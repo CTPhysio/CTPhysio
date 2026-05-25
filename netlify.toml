@@ -1,10 +1,9 @@
 [build]
   publish = "dist"
-  command = "npm install --registry=https://registry.npmjs.org/ && npm run build"
+  command = "echo 'registry=https://registry.npmjs.org/' > .npmrc && npm install && npm run build"
 
 [build.environment]
   NODE_VERSION = "20"
-  NPM_CONFIG_REGISTRY = "https://registry.npmjs.org/"
 
 [[redirects]]
   from = "/*"
