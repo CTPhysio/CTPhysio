@@ -1,10 +1,19 @@
 {
   "env": {
     "NPM_CONFIG_REGISTRY": "https://registry.npmjs.org/",
-    "npm_config_registry": "https://registry.npmjs.org/",
-    "NPM_CONFIG_HTTPS_PROXY": "",
-    "NPM_CONFIG_PROXY": "",
-    "NPM_CONFIG_STRICT_SSL": "true",
-    "npm_config_strict_ssl": "true"
+    "npm_config_registry": "https://registry.npmjs.org/"
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "printf 'registry=https://registry.npmjs.org/\\n' > /tmp/cc-agent/57547453/project/.npmrc"
+          }
+        ]
+      }
+    ]
   }
 }
