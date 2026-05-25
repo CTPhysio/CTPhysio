@@ -24,11 +24,11 @@ const JourneySteps: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 bg-white rounded-b-[60px]">
+    <section className="py-10 md:py-16 bg-white rounded-b-[60px]">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-navy-700 mb-4">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-2xl md:text-4xl font-bold text-navy-700 mb-3">
               The 3 Stages Of Recovery
             </h2>
           </div>
@@ -48,32 +48,32 @@ const JourneySteps: React.FC = () => {
             </div>
 
             {/* Steps */}
-            <div className="order-2 md:order-2 space-y-6 md:space-y-8">
+            <div className="order-2 md:order-2 space-y-5 md:space-y-8">
               {steps.map((step, index) => {
                 const Icon = step.icon;
                 return (
                   <div key={index} className="flex items-start space-x-3 md:space-x-4">
                     <div className="flex-shrink-0">
-                      <div className="w-10 h-10 md:w-12 md:h-12 bg-sky-500 text-white rounded-full flex items-center justify-center font-bold text-base md:text-lg">
+                      <div className="w-9 h-9 md:w-12 md:h-12 bg-sky-500 text-white rounded-full flex items-center justify-center font-bold text-sm md:text-lg">
                         {step.number}
                       </div>
                     </div>
                     <div className="flex-1">
-                      <div className="flex items-center mb-2">
-                        <Icon size={20} className="text-sky-500 mr-2 md:w-6 md:h-6" />
-                        <h3 className="text-lg md:text-xl font-bold text-navy-700">
+                      <div className="flex items-center mb-1.5">
+                        <Icon size={18} className="text-sky-500 mr-2" />
+                        <h3 className="text-base md:text-xl font-bold text-navy-700">
                           {step.title}
                         </h3>
                       </div>
-                      <p className="text-sm md:text-base text-gray-600">
+                      <p className="text-sm text-gray-600 leading-relaxed">
                         {step.description}
                       </p>
                     </div>
                   </div>
                 );
               })}
-              
-              <div className="pt-6 text-center md:text-left">
+
+              <div className="pt-4 md:pt-6">
                 <a
                   href="/services"
                   className="inline-flex items-center justify-center px-8 py-4 bg-navy-700 text-white font-bold rounded-lg hover:bg-navy-800 transition-colors text-base w-full md:w-auto"
