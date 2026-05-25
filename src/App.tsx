@@ -16,7 +16,7 @@ import Services from './components/Services';
 import Contact from './components/Contact';
 import AboutPage from './components/Team';
 import JourneySteps from './components/JourneySteps';
-import TreatmentConditions from './components/TreatmentConditions';
+import WhoWeHelp from './components/WhoWeHelp';
 import BackPain from './components/BackPain';
 import ShoulderPain from './components/ShoulderPain';
 import OrthopedicRehab from './components/OrthopedicRehab';
@@ -59,7 +59,7 @@ function App() {
               <PainPoints />
               <TestimonialSlider />
               <About />
-              <TreatmentConditions />
+              <WhoWeHelp />
               <DiscoveryVisit />
               <FAQ />
               <GoogleReviewsSlider />

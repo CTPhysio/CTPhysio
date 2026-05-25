@@ -10,7 +10,7 @@ const FinalCTA: React.FC = () => {
             Ready to Feel Stronger and Move Freely Again?
           </h2>
           <p className="text-base md:text-xl mb-6 text-gray-200 leading-relaxed">
-            Whether you're dealing with persistent pain, recovering from surgery, or simply want to stay strong and active as you get older, we're here to help you move forward with confidence.
+            Whether you're dealing with persistent pain, recovering from surgery, or simply want to stay active as you get older, we'd love to help.
           </p>
 
           <a

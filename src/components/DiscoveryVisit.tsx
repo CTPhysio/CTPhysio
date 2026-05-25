@@ -5,18 +5,18 @@ const DiscoveryVisit: React.FC = () => {
   const steps = [
     {
       icon: MessageSquare,
-      title: "We Listen to You",
-      description: "You'll have space to explain what's been happening, how it's affecting your life, and what you want to be able to do again."
+      title: "We Listen",
+      description: "You'll have time to explain what's been going on and what you want to be able to do again."
     },
     {
       icon: Activity,
-      title: "We Assess How You Move",
-      description: "A gentle, relaxed movement assessment helps us understand what's really going on, not just where it hurts."
+      title: "We Assess",
+      description: "A gentle movement assessment to understand what's really going on, not just where it hurts."
     },
     {
       icon: FileText,
-      title: "You Leave With a Clear Plan",
-      description: "We'll explain exactly what we think is causing the problem and give you an honest, realistic picture of what recovery looks like."
+      title: "You Leave with a Plan",
+      description: "An honest picture of what's causing the problem and what recovery looks like for you."
     }
   ];
 
@@ -44,13 +44,13 @@ const DiscoveryVisit: React.FC = () => {
 
         <div className="text-center">
           <p className="text-sm md:text-lg text-gray-600 mb-5 leading-relaxed">
-            It's completely free and there's no obligation to go further. Many people find it's the most useful conversation they've had about their health.
+            Completely free. No obligation. Many patients tell us it's the most useful conversation they've had about their health.
           </p>
           <a
             href="/contact"
             className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 bg-navy-700 text-white font-bold rounded-lg hover:bg-navy-800 transition-colors"
           >
-            Claim Your Free Discovery Visit
+            Book Your Free Discovery Visit
           </a>
         </div>
       </div>

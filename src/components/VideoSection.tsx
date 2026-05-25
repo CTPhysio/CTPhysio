@@ -70,7 +70,7 @@ const VideoSection: React.FC = () => {
               <h3 className="font-bold text-navy-700 text-base">About Chris</h3>
             </div>
             <a href="tel:01215170806" className="inline-flex md:hidden items-center justify-center px-6 py-3 bg-navy-700 text-white font-bold rounded-lg hover:bg-navy-800 transition-colors text-base w-full">
-              Call Chris
+              Call the Clinic
             </a>
             <Link to="/about" className="hidden md:inline-flex items-center justify-center px-8 py-4 bg-navy-700 text-white font-bold rounded-lg hover:bg-navy-800 transition-colors text-lg w-full">
               Learn More

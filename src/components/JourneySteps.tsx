@@ -7,19 +7,19 @@ const JourneySteps: React.FC = () => {
       number: "1",
       icon: MessageCircle,
       title: "Tell Us What's Holding You Back",
-      description: "Start with a free, no-obligation discovery visit. We take time to listen, understand your goals, and work out exactly what needs to change."
+      description: "Start with a free discovery visit. We listen, understand your goals, and work out what needs to change."
     },
     {
       number: "2",
       icon: Target,
       title: "Follow Your Strength-Based Plan",
-      description: "Receive a clear programme built around your body, your lifestyle, and the activities you want to get back to, whether that's the gym, golf, or keeping up with the grandchildren."
+      description: "A clear programme built around your body and the activities you want to get back to, whether that's the gym, golf, or keeping up with the grandchildren."
     },
     {
       number: "3",
       icon: Heart,
       title: "Move Freely and Stay Independent",
-      description: "Build the strength, confidence, and resilience to keep doing what matters, not just now, but for years to come."
+      description: "Build the strength and confidence to keep doing what matters, not just now, but for years to come."
     }
   ];
 
@@ -32,22 +32,19 @@ const JourneySteps: React.FC = () => {
               Your Path Back to Strength and Confidence
             </h2>
           </div>
-          
+
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Image - Mobile: top, Desktop: left */}
             <div className="order-1 md:order-1">
-              <img 
+              <img
                 src="/Headshot Square.png"
                 alt="Chris Tiley working with patient in gym"
                 className="w-full h-auto rounded-lg shadow-lg max-w-md mx-auto md:max-w-none"
                 onError={(e) => {
-                  console.log('Journey image failed to load');
                   e.currentTarget.src = 'https://images.pexels.com/photos/7579831/pexels-photo-7579831.jpeg';
                 }}
               />
             </div>
 
-            {/* Steps */}
             <div className="order-2 md:order-2 space-y-5 md:space-y-8">
               {steps.map((step, index) => {
                 const Icon = step.icon;

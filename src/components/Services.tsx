@@ -184,7 +184,7 @@ const Services: React.FC = () => {
             Hear From Our Patients
           </h2>
           <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
-            Over 100 people across Harborne and Birmingham have worked with us to get back to the activities they love. From managing persistent pain to returning to the gym or walking confidently again, our patients consistently see real, meaningful results.
+            Over 100 people across Harborne and Birmingham have worked with us to get back to the things they love, from returning to the gym to walking confidently again.
           </p>
         </div>
       </section>
