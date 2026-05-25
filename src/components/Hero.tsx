@@ -1,5 +1,4 @@
 import React from 'react';
-import { Phone } from 'lucide-react';
 import GoogleReviews from './GoogleReviews';
 
 const Hero: React.FC = () => {
@@ -48,22 +47,21 @@ const Hero: React.FC = () => {
             </div>
 
             {/* Primary CTA */}
-            <div className="mb-4">
+            <div className="mb-2">
               <a
                 href="/contact"
                 className="inline-flex justify-center items-center px-7 py-3.5 text-sm sm:text-base font-semibold rounded-md shadow-md text-white bg-navy-700 hover:bg-navy-800 transition-colors duration-200"
               >
-                Book a Free Discovery Visit
+                Start With A Free Discovery Visit
               </a>
             </div>
 
-            {/* Phone secondary link */}
+            {/* Secondary booking link */}
             <a
-              href="tel:01215170806"
-              className="inline-flex items-center gap-2 text-white/80 hover:text-white text-sm transition-colors duration-200"
+              href="https://appointments.chris-tiley-physiotherapy.co.uk"
+              className="inline-block text-white/70 hover:text-white/95 text-xs sm:text-sm underline underline-offset-2 decoration-white/40 hover:decoration-white/70 transition-colors duration-200"
             >
-              <Phone size={15} />
-              <span>Call 0121 517 0806</span>
+              Or book your initial assessment online
             </a>
 
             {/* Desktop trust signals */}
