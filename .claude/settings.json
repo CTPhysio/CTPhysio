@@ -1,0 +1,8 @@
+{
+  "env": {
+    "NPM_CONFIG_REGISTRY": "https://registry.npmjs.org/",
+    "NPM_CONFIG_HTTPS_PROXY": "",
+    "NPM_CONFIG_PROXY": "",
+    "NPM_CONFIG_STRICT_SSL": "true"
+  }
+}
