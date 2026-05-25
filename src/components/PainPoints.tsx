@@ -13,7 +13,7 @@ const PainPoints: React.FC = () => {
     },
     {
       icon: Hammer,
-      text: "Tried rest, painkillers, or other treatments — but the problem keeps coming back?"
+      text: "Tried rest, painkillers, or other treatments, but the problem keeps coming back?"
     },
     {
       icon: TrendingUp,
@@ -56,7 +56,7 @@ const PainPoints: React.FC = () => {
               You don't have to accept this as the new normal.
             </h3>
             <p className="text-sm md:text-lg text-gray-600 mb-5 leading-relaxed">
-              A free discovery visit with Chris is the first step — no pressure, no commitment, just honest guidance on what's possible for you.
+              A free discovery visit at our clinic is the first step. No pressure, no commitment, just honest guidance on what's possible for you.
             </p>
             <div>
               <a

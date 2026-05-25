@@ -11,7 +11,7 @@ const DiscoveryVisit: React.FC = () => {
     {
       icon: Activity,
       title: "We Assess How You Move",
-      description: "A gentle, relaxed movement assessment helps us understand what's really going on — not just where it hurts."
+      description: "A gentle, relaxed movement assessment helps us understand what's really going on, not just where it hurts."
     },
     {
       icon: FileText,

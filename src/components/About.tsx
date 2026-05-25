@@ -6,14 +6,14 @@ const About: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl sm:text-4xl font-bold text-navy-700 mb-8 md:mb-12 text-center">
-            Physiotherapy Built Around You
+            A Clinic Built Around Your Recovery
           </h2>
 
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Content */}
             <div className="order-2 lg:order-2">
               <p className="text-sm sm:text-lg text-gray-700 leading-relaxed mb-6">
-                Chris Tiley Physiotherapy specialises in helping active adults — particularly those in their 50s, 60s, and beyond — stay strong, independent, and confident in their movement. With over 15 years of clinical experience across the NHS, rehabilitation, private practice, and elite sport, Chris combines expert physiotherapy with practical strength-based rehabilitation to deliver results that last.
+                At Chris Tiley Physiotherapy, we specialise in helping active adults, particularly those in their 50s, 60s, and beyond, stay strong, mobile, and confident in their movement. With over 15 years of clinical experience across the NHS, rehabilitation services, private practice, and elite sport, our team combines expert physiotherapy with practical strength-based rehabilitation to deliver results that last.
               </p>
             </div>
 
@@ -35,17 +35,17 @@ const About: React.FC = () => {
           <div className="grid md:grid-cols-3 gap-3 md:gap-6 mt-8 md:mt-12">
             <div className="text-center bg-white p-4 md:p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
               <h3 className="font-bold text-lg md:text-xl text-navy-700 mb-2 md:mb-3">Strength-Based Rehabilitation</h3>
-              <p className="text-gray-600 text-sm md:text-base">We go beyond pain relief — helping you build physical resilience that lasts</p>
+              <p className="text-gray-600 text-sm md:text-base">We go beyond pain relief, helping you build physical resilience and the confidence to stay active long term</p>
             </div>
 
             <div className="text-center bg-white p-4 md:p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-              <h3 className="font-bold text-lg md:text-xl text-navy-700 mb-2 md:mb-3">A Plan That's Yours</h3>
-              <p className="text-gray-600 text-sm md:text-base">Every treatment plan is built around your goals, your lifestyle, and the activities that matter to you</p>
+              <h3 className="font-bold text-lg md:text-xl text-navy-700 mb-2 md:mb-3">A Plan That Fits Your Life</h3>
+              <p className="text-gray-600 text-sm md:text-base">Every programme is built around your goals, your lifestyle, and the activities that matter to you</p>
             </div>
 
             <div className="text-center bg-white p-4 md:p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
               <h3 className="font-bold text-lg md:text-xl text-navy-700 mb-2 md:mb-3">Long-Term Independence</h3>
-              <p className="text-gray-600 text-sm md:text-base">Our goal is to help you stay active, confident, and independent — not just for now, but for life</p>
+              <p className="text-gray-600 text-sm md:text-base">Our goal is to help you keep doing the things you love, walking confidently, staying active, and staying independent</p>
             </div>
           </div>
         </div>

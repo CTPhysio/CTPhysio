@@ -7,7 +7,7 @@ const VideoSection: React.FC = () => {
     <section className="py-12 md:py-16 bg-white rounded-b-[60px]">
       <div className="container mx-auto text-center px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-navy-700 mb-8">
-          "I was facing knee surgery — until I found Chris."
+          "I was facing knee surgery. Then I came to Chris Tiley Physiotherapy."
         </h2>
         
         <div className="relative max-w-4xl mx-auto">

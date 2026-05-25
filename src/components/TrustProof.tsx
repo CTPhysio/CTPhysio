@@ -23,7 +23,7 @@ const TrustProof: React.FC = () => {
         <div className="grid md:grid-cols-2 gap-12">
           {/* Reviews Slider */}
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-navy-700 mb-6">What My Patients Say</h3>
+            <h3 className="text-2xl font-bold text-navy-700 mb-6">What Our Patients Say</h3>
             <div className="space-y-4">
               {reviews.map((review, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg shadow-md">
@@ -50,13 +50,13 @@ const TrustProof: React.FC = () => {
 
           {/* Trust Badges */}
           <div className="bg-white p-8 rounded-lg shadow-md">
-            <h3 className="text-2xl font-bold text-navy-700 mb-6">Why Choose Chris?</h3>
+            <h3 className="text-2xl font-bold text-navy-700 mb-6">Why Patients Choose Us</h3>
             <div className="space-y-4">
               {[
-                "100+ Verified 5-Star Reviews",
-                "15+ Years Experience",
-                "Trusted by Harborne Residents",
-                "HCPC Registered Physiotherapist"
+                "100+ Verified 5-Star Google Reviews",
+                "15+ Years of Clinical Experience",
+                "Trusted by the Harborne Community",
+                "HCPC Registered Physiotherapists"
               ].map((item, index) => (
                 <div key={index} className="flex items-center">
                   <CheckCircle className="text-sky-500 mr-3" />

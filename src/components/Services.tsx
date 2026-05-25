@@ -8,10 +8,10 @@ const Services: React.FC = () => {
     {
       title: "Physiotherapy",
       icon: Activity,
-      description: "Professional physiotherapy to help you move comfortably and confidently again.",
+      description: "Expert physiotherapy to help you move well, recover from injury, and build confidence in your body again.",
       image: "https://lh3.googleusercontent.com/p/AF1QipNUIFWtazHZCfcGL_0SirdXWy2s-d-xG-4HPuGS=s680-w680-h510-rw",
       link: "https://chris-tiley-physiotherapy.uk1.cliniko.com/bookings#service",
-      buttonText: "Call Chris",
+      buttonText: "Call the Clinic",
       pricing: [
         { name: "Free Discovery Visit", price: "£0" },
         { name: "Initial Assessment (60 mins)", price: "£80" },
@@ -23,10 +23,10 @@ const Services: React.FC = () => {
     {
       title: "Strength Training",
       icon: Dumbbell,
-      description: "Tailored strength training to build resilience and support recovery.",
+      description: "Clinician-led strength training to build physical resilience, support your recovery, and help you stay capable long term.",
       image: "https://lh3.googleusercontent.com/p/AF1QipP4v9ya-xB_2jtMgpyz5gjO0ONL6mcdIUcvyVwC=s680-w680-h510-rw",
       link: "https://chris-tiley-physiotherapy.uk1.cliniko.com/bookings#service",
-      buttonText: "Call Chris",
+      buttonText: "Call the Clinic",
       pricing: [
         { name: "Initial Assessment (60 mins)", price: "£80" },
         { name: "Follow-Up Session (45 mins)", price: "£60" },
@@ -37,10 +37,10 @@ const Services: React.FC = () => {
     {
       title: "Strength & Rehab Classes",
       icon: Users,
-      description: "Guided group sessions to build lasting strength and maintain progress.",
+      description: "Small group sessions designed for active adults who want to build strength, move well, and stay independent.",
       image: "/dhdnevertoooldtoliftimage.webp",
       link: "https://chris-tiley-physiotherapy.uk1.cliniko.com/bookings#service",
-      buttonText: "Call Chris",
+      buttonText: "Call the Clinic",
       pricing: [
         { name: "Block of 12 Classes", price: "£225" },
         { name: "Monthly Direct Debit", price: "£65/month" }
@@ -52,17 +52,17 @@ const Services: React.FC = () => {
     {
       icon: CircleDot,
       title: "Assessment",
-      description: "Comprehensive evaluation of your condition"
+      description: "A thorough assessment to understand your condition and what's really going on"
     },
     {
       icon: Target,
-      title: "Treatment Plan",
-      description: "Customised approach for your needs"
+      title: "Your Plan",
+      description: "A strength-based programme built around your goals and lifestyle"
     },
     {
       icon: ArrowRight,
-      title: "Recovery",
-      description: "Guided path to optimal health"
+      title: "Progress",
+      description: "Guided support to help you stay active, confident, and independent"
     }
   ];
 
@@ -83,7 +83,7 @@ const Services: React.FC = () => {
               Physiotherapy For Your Active Life
             </h1>
             <p className="text-xl text-gray-200 mb-8">
-              Work with me to reduce pain, overcome limitations, and return to the activities that matter most to you.
+              At Chris Tiley Physiotherapy, we help you reduce pain, regain strength, and return to the activities that matter most.
             </p>
           </div>
         </div>
@@ -130,7 +130,7 @@ const Services: React.FC = () => {
 
                     {service.title === "Strength & Rehab Classes" && (
                       <p className="text-sm text-gray-600 mb-6 italic">
-                        *If you're interested in strength classes, please book a discovery visit with me first to discuss options.
+                        *If you're interested in our strength classes, please book a free discovery visit first so we can discuss the best option for you.
                       </p>
                     )}
                   </div>
@@ -181,12 +181,10 @@ const Services: React.FC = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-navy-700 mb-6">
-            Don't Just Take My Word For It
+            Hear From Our Patients
           </h2>
           <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
-            Over 100 Birmingham residents have regained their mobility and confidence through targeted physiotherapy care. 
-            From managing persistent pain to reducing the risk of future injuries, my patients consistently see meaningful improvements in their daily lives. 
-            Join the growing number of people who've chosen to take control of their movement and stay active.
+            Over 100 people across Harborne and Birmingham have worked with us to get back to the activities they love. From managing persistent pain to returning to the gym or walking confidently again, our patients consistently see real, meaningful results.
           </p>
         </div>
       </section>

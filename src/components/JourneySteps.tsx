@@ -7,19 +7,19 @@ const JourneySteps: React.FC = () => {
       number: "1",
       icon: MessageCircle,
       title: "Tell Us What's Holding You Back",
-      description: "Start with a free, no-obligation discovery visit. We listen carefully, understand your goals, and identify exactly what needs to change."
+      description: "Start with a free, no-obligation discovery visit. We take time to listen, understand your goals, and work out exactly what needs to change."
     },
     {
       number: "2",
       icon: Target,
-      title: "Follow Your Personalised Plan",
-      description: "Receive a clear, strength-based programme built around your body, your lifestyle, and the activities you want to get back to."
+      title: "Follow Your Strength-Based Plan",
+      description: "Receive a clear programme built around your body, your lifestyle, and the activities you want to get back to, whether that's the gym, golf, or keeping up with the grandchildren."
     },
     {
       number: "3",
       icon: Heart,
       title: "Move Freely and Stay Independent",
-      description: "Build the strength, confidence, and resilience to keep doing what matters — for years to come."
+      description: "Build the strength, confidence, and resilience to keep doing what matters, not just now, but for years to come."
     }
   ];
 

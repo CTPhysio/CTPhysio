@@ -5,48 +5,48 @@ import { BookOpen, Target, TrendingUp, Heart, CheckCircle, ChevronLeft, ChevronR
 const approachCards = [
   {
     icon: BookOpen,
-    title: 'Evidence-Based Care',
-    description: 'Treatment and rehabilitation based on current evidence and best practice.',
+    title: 'Clinically Led',
+    description: 'Treatment grounded in current best practice, delivered by experienced registered physiotherapists.',
   },
   {
     icon: Target,
-    title: 'Personalised Rehabilitation',
-    description: 'Every recovery plan is tailored to the individual and their goals.',
+    title: 'Built Around You',
+    description: 'Every programme is shaped around your goals, your lifestyle, and what matters most to you.',
   },
   {
     icon: TrendingUp,
-    title: 'Strength & Confidence',
-    description: 'We help people feel stronger, more capable, and confident in movement again.',
+    title: 'Strength and Confidence',
+    description: 'We help people feel physically capable again, moving without fear and returning to the activities they love.',
   },
   {
     icon: Heart,
-    title: 'Long-Term Results',
-    description: 'Our focus is helping people stay active and independent for the long term.',
+    title: 'Long-Term Independence',
+    description: 'Our focus is on lasting results, helping you stay active, strong, and independent for years to come.',
   },
 ];
 
 const trustPoints = [
-  'Personalised one-to-one care',
-  'Clear explanations and realistic plans',
-  'Strength-focused rehabilitation',
-  'Friendly and supportive environment',
-  'Evidence-based treatment',
+  'One-to-one care with a named clinician',
+  'Clear explanations at every stage',
+  'Strength-focused rehabilitation, not just pain management',
+  'Warm, supportive, unhurried appointments',
   'Focus on long-term recovery, not quick fixes',
+  'Helping you return to the activities you love',
 ];
 
 const testimonials = [
   {
-    text: "Chris has been absolutely fantastic. His approach is patient, thorough, and he really listens. I came in with a knee problem that had been troubling me for months, and after just a few sessions I'm back to running.",
+    text: "I came in with a knee problem that had been troubling me for months. After just a few sessions I'm back to running. The approach is patient, thorough, and you feel genuinely listened to.",
     author: 'Sarah M.',
     rating: 5,
   },
   {
-    text: "The treatment I received was excellent. Chris explained everything clearly and gave me a realistic plan. I feel so much stronger now and more confident in my movement.",
+    text: "Everything was explained clearly and I left with a realistic plan. I feel so much stronger now and far more confident in my movement. Brilliant from start to finish.",
     author: 'David T.',
     rating: 5,
   },
   {
-    text: "Brilliant clinic. Warm, professional and genuinely focused on helping you recover for the long term, not just a quick fix. Cannot recommend highly enough.",
+    text: "Warm, professional and genuinely focused on helping you recover for the long term, not just a quick fix. A clinic I'd recommend to anyone.",
     author: 'Helen R.',
     rating: 5,
   },
@@ -100,7 +100,7 @@ const Team: React.FC = () => {
               Helping You Move Better, Feel Stronger, and Stay Active
             </h1>
             <p className="text-sm sm:text-lg text-slate-300 leading-relaxed mb-6 max-w-xl mx-auto">
-              At Chris Tiley Physiotherapy, we combine evidence-based physiotherapy with a personalised, practical approach to recovery — helping you move confidently and return to the activities that matter most.
+              At Chris Tiley Physiotherapy, we combine clinical expertise with a practical, strength-focused approach to help you move confidently and return to the activities that matter most.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a
@@ -133,7 +133,7 @@ const Team: React.FC = () => {
           <div className="max-w-2xl mx-auto text-center mb-8 md:mb-12">
             <h2 className="text-2xl md:text-4xl font-bold text-slate-800 mb-3">Our Approach</h2>
             <p className="text-sm sm:text-lg text-slate-500 leading-relaxed">
-              We believe physiotherapy should focus on more than short-term pain relief. Our aim is to help people build confidence, strength, and long-term resilience.
+              We believe physiotherapy should do more than take the edge off pain. Our aim is to help people build genuine strength, movement confidence, and long-term resilience.
             </p>
           </div>
 
@@ -197,7 +197,7 @@ const Team: React.FC = () => {
                   Chris is a chartered physiotherapist with over 15 years of experience across the NHS, rehabilitation services, private practice, and elite sport, including work with Para Snowsport GB.
                 </p>
                 <p className="text-slate-600 leading-relaxed mb-4 text-sm flex-1">
-                  He has a particular interest in helping active adults and older people move confidently, build strength, and stay independent. Chris combines evidence-based physiotherapy with strength-focused rehabilitation to help people recover from injury, manage pain, and return to the activities that matter most.
+                  He has a particular interest in helping active adults and older people move confidently, build strength, and stay independent. Chris combines clinical expertise with strength-focused rehabilitation to help people recover from injury, manage persistent pain, and get back to the activities that matter most.
                 </p>
                 <div className="flex flex-wrap gap-1.5 mt-auto">
                   {['Strength Rehabilitation', 'Active Ageing', 'Sports Injury', 'Persistent Pain'].map(tag => (
@@ -236,7 +236,7 @@ const Team: React.FC = () => {
                   Kate is a chartered physiotherapist and former semi-professional footballer with experience across the NHS, private sports injury clinics, and pitch-side care with Wolverhampton Wanderers.
                 </p>
                 <p className="text-slate-600 leading-relaxed mb-4 text-sm flex-1">
-                  She has a particular interest in female health, sports rehabilitation, and helping people return confidently to sport, exercise, and everyday life following injury. Drawing on her background in elite sport, Kate combines evidence-based treatment with a personalised approach to ensure each patient feels supported throughout their recovery.
+                  She has a particular interest in female health, sports rehabilitation, and helping people return confidently to sport, exercise, and everyday life following injury. Drawing on her background in elite sport, Kate takes a practical, patient-centred approach to ensure each person feels supported at every stage of their recovery.
                 </p>
                 <div className="flex flex-wrap gap-1.5 mt-auto">
                   {['Female Health', 'Sports Rehabilitation', 'Return to Sport', 'Injury Recovery'].map(tag => (
@@ -349,7 +349,7 @@ const Team: React.FC = () => {
               Ready to Get Back to Doing What You Love?
             </h2>
             <p className="text-sm md:text-lg text-slate-300 mb-6 leading-relaxed">
-              Whether you're recovering from injury, managing ongoing pain, or looking to stay active and independent, we're here to help.
+              Whether you're recovering from injury, managing persistent pain, or simply want to stay strong and active as you get older, we're here to help.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
               <a

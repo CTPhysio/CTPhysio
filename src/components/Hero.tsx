@@ -27,12 +27,12 @@ const Hero: React.FC = () => {
             {/* Main Content */}
             <div className="lg:max-w-2xl">
               <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-white mb-3 leading-tight">
-                Stay Strong, Stay Active,{' '}
-                <span className="text-white">Stay Independent</span>
+                Helping Active Adults Stay Strong,{' '}
+                <span className="text-white">Confident, and Independent</span>
               </h1>
               {/* Desktop subtitle */}
               <p className="hidden sm:block text-base sm:text-xl text-white mb-5 sm:mb-8 leading-relaxed">
-                Helping active adults 50+ build strength, recover from injury, and stay confidently independent — with a clear, personalised plan and 100+ five-star results.
+                At Chris Tiley Physiotherapy, we help people in their 50s, 60s, and beyond move well, build strength, and stay active in the things that matter most to them. Trusted by over 100 local patients with five-star results.
               </p>
 
               {/* Mobile bullet points */}
@@ -51,7 +51,7 @@ const Hero: React.FC = () => {
                 </div>
                 <div className="flex items-start">
                   <span className="mr-2 mt-1">•</span>
-                  <span>Clear, personalised plan from your very first visit</span>
+                  <span>A clear plan from your very first visit</span>
                 </div>
               </div>
 
