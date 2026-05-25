@@ -59,9 +59,9 @@ const Hero: React.FC = () => {
             {/* Secondary booking link */}
             <a
               href="https://appointments.chris-tiley-physiotherapy.co.uk"
-              className="inline-block text-white/70 hover:text-white/95 text-xs sm:text-sm underline underline-offset-2 decoration-white/40 hover:decoration-white/70 transition-colors duration-200"
+              className="inline-flex items-center gap-1 mt-3 text-white/90 hover:text-white text-xs sm:text-sm font-medium transition-colors duration-200"
             >
-              Or book your initial assessment online
+              Or book your initial assessment online →
             </a>
 
             {/* Desktop trust signals */}
