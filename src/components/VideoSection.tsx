@@ -7,7 +7,7 @@ const VideoSection: React.FC = () => {
     <section className="py-12 md:py-16 bg-white rounded-b-[60px]">
       <div className="container mx-auto text-center px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-navy-700 mb-8">
-          "I was facing knee surgery until I found Chris."
+          "I was facing knee surgery — until I found Chris."
         </h2>
         
         <div className="relative max-w-4xl mx-auto">
@@ -40,18 +40,18 @@ const VideoSection: React.FC = () => {
         </div>
         
         <p className="mt-6 text-lg text-gray-600">
-          Real patient. Real recovery. Real proof.
+          A real patient. A real recovery. Hear what strength-based physiotherapy made possible.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 max-w-3xl mx-auto mt-12">
           <div className="md:flex md:flex-col md:items-center md:space-y-3">
             <div className="hidden md:flex items-center gap-2">
               <MessageSquare size={24} className="text-sky-500" />
-              <h3 className="font-bold text-navy-700 text-base">Discovery Visit</h3>
+              <h3 className="font-bold text-navy-700 text-base">Free Discovery Visit</h3>
             </div>
             <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 md:px-8 md:py-4 bg-navy-700 text-white font-bold rounded-lg hover:bg-navy-800 transition-colors text-base md:text-lg w-full">
-              <span className="md:hidden">Book Free Consultation</span>
-              <span className="hidden md:inline">Get In Touch</span>
+              <span className="md:hidden">Book Free Discovery Visit</span>
+              <span className="hidden md:inline">Book a Free Visit</span>
             </a>
           </div>
           <div className="md:flex md:flex-col md:items-center md:space-y-3">

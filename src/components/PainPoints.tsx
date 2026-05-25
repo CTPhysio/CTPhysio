@@ -5,27 +5,27 @@ const PainPoints: React.FC = () => {
   const painPoints = [
     {
       icon: Frown,
-      text: "Feeling frustrated after trying multiple approaches without lasting results?"
+      text: "Worried that pain or injury is going to stop you doing the things you love?"
     },
     {
       icon: PersonStanding,
-      text: "Wanting active solutions rather than just managing symptoms?"
+      text: "Concerned about losing your strength, fitness, or independence as you get older?"
     },
     {
       icon: Hammer,
-      text: "Tried various gadgets and products with limited success?"
+      text: "Tried rest, painkillers, or other treatments — but the problem keeps coming back?"
     },
     {
       icon: TrendingUp,
-      text: "Motivated to invest in your physical wellbeing and future quality of life?"
+      text: "Ready to take an active approach to your recovery, not just manage symptoms?"
     },
     {
       icon: Worried,
-      text: "Concerned about your condition progressing and further affecting your day-to-day life?"
+      text: "Frustrated that nobody has given you a clear explanation or a realistic plan?"
     },
     {
       icon: NotebookPen,
-      text: "Looking for a clear, personalised treatment approach?"
+      text: "Looking for someone who genuinely listens and treats you as an individual?"
     }
   ];
 
@@ -34,7 +34,7 @@ const PainPoints: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-4xl font-bold text-navy-700 mb-6 md:mb-8 leading-tight text-center">
-            Are pain and injuries holding you back?
+            Does any of this sound familiar?
           </h2>
 
           <div className="grid md:grid-cols-2 gap-3 md:gap-6 mb-8 md:mb-12">
@@ -53,17 +53,17 @@ const PainPoints: React.FC = () => {
 
           <div className="text-center mb-8 md:mb-12">
             <h3 className="text-xl md:text-2xl font-bold text-navy-700 mb-3">
-              Schedule A Free Discovery Visit With Chris Tiley
+              You don't have to accept this as the new normal.
             </h3>
             <p className="text-sm md:text-lg text-gray-600 mb-5 leading-relaxed">
-              So you don't have to give up your active lifestyle.
+              A free discovery visit with Chris is the first step — no pressure, no commitment, just honest guidance on what's possible for you.
             </p>
             <div>
               <a
                 href="/contact"
                 className="inline-flex items-center justify-center px-8 py-4 bg-navy-700 text-white font-bold rounded-lg hover:bg-navy-800 transition-colors w-full md:w-auto"
               >
-                Learn More
+                Book Your Free Discovery Visit
               </a>
             </div>
           </div>

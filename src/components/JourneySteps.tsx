@@ -6,20 +6,20 @@ const JourneySteps: React.FC = () => {
     {
       number: "1",
       icon: MessageCircle,
-      title: "Speak With Chris",
-      description: "Start with a personal consultation to understand your condition and goals"
+      title: "Tell Us What's Holding You Back",
+      description: "Start with a free, no-obligation discovery visit. We listen carefully, understand your goals, and identify exactly what needs to change."
     },
     {
-      number: "2", 
+      number: "2",
       icon: Target,
-      title: "Get Tailored Treatment",
-      description: "Receive a personalised treatment plan designed specifically for your needs"
+      title: "Follow Your Personalised Plan",
+      description: "Receive a clear, strength-based programme built around your body, your lifestyle, and the activities you want to get back to."
     },
     {
       number: "3",
       icon: Heart,
-      title: "Move With Confidence",
-      description: "Build lasting resilience and return to the activities that matter to you"
+      title: "Move Freely and Stay Independent",
+      description: "Build the strength, confidence, and resilience to keep doing what matters — for years to come."
     }
   ];
 
@@ -29,7 +29,7 @@ const JourneySteps: React.FC = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-8 md:mb-12">
             <h2 className="text-2xl md:text-4xl font-bold text-navy-700 mb-3">
-              The 3 Stages Of Recovery
+              Your Path Back to Strength and Confidence
             </h2>
           </div>
           
@@ -78,7 +78,7 @@ const JourneySteps: React.FC = () => {
                   href="/services"
                   className="inline-flex items-center justify-center px-8 py-4 bg-navy-700 text-white font-bold rounded-lg hover:bg-navy-800 transition-colors text-base w-full md:w-auto"
                 >
-                  Learn More
+                  See How We Can Help
                 </a>
               </div>
             </div>

@@ -21,10 +21,10 @@ const TreatmentConditions: React.FC = () => {
             {/* Left Column - Title and Description */}
             <div className="lg:col-span-1">
               <h2 className="text-3xl md:text-4xl font-bold text-navy-700 mb-6">
-                WHAT I TREAT:
+                Conditions We Treat
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed">
-                Over 800 Harborne residents have regained their mobility and returned to the activities they love by actively participating in their recovery and developing lasting physical resilience.
+                Whether you're recovering from injury, managing pain, or simply noticing your strength isn't what it was — we can help. Over 800 people in Harborne have used our strength-based approach to get back to living actively and independently.
               </p>
             </div>
 
@@ -69,7 +69,7 @@ const TreatmentConditions: React.FC = () => {
               href="/contact"
               className="inline-flex items-center px-8 py-4 bg-navy-700 text-white font-bold rounded-lg hover:bg-navy-800 transition-colors text-lg"
             >
-              Get In Touch
+              Start Your Recovery Today
             </a>
           </div>
         </div>

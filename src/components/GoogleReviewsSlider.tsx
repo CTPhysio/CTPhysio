@@ -147,7 +147,7 @@ const GoogleReviewsSlider: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Over 100+ Happy Patients
+            Hear From Our Patients
           </h2>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <div className="flex items-center">

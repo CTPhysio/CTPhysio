@@ -5,7 +5,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "printf 'registry=https://registry.npmjs.org/\\n' > /tmp/cc-agent/57547453/project/.npmrc"
+            "command": "printf 'registry=https://registry.npmjs.org/\\nprefer-offline=true\\n' > /tmp/cc-agent/57547453/project/.npmrc"
           }
         ]
       }
@@ -16,7 +16,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "printf 'registry=https://registry.npmjs.org/\\n' > /tmp/cc-agent/57547453/project/.npmrc"
+            "command": "printf 'registry=https://registry.npmjs.org/\\nprefer-offline=true\\n' > /tmp/cc-agent/57547453/project/.npmrc"
           }
         ]
       }

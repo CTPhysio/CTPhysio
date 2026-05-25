@@ -27,40 +27,41 @@ const Hero: React.FC = () => {
             {/* Main Content */}
             <div className="lg:max-w-2xl">
               <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-white mb-3 leading-tight">
-                Manage Pain, <span className="text-white">Build Strength, Move Confidently</span>
+                Stay Strong, Stay Active,{' '}
+                <span className="text-white">Stay Independent</span>
               </h1>
               {/* Desktop subtitle */}
               <p className="hidden sm:block text-base sm:text-xl text-white mb-5 sm:mb-8 leading-relaxed">
-                Helping 800+ older adults move confidently again | 100+ 5-star reviews | Trusted physiotherapy clinic in Birmingham, Harborne | Thorough treatment approach with clear, individualised plans.
+                Helping active adults 50+ build strength, recover from injury, and stay confidently independent — with a clear, personalised plan and 100+ five-star results.
               </p>
 
               {/* Mobile bullet points */}
               <div className="sm:hidden space-y-1.5 text-white text-sm mb-5">
                 <div className="flex items-start">
                   <span className="mr-2 mt-1">•</span>
-                  <span>Helping 800+ older adults move confidently again</span>
+                  <span>Helping active adults 50+ stay strong and independent</span>
                 </div>
                 <div className="flex items-start">
                   <span className="mr-2 mt-1">•</span>
-                  <span>100+ 5-star reviews</span>
+                  <span>Strength-based rehabilitation, not just pain relief</span>
                 </div>
                 <div className="flex items-start">
                   <span className="mr-2 mt-1">•</span>
-                  <span>Trusted physiotherapy clinic in Birmingham, Harborne</span>
+                  <span>100+ five-star reviews in Harborne, Birmingham</span>
                 </div>
                 <div className="flex items-start">
                   <span className="mr-2 mt-1">•</span>
-                  <span>Thorough treatment approach with clear, individualised plans</span>
+                  <span>Clear, personalised plan from your very first visit</span>
                 </div>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-3 mb-4 sm:mb-8">
-                {/* Get In Touch Button */}
+                {/* Primary CTA */}
                 <a
                   href="/contact"
                   className="inline-flex justify-center items-center px-6 sm:px-8 py-3 sm:py-4 border border-transparent text-sm sm:text-lg font-bold rounded-md shadow-lg text-white bg-navy-700 hover:bg-navy-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-navy-500 transition-all duration-200"
                 >
-                  Get In Touch
+                  Book a Free Discovery Visit
                 </a>
 
                 {/* Phone CTA Button */}
@@ -83,19 +84,19 @@ const Hero: React.FC = () => {
                 </a>
               </div>
 
-              {/* Desktop bullet points */}
+              {/* Desktop trust signals */}
               <div className="hidden sm:block space-y-2 text-white text-sm sm:text-base">
                 <div className="flex items-center">
                   <span className="mr-2">•</span>
-                  <span>[HCPC Registered]</span>
+                  <span>HCPC Registered Physiotherapist</span>
                 </div>
                 <div className="flex items-center">
                   <span className="mr-2">•</span>
-                  <span>[15+ Years of Clinical Experience]</span>
+                  <span>15+ Years of Clinical Experience</span>
                 </div>
                 <div className="flex items-center">
                   <span className="mr-2">•</span>
-                  <span>[100+ Verified 5-Star Reviews]</span>
+                  <span>100+ Verified 5-Star Google Reviews</span>
                 </div>
               </div>
             </div>

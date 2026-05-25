@@ -23,7 +23,7 @@ const TestimonialSlider: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-7 md:mb-12">
           <h2 className="text-2xl md:text-4xl font-bold text-navy-700 mb-3">
-            Real Stories, Real Results
+            Real People. Real Recoveries.
           </h2>
         </div>
 
