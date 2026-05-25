@@ -1,8 +1,4 @@
 {
-  "env": {
-    "NPM_CONFIG_REGISTRY": "https://registry.npmjs.org/",
-    "npm_config_registry": "https://registry.npmjs.org/"
-  },
   "hooks": {
     "PreToolUse": [
       {
