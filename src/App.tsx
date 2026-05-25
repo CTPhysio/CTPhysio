@@ -14,7 +14,7 @@ import Footer from './components/Footer';
 import TrustpilotBanner from './components/TrustpilotBanner';
 import Services from './components/Services';
 import Contact from './components/Contact';
-import Team from './components/Team';
+import AboutPage from './components/Team';
 import JourneySteps from './components/JourneySteps';
 import TreatmentConditions from './components/TreatmentConditions';
 import BackPain from './components/BackPain';
@@ -68,8 +68,7 @@ function App() {
           } />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/about" element={<Team />} />
-          <Route path="/team" element={<Team />} />
+          <Route path="/about" element={<AboutPage />} />
           <Route path="/treatments/back-pain" element={<BackPain />} />
           <Route path="/treatments/shoulder-pain" element={<ShoulderPain />} />
           <Route path="/treatments/orthopedic-rehab" element={<OrthopedicRehab />} />

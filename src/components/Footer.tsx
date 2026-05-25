@@ -176,7 +176,7 @@ const Footer: React.FC = () => {
               <h3 className="text-xl font-bold mb-4">Quick Links</h3>
               <ul className="space-y-2">
                 <li><a href="/services" className="hover:text-sky-400 transition-colors">Our Services</a></li>
-                <li><a href="/team" className="hover:text-sky-400 transition-colors">Meet Chris</a></li>
+                <li><a href="/about" className="hover:text-sky-400 transition-colors">About Chris</a></li>
                 <li><a href="https://chris-tiley-physiotherapy.uk1.cliniko.com/bookings#service" className="hover:text-sky-400 transition-colors">Book Appointment</a></li>
                 <li><a href="/contact" className="hover:text-sky-400 transition-colors">Contact</a></li>
                 <li><a href="/privacy" className="hover:text-sky-400 transition-colors">Privacy Policy</a></li>

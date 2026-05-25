@@ -1,101 +1,345 @@
-import React from 'react';
-import { Award, Building, Users, Phone } from 'lucide-react';
+import React, { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { BookOpen, Target, TrendingUp, Heart, CheckCircle, ChevronLeft, ChevronRight, Star, Phone } from 'lucide-react';
+
+const approachCards = [
+  {
+    icon: BookOpen,
+    title: 'Evidence-Based Care',
+    description: 'Treatment and rehabilitation based on current evidence and best practice.',
+  },
+  {
+    icon: Target,
+    title: 'Personalised Rehabilitation',
+    description: 'Every recovery plan is tailored to the individual and their goals.',
+  },
+  {
+    icon: TrendingUp,
+    title: 'Strength & Confidence',
+    description: 'We help people feel stronger, more capable, and confident in movement again.',
+  },
+  {
+    icon: Heart,
+    title: 'Long-Term Results',
+    description: 'Our focus is helping people stay active and independent for the long term.',
+  },
+];
+
+const trustPoints = [
+  'Personalised one-to-one care',
+  'Clear explanations and realistic plans',
+  'Strength-focused rehabilitation',
+  'Friendly and supportive environment',
+  'Evidence-based treatment',
+  'Focus on long-term recovery, not quick fixes',
+];
+
+const testimonials = [
+  {
+    text: "Chris has been absolutely fantastic. His approach is patient, thorough, and he really listens. I came in with a knee problem that had been troubling me for months, and after just a few sessions I'm back to running.",
+    author: 'Sarah M.',
+    rating: 5,
+  },
+  {
+    text: "The treatment I received was excellent. Chris explained everything clearly and gave me a realistic plan. I feel so much stronger now and more confident in my movement.",
+    author: 'David T.',
+    rating: 5,
+  },
+  {
+    text: "Brilliant clinic. Warm, professional and genuinely focused on helping you recover for the long term, not just a quick fix. Cannot recommend highly enough.",
+    author: 'Helen R.',
+    rating: 5,
+  },
+];
+
+function useInView(threshold = 0.15) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [inView, setInView] = useState(false);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setInView(true); },
+      { threshold }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [threshold]);
+  return { ref, inView };
+}
 
 const Team: React.FC = () => {
-  const experiences = [
-    {
-      icon: Building,
-      title: "Hospitals",
-      description: "Experience in both UK and Canadian healthcare systems"
-    },
-    {
-      icon: Users,
-      title: "Sports Teams",
-      description: "Including Para Snowsport GB and Reading FC Academy"
-    },
-    {
-      icon: Award,
-      title: "Specialised Care",
-      description: "Expert in rehabilitation and strength training"
-    }
-  ];
+  const [testimonialIndex, setTestimonialIndex] = useState(0);
+  const heroSection = useInView(0.1);
+  const approachSection = useInView(0.1);
+  const teamSection = useInView(0.1);
+  const trustSection = useInView(0.1);
+  const ctaSection = useInView(0.1);
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <section className="relative h-[60vh] bg-navy-800">
-        <div className="absolute inset-0">
-          <img 
-            src="/Headshot Square.png"
-            alt="Chris Tiley"
-            className="w-full h-full object-cover object-center opacity-40"
-            style={{ objectPosition: 'center 20%' }}
+    <div className="min-h-screen bg-white">
+
+      {/* SECTION 1 — HERO */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-sky-900">
+        <div className="absolute inset-0 opacity-10">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: 'radial-gradient(circle at 30% 50%, rgba(56,189,248,0.4) 0%, transparent 60%), radial-gradient(circle at 70% 20%, rgba(148,163,184,0.3) 0%, transparent 50%)',
+            }}
           />
         </div>
-        <div className="relative h-full flex items-center justify-center text-center">
-          <div className="max-w-4xl mx-auto px-4">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Meet Chris Tiley
+
+        <div
+          ref={heroSection.ref}
+          className={`relative container mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 transition-all duration-1000 ${heroSection.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+        >
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 bg-sky-500/20 text-sky-300 text-sm font-medium px-4 py-2 rounded-full mb-6 border border-sky-500/30">
+              Chris Tiley Physiotherapy · Harborne, Birmingham
+            </div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+              Helping You Move Better, Feel Stronger, and Stay Active
             </h1>
-            <p className="text-xl text-gray-200">
-              15+ Years of Experience in Physiotherapy and Rehabilitation
+            <p className="text-lg md:text-xl text-slate-300 leading-relaxed mb-10 max-w-2xl mx-auto">
+              At Chris Tiley Physiotherapy, we combine evidence-based physiotherapy with a personalised, practical approach to recovery. Whether you're recovering from injury, managing pain, or looking to stay active and independent, our focus is helping you move confidently and return to the activities that matter most.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="https://chris-tiley-physiotherapy.uk1.cliniko.com/bookings#service"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-8 py-4 bg-sky-500 text-white font-bold rounded-xl hover:bg-sky-400 transition-all duration-200 shadow-lg hover:shadow-sky-500/30 hover:-translate-y-0.5"
+              >
+                Book an Appointment
+              </a>
+              <a
+                href="#meet-the-team"
+                className="inline-flex items-center justify-center px-8 py-4 bg-white/10 text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-200 border border-white/20 backdrop-blur-sm"
+              >
+                Meet the Team
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="absolute bottom-0 left-0 right-0 h-12 bg-white" style={{ clipPath: 'ellipse(55% 100% at 50% 100%)' }} />
+      </section>
+
+      {/* SECTION 2 — OUR APPROACH */}
+      <section className="py-20 bg-white">
+        <div
+          ref={approachSection.ref}
+          className={`container mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-1000 ${approachSection.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+        >
+          <div className="max-w-2xl mx-auto text-center mb-14">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Our Approach</h2>
+            <p className="text-lg text-slate-500 leading-relaxed">
+              We believe physiotherapy should focus on more than short-term pain relief. Our aim is to help people build confidence, strength, and long-term resilience.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {approachCards.map((card, i) => {
+              const Icon = card.icon;
+              return (
+                <div
+                  key={i}
+                  className="group bg-white border border-slate-100 rounded-2xl p-7 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+                  style={{ transitionDelay: `${i * 80}ms` }}
+                >
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-sky-50 rounded-xl mb-5 group-hover:bg-sky-100 transition-colors">
+                    <Icon size={22} className="text-sky-500" />
+                  </div>
+                  <h3 className="font-bold text-slate-800 text-lg mb-2">{card.title}</h3>
+                  <p className="text-slate-500 text-sm leading-relaxed">{card.description}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <div className="bg-white rounded-lg shadow-lg p-8 mb-12">
-              <h2 className="text-3xl font-bold text-navy-700 mb-6">About Me</h2>
-              <div className="prose prose-lg">
-                <p className="text-gray-700 mb-6">
-                  My name is Chris Tiley, and I'm a physiotherapist with over 15 years of experience. Throughout my career, I've had the privilege of working in various settings that have shaped my approach to physiotherapy and rehabilitation.
+      {/* SECTION 3 — MEET THE TEAM */}
+      <section id="meet-the-team" className="py-20 bg-slate-50">
+        <div
+          ref={teamSection.ref}
+          className={`container mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-1000 ${teamSection.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+        >
+          <div className="max-w-2xl mx-auto text-center mb-14">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Meet the Team</h2>
+            <p className="text-lg text-slate-500 leading-relaxed">
+              Experienced, qualified, and genuinely passionate about helping you recover and stay active.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* Chris */}
+            <div className="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-md transition-shadow duration-300">
+              <div className="bg-gradient-to-br from-sky-50 to-slate-100 px-8 pt-10 pb-0 flex justify-center">
+                <img
+                  src="/Headshot_2022.png"
+                  alt="Chris Tiley - Founder & Physiotherapist"
+                  className="w-48 h-48 object-cover object-top rounded-full border-4 border-white shadow-md"
+                />
+              </div>
+              <div className="p-8">
+                <h3 className="text-2xl font-bold text-slate-800 mb-1">Chris Tiley</h3>
+                <p className="text-sky-500 font-semibold text-sm uppercase tracking-wider mb-4">Founder & Physiotherapist</p>
+                <p className="text-slate-600 leading-relaxed mb-6 text-sm">
+                  Chris is a chartered physiotherapist with over 15 years of experience across the NHS, rehabilitation services, private practice, and elite sport, including work with Para Snowsport GB.
                 </p>
-                
-                <div className="grid md:grid-cols-3 gap-8 my-12">
-                  {experiences.map((exp, index) => {
-                    const Icon = exp.icon;
-                    return (
-                      <div key={index} className="text-center">
-                        <div className="inline-block p-4 bg-sky-100 rounded-full mb-4">
-                          <Icon size={32} className="text-sky-500" />
-                        </div>
-                        <h3 className="font-bold text-lg mb-2">{exp.title}</h3>
-                        <p className="text-gray-600">{exp.description}</p>
-                      </div>
-                    );
-                  })}
+                <p className="text-slate-600 leading-relaxed mb-6 text-sm">
+                  He has a particular interest in helping active adults and older people move confidently, build strength, and stay independent. Chris combines evidence-based physiotherapy with strength-focused rehabilitation to help people recover from injury, manage pain, and return to the activities that matter most.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {['Strength Rehabilitation', 'Active Ageing', 'Sports Injury', 'Persistent Pain'].map(tag => (
+                    <span key={tag} className="px-3 py-1 bg-sky-50 text-sky-700 text-xs font-medium rounded-full border border-sky-100">
+                      {tag}
+                    </span>
+                  ))}
                 </div>
-
-                <p className="text-gray-700 mb-6">
-                  Within these roles, but especially within Para Snowsport GB, I've used my experience to treat injuries as they happen. More importantly, I have routinely incorporated strength programs with the aim of reducing the risk of further injuries. I've also become confident in adapting these programs around various disabilities and injuries.
-                </p>
-
-                <p className="text-gray-700 mb-6">
-                  I'm passionate about introducing strength training to those who never thought that they would be able to do it. I love seeing the results that they achieve, seeing their confidence grow and seeing how much it brings back to their everyday lives.
-                </p>
               </div>
             </div>
 
-            <div className="text-center">
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="/contact" 
-                  className="inline-flex items-center px-8 py-4 bg-navy-700 text-white font-bold rounded-lg hover:bg-navy-800 transition-colors"
-                >
-                  Get In Touch
-                </a>
-                <a 
-                  href="tel:01215170806" 
-                  className="inline-flex items-center px-8 py-4 bg-sky-500 text-white font-bold rounded-lg hover:bg-sky-600 transition-colors"
-                >
-                  <Phone size={18} className="mr-2" />
-                  Call Chris: 0121 517 0806
-                </a>
+            {/* Kate */}
+            <div className="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-md transition-shadow duration-300">
+              <div className="bg-gradient-to-br from-sky-50 to-slate-100 px-8 pt-10 pb-0 flex justify-center">
+                <img
+                  src="/1000083369.jpg"
+                  alt="Kate - Physiotherapist"
+                  className="w-48 h-48 object-cover object-top rounded-full border-4 border-white shadow-md"
+                />
               </div>
+              <div className="p-8">
+                <h3 className="text-2xl font-bold text-slate-800 mb-1">Kate</h3>
+                <p className="text-sky-500 font-semibold text-sm uppercase tracking-wider mb-4">Physiotherapist</p>
+                <p className="text-slate-600 leading-relaxed mb-6 text-sm">
+                  Kate is a chartered physiotherapist and former semi-professional footballer with experience across the NHS, private sports injury clinics, and pitch-side care with Wolverhampton Wanderers.
+                </p>
+                <p className="text-slate-600 leading-relaxed mb-6 text-sm">
+                  She has a particular interest in female health, sports rehabilitation, and helping people return confidently to sport, exercise, and everyday life following injury. Drawing on her background in elite sport, Kate combines evidence-based treatment with a personalised approach to ensure each patient feels supported throughout their recovery.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {['Female Health', 'Sports Rehabilitation', 'Return to Sport', 'Injury Recovery'].map(tag => (
+                    <span key={tag} className="px-3 py-1 bg-sky-50 text-sky-700 text-xs font-medium rounded-full border border-sky-100">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 4 — WHY PATIENTS CHOOSE US */}
+      <section className="py-20 bg-white">
+        <div
+          ref={trustSection.ref}
+          className={`container mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-1000 ${trustSection.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+        >
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-14">
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
+                Why Patients Choose Chris Tiley Physiotherapy
+              </h2>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-12 items-start">
+              {/* Trust points */}
+              <div className="space-y-4">
+                {trustPoints.map((point, i) => (
+                  <div
+                    key={i}
+                    className="flex items-start gap-3 p-4 bg-slate-50 rounded-xl hover:bg-sky-50 transition-colors duration-200"
+                    style={{ transitionDelay: `${i * 60}ms` }}
+                  >
+                    <CheckCircle size={20} className="text-sky-500 mt-0.5 shrink-0" />
+                    <span className="text-slate-700 font-medium">{point}</span>
+                  </div>
+                ))}
+              </div>
+
+              {/* Testimonial carousel */}
+              <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100 relative">
+                <div className="flex gap-1 mb-4">
+                  {Array.from({ length: testimonials[testimonialIndex].rating }).map((_, i) => (
+                    <Star key={i} size={16} className="text-amber-400 fill-amber-400" />
+                  ))}
+                </div>
+                <blockquote className="text-slate-700 leading-relaxed italic mb-6 min-h-[96px]">
+                  "{testimonials[testimonialIndex].text}"
+                </blockquote>
+                <p className="font-semibold text-slate-800">{testimonials[testimonialIndex].author}</p>
+
+                <div className="flex gap-2 mt-6">
+                  <button
+                    onClick={() => setTestimonialIndex((testimonialIndex - 1 + testimonials.length) % testimonials.length)}
+                    className="p-2 rounded-lg bg-white border border-slate-200 hover:border-sky-300 hover:text-sky-500 transition-colors"
+                    aria-label="Previous testimonial"
+                  >
+                    <ChevronLeft size={18} />
+                  </button>
+                  <button
+                    onClick={() => setTestimonialIndex((testimonialIndex + 1) % testimonials.length)}
+                    className="p-2 rounded-lg bg-white border border-slate-200 hover:border-sky-300 hover:text-sky-500 transition-colors"
+                    aria-label="Next testimonial"
+                  >
+                    <ChevronRight size={18} />
+                  </button>
+                  <div className="flex items-center gap-1.5 ml-2">
+                    {testimonials.map((_, i) => (
+                      <button
+                        key={i}
+                        onClick={() => setTestimonialIndex(i)}
+                        className={`w-2 h-2 rounded-full transition-colors ${i === testimonialIndex ? 'bg-sky-500' : 'bg-slate-300'}`}
+                        aria-label={`Testimonial ${i + 1}`}
+                      />
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 5 — FINAL CTA */}
+      <section className="py-20 bg-gradient-to-br from-slate-800 to-sky-900 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: 'radial-gradient(circle at 70% 50%, rgba(56,189,248,0.5) 0%, transparent 60%)',
+            }}
+          />
+        </div>
+        <div
+          ref={ctaSection.ref}
+          className={`relative container mx-auto px-4 sm:px-6 lg:px-8 text-center transition-all duration-1000 ${ctaSection.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+        >
+          <div className="max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-5">
+              Ready to Get Back to Doing What You Love?
+            </h2>
+            <p className="text-lg text-slate-300 mb-10 leading-relaxed">
+              Whether you're recovering from injury, managing ongoing pain, or looking to stay active and independent, we're here to help.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="https://chris-tiley-physiotherapy.uk1.cliniko.com/bookings#service"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-8 py-4 bg-sky-500 text-white font-bold rounded-xl hover:bg-sky-400 transition-all duration-200 shadow-lg hover:shadow-sky-500/30 hover:-translate-y-0.5"
+              >
+                Book Your Appointment
+              </a>
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center px-8 py-4 bg-white/10 text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-200 border border-white/20 backdrop-blur-sm"
+              >
+                <Phone size={16} className="mr-2" />
+                Contact Us
+              </Link>
             </div>
           </div>
         </div>
