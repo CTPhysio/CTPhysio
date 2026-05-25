@@ -5,7 +5,6 @@ import Hero from './components/Hero';
 import WhoWeHelp from './components/WhoWeHelp';
 import HowWeHelp from './components/HowWeHelp';
 import GoogleReviewsSlider from './components/GoogleReviewsSlider';
-import DiscoveryCTA from './components/DiscoveryCTA';
 import FAQ from './components/FAQ';
 import FinalCTA from './components/FinalCTA';
 import Footer from './components/Footer';
@@ -53,7 +52,6 @@ function App() {
               <WhoWeHelp />
               <HowWeHelp />
               <GoogleReviewsSlider />
-              <DiscoveryCTA />
               <FAQ />
               <FinalCTA />
             </>

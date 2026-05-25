@@ -21,8 +21,8 @@ const Hero: React.FC = () => {
       {/* Content Overlay */}
       <div className="relative z-10 h-full flex flex-col justify-center py-8 sm:py-0">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-xl">
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 leading-[1.25]">
+          <div className="max-w-[660px]">
+            <h1 className="text-2xl sm:text-3xl lg:text-[2.375rem] font-semibold text-white mb-4 leading-[1.32] tracking-tight">
               Helping Active Adults Stay Strong, Confident, and Independent
             </h1>
 

@@ -14,7 +14,7 @@ interface Review {
 const GOOGLE_MAPS_URL =
   'https://www.google.com/maps/place/Chris+Tiley+Physiotherapy/@52.4603497,-1.9725524,17z/data=!4m18!1m9!3m8!1s0x4870bd415e6fc5e9:0x9cfb99fc1d9936ce!2sChris+Tiley+Physiotherapy!8m2!3d52.4603497!4d-1.9699775!9m1!1b1!16s%2Fg%2F11j5bx_tkw!3m7!1s0x4870bd415e6fc5e9:0x9cfb99fc1d9936ce!8m2!3d52.4603497!4d-1.9699775!9m1!1b1!16s%2Fg%2F11j5bx_tkw?entry=ttu&g_ep=EgoyMDI1MDcxMy4wIKXMDSoASAFQAw%3D%3D';
 
-function truncateReview(text: string, maxChars = 200): string {
+function truncateReview(text: string, maxChars = 160): string {
   if (text.length <= maxChars) return text;
   const trimmed = text.slice(0, maxChars);
   const lastSpace = trimmed.lastIndexOf(' ');
@@ -22,7 +22,7 @@ function truncateReview(text: string, maxChars = 200): string {
 }
 
 const ReviewCard: React.FC<{ review: Review; keyProp: string }> = ({ review, keyProp }) => (
-  <div key={keyProp} className="bg-white border border-gray-100 rounded-xl p-4 flex flex-col shadow-sm">
+  <div key={keyProp} className="bg-white border border-gray-100 rounded-xl p-5 flex flex-col shadow-sm">
     <div className="flex items-center mb-3 gap-3">
       <img
         src={review.profile_photo_url}
@@ -42,7 +42,7 @@ const ReviewCard: React.FC<{ review: Review; keyProp: string }> = ({ review, key
       </div>
       <span className="ml-auto text-xs text-gray-400 whitespace-nowrap">{review.relative_time_description}</span>
     </div>
-    <p className="text-gray-600 text-sm leading-relaxed">
+    <p className="text-gray-600 text-sm leading-[1.7]">
       {truncateReview(review.text)}
     </p>
   </div>
@@ -170,14 +170,14 @@ const GoogleReviewsSlider: React.FC = () => {
 
           <div className={`transition-opacity duration-300 ${isTransitioning ? 'opacity-70' : 'opacity-100'}`}>
             {/* Mobile: 1 card */}
-            <div className="md:hidden px-2">
+            <div className="md:hidden px-1">
               {visible.slice(0, 1).map((review) => (
                 <ReviewCard key={`m-${review.author_name}-${review.time}-${currentIndex}`} review={review} keyProp={`m-${review.time}`} />
               ))}
             </div>
 
             {/* Desktop: 3 cards */}
-            <div className="hidden md:grid md:grid-cols-3 gap-4">
+            <div className="hidden md:grid md:grid-cols-3 gap-5">
               {visible.map((review, i) => (
                 <ReviewCard key={`d-${review.author_name}-${review.time}-${currentIndex}-${i}`} review={review} keyProp={`d-${review.time}-${i}`} />
               ))}
