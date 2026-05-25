@@ -90,30 +90,30 @@ const Team: React.FC = () => {
 
         <div
           ref={heroSection.ref}
-          className={`relative container mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20 transition-all duration-1000 ${heroSection.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+          className={`relative container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 transition-all duration-1000 ${heroSection.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
         >
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-2xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 bg-sky-500/20 text-sky-300 text-sm font-medium px-4 py-2 rounded-full mb-5 border border-sky-500/30">
               Chris Tiley Physiotherapy · Harborne, Birmingham
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.15] md:leading-[1.1] mb-5">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-[1.15] mb-5">
               Helping You Move Better, Feel Stronger, and Stay Active
             </h1>
-            <p className="text-lg md:text-xl text-slate-300 leading-relaxed mb-8 max-w-2xl mx-auto">
-              At Chris Tiley Physiotherapy, we combine evidence-based physiotherapy with a personalised, practical approach to recovery. Whether you're recovering from injury, managing pain, or looking to stay active and independent, our focus is helping you move confidently and return to the activities that matter most.
+            <p className="text-base md:text-lg text-slate-300 leading-relaxed mb-7 max-w-xl mx-auto">
+              At Chris Tiley Physiotherapy, we combine evidence-based physiotherapy with a personalised, practical approach to recovery — helping you move confidently and return to the activities that matter most.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a
                 href="https://chris-tiley-physiotherapy.uk1.cliniko.com/bookings#service"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-4 bg-sky-500 text-white font-bold rounded-xl hover:bg-sky-400 transition-all duration-300 shadow-lg hover:shadow-sky-500/30 hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center px-7 py-3.5 bg-sky-500 text-white font-bold rounded-xl hover:bg-sky-400 transition-all duration-300 shadow-lg hover:shadow-sky-500/30 hover:-translate-y-0.5"
               >
                 Book an Appointment
               </a>
               <a
                 href="#meet-the-team"
-                className="inline-flex items-center justify-center px-8 py-4 bg-white/10 text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-300 border border-white/20 backdrop-blur-sm"
+                className="inline-flex items-center justify-center px-7 py-3.5 bg-white/10 text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-300 border border-white/20 backdrop-blur-sm"
               >
                 Meet the Team
               </a>
@@ -172,15 +172,22 @@ const Team: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto items-stretch">
+
             {/* Chris */}
-            <div className="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 flex flex-col">
+            <div className="bg-white rounded-2xl shadow-[0_2px_20px_rgba(15,23,42,0.07)] border border-slate-100 overflow-hidden hover:shadow-[0_4px_28px_rgba(15,23,42,0.11)] transition-all duration-300 hover:-translate-y-0.5 flex flex-col">
               <div className="bg-gradient-to-br from-sky-50 to-slate-100 px-8 pt-10 pb-0 flex justify-center">
-                <div className="w-56 h-56 rounded-full border-4 border-white shadow-md overflow-hidden">
+                {/* Clipping container — controls the visible circle */}
+                <div className="w-56 h-56 rounded-full border-4 border-white shadow-[0_4px_20px_rgba(15,23,42,0.14)] overflow-hidden">
                   <img
                     src="/Headshot_2022.png"
                     alt="Chris Tiley - Founder & Physiotherapist"
-                    className="w-full h-full object-cover"
-                    style={{ objectPosition: 'center 8%', transform: 'scale(1.14)', transformOrigin: 'center 25%' }}
+                    style={{
+                      width: '100%',
+                      height: '130%',
+                      objectFit: 'cover',
+                      objectPosition: 'center 5%',
+                      display: 'block',
+                    }}
                   />
                 </div>
               </div>
@@ -195,7 +202,10 @@ const Team: React.FC = () => {
                 </p>
                 <div className="flex flex-wrap gap-2 mt-auto">
                   {['Strength Rehabilitation', 'Active Ageing', 'Sports Injury', 'Persistent Pain'].map(tag => (
-                    <span key={tag} className="px-3 py-1 bg-sky-50 text-sky-700 text-xs font-medium rounded-full border border-sky-100">
+                    <span
+                      key={tag}
+                      className="px-3 py-1 bg-sky-50 text-sky-700 text-xs font-medium rounded-full border border-sky-100 hover:bg-sky-100 hover:border-sky-200 transition-colors duration-200 cursor-default"
+                    >
                       {tag}
                     </span>
                   ))}
@@ -204,13 +214,19 @@ const Team: React.FC = () => {
             </div>
 
             {/* Kate Evans */}
-            <div className="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 flex flex-col">
+            <div className="bg-white rounded-2xl shadow-[0_2px_20px_rgba(15,23,42,0.07)] border border-slate-100 overflow-hidden hover:shadow-[0_4px_28px_rgba(15,23,42,0.11)] transition-all duration-300 hover:-translate-y-0.5 flex flex-col">
               <div className="bg-gradient-to-br from-sky-50 to-slate-100 px-8 pt-10 pb-0 flex justify-center">
-                <div className="w-56 h-56 rounded-full border-4 border-white shadow-md overflow-hidden">
+                <div className="w-56 h-56 rounded-full border-4 border-white shadow-[0_4px_20px_rgba(15,23,42,0.14)] overflow-hidden">
                   <img
                     src="/1000083369.jpg"
                     alt="Kate Evans - Physiotherapist"
-                    className="w-full h-full object-cover object-top"
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      objectPosition: 'center top',
+                      display: 'block',
+                    }}
                   />
                 </div>
               </div>
@@ -225,19 +241,23 @@ const Team: React.FC = () => {
                 </p>
                 <div className="flex flex-wrap gap-2 mt-auto">
                   {['Female Health', 'Sports Rehabilitation', 'Return to Sport', 'Injury Recovery'].map(tag => (
-                    <span key={tag} className="px-3 py-1 bg-sky-50 text-sky-700 text-xs font-medium rounded-full border border-sky-100">
+                    <span
+                      key={tag}
+                      className="px-3 py-1 bg-sky-50 text-sky-700 text-xs font-medium rounded-full border border-sky-100 hover:bg-sky-100 hover:border-sky-200 transition-colors duration-200 cursor-default"
+                    >
                       {tag}
                     </span>
                   ))}
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </section>
 
       {/* SECTION 4 — WHY PATIENTS CHOOSE US */}
-      <section className="py-14 md:py-18 bg-white">
+      <section className="py-14 md:py-16 bg-white">
         <div
           ref={trustSection.ref}
           className={`container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl transition-all duration-1000 ${trustSection.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
@@ -265,18 +285,22 @@ const Team: React.FC = () => {
               </div>
 
               {/* Testimonial carousel */}
-              <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100 relative shadow-[0_2px_16px_rgba(15,23,42,0.07)]">
-                <div className="flex gap-1 mb-4">
+              <div className="bg-slate-50/80 rounded-2xl p-9 border border-slate-100 relative shadow-[0_2px_16px_rgba(15,23,42,0.06)]">
+                {/* Oversized decorative quote mark */}
+                <div className="absolute top-5 left-7 text-sky-200 select-none pointer-events-none" style={{ fontSize: '5rem', lineHeight: 1, fontFamily: 'Georgia, serif' }}>
+                  "
+                </div>
+                <div className="flex gap-1 mb-5 relative z-10">
                   {Array.from({ length: testimonials[testimonialIndex].rating }).map((_, i) => (
-                    <Star key={i} size={16} className="text-amber-400 fill-amber-400" />
+                    <Star key={i} size={15} className="text-amber-400 fill-amber-400" />
                   ))}
                 </div>
-                <blockquote className="text-slate-600 leading-relaxed italic mb-6 min-h-[96px] text-base">
-                  "{testimonials[testimonialIndex].text}"
+                <blockquote className="text-slate-600 leading-relaxed italic mb-6 text-base relative z-10 min-h-[100px]">
+                  {testimonials[testimonialIndex].text}
                 </blockquote>
-                <p className="font-semibold text-slate-800">{testimonials[testimonialIndex].author}</p>
+                <p className="font-semibold text-slate-800 relative z-10">{testimonials[testimonialIndex].author}</p>
 
-                <div className="flex gap-2 mt-6">
+                <div className="flex gap-2 mt-6 relative z-10">
                   <button
                     onClick={() => setTestimonialIndex((testimonialIndex - 1 + testimonials.length) % testimonials.length)}
                     className="p-2 rounded-lg bg-white border border-slate-200 hover:border-sky-300 hover:text-sky-500 transition-all duration-300"
@@ -309,7 +333,7 @@ const Team: React.FC = () => {
       </section>
 
       {/* SECTION 5 — FINAL CTA */}
-      <section className="py-16 md:py-20 bg-gradient-to-br from-slate-800 to-sky-900 relative overflow-hidden">
+      <section className="py-14 md:py-16 bg-gradient-to-br from-slate-800 to-sky-900 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div
             className="absolute inset-0"
@@ -326,7 +350,7 @@ const Team: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Back to Doing What You Love?
             </h2>
-            <p className="text-lg text-slate-300 mb-8 leading-relaxed">
+            <p className="text-base md:text-lg text-slate-300 mb-7 leading-relaxed">
               Whether you're recovering from injury, managing ongoing pain, or looking to stay active and independent, we're here to help.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
@@ -334,13 +358,13 @@ const Team: React.FC = () => {
                 href="https://chris-tiley-physiotherapy.uk1.cliniko.com/bookings#service"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-sky-500 text-white font-bold rounded-xl hover:bg-sky-400 transition-all duration-300 shadow-lg hover:shadow-sky-500/30 hover:-translate-y-0.5"
+                className="w-full sm:w-auto inline-flex items-center justify-center px-7 py-3.5 bg-sky-500 text-white font-bold rounded-xl hover:bg-sky-400 transition-all duration-300 shadow-lg hover:shadow-sky-500/30 hover:-translate-y-0.5"
               >
                 Book Your Appointment
               </a>
               <Link
                 to="/contact"
-                className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-white/10 text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-300 border border-white/20 backdrop-blur-sm"
+                className="w-full sm:w-auto inline-flex items-center justify-center px-7 py-3.5 bg-white/10 text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-300 border border-white/20 backdrop-blur-sm"
               >
                 <Phone size={16} className="mr-2" />
                 Contact Us
@@ -349,6 +373,7 @@ const Team: React.FC = () => {
           </div>
         </div>
       </section>
+
     </div>
   );
 };
