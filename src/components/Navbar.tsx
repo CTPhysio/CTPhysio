@@ -22,7 +22,7 @@ const Navbar: React.FC = () => {
   return (
     <header
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
+        isScrolled ? 'bg-white shadow-[0_1px_12px_rgba(15,23,42,0.08)]' : 'bg-transparent'
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -44,17 +44,17 @@ const Navbar: React.FC = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <Link to="/" className="text-navy-700 hover:text-sky-500 px-3 py-2 font-medium">
+            <Link to="/" className="text-navy-700 hover:text-sky-500 px-3 py-2 font-medium transition-colors duration-200">
               Home
             </Link>
-            <Link to="/services" className="text-navy-700 hover:text-sky-500 px-3 py-2 font-medium">
+            <Link to="/services" className="text-navy-700 hover:text-sky-500 px-3 py-2 font-medium transition-colors duration-200">
               Services
             </Link>
 
-            <Link to="/about" className="text-navy-700 hover:text-sky-500 px-3 py-2 font-medium">
+            <Link to="/about" className="text-navy-700 hover:text-sky-500 px-3 py-2 font-medium transition-colors duration-200">
               About
             </Link>
-            <Link to="/contact" className="text-navy-700 hover:text-sky-500 px-3 py-2 font-medium">
+            <Link to="/contact" className="text-navy-700 hover:text-sky-500 px-3 py-2 font-medium transition-colors duration-200">
               Contact
             </Link>
             <button className="text-navy-700 hover:text-sky-500 px-3 py-2">

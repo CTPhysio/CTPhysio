@@ -90,30 +90,30 @@ const Team: React.FC = () => {
 
         <div
           ref={heroSection.ref}
-          className={`relative container mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 transition-all duration-1000 ${heroSection.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+          className={`relative container mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20 transition-all duration-1000 ${heroSection.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
         >
           <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 bg-sky-500/20 text-sky-300 text-sm font-medium px-4 py-2 rounded-full mb-6 border border-sky-500/30">
+            <div className="inline-flex items-center gap-2 bg-sky-500/20 text-sky-300 text-sm font-medium px-4 py-2 rounded-full mb-5 border border-sky-500/30">
               Chris Tiley Physiotherapy · Harborne, Birmingham
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.15] md:leading-[1.1] mb-5">
               Helping You Move Better, Feel Stronger, and Stay Active
             </h1>
-            <p className="text-lg md:text-xl text-slate-300 leading-relaxed mb-10 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-slate-300 leading-relaxed mb-8 max-w-2xl mx-auto">
               At Chris Tiley Physiotherapy, we combine evidence-based physiotherapy with a personalised, practical approach to recovery. Whether you're recovering from injury, managing pain, or looking to stay active and independent, our focus is helping you move confidently and return to the activities that matter most.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a
                 href="https://chris-tiley-physiotherapy.uk1.cliniko.com/bookings#service"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-4 bg-sky-500 text-white font-bold rounded-xl hover:bg-sky-400 transition-all duration-200 shadow-lg hover:shadow-sky-500/30 hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center px-8 py-4 bg-sky-500 text-white font-bold rounded-xl hover:bg-sky-400 transition-all duration-300 shadow-lg hover:shadow-sky-500/30 hover:-translate-y-0.5"
               >
                 Book an Appointment
               </a>
               <a
                 href="#meet-the-team"
-                className="inline-flex items-center justify-center px-8 py-4 bg-white/10 text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-200 border border-white/20 backdrop-blur-sm"
+                className="inline-flex items-center justify-center px-8 py-4 bg-white/10 text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-300 border border-white/20 backdrop-blur-sm"
               >
                 Meet the Team
               </a>
@@ -125,19 +125,19 @@ const Team: React.FC = () => {
       </section>
 
       {/* SECTION 2 — OUR APPROACH */}
-      <section className="py-20 bg-white">
+      <section className="py-16 md:py-20 bg-white">
         <div
           ref={approachSection.ref}
-          className={`container mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-1000 ${approachSection.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+          className={`container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl transition-all duration-1000 ${approachSection.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
         >
-          <div className="max-w-2xl mx-auto text-center mb-14">
+          <div className="max-w-2xl mx-auto text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Our Approach</h2>
             <p className="text-lg text-slate-500 leading-relaxed">
               We believe physiotherapy should focus on more than short-term pain relief. Our aim is to help people build confidence, strength, and long-term resilience.
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
             {approachCards.map((card, i) => {
               const Icon = card.icon;
               return (
@@ -146,7 +146,7 @@ const Team: React.FC = () => {
                   className="group bg-white border border-slate-100 rounded-2xl p-7 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300"
                   style={{ transitionDelay: `${i * 80}ms` }}
                 >
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-sky-50 rounded-xl mb-5 group-hover:bg-sky-100 transition-colors">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-sky-50 rounded-xl mb-5 group-hover:bg-sky-100 transition-colors duration-300">
                     <Icon size={22} className="text-sky-500" />
                   </div>
                   <h3 className="font-bold text-slate-800 text-lg mb-2">{card.title}</h3>
@@ -159,38 +159,41 @@ const Team: React.FC = () => {
       </section>
 
       {/* SECTION 3 — MEET THE TEAM */}
-      <section id="meet-the-team" className="py-20 bg-slate-50">
+      <section id="meet-the-team" className="py-16 md:py-20 bg-slate-50">
         <div
           ref={teamSection.ref}
-          className={`container mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-1000 ${teamSection.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+          className={`container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl transition-all duration-1000 ${teamSection.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
         >
-          <div className="max-w-2xl mx-auto text-center mb-14">
+          <div className="max-w-2xl mx-auto text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Meet the Team</h2>
             <p className="text-lg text-slate-500 leading-relaxed">
               Experienced, qualified, and genuinely passionate about helping you recover and stay active.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto items-stretch">
             {/* Chris */}
-            <div className="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-md transition-shadow duration-300">
+            <div className="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 flex flex-col">
               <div className="bg-gradient-to-br from-sky-50 to-slate-100 px-8 pt-10 pb-0 flex justify-center">
-                <img
-                  src="/Headshot_2022.png"
-                  alt="Chris Tiley - Founder & Physiotherapist"
-                  className="w-48 h-48 object-cover object-top rounded-full border-4 border-white shadow-md"
-                />
+                <div className="w-56 h-56 rounded-full border-4 border-white shadow-md overflow-hidden">
+                  <img
+                    src="/Headshot_2022.png"
+                    alt="Chris Tiley - Founder & Physiotherapist"
+                    className="w-full h-full object-cover"
+                    style={{ objectPosition: 'center 8%', transform: 'scale(1.14)', transformOrigin: 'center 25%' }}
+                  />
+                </div>
               </div>
-              <div className="p-8">
+              <div className="p-8 flex flex-col flex-1">
                 <h3 className="text-2xl font-bold text-slate-800 mb-1">Chris Tiley</h3>
                 <p className="text-sky-500 font-semibold text-sm uppercase tracking-wider mb-4">Founder & Physiotherapist</p>
-                <p className="text-slate-600 leading-relaxed mb-6 text-sm">
+                <p className="text-slate-600 leading-relaxed mb-4 text-sm">
                   Chris is a chartered physiotherapist with over 15 years of experience across the NHS, rehabilitation services, private practice, and elite sport, including work with Para Snowsport GB.
                 </p>
-                <p className="text-slate-600 leading-relaxed mb-6 text-sm">
+                <p className="text-slate-600 leading-relaxed mb-6 text-sm flex-1">
                   He has a particular interest in helping active adults and older people move confidently, build strength, and stay independent. Chris combines evidence-based physiotherapy with strength-focused rehabilitation to help people recover from injury, manage pain, and return to the activities that matter most.
                 </p>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mt-auto">
                   {['Strength Rehabilitation', 'Active Ageing', 'Sports Injury', 'Persistent Pain'].map(tag => (
                     <span key={tag} className="px-3 py-1 bg-sky-50 text-sky-700 text-xs font-medium rounded-full border border-sky-100">
                       {tag}
@@ -200,25 +203,27 @@ const Team: React.FC = () => {
               </div>
             </div>
 
-            {/* Kate */}
-            <div className="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-md transition-shadow duration-300">
+            {/* Kate Evans */}
+            <div className="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 flex flex-col">
               <div className="bg-gradient-to-br from-sky-50 to-slate-100 px-8 pt-10 pb-0 flex justify-center">
-                <img
-                  src="/1000083369.jpg"
-                  alt="Kate - Physiotherapist"
-                  className="w-48 h-48 object-cover object-top rounded-full border-4 border-white shadow-md"
-                />
+                <div className="w-56 h-56 rounded-full border-4 border-white shadow-md overflow-hidden">
+                  <img
+                    src="/1000083369.jpg"
+                    alt="Kate Evans - Physiotherapist"
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
               </div>
-              <div className="p-8">
-                <h3 className="text-2xl font-bold text-slate-800 mb-1">Kate</h3>
+              <div className="p-8 flex flex-col flex-1">
+                <h3 className="text-2xl font-bold text-slate-800 mb-1">Kate Evans</h3>
                 <p className="text-sky-500 font-semibold text-sm uppercase tracking-wider mb-4">Physiotherapist</p>
-                <p className="text-slate-600 leading-relaxed mb-6 text-sm">
+                <p className="text-slate-600 leading-relaxed mb-4 text-sm">
                   Kate is a chartered physiotherapist and former semi-professional footballer with experience across the NHS, private sports injury clinics, and pitch-side care with Wolverhampton Wanderers.
                 </p>
-                <p className="text-slate-600 leading-relaxed mb-6 text-sm">
+                <p className="text-slate-600 leading-relaxed mb-6 text-sm flex-1">
                   She has a particular interest in female health, sports rehabilitation, and helping people return confidently to sport, exercise, and everyday life following injury. Drawing on her background in elite sport, Kate combines evidence-based treatment with a personalised approach to ensure each patient feels supported throughout their recovery.
                 </p>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mt-auto">
                   {['Female Health', 'Sports Rehabilitation', 'Return to Sport', 'Injury Recovery'].map(tag => (
                     <span key={tag} className="px-3 py-1 bg-sky-50 text-sky-700 text-xs font-medium rounded-full border border-sky-100">
                       {tag}
@@ -232,25 +237,25 @@ const Team: React.FC = () => {
       </section>
 
       {/* SECTION 4 — WHY PATIENTS CHOOSE US */}
-      <section className="py-20 bg-white">
+      <section className="py-14 md:py-18 bg-white">
         <div
           ref={trustSection.ref}
-          className={`container mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-1000 ${trustSection.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+          className={`container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl transition-all duration-1000 ${trustSection.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
         >
           <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-14">
+            <div className="text-center mb-10">
               <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
                 Why Patients Choose Chris Tiley Physiotherapy
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-12 items-start">
+            <div className="grid md:grid-cols-2 gap-10 md:gap-12 items-start">
               {/* Trust points */}
-              <div className="space-y-4">
+              <div className="space-y-3">
                 {trustPoints.map((point, i) => (
                   <div
                     key={i}
-                    className="flex items-start gap-3 p-4 bg-slate-50 rounded-xl hover:bg-sky-50 transition-colors duration-200"
+                    className="flex items-start gap-3 p-4 bg-slate-50 rounded-xl hover:bg-sky-50 transition-colors duration-300"
                     style={{ transitionDelay: `${i * 60}ms` }}
                   >
                     <CheckCircle size={20} className="text-sky-500 mt-0.5 shrink-0" />
@@ -260,13 +265,13 @@ const Team: React.FC = () => {
               </div>
 
               {/* Testimonial carousel */}
-              <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100 relative">
+              <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100 relative shadow-[0_2px_16px_rgba(15,23,42,0.07)]">
                 <div className="flex gap-1 mb-4">
                   {Array.from({ length: testimonials[testimonialIndex].rating }).map((_, i) => (
                     <Star key={i} size={16} className="text-amber-400 fill-amber-400" />
                   ))}
                 </div>
-                <blockquote className="text-slate-700 leading-relaxed italic mb-6 min-h-[96px]">
+                <blockquote className="text-slate-600 leading-relaxed italic mb-6 min-h-[96px] text-base">
                   "{testimonials[testimonialIndex].text}"
                 </blockquote>
                 <p className="font-semibold text-slate-800">{testimonials[testimonialIndex].author}</p>
@@ -274,14 +279,14 @@ const Team: React.FC = () => {
                 <div className="flex gap-2 mt-6">
                   <button
                     onClick={() => setTestimonialIndex((testimonialIndex - 1 + testimonials.length) % testimonials.length)}
-                    className="p-2 rounded-lg bg-white border border-slate-200 hover:border-sky-300 hover:text-sky-500 transition-colors"
+                    className="p-2 rounded-lg bg-white border border-slate-200 hover:border-sky-300 hover:text-sky-500 transition-all duration-300"
                     aria-label="Previous testimonial"
                   >
                     <ChevronLeft size={18} />
                   </button>
                   <button
                     onClick={() => setTestimonialIndex((testimonialIndex + 1) % testimonials.length)}
-                    className="p-2 rounded-lg bg-white border border-slate-200 hover:border-sky-300 hover:text-sky-500 transition-colors"
+                    className="p-2 rounded-lg bg-white border border-slate-200 hover:border-sky-300 hover:text-sky-500 transition-all duration-300"
                     aria-label="Next testimonial"
                   >
                     <ChevronRight size={18} />
@@ -291,7 +296,7 @@ const Team: React.FC = () => {
                       <button
                         key={i}
                         onClick={() => setTestimonialIndex(i)}
-                        className={`w-2 h-2 rounded-full transition-colors ${i === testimonialIndex ? 'bg-sky-500' : 'bg-slate-300'}`}
+                        className={`w-2 h-2 rounded-full transition-all duration-300 ${i === testimonialIndex ? 'bg-sky-500' : 'bg-slate-300'}`}
                         aria-label={`Testimonial ${i + 1}`}
                       />
                     ))}
@@ -304,7 +309,7 @@ const Team: React.FC = () => {
       </section>
 
       {/* SECTION 5 — FINAL CTA */}
-      <section className="py-20 bg-gradient-to-br from-slate-800 to-sky-900 relative overflow-hidden">
+      <section className="py-16 md:py-20 bg-gradient-to-br from-slate-800 to-sky-900 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div
             className="absolute inset-0"
@@ -315,27 +320,27 @@ const Team: React.FC = () => {
         </div>
         <div
           ref={ctaSection.ref}
-          className={`relative container mx-auto px-4 sm:px-6 lg:px-8 text-center transition-all duration-1000 ${ctaSection.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+          className={`relative container mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-6xl transition-all duration-1000 ${ctaSection.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
         >
           <div className="max-w-2xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-5">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Back to Doing What You Love?
             </h2>
-            <p className="text-lg text-slate-300 mb-10 leading-relaxed">
+            <p className="text-lg text-slate-300 mb-8 leading-relaxed">
               Whether you're recovering from injury, managing ongoing pain, or looking to stay active and independent, we're here to help.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
               <a
                 href="https://chris-tiley-physiotherapy.uk1.cliniko.com/bookings#service"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-4 bg-sky-500 text-white font-bold rounded-xl hover:bg-sky-400 transition-all duration-200 shadow-lg hover:shadow-sky-500/30 hover:-translate-y-0.5"
+                className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-sky-500 text-white font-bold rounded-xl hover:bg-sky-400 transition-all duration-300 shadow-lg hover:shadow-sky-500/30 hover:-translate-y-0.5"
               >
                 Book Your Appointment
               </a>
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 bg-white/10 text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-200 border border-white/20 backdrop-blur-sm"
+                className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-white/10 text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-300 border border-white/20 backdrop-blur-sm"
               >
                 <Phone size={16} className="mr-2" />
                 Contact Us
