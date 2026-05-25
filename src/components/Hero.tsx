@@ -59,13 +59,13 @@ const Hero: React.FC = () => {
             {/* Secondary booking link */}
             <a
               href="https://appointments.chris-tiley-physiotherapy.co.uk"
-              className="inline-flex items-center gap-1 mt-3 text-white/90 hover:text-white text-xs sm:text-sm font-medium transition-colors duration-200"
+              className="inline-flex items-center gap-1 mt-3 mb-6 text-white/90 hover:text-white text-xs sm:text-sm font-medium transition-colors duration-200"
             >
               Or book your initial assessment online →
             </a>
 
             {/* Desktop trust signals */}
-            <div className="hidden sm:flex flex-col gap-1.5 mt-6 text-white/75 text-sm">
+            <div className="hidden sm:flex flex-col gap-1.5 text-white/60 text-xs">
               <span>HCPC Registered Physiotherapist</span>
               <span>15+ Years of Clinical Experience</span>
               <span>100+ Verified 5-Star Google Reviews</span>
