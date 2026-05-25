@@ -1,42 +1,24 @@
 import React from 'react';
-import { MapPin, Clock, Award } from 'lucide-react';
 
 const FinalCTA: React.FC = () => {
   return (
-    <div className="bg-navy-800">
-      <section className="py-10 md:py-16 bg-navy-700 text-white rounded-b-[60px]">
-        <div className="container mx-auto text-center px-4">
-          <h2 className="text-2xl md:text-4xl font-bold mb-3 leading-tight">
-            Ready to Feel Stronger and Move Freely Again?
-          </h2>
-          <p className="text-base md:text-xl mb-6 text-gray-200 leading-relaxed">
-            Whether you're dealing with persistent pain, recovering from surgery, or simply want to stay active as you get older, we'd love to help.
-          </p>
+    <section className="py-12 md:py-16 bg-navy-800 text-white">
+      <div className="container mx-auto text-center px-4">
+        <h2 className="text-2xl md:text-3xl font-bold mb-3 leading-tight">
+          Ready To Feel Stronger And Move More Confidently?
+        </h2>
+        <p className="text-base md:text-lg mb-8 text-gray-300 max-w-lg mx-auto leading-relaxed">
+          Book a free discovery visit and let's talk about the best next step for you.
+        </p>
 
-          <a
-            href="/contact"
-            className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 bg-sky-500 text-white font-bold rounded-lg hover:bg-sky-600 transition-colors mb-8"
-          >
-            Book Your Free Discovery Visit
-          </a>
-
-          <div className="grid grid-cols-3 gap-4 max-w-3xl mx-auto text-center">
-            <div className="flex flex-col items-center">
-              <MapPin size={20} className="text-sky-400 mb-1.5 md:mb-2" />
-              <span className="text-xs sm:text-base">Harborne, Birmingham</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <Award size={20} className="text-sky-400 mb-1.5 md:mb-2" />
-              <span className="text-xs sm:text-base">15+ Years Experience</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <Clock size={20} className="text-sky-400 mb-1.5 md:mb-2" />
-              <span className="text-xs sm:text-base">100+ Five-Star Reviews</span>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+        <a
+          href="/contact"
+          className="inline-flex items-center justify-center px-8 py-4 bg-sky-500 text-white font-bold rounded-lg hover:bg-sky-600 transition-colors"
+        >
+          Book Your Free Discovery Visit
+        </a>
+      </div>
+    </section>
   );
 };
 

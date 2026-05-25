@@ -128,30 +128,30 @@ const GoogleReviewsSlider: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="py-12 md:py-16 bg-white">
+      <div className="py-12 md:py-16 bg-gray-50">
         <div className="container mx-auto text-center">
           <div className="flex items-center justify-center space-x-2">
-            <div className="w-4 h-4 bg-sky-500 rounded-full animate-bounce [animation-delay:-0.3s]"></div>
-            <div className="w-4 h-4 bg-sky-500 rounded-full animate-bounce [animation-delay:-0.15s]"></div>
-            <div className="w-4 h-4 bg-sky-500 rounded-full animate-bounce"></div>
+            <div className="w-3 h-3 bg-sky-400 rounded-full animate-bounce [animation-delay:-0.3s]"></div>
+            <div className="w-3 h-3 bg-sky-400 rounded-full animate-bounce [animation-delay:-0.15s]"></div>
+            <div className="w-3 h-3 bg-sky-400 rounded-full animate-bounce"></div>
           </div>
-          <p className="mt-4 text-gray-600">Loading reviews...</p>
+          <p className="mt-4 text-gray-500 text-sm">Loading reviews...</p>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="bg-navy-700">
-      <section className="py-12 md:py-16 bg-navy-800 text-white rounded-b-[60px]">
+    <div className="bg-gray-50">
+      <section className="py-12 md:py-16 bg-gray-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-navy-700 mb-4">
             Hear From Our Patients
           </h2>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
             <div className="flex items-center">
-              <span className="text-2xl font-bold mr-2">Google</span>
+              <span className="text-lg font-bold mr-2 text-gray-700">Google</span>
               <a 
                 href="https://www.google.com/maps/place/Chris+Tiley+Physiotherapy/@52.4603497,-1.9725524,17z/data=!4m18!1m9!3m8!1s0x4870bd415e6fc5e9:0x9cfb99fc1d9936ce!2sChris+Tiley+Physiotherapy!8m2!3d52.4603497!4d-1.9699775!9m1!1b1!16s%2Fg%2F11j5bx_tkw!3m7!1s0x4870bd415e6fc5e9:0x9cfb99fc1d9936ce!8m2!3d52.4603497!4d-1.9699775!9m1!1b1!16s%2Fg%2F11j5bx_tkw?entry=ttu&g_ep=EgoyMDI1MDcxMy4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
@@ -169,39 +169,39 @@ const GoogleReviewsSlider: React.FC = () => {
             </div>
             <div className="flex">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} size={24} className="fill-yellow-500 text-yellow-500" />
+                <Star key={i} size={18} className="fill-yellow-400 text-yellow-400" />
               ))}
             </div>
-            <span className="text-lg">5.0</span>
-            <span className="text-sm text-gray-300">(109 reviews)</span>
+            <span className="text-base font-semibold text-gray-700">5.0</span>
+            <span className="text-sm text-gray-500">(109 reviews)</span>
           </div>
         </div>
 
-        <div className="relative max-w-7xl mx-auto">
+        <div className="relative max-w-5xl mx-auto">
           {reviews.length > 1 && (
             <>
-              <button 
+              <button
                 onClick={prevReview}
-                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors z-10 disabled:opacity-50"
+                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-10 bg-gray-100 p-2 rounded-full hover:bg-gray-200 transition-colors z-10 disabled:opacity-40"
                 aria-label="Previous reviews"
                 disabled={isTransitioning}
               >
-                <ChevronLeft size={20} className="md:w-6 md:h-6" />
+                <ChevronLeft size={18} className="text-navy-700" />
               </button>
 
-              <button 
+              <button
                 onClick={nextReview}
-                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors z-10 disabled:opacity-50"
+                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-10 bg-gray-100 p-2 rounded-full hover:bg-gray-200 transition-colors z-10 disabled:opacity-40"
                 aria-label="Next reviews"
                 disabled={isTransitioning}
               >
-                <ChevronRight size={20} className="md:w-6 md:h-6" />
+                <ChevronRight size={18} className="text-navy-700" />
               </button>
             </>
           )}
 
           <div className="overflow-hidden">
-            <div 
+            <div
               className={`transition-all duration-300 ${
                 isTransitioning ? 'opacity-90' : 'opacity-100'
               }`}
@@ -209,26 +209,26 @@ const GoogleReviewsSlider: React.FC = () => {
               {/* Mobile Layout - Single Review */}
               <div className="md:hidden">
                 {visibleReviews.slice(0, 1).map((review, index) => (
-                  <div key={`mobile-${review.author_name}-${review.time}-${currentIndex}`} className="bg-white/5 p-6 rounded-lg min-h-[280px] flex flex-col mx-auto max-w-sm">
-                    <div className="flex items-center mb-4">
-                      <img 
-                        src={review.profile_photo_url} 
+                  <div key={`mobile-${review.author_name}-${review.time}-${currentIndex}`} className="bg-white border border-gray-100 shadow-sm p-5 rounded-xl flex flex-col mx-auto max-w-sm">
+                    <div className="flex items-center mb-3">
+                      <img
+                        src={review.profile_photo_url}
                         alt={review.author_name}
-                        className="w-12 h-12 rounded-full mr-4 object-cover"
+                        className="w-10 h-10 rounded-full mr-3 object-cover"
                         onError={(e) => {
-                          e.currentTarget.src = 'https://via.placeholder.com/48x48/4285F4/ffffff?text=' + review.author_name.charAt(0);
+                          e.currentTarget.src = 'https://via.placeholder.com/40x40/4285F4/ffffff?text=' + review.author_name.charAt(0);
                         }}
                       />
                       <div>
-                        <h4 className="font-semibold text-white">{review.author_name}</h4>
+                        <h4 className="font-semibold text-navy-700 text-sm">{review.author_name}</h4>
                         <div className="flex">
                           {[...Array(review.rating)].map((_, i) => (
-                            <Star key={i} size={16} className="fill-yellow-500 text-yellow-500" />
+                            <Star key={i} size={14} className="fill-yellow-400 text-yellow-400" />
                           ))}
                         </div>
                       </div>
                     </div>
-                    <p className="text-gray-200 mb-4 flex-grow text-sm leading-relaxed">
+                    <p className="text-gray-600 mb-3 flex-grow text-sm leading-relaxed">
                       {review.text}
                     </p>
                     <span className="text-xs text-gray-400 mt-auto">
@@ -239,31 +239,31 @@ const GoogleReviewsSlider: React.FC = () => {
               </div>
 
               {/* Desktop Layout - Three Reviews */}
-              <div className="hidden md:grid md:grid-cols-3 gap-8">
+              <div className="hidden md:grid md:grid-cols-3 gap-5">
                 {visibleReviews.map((review, index) => (
-                  <div key={`desktop-${review.author_name}-${review.time}-${currentIndex}-${index}`} className="bg-white/5 p-6 rounded-lg min-h-[280px] flex flex-col">
-                    <div className="flex items-center mb-4">
-                      <img 
-                        src={review.profile_photo_url} 
+                  <div key={`desktop-${review.author_name}-${review.time}-${currentIndex}-${index}`} className="bg-white border border-gray-100 shadow-sm p-5 rounded-xl flex flex-col">
+                    <div className="flex items-center mb-3">
+                      <img
+                        src={review.profile_photo_url}
                         alt={review.author_name}
-                        className="w-12 h-12 rounded-full mr-4 object-cover"
+                        className="w-10 h-10 rounded-full mr-3 object-cover"
                         onError={(e) => {
-                          e.currentTarget.src = 'https://via.placeholder.com/48x48/4285F4/ffffff?text=' + review.author_name.charAt(0);
+                          e.currentTarget.src = 'https://via.placeholder.com/40x40/4285F4/ffffff?text=' + review.author_name.charAt(0);
                         }}
                       />
                       <div>
-                        <h4 className="font-semibold text-white">{review.author_name}</h4>
+                        <h4 className="font-semibold text-navy-700 text-sm">{review.author_name}</h4>
                         <div className="flex">
                           {[...Array(review.rating)].map((_, i) => (
-                            <Star key={i} size={16} className="fill-yellow-500 text-yellow-500" />
+                            <Star key={i} size={14} className="fill-yellow-400 text-yellow-400" />
                           ))}
                         </div>
                       </div>
                     </div>
-                    <p className="text-gray-200 mb-4 flex-grow text-base leading-relaxed">
+                    <p className="text-gray-600 mb-3 flex-grow text-sm leading-relaxed">
                       {review.text}
                     </p>
-                    <span className="text-sm text-gray-400 mt-auto">
+                    <span className="text-xs text-gray-400 mt-auto">
                       {review.relative_time_description}
                     </span>
                   </div>
@@ -275,13 +275,13 @@ const GoogleReviewsSlider: React.FC = () => {
 
         {/* Progress Indicators */}
         {reviews.length > 1 && (
-          <div className="flex justify-center mt-8 gap-2">
+          <div className="flex justify-center mt-6 gap-1.5">
             {reviews.map((_, index) => (
               <button
                 key={index}
                 onClick={() => !isTransitioning && setCurrentIndex(index)}
-                className={`w-3 h-3 rounded-full transition-colors disabled:cursor-not-allowed ${
-                  index === currentIndex ? 'bg-sky-500' : 'bg-white/30'
+                className={`w-2 h-2 rounded-full transition-colors disabled:cursor-not-allowed ${
+                  index === currentIndex ? 'bg-sky-500' : 'bg-gray-300'
                 }`}
                 aria-label={`Go to review ${index + 1}`}
                 disabled={isTransitioning}
@@ -290,12 +290,12 @@ const GoogleReviewsSlider: React.FC = () => {
           </div>
         )}
 
-        <div className="text-center mt-8">
+        <div className="text-center mt-6">
           <a
             href="https://www.google.com/maps/place/Chris+Tiley+Physiotherapy/@52.4603497,-1.9725524,17z/data=!4m18!1m9!3m8!1s0x4870bd415e6fc5e9:0x9cfb99fc1d9936ce!2sChris+Tiley+Physiotherapy!8m2!3d52.4603497!4d-1.9699775!9m1!1b1!16s%2Fg%2F11j5bx_tkw!3m7!1s0x4870bd415e6fc5e9:0x9cfb99fc1d9936ce!8m2!3d52.4603497!4d-1.9699775!9m1!1b1!16s%2Fg%2F11j5bx_tkw?entry=ttu&g_ep=EgoyMDI1MDcxMy4wIKXMDSoASAFQAw%3D%3D"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-6 py-3 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-colors"
+            className="inline-flex items-center px-5 py-2.5 border border-gray-200 text-gray-600 text-sm font-medium rounded-lg hover:bg-gray-50 transition-colors"
           >
             View All Reviews on Google
           </a>

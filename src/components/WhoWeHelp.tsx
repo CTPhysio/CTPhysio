@@ -36,7 +36,7 @@ const whoGroups = [
 
 const WhoWeHelp: React.FC = () => {
   return (
-    <section className="py-12 md:py-16 bg-gray-100 rounded-b-[60px]">
+    <section className="py-12 md:py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-8 md:mb-12">

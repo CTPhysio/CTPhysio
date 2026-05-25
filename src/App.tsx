@@ -2,21 +2,17 @@ import React, { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import About from './components/About';
-import VideoSection from './components/VideoSection';
-import PainPoints from './components/PainPoints';
-import TestimonialSlider from './components/TestimonialSlider';
-import DiscoveryVisit from './components/DiscoveryVisit';
-import FAQ from './components/FAQ';
+import WhoWeHelp from './components/WhoWeHelp';
+import HowWeHelp from './components/HowWeHelp';
 import GoogleReviewsSlider from './components/GoogleReviewsSlider';
+import DiscoveryCTA from './components/DiscoveryCTA';
+import FAQ from './components/FAQ';
 import FinalCTA from './components/FinalCTA';
 import Footer from './components/Footer';
 import TrustpilotBanner from './components/TrustpilotBanner';
 import Services from './components/Services';
 import Contact from './components/Contact';
 import AboutPage from './components/Team';
-import JourneySteps from './components/JourneySteps';
-import WhoWeHelp from './components/WhoWeHelp';
 import BackPain from './components/BackPain';
 import ShoulderPain from './components/ShoulderPain';
 import OrthopedicRehab from './components/OrthopedicRehab';
@@ -54,15 +50,11 @@ function App() {
           <Route path="/" element={
             <>
               <Hero />
-              <JourneySteps />
-              <VideoSection />
-              <PainPoints />
-              <TestimonialSlider />
-              <About />
               <WhoWeHelp />
-              <DiscoveryVisit />
-              <FAQ />
+              <HowWeHelp />
               <GoogleReviewsSlider />
+              <DiscoveryCTA />
+              <FAQ />
               <FinalCTA />
             </>
           } />

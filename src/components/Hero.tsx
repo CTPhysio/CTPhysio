@@ -32,7 +32,7 @@ const Hero: React.FC = () => {
               </h1>
               {/* Desktop subtitle */}
               <p className="hidden sm:block text-base sm:text-xl text-white mb-5 sm:mb-8 leading-relaxed">
-                At Chris Tiley Physiotherapy, we help people in their 50s, 60s, and beyond move well, build strength, and stay active in the things that matter most to them. Trusted by over 100 local patients with five-star results.
+                At Chris Tiley Physiotherapy, we help people in their 50s, 60s, and beyond move well, build strength, and stay active in the things that matter most to them.
               </p>
 
               {/* Mobile bullet points */}
