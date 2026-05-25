@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { HelpCircle, ChevronDown, ChevronUp } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 
 const faqs = [
   {
@@ -40,40 +40,42 @@ const FAQ: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-12 md:py-16 bg-gray-50">
+    <section className="py-10 md:py-14 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl md:text-3xl font-bold text-navy-700 mb-8 text-center">
+        <h2 className="text-2xl md:text-3xl font-bold text-navy-700 mb-6 md:mb-8 text-center">
           Common Questions
         </h2>
 
-        <div className="max-w-3xl mx-auto space-y-3">
-          {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-lg shadow-sm border border-gray-100"
-            >
-              <button
-                className="w-full px-5 py-4 flex items-center justify-between text-left gap-3"
-                onClick={() => setOpenIndex(openIndex === index ? null : index)}
-              >
-                <div className="flex items-center gap-3">
-                  <HelpCircle size={18} className="text-sky-500 flex-shrink-0" />
-                  <span className="font-semibold text-navy-700 text-sm md:text-base">{faq.question}</span>
-                </div>
-                {openIndex === index ? (
-                  <ChevronUp size={18} className="text-sky-500 flex-shrink-0" />
-                ) : (
-                  <ChevronDown size={18} className="text-sky-500 flex-shrink-0" />
-                )}
-              </button>
+        <div className="max-w-2xl mx-auto divide-y divide-gray-100">
+          {faqs.map((faq, index) => {
+            const isOpen = openIndex === index;
+            return (
+              <div key={index}>
+                <button
+                  className="w-full py-4 flex items-center justify-between text-left gap-4 group"
+                  onClick={() => setOpenIndex(isOpen ? null : index)}
+                >
+                  <span className={`font-medium text-sm md:text-base transition-colors duration-200 ${isOpen ? 'text-sky-600' : 'text-navy-700 group-hover:text-sky-600'}`}>
+                    {faq.question}
+                  </span>
+                  <ChevronDown
+                    size={16}
+                    className={`flex-shrink-0 text-gray-400 transition-transform duration-300 ${isOpen ? 'rotate-180 text-sky-500' : ''}`}
+                  />
+                </button>
 
-              {openIndex === index && (
-                <div className="px-5 pb-4 text-gray-600 leading-relaxed whitespace-pre-line text-sm md:text-base border-t border-gray-50 pt-3">
-                  {faq.answer}
+                <div
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                    isOpen ? 'max-h-96 opacity-100 pb-4' : 'max-h-0 opacity-0'
+                  }`}
+                >
+                  <p className="text-gray-500 text-sm leading-relaxed whitespace-pre-line">
+                    {faq.answer}
+                  </p>
                 </div>
-              )}
-            </div>
-          ))}
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

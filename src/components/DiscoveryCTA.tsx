@@ -3,7 +3,7 @@ import { MapPin, Award, Star } from 'lucide-react';
 
 const DiscoveryCTA: React.FC = () => {
   return (
-    <section className="py-12 md:py-16 bg-navy-700 text-white">
+    <section className="py-10 md:py-14 bg-navy-700 text-white">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-2xl md:text-3xl font-bold mb-3 leading-tight">
           You Don't Have To Accept This As The New Normal

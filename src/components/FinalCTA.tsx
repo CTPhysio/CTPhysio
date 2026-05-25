@@ -2,7 +2,7 @@ import React from 'react';
 
 const FinalCTA: React.FC = () => {
   return (
-    <section className="py-12 md:py-16 bg-navy-800 text-white">
+    <section className="py-10 md:py-14 bg-navy-800 text-white">
       <div className="container mx-auto text-center px-4">
         <h2 className="text-2xl md:text-3xl font-bold mb-3 leading-tight">
           Ready To Feel Stronger And Move More Confidently?
