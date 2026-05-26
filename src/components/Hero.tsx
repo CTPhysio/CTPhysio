@@ -27,27 +27,27 @@ const Hero: React.FC = () => {
       />
 
       {/* Google Reviews Badge - Desktop: Bottom Right */}
-      <div className="hidden lg:block absolute bottom-8 right-12 z-20">
+      <div className="hidden lg:block absolute bottom-6 right-10 z-20">
         <GoogleReviews />
       </div>
 
       {/* Content Overlay */}
       <div className="relative z-10 h-full flex flex-col justify-center py-8 sm:py-0">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-[620px]">
+          <div className="max-w-[520px]">
             <h1
               className="text-2xl sm:text-3xl lg:text-[2.375rem] font-semibold text-white mb-4 leading-[1.32] tracking-tight"
               style={{ textShadow: '0 2px 8px rgba(0,0,0,0.35)' }}
             >
-              Stay Strong, Active, and Independent After 50
+              Stay Strong, Active, and Independent Over 50
             </h1>
 
             {/* Desktop subtitle */}
             <p
-              className="hidden sm:block text-base sm:text-lg text-white/90 mb-6 leading-relaxed"
+              className="hidden sm:block text-base sm:text-lg text-white mb-6 leading-relaxed"
               style={{ textShadow: '0 2px 8px rgba(0,0,0,0.35)' }}
             >
-              Helping adults over 50 overcome pain, build strength, and stay confident doing everyday life.
+              Helping adults over 50 overcome pain, build strength, and stay confident doing the things they love.
             </p>
 
             {/* Mobile bullets */}
@@ -70,7 +70,7 @@ const Hero: React.FC = () => {
             <div className="mb-6">
               <a
                 href="/contact"
-                className="inline-flex justify-center items-center px-7 py-3.5 text-sm sm:text-base font-semibold rounded-md shadow-md text-white bg-navy-700 hover:bg-navy-800 transition-colors duration-200"
+                className="inline-flex justify-center items-center px-8 py-4 text-sm sm:text-base font-semibold rounded-md shadow-md text-white bg-navy-700 hover:bg-navy-800 transition-colors duration-200"
               >
                 Start With A Free Discovery Visit
               </a>
