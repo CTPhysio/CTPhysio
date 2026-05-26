@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
       {/* Background Image */}
       <div
         className="absolute inset-0 z-0 bg-cover bg-center sm:bg-[center_30%]"
-        style={{ backgroundImage: 'url("/Untitled_design_(1).png")' }}
+        style={{ backgroundImage: 'url("/Untitled_design_(2).png")' }}
       />
 
       {/* Left-to-right gradient overlay: darker navy on left, lighter on right */}
