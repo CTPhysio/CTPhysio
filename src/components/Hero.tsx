@@ -3,14 +3,28 @@ import GoogleReviews from './GoogleReviews';
 
 const Hero: React.FC = () => {
   return (
-    <div className="relative h-[85vh] sm:h-[75vh] overflow-hidden rounded-b-[60px]">
+    <div className="relative h-[75vh] sm:h-[66vh] overflow-hidden rounded-b-[60px]">
       {/* Background Image */}
       <div
         className="absolute inset-0 z-0 bg-cover bg-center sm:bg-[center_30%]"
         style={{ backgroundImage: 'url("/Untitled_design_(1).png")' }}
-      >
-        <div className="absolute inset-0 bg-navy-900/40"></div>
-      </div>
+      />
+
+      {/* Left-to-right gradient overlay: darker navy on left, lighter on right */}
+      <div
+        className="absolute inset-0 z-[1]"
+        style={{
+          background: 'linear-gradient(to right, rgba(10,25,50,0.82) 0%, rgba(10,25,50,0.62) 50%, rgba(10,25,50,0.28) 100%)',
+        }}
+      />
+
+      {/* Subtle dark panel behind text content area */}
+      <div
+        className="absolute inset-y-0 left-0 z-[2] w-full sm:w-[55%]"
+        style={{
+          background: 'linear-gradient(to right, rgba(8,20,44,0.55) 0%, rgba(8,20,44,0.0) 100%)',
+        }}
+      />
 
       {/* Google Reviews Badge - Desktop: Bottom Right */}
       <div className="hidden lg:block absolute bottom-8 right-12 z-20">
@@ -20,14 +34,20 @@ const Hero: React.FC = () => {
       {/* Content Overlay */}
       <div className="relative z-10 h-full flex flex-col justify-center py-8 sm:py-0">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-[660px]">
-            <h1 className="text-2xl sm:text-3xl lg:text-[2.375rem] font-semibold text-white mb-4 leading-[1.32] tracking-tight">
-              Helping Active Adults Stay Strong, Confident, and Independent
+          <div className="max-w-[620px]">
+            <h1
+              className="text-2xl sm:text-3xl lg:text-[2.375rem] font-semibold text-white mb-4 leading-[1.32] tracking-tight"
+              style={{ textShadow: '0 2px 8px rgba(0,0,0,0.35)' }}
+            >
+              Stay Strong, Active, and Independent After 50
             </h1>
 
             {/* Desktop subtitle */}
-            <p className="hidden sm:block text-base sm:text-lg text-white/90 mb-6 leading-relaxed">
-              At Chris Tiley Physiotherapy, we help people in their 50s, 60s, and beyond move well, build strength, and stay active in the things that matter most to them.
+            <p
+              className="hidden sm:block text-base sm:text-lg text-white/90 mb-6 leading-relaxed"
+              style={{ textShadow: '0 2px 8px rgba(0,0,0,0.35)' }}
+            >
+              Helping adults over 50 overcome pain, build strength, and stay confident doing everyday life.
             </p>
 
             {/* Mobile bullets */}
@@ -47,7 +67,7 @@ const Hero: React.FC = () => {
             </div>
 
             {/* Primary CTA */}
-            <div className="mb-2">
+            <div className="mb-6">
               <a
                 href="/contact"
                 className="inline-flex justify-center items-center px-7 py-3.5 text-sm sm:text-base font-semibold rounded-md shadow-md text-white bg-navy-700 hover:bg-navy-800 transition-colors duration-200"
@@ -56,18 +76,10 @@ const Hero: React.FC = () => {
               </a>
             </div>
 
-            {/* Secondary booking link */}
-            <a
-              href="https://appointments.chris-tiley-physiotherapy.co.uk"
-              className="inline-flex items-center gap-1 mt-3 mb-6 text-white/90 hover:text-white text-xs sm:text-sm font-medium transition-colors duration-200"
-            >
-              Or book your initial assessment online →
-            </a>
-
             {/* Desktop trust signals */}
             <div className="hidden sm:flex flex-col gap-1.5 text-white/60 text-xs">
               <span>HCPC Registered Physiotherapist</span>
-              <span>15+ Years of Clinical Experience</span>
+              <span>18+ Years of Clinical Experience</span>
               <span>100+ Verified 5-Star Google Reviews</span>
             </div>
           </div>
