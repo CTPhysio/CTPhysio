@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
@@ -51,7 +51,14 @@ const Navbar: React.FC = () => {
           </nav>
 
           {/* Desktop CTA */}
-          <div className="hidden md:flex">
+          <div className="hidden md:flex items-center space-x-4">
+            <a
+              href="tel:01215170806"
+              className="inline-flex items-center space-x-2 text-navy-700 hover:text-sky-500 transition-colors duration-200 font-medium"
+            >
+              <Phone size={18} className="text-sky-500" />
+              <span>0121 517 0806</span>
+            </a>
             <a
               href="/contact"
               className="inline-flex items-center px-5 py-2.5 text-sm font-semibold rounded-md text-white bg-navy-700 hover:bg-navy-800 transition-colors duration-200"
@@ -104,6 +111,14 @@ const Navbar: React.FC = () => {
             >
               Contact
             </Link>
+            <a
+              href="tel:01215170806"
+              className="flex items-center space-x-2 px-3 py-2 rounded-md text-base font-medium text-navy-700 hover:text-sky-500"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              <Phone size={18} className="text-sky-500" />
+              <span>0121 517 0806</span>
+            </a>
             <a
               href="/contact"
               className="block w-full text-center mt-2 px-4 py-2.5 rounded-md text-sm font-semibold text-white bg-navy-700 hover:bg-navy-800"
