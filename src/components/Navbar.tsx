@@ -67,8 +67,15 @@ const Navbar: React.FC = () => {
             </a>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
+          {/* Mobile phone + menu button */}
+          <div className="md:hidden flex items-center space-x-3">
+            <a
+              href="tel:01215170806"
+              className="inline-flex items-center space-x-2 text-navy-700 hover:text-sky-500 transition-colors duration-200 font-medium"
+            >
+              <Phone size={20} className="text-sky-500" />
+              <span className="text-sm">0121 517 0806</span>
+            </a>
             <button
               className="inline-flex items-center justify-center p-2 rounded-md text-navy-700 hover:text-sky-500 focus:outline-none"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
