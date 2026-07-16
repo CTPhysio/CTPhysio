@@ -24,16 +24,12 @@ const Navbar: React.FC = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center space-x-2">
+            <Link to="/" className="flex items-center">
               <img
-                src="/logo.png"
+                src="/Logo_-_250px_x_100px.png"
                 alt="Chris Tiley Physiotherapy"
-                className="h-10 w-auto"
-                onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                className="h-12 w-auto"
               />
-              <span className="text-navy-700 font-semibold text-lg leading-tight hidden sm:inline">
-                Chris Tiley Physiotherapy
-              </span>
             </Link>
           </div>
 
