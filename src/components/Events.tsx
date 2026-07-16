@@ -15,6 +15,7 @@ export interface EventItem {
   bookingUrl: string;
   price?: string;
   capacity?: string;
+  imagePosition?: string;
 }
 
 const events: EventItem[] = [
@@ -37,6 +38,7 @@ const events: EventItem[] = [
       'https://www.eventbrite.co.uk/e/injury-prevention-in-womens-football-tickets-1993001213279',
     price: '£5',
     capacity: '15 spaces',
+    imagePosition: 'object-left',
   },
 ];
 
@@ -47,7 +49,7 @@ const EventCard: React.FC<{ event: EventItem }> = ({ event }) => {
         <img
           src={event.image}
           alt={event.title}
-          className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+          className={`w-full h-full object-cover ${event.imagePosition ?? 'object-center'} hover:scale-105 transition-transform duration-500`}
           onError={(e) => {
             e.currentTarget.style.display = 'none';
           }}
