@@ -21,7 +21,7 @@ const events: EventItem[] = [
   {
     id: 'injury-prevention-womens-football',
     title: "Injury Prevention in Women's Football",
-    image: '/events/womens-football-injury-prevention.jpg',
+    image: '/Kate_Talk.jpg',
     date: 'Saturday 1st August 2026',
     time: '10:30am – 11:30am',
     location: 'Chris Tiley Physiotherapy, 24 Earls Court Road, Harborne, B17 9AH',
