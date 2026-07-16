@@ -27,6 +27,7 @@ import HipPain from './components/HipPain';
 import Sciatica from './components/Sciatica';
 import BalanceFalls from './components/BalanceFalls';
 import Deconditioning from './components/Deconditioning';
+import Events from './components/Events';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -59,6 +60,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/events" element={<Events />} />
           <Route path="/treatments/back-pain" element={<BackPain />} />
           <Route path="/treatments/shoulder-pain" element={<ShoulderPain />} />
           <Route path="/treatments/orthopedic-rehab" element={<OrthopedicRehab />} />
