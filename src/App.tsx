@@ -28,6 +28,7 @@ import Sciatica from './components/Sciatica';
 import BalanceFalls from './components/BalanceFalls';
 import Deconditioning from './components/Deconditioning';
 import Events from './components/Events';
+import PrivacyPolicy from './components/PrivacyPolicy';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -61,6 +62,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/events" element={<Events />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/treatments/back-pain" element={<BackPain />} />
           <Route path="/treatments/shoulder-pain" element={<ShoulderPain />} />
           <Route path="/treatments/orthopedic-rehab" element={<OrthopedicRehab />} />

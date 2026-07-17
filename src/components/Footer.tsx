@@ -86,7 +86,7 @@ const Footer: React.FC = () => {
                 <li><a href="/about" className="text-sm hover:text-sky-400 transition-colors">About Chris</a></li>
                 <li><a href="https://chris-tiley-physiotherapy.uk1.cliniko.com/bookings#service" className="text-sm hover:text-sky-400 transition-colors">Book Appointment</a></li>
                 <li><a href="/contact" className="text-sm hover:text-sky-400 transition-colors">Contact</a></li>
-                <li><a href="/privacy" className="text-sm hover:text-sky-400 transition-colors">Privacy Policy</a></li>
+                <li><a href="/privacy-policy" className="text-sm hover:text-sky-400 transition-colors">Privacy Policy</a></li>
               </ul>
             </div>
           </div>
@@ -97,7 +97,7 @@ const Footer: React.FC = () => {
             <p className="text-sm">&copy; {new Date().getFullYear()} Chris Tiley Physiotherapy. All rights reserved.</p>
             <div>
               <a href="/terms" className="text-sm text-gray-400 hover:text-white mr-4">Terms of Service</a>
-              <a href="/privacy" className="text-sm text-gray-400 hover:text-white">Privacy Policy</a>
+              <a href="/privacy-policy" className="text-sm text-gray-400 hover:text-white">Privacy Policy</a>
             </div>
           </div>
         </div>
