@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Loader } from '@googlemaps/js-api-loader';
+import { useConsent } from '../lib/useConsent';
 
 interface Review {
   rating: number;
@@ -53,8 +54,11 @@ const GoogleReviewsSlider: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const { hasConsent } = useConsent();
 
   useEffect(() => {
+    if (!hasConsent('preferences')) return;
+
     const loader = new Loader({
       apiKey: 'AIzaSyAyhvShJVxYYJBw_iFcMw4UYWwVwWcMihY',
       version: 'weekly',
@@ -78,7 +82,7 @@ const GoogleReviewsSlider: React.FC = () => {
         }
       );
     }).catch(() => setLoading(false));
-  }, []);
+  }, [hasConsent]);
 
   const advance = (dir: 1 | -1) => {
     if (isTransitioning) return;

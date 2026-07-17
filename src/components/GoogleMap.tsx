@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Loader } from '@googlemaps/js-api-loader';
+import { useConsent } from '../lib/useConsent';
 
 interface GoogleMapProps {
   className?: string;
@@ -12,8 +13,11 @@ let isLoaderInitialized = false;
 const GoogleMap: React.FC<GoogleMapProps> = ({ className = "w-full h-[400px]" }) => {
   const mapRef = useRef<HTMLDivElement>(null);
   const [mapError, setMapError] = useState(false);
+  const { hasConsent } = useConsent();
 
   useEffect(() => {
+    if (!hasConsent('preferences')) return;
+
     const initializeMap = async () => {
       try {
         // Create loader only once
@@ -63,7 +67,7 @@ const GoogleMap: React.FC<GoogleMapProps> = ({ className = "w-full h-[400px]" })
     };
 
     initializeMap();
-  }, []);
+  }, [hasConsent]);
 
   if (mapError) {
     return (
