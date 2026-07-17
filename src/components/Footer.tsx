@@ -96,7 +96,7 @@ const Footer: React.FC = () => {
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
             <p className="text-sm">&copy; {new Date().getFullYear()} Chris Tiley Physiotherapy. All rights reserved.</p>
             <div>
-              <a href="/terms" className="text-sm text-gray-400 hover:text-white mr-4">Terms of Service</a>
+              <a href="/terms-of-service" className="text-sm text-gray-400 hover:text-white mr-4">Terms of Service</a>
               <a href="/privacy-policy" className="text-sm text-gray-400 hover:text-white">Privacy Policy</a>
             </div>
           </div>

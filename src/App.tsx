@@ -29,6 +29,7 @@ import BalanceFalls from './components/BalanceFalls';
 import Deconditioning from './components/Deconditioning';
 import Events from './components/Events';
 import PrivacyPolicy from './components/PrivacyPolicy';
+import TermsOfService from './components/TermsOfService';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -63,6 +64,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/events" element={<Events />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/treatments/back-pain" element={<BackPain />} />
           <Route path="/treatments/shoulder-pain" element={<ShoulderPain />} />
           <Route path="/treatments/orthopedic-rehab" element={<OrthopedicRehab />} />
