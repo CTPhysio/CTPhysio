@@ -348,9 +348,16 @@ const StrengthRehabClasses: React.FC = () => {
                   &ldquo;We won&rsquo;t force you to do something you&rsquo;re not ready for, but we will help you gradually become capable of doing more.&rdquo;
                 </blockquote>
               </div>
-              <div className="mt-5 rounded-2xl border-2 border-dashed border-navy-100 bg-gray-50 flex items-center justify-center text-gray-400 text-sm py-10">
-                <span>Photograph of the clinic space to be added</span>
-              </div>
+              <figure className="mt-5 overflow-hidden rounded-2xl border border-navy-100 bg-gray-100 shadow-sm">
+                <img
+                  src="/IMG_5689.jpeg"
+                  alt="The strength and rehab training space at Chris Tiley Physiotherapy"
+                  className="block w-full aspect-[4/3] object-cover"
+                />
+                <figcaption className="bg-white px-4 py-3 text-sm text-gray-500">
+                  The training space at the clinic.
+                </figcaption>
+              </figure>
             </div>
           </div>
         </div>
@@ -449,6 +456,13 @@ const StrengthRehabClasses: React.FC = () => {
                   </div>
                 ))}
               </div>
+              <figure className="mt-5 overflow-hidden rounded-xl border border-navy-100 bg-white shadow-sm">
+                <img
+                  src="/IMG_5688.jpeg"
+                  alt="Strength training equipment in the clinic gym"
+                  className="block w-full aspect-[4/3] object-cover"
+                />
+              </figure>
             </div>
           </div>
         </div>
