@@ -133,6 +133,14 @@ const Services: React.FC = () => {
                         *If you're interested in our strength classes, please book a free discovery visit first so we can discuss the best option for you.
                       </p>
                     )}
+                    {service.title === "Strength & Rehab Classes" && (
+                      <a
+                        href="/strength-rehab-classes"
+                        className="block text-sm font-semibold text-sky-600 hover:text-sky-700 mb-6"
+                      >
+                        Learn more about Strength &amp; Rehab Classes &rarr;
+                      </a>
+                    )}
                   </div>
                   
                   <div className="p-8 pt-0">

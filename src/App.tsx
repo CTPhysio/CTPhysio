@@ -30,6 +30,7 @@ import Deconditioning from './components/Deconditioning';
 import Events from './components/Events';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsOfService from './components/TermsOfService';
+import StrengthRehabClasses from './components/StrengthRehabClasses';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -65,6 +66,7 @@ function App() {
           <Route path="/events" element={<Events />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/strength-rehab-classes" element={<StrengthRehabClasses />} />
           <Route path="/treatments/back-pain" element={<BackPain />} />
           <Route path="/treatments/shoulder-pain" element={<ShoulderPain />} />
           <Route path="/treatments/orthopedic-rehab" element={<OrthopedicRehab />} />
