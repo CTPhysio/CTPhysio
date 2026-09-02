@@ -235,7 +235,7 @@ const StrengthRehabClasses: React.FC = () => {
             Each class lasts approximately one hour. The session is organised around five different movement patterns, with one person starting at each station so everyone is working on a different pattern at the same time.
           </p>
           <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
-            <div>
+            <div className="order-2 md:order-1">
               <p className="text-gray-600 leading-relaxed mb-4">
                 Each station lasts approximately seven minutes. During that time you perform several sets of your exercise, resting between sets. When the seven minutes are finished, everyone rotates clockwise to the next station. By the end of the session, everyone has worked through all five movement patterns.
               </p>
@@ -248,9 +248,9 @@ const StrengthRehabClasses: React.FC = () => {
                 The pattern for each session is: <span className="font-semibold text-navy-700">Work, Rest, Repeat, Rotate</span>.
               </p>
             </div>
-            <div>
+            <div className="order-1 md:order-2">
               <img
-                src="/ChatGPT_Image_Sep_2,_2026,_05_51_45_PM.png"
+                src="/ChatGPT_Image_Sep_2,_2026,_05_58_47_PM.png"
                 alt="Five station strength and rehab class movement pattern diagram"
                 className="block w-full max-w-md mx-auto h-auto"
               />
