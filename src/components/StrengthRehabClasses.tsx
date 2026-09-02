@@ -12,8 +12,8 @@ type ClassSlot = {
 
 const classTimetable: ClassSlot[] = [
   { day: 'Monday', time: '6:30pm', spaces: 2 },
-  { day: 'Monday', time: '7:30pm', spaces: 1 },
-  { day: 'Wednesday', time: '6:30pm', spaces: 0 },
+  { day: 'Monday', time: '7:30pm', spaces: 0 },
+  { day: 'Wednesday', time: '6:30pm', spaces: 1 },
   { day: 'Wednesday', time: '7:30pm', spaces: 2 },
 ];
 
@@ -110,7 +110,7 @@ const progressionStages = [
   { label: 'Progress', detail: 'Gradually increase resistance', sub: 'Build familiarity and confidence' },
   { label: 'Build', detail: 'More strength and confidence', sub: 'Comfortable with heavier loads' },
   { label: '12 weeks', detail: 'Heavier resistance, 3 to 6 reps', sub: 'Noticeably stronger' },
-  { label: 'New block', detail: 'New movement patterns', sub: 'Progression starts again' },
+  { label: 'New block', detail: 'New exercises and movement patterns', sub: 'Progression starts again' },
 ];
 
 const audienceCards = [
@@ -195,11 +195,31 @@ const StrengthRehabClasses: React.FC = () => {
     const prevTitle = document.title;
     const prevDesc = document.querySelector('meta[name="description"]');
     const prevDescContent = prevDesc?.getAttribute('content');
-    document.title = 'Strength & Rehab Classes in Birmingham | Chris Tiley Physiotherapy';
-    if (prevDesc) prevDesc.setAttribute('content', 'Small-group strength classes in Harborne, Birmingham, led by physiotherapists and sports therapists. Build strength progressively with individual guidance.');
+    document.title = 'Strength & Rehab Classes in Harborne, Birmingham | Chris Tiley Physiotherapy';
+    if (prevDesc) prevDesc.setAttribute('content', 'Small-group strength and rehab classes in Harborne, Birmingham, led by physiotherapists and sports therapists. Build strength with expert guidance in a supportive setting.');
+    const ldJson = document.createElement('script');
+    ldJson.type = 'application/ld+json';
+    ldJson.text = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'MedicalBusiness',
+      name: 'Chris Tiley Physiotherapy',
+      description: 'Physiotherapy clinic offering small-group strength and rehab classes led by physiotherapists and sports therapists.',
+      url: 'https://christileyphysiotherapy.com/strength-rehab-classes',
+      telephone: '01215170806',
+      priceRange: '£65/month',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Harborne, Birmingham',
+        addressRegion: 'West Midlands',
+        addressCountry: 'GB',
+      },
+    });
+    document.head.appendChild(ldJson);
+
     return () => {
       document.title = prevTitle;
       if (prevDesc && prevDescContent) prevDesc.setAttribute('content', prevDescContent);
+      document.head.removeChild(ldJson);
     };
   }, []);
 
@@ -229,9 +249,9 @@ const StrengthRehabClasses: React.FC = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
-              <SectionHeading>A proper strength-training space</SectionHeading>
+              <SectionHeading>Our strength-training space</SectionHeading>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Classes take place in our dedicated training area at the clinic, with a range of equipment that allows exercises to be adapted to different abilities and experience levels. It's a clinical environment, not a commercial gym, so the focus is on doing things correctly and progressing at the right pace.
+                Classes take place in our dedicated training area at our physiotherapy clinic in Harborne, Birmingham, with a range of equipment that allows exercises to be adapted to different abilities and experience levels. It's a proper strength-training environment within the clinic, with the added reassurance of having a physiotherapist or sports therapist there to guide you.
               </p>
               <p className="text-gray-600 leading-relaxed">
                 With a maximum of five people in each class, there's time to give everyone individual attention. You don't need to plan your own programme, and you don't need to already know what you're doing.
@@ -256,7 +276,7 @@ const StrengthRehabClasses: React.FC = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
           <SectionHeading className="text-center mb-3">Who are the classes for?</SectionHeading>
           <p className="text-gray-600 text-center max-w-2xl mx-auto mb-8 leading-relaxed">
-            The classes suit a range of people, and many members are new to strength training. Previous experience isn't required, and you don't need to have been a physiotherapy patient at the clinic before.
+            You don't need to be experienced with weights. The classes are designed for people who want to get stronger with the reassurance of having a physiotherapist or sports therapist there to guide them. Many members are new to strength training, and you don't need to have been a physiotherapy patient at the clinic before.
           </p>
           <div className="grid sm:grid-cols-2 gap-4 sm:gap-5">
             {audienceCards.map((card, i) => (
