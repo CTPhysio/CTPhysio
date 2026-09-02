@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, RotateCw, Calendar, Clock, Users, ArrowRight, Dumbbell } from 'lucide-react';
+import { ChevronDown, Calendar, Clock, Users, ArrowRight } from 'lucide-react';
 
 const BOOKING_URL = 'https://chris-tiley-physiotherapy.uk1.cliniko.com/bookings';
 
@@ -38,71 +38,6 @@ const SectionHeading: React.FC<{ children: React.ReactNode; className?: string }
   <h2 className={`text-2xl md:text-4xl font-bold text-navy-700 mb-4 leading-tight ${className}`}>
     {children}
   </h2>
-);
-
-const stations = [
-  { label: 'Station 1', pattern: 'Squat' },
-  { label: 'Station 2', pattern: 'Hinge' },
-  { label: 'Station 3', pattern: 'Push' },
-  { label: 'Station 4', pattern: 'Pull' },
-  { label: 'Station 5', pattern: 'Carry' },
-];
-
-const FiveStationDiagram: React.FC = () => (
-  <div className="flex flex-col items-center">
-    <div className="relative w-full max-w-sm mx-auto" style={{ aspectRatio: '1 / 1' }}>
-      <svg viewBox="0 0 300 300" className="w-full h-full" aria-hidden="true">
-        <circle cx="150" cy="150" r="125" fill="none" stroke="#e0f2fe" strokeWidth="2" strokeDasharray="6 6" />
-        <text x="150" y="142" textAnchor="middle" className="fill-navy-700" style={{ fontSize: '13px', fontWeight: 700 }}>7 min</text>
-        <text x="150" y="160" textAnchor="middle" className="fill-navy-700" style={{ fontSize: '10px', fontWeight: 600 }}>per station</text>
-        {(() => {
-          const angleStep = 360 / stations.length;
-          const startAngle = -90;
-          return stations.map((s, i) => {
-            const angle = ((startAngle + i * angleStep) * Math.PI) / 180;
-            const cx = 150 + Math.cos(angle) * 125;
-            const cy = 150 + Math.sin(angle) * 125;
-            return (
-              <g key={i}>
-                <circle cx={cx} cy={cy} r="40" fill="#2d416b" />
-                <text x={cx} y={cy - 4} textAnchor="middle" fill="white" style={{ fontSize: '11px', fontWeight: 700 }}>{s.label}</text>
-                <text x={cx} y={cy + 10} textAnchor="middle" fill="#7dd3fc" style={{ fontSize: '10px', fontWeight: 600 }}>{s.pattern}</text>
-              </g>
-            );
-          });
-        })()}
-        {(() => {
-          const angleStep = 360 / stations.length;
-          const startAngle = -90;
-          return stations.map((_, i) => {
-            const a1 = ((startAngle + i * angleStep) * Math.PI) / 180;
-            const a2 = ((startAngle + (i + 1) * angleStep) * Math.PI) / 180;
-            const r = 125;
-            const x1 = 150 + Math.cos(a1) * (r - 52);
-            const y1 = 150 + Math.sin(a1) * (r - 52);
-            const x2 = 150 + Math.cos(a2) * (r - 52);
-            const y2 = 150 + Math.sin(a2) * (r - 52);
-            return (
-              <g key={`arrow-${i}`}>
-                <path d={`M ${x1} ${y1} A ${r - 52} ${r - 52} 0 0 1 ${x2} ${y2}`} fill="none" stroke="#0ea5e9" strokeWidth="2.5" markerEnd="url(#arrowhead)" />
-              </g>
-            );
-          });
-        })()}
-        <defs>
-          <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="5" refY="3" orient="auto">
-            <polygon points="0 0, 6 3, 0 6" fill="#0ea5e9" />
-          </marker>
-        </defs>
-      </svg>
-    </div>
-    <div className="flex flex-wrap justify-center gap-x-4 gap-y-1.5 mt-5 text-sm text-gray-500">
-      <span className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-full bg-sky-500" /> Work</span>
-      <span className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-full bg-navy-300" /> Rest</span>
-      <span className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-full bg-navy-500" /> Repeat</span>
-      <span className="flex items-center gap-1.5"><RotateCw size={14} className="text-sky-500" /> Rotate clockwise</span>
-    </div>
-  </div>
 );
 
 const progressionStages = [
@@ -314,7 +249,11 @@ const StrengthRehabClasses: React.FC = () => {
               </p>
             </div>
             <div>
-              <FiveStationDiagram />
+              <img
+                src="/ChatGPT_Image_Sep_2,_2026,_05_51_45_PM.png"
+                alt="Five station strength and rehab class movement pattern diagram"
+                className="block w-full max-w-md mx-auto h-auto"
+              />
               <p className="text-xs text-gray-400 text-center mt-4 leading-relaxed">
                 Movement patterns shown are illustrative. The specific exercises change between 12-week blocks.
               </p>
