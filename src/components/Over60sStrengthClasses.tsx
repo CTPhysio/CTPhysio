@@ -413,7 +413,7 @@ const Over60sStrengthClasses: React.FC = () => {
           <p className="text-gray-600 text-center max-w-2xl mx-auto mb-8 leading-relaxed">
             The class can be particularly useful if you:
           </p>
-          <ul className="space-y-3 max-w-2xl mx-auto">
+          <ul className="space-y-3 max-w-2xl mx-auto mb-6">
             {whoForReasons.map((reason, i) => (
               <li key={i} className="flex items-start space-x-3">
                 <span className="mt-1.5 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-sky-500" />
@@ -421,6 +421,9 @@ const Over60sStrengthClasses: React.FC = () => {
               </li>
             ))}
           </ul>
+          <p className="text-gray-500 text-sm text-center max-w-2xl mx-auto leading-relaxed">
+            Not over 60, or looking for a more general strength class? You might be better suited to our <Link to="/strength-rehab-classes" className="text-sky-600 hover:text-sky-700 underline">Strength &amp; Rehab Classes</Link>.
+          </p>
         </div>
       </section>
 

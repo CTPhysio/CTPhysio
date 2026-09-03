@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Users, Dumbbell, Activity, Heart, TrendingUp, ShieldCheck } from 'lucide-react';
 
 const whoGroups = [
@@ -78,6 +79,10 @@ const WhoWeHelp: React.FC = () => {
               Book a Free Discovery Visit
             </a>
           </div>
+
+          <p className="text-center text-sm text-gray-500 mt-5 leading-relaxed">
+            We also run small-group <Link to="/strength-rehab-classes" className="text-sky-600 hover:text-sky-700 underline">Strength &amp; Rehab Classes</Link> and <Link to="/over-60s-strength-classes" className="text-sky-600 hover:text-sky-700 underline">Over 60s Strength Classes</Link> for people who want to get stronger with the reassurance of a physiotherapist there to guide them.
+          </p>
         </div>
       </div>
     </section>

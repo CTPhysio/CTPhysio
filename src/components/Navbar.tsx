@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X, Phone, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileClassesOpen, setMobileClassesOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,13 +35,36 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-6">
+          <nav className="hidden md:flex space-x-6 items-center">
             <Link to="/" className="text-navy-700 hover:text-sky-500 px-3 py-2 font-medium transition-colors duration-200">
               Home
             </Link>
             <Link to="/services" className="text-navy-700 hover:text-sky-500 px-3 py-2 font-medium transition-colors duration-200">
               Services
             </Link>
+
+            {/* Classes Dropdown */}
+            <div className="relative group">
+              <button className="flex items-center text-navy-700 hover:text-sky-500 px-3 py-2 font-medium transition-colors duration-200">
+                Classes
+                <ChevronDown size={16} className="ml-1 transition-transform duration-200 group-hover:rotate-180" />
+              </button>
+              <div className="absolute top-full left-0 hidden group-hover:block w-60 bg-white shadow-lg rounded-md border border-gray-100 pt-1 z-50">
+                <Link
+                  to="/strength-rehab-classes"
+                  className="block px-4 py-2.5 text-sm text-navy-700 hover:text-sky-500 hover:bg-gray-50 transition-colors duration-200"
+                >
+                  Strength &amp; Rehab Classes
+                </Link>
+                <Link
+                  to="/over-60s-strength-classes"
+                  className="block px-4 py-2.5 text-sm text-navy-700 hover:text-sky-500 hover:bg-gray-50 transition-colors duration-200"
+                >
+                  Over 60s Strength Classes
+                </Link>
+              </div>
+            </div>
+
             <Link to="/about" className="text-navy-700 hover:text-sky-500 px-3 py-2 font-medium transition-colors duration-200">
               About
             </Link>
@@ -106,6 +130,36 @@ const Navbar: React.FC = () => {
             >
               Services
             </Link>
+
+            {/* Classes expandable */}
+            <div>
+              <button
+                className="w-full flex items-center justify-between px-3 py-2 rounded-md text-base font-medium text-navy-700 hover:text-sky-500"
+                onClick={() => setMobileClassesOpen(!mobileClassesOpen)}
+              >
+                <span>Classes</span>
+                <ChevronDown size={18} className={`transition-transform duration-200 ${mobileClassesOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {mobileClassesOpen && (
+                <div className="pl-6 space-y-1">
+                  <Link
+                    to="/strength-rehab-classes"
+                    className="block px-3 py-2 rounded-md text-sm font-medium text-navy-700 hover:text-sky-500"
+                    onClick={() => { setMobileMenuOpen(false); setMobileClassesOpen(false); }}
+                  >
+                    Strength &amp; Rehab Classes
+                  </Link>
+                  <Link
+                    to="/over-60s-strength-classes"
+                    className="block px-3 py-2 rounded-md text-sm font-medium text-navy-700 hover:text-sky-500"
+                    onClick={() => { setMobileMenuOpen(false); setMobileClassesOpen(false); }}
+                  >
+                    Over 60s Strength Classes
+                  </Link>
+                </div>
+              )}
+            </div>
+
             <Link
               to="/about"
               className="block px-3 py-2 rounded-md text-base font-medium text-navy-700 hover:text-sky-500"

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Activity, Dumbbell, Users, CircleDot, ArrowRight, Target } from 'lucide-react';
 import PainPoints from './PainPoints';
 import GoogleReviewsSlider from './GoogleReviewsSlider';
@@ -136,10 +137,15 @@ const Services: React.FC = () => {
                     {service.title === "Strength & Rehab Classes" && (
                       <a
                         href="/strength-rehab-classes"
-                        className="block text-sm font-semibold text-sky-600 hover:text-sky-700 mb-6"
+                        className="block text-sm font-semibold text-sky-600 hover:text-sky-700 mb-4"
                       >
                         Learn more about Strength &amp; Rehab Classes &rarr;
                       </a>
+                    )}
+                    {service.title === "Strength & Rehab Classes" && (
+                      <p className="text-sm text-gray-600 mb-2">
+                        We also run <Link to="/over-60s-strength-classes" className="text-sky-600 hover:text-sky-700 underline">Over 60s Strength Classes</Link> for people who want a class focused on this stage of life.
+                      </p>
                     )}
                   </div>
                   
