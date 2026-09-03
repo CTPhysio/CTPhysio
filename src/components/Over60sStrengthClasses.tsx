@@ -466,17 +466,24 @@ const Over60sStrengthClasses: React.FC = () => {
 
           {/* Active classes */}
           <div className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden mb-6">
-            <div className="grid grid-cols-2 bg-navy-700 text-white text-sm font-semibold">
+            <div className="grid grid-cols-3 bg-navy-700 text-white text-sm font-semibold">
               <div className="px-4 sm:px-5 py-3 flex items-center gap-2"><Calendar size={16} /> Day</div>
               <div className="px-4 sm:px-5 py-3 flex items-center gap-2"><Clock size={16} /> Time</div>
+              <div className="px-4 sm:px-5 py-3 flex items-center gap-2"><Users size={16} /> Status</div>
             </div>
-            <div className="grid grid-cols-2 border-t border-gray-100">
+            <div className="grid grid-cols-3 border-t border-gray-100">
               <div className="px-4 sm:px-5 py-3 text-gray-700 font-medium text-sm sm:text-base">Tuesday</div>
               <div className="px-4 sm:px-5 py-3 text-gray-600 text-sm sm:text-base">11:00am</div>
+              <div className="px-4 sm:px-5 py-3">
+                <span className="inline-flex items-center px-3 py-1 rounded-full bg-gray-100 text-gray-500 font-medium text-xs sm:text-sm">Full</span>
+              </div>
             </div>
-            <div className="grid grid-cols-2 border-t border-gray-100 bg-gray-50/60">
+            <div className="grid grid-cols-3 border-t border-gray-100 bg-gray-50/60">
               <div className="px-4 sm:px-5 py-3 text-gray-700 font-medium text-sm sm:text-base">Thursday</div>
               <div className="px-4 sm:px-5 py-3 text-gray-600 text-sm sm:text-base">1:30pm</div>
+              <div className="px-4 sm:px-5 py-3">
+                <span className="inline-flex items-center px-3 py-1 rounded-full bg-gray-100 text-gray-500 font-medium text-xs sm:text-sm">Full</span>
+              </div>
             </div>
           </div>
 
@@ -498,11 +505,9 @@ const Over60sStrengthClasses: React.FC = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           <SectionHeading className="text-center mb-3">Membership</SectionHeading>
           <div className="max-w-2xl mx-auto bg-gray-50 rounded-lg border border-gray-100 p-5 md:p-6 text-center">
-            <p className="text-gray-600 leading-relaxed text-sm md:text-base mb-3">
-              We are moving to a monthly membership model for these classes, similar to our other strength classes. Final details, including pricing and payment arrangements, will be published here once they are confirmed.
-            </p>
-            <p className="text-gray-500 leading-relaxed text-sm">
-              If you'd like to be notified when membership details are available, <Link to="/contact" className="text-sky-600 hover:text-sky-700 underline">get in touch</Link> with the reception team.
+            <p className="text-3xl md:text-4xl font-bold text-navy-700 mb-1">£65<span className="text-lg font-medium text-gray-400"> / month</span></p>
+            <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+              Membership is £65 per month for one fixed weekly class, with your place reserved each week.
             </p>
           </div>
         </div>
