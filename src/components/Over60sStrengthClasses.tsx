@@ -164,11 +164,8 @@ const Over60sStrengthClasses: React.FC = () => {
             <p className="text-lg md:text-xl text-sky-200 font-medium mb-2 leading-relaxed max-w-2xl">
               Build strength, fitness and confidence to keep doing the things you enjoy.
             </p>
-            <p className="text-sm md:text-base text-gray-300 mb-4 leading-relaxed max-w-2xl">
+            <p className="text-sm md:text-base text-gray-300 mb-6 leading-relaxed max-w-2xl">
               Small-group strength training with a physiotherapist there throughout.
-            </p>
-            <p className="text-base md:text-lg text-gray-200 mb-6 leading-relaxed max-w-2xl">
-              Small-group strength and fitness classes for people over 60, led by a physiotherapist at our clinic in Harborne, Birmingham. You don't need to be a gym person or have experience with weights. Everyone works at their own level, with exercises adapted to you and progressed as you become stronger and more confident.
             </p>
             <div className="flex flex-col sm:flex-row sm:items-center gap-4">
               <DiscoveryButton />
