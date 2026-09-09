@@ -88,6 +88,7 @@ const classFaqs = [
   { q: 'Can I join if I\'m over 80?', a: "Yes. The classes are for anyone over 60, and exercises are adapted to your individual ability rather than your age." },
   { q: 'Can I join part-way through a 12-week block?', a: "Yes. You don't need to wait for the next block. You'll be introduced to the current movement patterns and given appropriate exercise variations for your ability." },
   { q: 'What happens if I miss a class?', a: 'We are finalising the membership arrangements and will share details of how missed sessions are handled once they are confirmed.' },
+  { q: 'What happens during the 20-minute Discovery Visit?', a: "We'll show you the training space, explain how the classes work and talk through what you'd like to achieve. It's also an opportunity to discuss any injuries, health concerns or worries you have about exercising. There's no obligation to join." },
 ];
 
 const FAQAccordion: React.FC = () => {
@@ -160,8 +161,11 @@ const Over60sStrengthClasses: React.FC = () => {
             <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-4 leading-snug">
               Over 60s Strength Classes
             </h1>
-            <p className="text-lg md:text-xl text-sky-200 font-medium mb-4 leading-relaxed max-w-2xl">
+            <p className="text-lg md:text-xl text-sky-200 font-medium mb-2 leading-relaxed max-w-2xl">
               Build strength, fitness and confidence to keep doing the things you enjoy.
+            </p>
+            <p className="text-sm md:text-base text-gray-300 mb-4 leading-relaxed max-w-2xl">
+              Small-group strength training with a physiotherapist there throughout.
             </p>
             <p className="text-base md:text-lg text-gray-200 mb-6 leading-relaxed max-w-2xl">
               Small-group strength and fitness classes for people over 60, led by a physiotherapist at our clinic in Harborne, Birmingham. You don't need to be a gym person or have experience with weights. Everyone works at their own level, with exercises adapted to you and progressed as you become stronger and more confident.
@@ -383,7 +387,7 @@ const Over60sStrengthClasses: React.FC = () => {
                 Depending on the session, there may also be balance exercises or short intervals to challenge your cardiovascular fitness. You'll spend several minutes working at each station, completing sets with rest between them before moving on to the next exercise.
               </p>
               <p className="text-gray-600 leading-relaxed mb-4">
-                The exercises change throughout each 12-week block, while the underlying aim remains the same: gradually build your strength, fitness and confidence.
+                Each 12-week block follows a planned progression. You'll work on the same key movement patterns while the exercises and level of resistance gradually change as you become stronger. The underlying aim remains the same throughout: gradually build your strength, fitness and confidence.
               </p>
               <p className="text-gray-600 leading-relaxed">
                 Everyone works at their own level, so the person next to you may be doing a completely different version of the same movement.
