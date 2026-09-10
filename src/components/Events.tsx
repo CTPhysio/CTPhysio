@@ -69,7 +69,7 @@ const EventCard: React.FC<{ event: EventItem; isActive: boolean; onToggle: () =>
         isActive ? 'ring-2 ring-sky-500' : ''
       }`}
     >
-      <div className="bg-gradient-to-br from-navy-700 to-navy-900 px-8 py-10 flex items-center justify-center min-h-[140px]">
+      <div className="bg-gradient-to-br from-navy-700 to-navy-900 px-6 py-10 flex items-center justify-center min-h-[180px]">
         <h2 className="text-xl md:text-2xl font-bold text-white text-center leading-snug">{event.title}</h2>
       </div>
 
