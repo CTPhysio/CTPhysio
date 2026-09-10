@@ -32,6 +32,7 @@ import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsOfService from './components/TermsOfService';
 import StrengthRehabClasses from './components/StrengthRehabClasses';
 import Over60sStrengthClasses from './components/Over60sStrengthClasses';
+import EventWaitingListConfirmed from './components/EventWaitingListConfirmed';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -69,6 +70,7 @@ function App() {
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/strength-rehab-classes" element={<StrengthRehabClasses />} />
           <Route path="/over-60s-strength-classes" element={<Over60sStrengthClasses />} />
+          <Route path="/event-waiting-list-confirmed" element={<EventWaitingListConfirmed />} />
           <Route path="/treatments/back-pain" element={<BackPain />} />
           <Route path="/treatments/shoulder-pain" element={<ShoulderPain />} />
           <Route path="/treatments/orthopedic-rehab" element={<OrthopedicRehab />} />
