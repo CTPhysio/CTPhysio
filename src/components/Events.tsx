@@ -1,111 +1,60 @@
 import React from 'react';
-import { Calendar, Clock, MapPin, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import FinalCTA from './FinalCTA';
 
 export interface EventItem {
   id: string;
   title: string;
-  image: string;
-  date: string;
-  time: string;
-  location: string;
   summary: string;
-  description: string[];
-  bookingUrl: string;
-  price?: string;
-  capacity?: string;
+  waitingListUrl: string;
 }
 
 const events: EventItem[] = [
   {
-    id: 'injury-prevention-womens-football',
-    title: "Injury Prevention in Women's Football",
-    image: '/Kate_Talk.jpg',
-    date: 'Saturday 1st August 2026',
-    time: '10:30am – 11:30am',
-    location: 'Chris Tiley Physiotherapy, 24 Earls Court Road, Harborne, B17 9AH',
+    id: 'strength-training-over-60s',
+    title: 'Strength Training for Over 60s',
     summary:
-      "A practical, in-person talk with Kate Evans, physiotherapist and former professional footballer, on how to prevent injuries and stay ready for next season.",
-    description: [
-      "Are you ready for next season? Join Kate Evans, physiotherapist and former professional footballer, for a practical, in-person talk on preventing injuries in football.",
-      "Kate will cover: how to warm up properly, structuring a simple strength training programme, managing training load, and recovering effectively between sessions and games.",
-      "Whether you're a player or a coach, you'll leave with practical, useable ideas. Spaces are limited to 15. Tickets are £5, with all proceeds donated to Football Beyond Borders, a charity that uses football to help young people stay engaged in education.",
-      "After the talk, everyone is welcome to book a free 20-minute discovery visit or a full initial assessment, and will receive £10 off their first paid session.",
-    ],
-    bookingUrl:
-      'https://www.eventbrite.co.uk/e/injury-prevention-in-womens-football-tickets-1993001213279',
-    price: '£5',
-    capacity: '15 spaces',
+      'A practical session focused on building strength, fitness and confidence to help you keep doing the things you enjoy as you get older.',
+    waitingListUrl: 'https://christileyphysiotherapy.kit.com/54270f86c9',
+  },
+  {
+    id: 'preventing-injuries-womens-football',
+    title: "Preventing Injuries in Women's Football",
+    summary:
+      'A practical talk focused on helping women stay strong, reduce injury risk and keep playing the sport they enjoy.',
+    waitingListUrl: 'https://christileyphysiotherapy.kit.com/c0b5b4eb56',
+  },
+  {
+    id: 'tennis-injury-prevention',
+    title: 'Tennis Injury Prevention',
+    summary:
+      'A practical session for tennis players focused on reducing injury risk, building resilience and helping you keep playing the sport you enjoy.',
+    waitingListUrl: 'https://christileyphysiotherapy.kit.com/c699184b10',
   },
 ];
 
 const EventCard: React.FC<{ event: EventItem }> = ({ event }) => {
   return (
     <article className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
-      <div className="overflow-hidden bg-navy-100" style={{ aspectRatio: '16/7' }}>
-        <img
-          src={event.image}
-          alt={event.title}
-          className="w-full h-full object-contain hover:scale-105 transition-transform duration-500"
-          onError={(e) => {
-            e.currentTarget.style.display = 'none';
-          }}
-        />
+      <div className="bg-gradient-to-br from-navy-700 to-navy-900 px-8 py-10 flex items-center justify-center">
+        <h2 className="text-xl md:text-2xl font-bold text-white text-center leading-snug">{event.title}</h2>
       </div>
 
       <div className="p-8 flex-grow flex flex-col">
-        <h2 className="text-2xl font-bold text-navy-700 mb-4">{event.title}</h2>
-
-        <div className="space-y-2 mb-5">
-          <div className="flex items-start space-x-2 text-gray-700">
-            <Calendar size={18} className="text-sky-500 mt-0.5 flex-shrink-0" />
-            <span>{event.date}</span>
-          </div>
-          <div className="flex items-start space-x-2 text-gray-700">
-            <Clock size={18} className="text-sky-500 mt-0.5 flex-shrink-0" />
-            <span>{event.time}</span>
-          </div>
-          <div className="flex items-start space-x-2 text-gray-700">
-            <MapPin size={18} className="text-sky-500 mt-0.5 flex-shrink-0" />
-            <span>{event.location}</span>
-          </div>
+        <div className="mb-4">
+          <span className="inline-flex items-center px-3 py-1 rounded-full bg-amber-50 text-amber-700 font-medium text-xs sm:text-sm">
+            Coming soon
+          </span>
         </div>
 
-        <p className="text-gray-600 mb-5">{event.summary}</p>
-
-        <div className="space-y-3 mb-6">
-          {event.description.map((paragraph, i) => (
-            <p key={i} className="text-gray-600 leading-relaxed">
-              {paragraph}
-            </p>
-          ))}
-        </div>
-
-        {(event.price || event.capacity) && (
-          <div className="flex flex-wrap gap-4 mb-6 text-sm">
-            {event.price && (
-              <span className="inline-flex items-center px-3 py-1 rounded-full bg-sky-50 text-sky-700 font-medium">
-                Tickets: {event.price}
-              </span>
-            )}
-            {event.capacity && (
-              <span className="inline-flex items-center px-3 py-1 rounded-full bg-navy-50 text-navy-700 font-medium">
-                Limited to {event.capacity}
-              </span>
-            )}
-          </div>
-        )}
+        <p className="text-gray-600 leading-relaxed mb-6 flex-grow">{event.summary}</p>
 
         <div className="mt-auto">
           <a
-            href={event.bookingUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center space-x-2 w-full px-6 py-3 bg-navy-700 text-white font-semibold rounded-lg hover:bg-navy-800 transition-colors duration-200"
+            href={event.waitingListUrl}
+            className="inline-flex items-center justify-center w-full px-6 py-3 bg-navy-700 text-white font-semibold rounded-lg hover:bg-navy-800 transition-colors duration-200"
           >
-            <span>Book Your Place</span>
-            <ExternalLink size={18} />
+            Join the waiting list
           </a>
         </div>
       </div>
@@ -130,23 +79,11 @@ const Events: React.FC = () => {
 
       <section className="py-16">
         <div className="container mx-auto px-4">
-          {events.length > 0 ? (
-            <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              {events.map((event) => (
-                <EventCard key={event.id} event={event} />
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-20">
-              <p className="text-xl text-gray-500 mb-6">No events are currently scheduled.</p>
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-6 py-3 bg-navy-700 text-white font-semibold rounded-lg hover:bg-navy-800 transition-colors duration-200"
-              >
-                Get In Touch
-              </Link>
-            </div>
-          )}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {events.map((event) => (
+              <EventCard key={event.id} event={event} />
+            ))}
+          </div>
         </div>
       </section>
 
