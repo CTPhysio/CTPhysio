@@ -387,27 +387,36 @@ const StrengthRehabClasses: React.FC = () => {
           </p>
 
           {/* Membership */}
-          <div className="grid md:grid-cols-2 gap-6 items-center">
-            <div className="bg-white rounded-lg border border-gray-100 p-6 text-center md:text-left">
+          <div className="grid md:grid-cols-2 gap-4 sm:gap-6 mb-8">
+            <div className="bg-white rounded-lg border border-gray-100 p-6 text-center">
+              <p className="text-sm font-semibold text-gray-500 mb-2">1 class per week</p>
               <p className="text-3xl md:text-4xl font-bold text-navy-700 mb-1">£65<span className="text-lg font-medium text-gray-400"> / month</span></p>
               <p className="text-gray-500 text-sm mb-3">By Direct Debit</p>
               <p className="text-gray-600 leading-relaxed text-sm">
-                Your membership reserves your place in your chosen weekly class. This works out at around £15 per class on average across the year, though this is an average and not the exact cost of an individual session.
+                Your chosen class place is reserved for you each week.
               </p>
             </div>
-            <div className="space-y-2.5">
-              {[
-                'Rolling monthly membership',
-                "One month's notice to cancel",
-                'If you miss a session, you can make it up in another class that week if there is a space available',
-                'If we have to cancel a class, we will credit the average session value',
-              ].map((item, i) => (
-                <div key={i} className="flex items-start gap-2.5">
-                  <span className="mt-1.5 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-sky-500" />
-                  <span className="text-gray-600 text-sm leading-relaxed">{item}</span>
-                </div>
-              ))}
+            <div className="bg-white rounded-lg border border-gray-100 p-6 text-center">
+              <p className="text-sm font-semibold text-gray-500 mb-2">2 classes per week</p>
+              <p className="text-3xl md:text-4xl font-bold text-navy-700 mb-1">£120<span className="text-lg font-medium text-gray-400"> / month</span></p>
+              <p className="text-gray-500 text-sm mb-3">By Direct Debit</p>
+              <p className="text-gray-600 leading-relaxed text-sm">
+                You can attend two regular classes each week. Choose two different class times from the available Strength &amp; Rehab classes.
+              </p>
             </div>
+          </div>
+          <div className="space-y-2.5 max-w-2xl mx-auto">
+            {[
+              'Rolling monthly membership',
+              "One month's notice to cancel",
+              'If you miss a session, you can make it up in another class that week if there is a space available',
+              'If we have to cancel a class, we will credit the average session value',
+            ].map((item, i) => (
+              <div key={i} className="flex items-start gap-2.5">
+                <span className="mt-1.5 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-sky-500" />
+                <span className="text-gray-600 text-sm leading-relaxed">{item}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>

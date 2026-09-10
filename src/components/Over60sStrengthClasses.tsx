@@ -506,11 +506,23 @@ const Over60sStrengthClasses: React.FC = () => {
       <section className="py-10 md:py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           <SectionHeading className="text-center mb-3">Membership</SectionHeading>
-          <div className="max-w-2xl mx-auto bg-gray-50 rounded-lg border border-gray-100 p-5 md:p-6 text-center">
-            <p className="text-3xl md:text-4xl font-bold text-navy-700 mb-1">£65<span className="text-lg font-medium text-gray-400"> / month</span></p>
-            <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-              Membership is £65 per month for one fixed weekly class, with your place reserved each week.
-            </p>
+          <div className="grid md:grid-cols-2 gap-4 sm:gap-6 mb-8">
+            <div className="bg-gray-50 rounded-lg border border-gray-100 p-6 text-center">
+              <p className="text-sm font-semibold text-gray-500 mb-2">1 class per week</p>
+              <p className="text-3xl md:text-4xl font-bold text-navy-700 mb-1">£65<span className="text-lg font-medium text-gray-400"> / month</span></p>
+              <p className="text-gray-500 text-sm mb-3">By Direct Debit</p>
+              <p className="text-gray-600 leading-relaxed text-sm">
+                Your chosen class place is reserved for you each week.
+              </p>
+            </div>
+            <div className="bg-gray-50 rounded-lg border border-gray-100 p-6 text-center">
+              <p className="text-sm font-semibold text-gray-500 mb-2">2 classes per week</p>
+              <p className="text-3xl md:text-4xl font-bold text-navy-700 mb-1">£120<span className="text-lg font-medium text-gray-400"> / month</span></p>
+              <p className="text-gray-500 text-sm mb-3">By Direct Debit</p>
+              <p className="text-gray-600 leading-relaxed text-sm">
+                You can attend two regular Over 60s Strength classes each week. Choose two different class times from the available Over 60s classes.
+              </p>
+            </div>
           </div>
         </div>
       </section>
