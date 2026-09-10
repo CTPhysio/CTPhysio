@@ -38,7 +38,7 @@ const realLifeExamples = [
   { title: 'Get up from the floor', body: 'Build the strength and confidence to get down and back up again.' },
   { title: 'Walk with friends', body: "Improve your strength and fitness so you can keep up without feeling like you're holding everyone back." },
   { title: 'Keep working in the garden', body: 'Build the strength and physical capacity for the jobs and projects you enjoy.' },
-  { title: 'Carry things with confidence', body: 'Develop the strength needed to lift and carry everyday objects without worrying about what you can manage.' },
+  { title: 'Carry things with confidence', body: 'Develop the strength needed to lift and carry things like shopping bags and everyday objects with confidence.' },
   { title: 'Keep travelling', body: "Maintain the strength, fitness and confidence to stay active when you're away from home." },
 ];
 
@@ -87,7 +87,7 @@ const classFaqs = [
   { q: 'Do I need an assessment before joining?', a: "Yes. You'll have either a free Discovery Visit or an Initial Assessment first, so we can make sure the class is right for you." },
   { q: 'Can I join if I\'m over 80?', a: "Yes. The classes are for anyone over 60, and exercises are adapted to your individual ability rather than your age." },
   { q: 'Can I join part-way through a 12-week block?', a: "Yes. You don't need to wait for the next block. You'll be introduced to the current movement patterns and given appropriate exercise variations for your ability." },
-  { q: 'What happens if I miss a class?', a: 'We are finalising the membership arrangements and will share details of how missed sessions are handled once they are confirmed.' },
+  { q: 'What happens if I miss a class?', a: "If you miss your usual class, that session will normally be missed. If there happens to be a space in another class that week, you're welcome to make up the session there instead. If we have to cancel a class, we'll refund £15 for that session." },
   { q: 'What happens during the 20-minute Discovery Visit?', a: "We'll show you the training space, explain how the classes work and talk through what you'd like to achieve. It's also an opportunity to discuss any injuries, health concerns or worries you have about exercising. There's no obligation to join." },
 ];
 
@@ -164,16 +164,14 @@ const Over60sStrengthClasses: React.FC = () => {
             <p className="text-lg md:text-xl text-sky-200 font-medium mb-2 leading-relaxed max-w-2xl">
               Build strength, fitness and confidence to keep doing the things you enjoy.
             </p>
-            <p className="text-sm md:text-base text-gray-300 mb-6 leading-relaxed max-w-2xl">
+            <p className="text-sm md:text-base text-gray-300 mb-4 leading-relaxed max-w-2xl">
               Small-group strength training with a physiotherapist there throughout.
             </p>
-            <div className="flex flex-col sm:flex-row sm:items-center gap-4">
-              <DiscoveryButton />
-              <p className="text-sm text-gray-300 leading-relaxed">
-                <span className="font-semibold text-white">Maximum 5 people</span> per class
-              </p>
-            </div>
-            <p className="text-sm text-gray-400 mt-3 leading-relaxed">
+            <p className="text-sm text-gray-300 leading-relaxed mb-5">
+              <span className="font-semibold text-white">Maximum 5 people</span> per class
+            </p>
+            <DiscoveryButton />
+            <p className="text-sm text-gray-400 mt-4 leading-relaxed">
               No obligation. Come and see the clinic, meet the team, and find out if the classes are right for you.
             </p>
           </div>
@@ -545,7 +543,7 @@ const Over60sStrengthClasses: React.FC = () => {
       </section>
 
       {/* FINAL CTA */}
-      <section className="py-12 md:py-16 bg-navy-700 text-white rounded-t-[40px]">
+      <section className="py-12 md:py-16 bg-navy-900 text-white rounded-t-[40px]">
         <div className="container mx-auto text-center px-4 sm:px-6 lg:px-8 max-w-2xl">
           <h2 className="text-2xl md:text-4xl font-bold mb-3 leading-tight">Ready to feel stronger and more confident?</h2>
           <p className="text-base md:text-lg text-gray-300 mb-6 leading-relaxed">
