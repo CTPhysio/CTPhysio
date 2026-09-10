@@ -14,7 +14,7 @@ const events: EventItem[] = [
     id: 'strength-training-over-60s',
     title: 'Strength Training for Over 60s',
     summary:
-      'A practical session focused on building strength, fitness and confidence to help you keep doing the things you enjoy as you get older.',
+      'A practical session focused on building strength, fitness and confidence to help you keep doing the things you enjoy.',
     waitingListUrl: 'https://christileyphysiotherapy.kit.com/54270f86c9',
   },
   {
@@ -65,7 +65,7 @@ const EventCard: React.FC<{ event: EventItem }> = ({ event }) => {
 const Events: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
-      <section className="relative h-[45vh] bg-navy-800">
+      <section className="relative h-[45vh] bg-navy-800 pt-20">
         <div className="absolute inset-0 bg-gradient-to-br from-navy-900 to-navy-700 opacity-90" />
         <div className="relative h-full flex items-center justify-center text-center px-4">
           <div className="max-w-3xl mx-auto">
