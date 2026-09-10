@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { X } from 'lucide-react';
 import FinalCTA from './FinalCTA';
 
 export interface EventItem {
@@ -50,11 +51,17 @@ const KitEmbed: React.FC<{ uid: string; shouldLoad: boolean }> = ({ uid, shouldL
   return <div ref={containerRef} className="kit-embed-container" />;
 };
 
-const EventCard: React.FC<{ event: EventItem }> = ({ event }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
+const EventCard: React.FC<{ event: EventItem; isActive: boolean; onToggle: () => void }> = ({
+  event,
+  isActive,
+  onToggle,
+}) => {
   return (
-    <article className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+    <article
+      className={`bg-white rounded-xl shadow-lg overflow-hidden flex flex-col transition-shadow duration-200 ${
+        isActive ? 'ring-2 ring-sky-500' : ''
+      }`}
+    >
       <div className="bg-gradient-to-br from-navy-700 to-navy-900 px-8 py-10 flex items-center justify-center">
         <h2 className="text-xl md:text-2xl font-bold text-white text-center leading-snug">{event.title}</h2>
       </div>
@@ -69,25 +76,36 @@ const EventCard: React.FC<{ event: EventItem }> = ({ event }) => {
         <p className="text-gray-600 leading-relaxed mb-6 flex-grow">{event.summary}</p>
 
         <button
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={onToggle}
           className="inline-flex items-center justify-center w-full px-6 py-3 bg-navy-700 text-white font-semibold rounded-lg hover:bg-navy-800 transition-colors duration-200"
         >
-          {isOpen ? 'Close waiting list form' : 'Join the waiting list'}
+          {isActive ? 'Close waiting list form' : 'Join the waiting list'}
         </button>
-
-        <div
-          className={`overflow-hidden transition-all duration-300 ease-in-out ${
-            isOpen ? 'max-h-[800px] opacity-100 mt-6' : 'max-h-0 opacity-0'
-          }`}
-        >
-          <KitEmbed uid={event.kitUid} shouldLoad={isOpen} />
-        </div>
       </div>
     </article>
   );
 };
 
 const Events: React.FC = () => {
+  const [activeEventId, setActiveEventId] = useState<string | null>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
+
+  const activeEvent = events.find((e) => e.id === activeEventId) || null;
+
+  const handleToggle = (eventId: string) => {
+    setActiveEventId((prev) => (prev === eventId ? null : eventId));
+  };
+
+  const handleClose = () => {
+    setActiveEventId(null);
+  };
+
+  useEffect(() => {
+    if (activeEventId && panelRef.current) {
+      panelRef.current.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  }, [activeEventId]);
+
   return (
     <div className="min-h-screen bg-gray-50">
       <section className="relative h-[45vh] bg-navy-800 pt-20">
@@ -104,10 +122,44 @@ const Events: React.FC = () => {
 
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto items-start">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {events.map((event) => (
-              <EventCard key={event.id} event={event} />
+              <EventCard
+                key={event.id}
+                event={event}
+                isActive={activeEventId === event.id}
+                onToggle={() => handleToggle(event.id)}
+              />
             ))}
+          </div>
+
+          <div
+            ref={panelRef}
+            className={`max-w-6xl mx-auto overflow-hidden transition-all duration-300 ease-in-out ${
+              activeEvent ? 'mt-8 opacity-100' : 'max-h-0 opacity-0 mt-0'
+            }`}
+          >
+            {activeEvent && (
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div className="bg-gradient-to-br from-navy-700 to-navy-900 px-8 py-6 flex items-center justify-between">
+                  <div>
+                    <p className="text-sky-300 font-medium text-sm mb-1">Join the waiting list</p>
+                    <h2 className="text-xl md:text-2xl font-bold text-white leading-snug">{activeEvent.title}</h2>
+                  </div>
+                  <button
+                    onClick={handleClose}
+                    className="inline-flex items-center justify-center w-10 h-10 rounded-lg text-white hover:bg-white/10 transition-colors duration-200 flex-shrink-0 ml-4"
+                    aria-label="Close waiting list form"
+                  >
+                    <X size={22} />
+                  </button>
+                </div>
+
+                <div className="p-8 md:p-10">
+                  <KitEmbed uid={activeEvent.kitUid} shouldLoad={true} />
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>
