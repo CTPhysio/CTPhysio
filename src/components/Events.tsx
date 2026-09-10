@@ -31,6 +31,13 @@ const events: EventItem[] = [
       'A practical session for tennis players focused on reducing injury risk, building resilience and helping you keep playing the sport you enjoy.',
     kitUid: 'c699184b10',
   },
+  {
+    id: 'preventing-running-injuries',
+    title: 'Preventing Running Injuries',
+    summary:
+      'A practical talk focused on helping runners reduce injury risk, understand common running injuries and keep doing more of what they enjoy.',
+    kitUid: '6749280a76',
+  },
 ];
 
 const KitEmbed: React.FC<{ uid: string; shouldLoad: boolean }> = ({ uid, shouldLoad }) => {
@@ -122,7 +129,7 @@ const Events: React.FC = () => {
 
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 max-w-6xl mx-auto">
             {events.map((event) => (
               <EventCard
                 key={event.id}
