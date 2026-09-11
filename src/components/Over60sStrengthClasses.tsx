@@ -124,8 +124,49 @@ const Over60sStrengthClasses: React.FC = () => {
     const prevTitle = document.title;
     const prevDesc = document.querySelector('meta[name="description"]');
     const prevDescContent = prevDesc?.getAttribute('content');
-    document.title = 'Over 60s Strength Classes in Harborne, Birmingham | Chris Tiley Physiotherapy';
-    if (prevDesc) prevDesc.setAttribute('content', 'Small-group strength and fitness classes for over 60s in Harborne, Birmingham. Led by a physiotherapist, with individualised exercises to build strength, balance, fitness and confidence.');
+
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    const prevOgTitle = ogTitle?.getAttribute('content');
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    const prevOgDesc = ogDesc?.getAttribute('content');
+    const ogImage = document.querySelector('meta[property="og:image"]');
+    const prevOgImage = ogImage?.getAttribute('content');
+    const ogUrl = document.querySelector('meta[property="og:url"]');
+    const prevOgUrl = ogUrl?.getAttribute('content');
+    const ogType = document.querySelector('meta[property="og:type"]');
+    const prevOgType = ogType?.getAttribute('content');
+    const twCard = document.querySelector('meta[name="twitter:card"]');
+    const prevTwCard = twCard?.getAttribute('content');
+    const twImage = document.querySelector('meta[name="twitter:image"]');
+    const prevTwImage = twImage?.getAttribute('content');
+
+    const pageUrl = 'https://christileyphysiotherapy.com/over-60s-strength-classes';
+    const ogImageUrl = 'https://christileyphysiotherapy.com/og-over60s-strength-classes.png';
+    const ogTitleContent = 'Over 60s Strength Classes in Harborne, Birmingham | Chris Tiley Physiotherapy';
+    const ogDescContent = 'Small-group strength and fitness classes for over 60s in Harborne, Birmingham. Led by a physiotherapist, with individualised exercises to build strength, balance, fitness and confidence.';
+
+    document.title = ogTitleContent;
+    if (prevDesc) prevDesc.setAttribute('content', ogDescContent);
+
+    const upsertMeta = (selector: string, attr: string, value: string) => {
+      let el = document.head.querySelector(`meta[${selector}]`) as HTMLMetaElement | null;
+      if (!el) {
+        el = document.createElement('meta');
+        const [prop, val] = selector.split('=').map((s) => s.replace(/"/g, '').replace('property', 'property').replace('name', 'name'));
+        el.setAttribute(prop === 'property' ? 'property' : 'name', val);
+        document.head.appendChild(el);
+      }
+      el.setAttribute(attr, value);
+    };
+
+    upsertMeta('property="og:title"', 'content', ogTitleContent);
+    upsertMeta('property="og:description"', 'content', ogDescContent);
+    upsertMeta('property="og:image"', 'content', ogImageUrl);
+    upsertMeta('property="og:url"', 'content', pageUrl);
+    upsertMeta('property="og:type"', 'content', 'website');
+    upsertMeta('name="twitter:card"', 'content', 'summary_large_image');
+    upsertMeta('name="twitter:image"', 'content', ogImageUrl);
+
     const ldJson = document.createElement('script');
     ldJson.type = 'application/ld+json';
     ldJson.text = JSON.stringify({
@@ -133,7 +174,7 @@ const Over60sStrengthClasses: React.FC = () => {
       '@type': 'MedicalBusiness',
       name: 'Chris Tiley Physiotherapy',
       description: 'Physiotherapy clinic offering small-group strength and fitness classes for over 60s, led by a physiotherapist.',
-      url: 'https://christileyphysiotherapy.com/over-60s-strength-classes',
+      url: pageUrl,
       telephone: '01215170806',
       address: {
         '@type': 'PostalAddress',
@@ -147,6 +188,13 @@ const Over60sStrengthClasses: React.FC = () => {
     return () => {
       document.title = prevTitle;
       if (prevDesc && prevDescContent) prevDesc.setAttribute('content', prevDescContent);
+      if (ogTitle && prevOgTitle) ogTitle.setAttribute('content', prevOgTitle);
+      if (ogDesc && prevOgDesc) ogDesc.setAttribute('content', prevOgDesc);
+      if (ogImage && prevOgImage) ogImage.setAttribute('content', prevOgImage);
+      if (ogUrl && prevOgUrl) ogUrl.setAttribute('content', prevOgUrl);
+      if (ogType && prevOgType) ogType.setAttribute('content', prevOgType);
+      if (twCard && prevTwCard) twCard.setAttribute('content', prevTwCard);
+      if (twImage && prevTwImage) twImage.setAttribute('content', prevTwImage);
       document.head.removeChild(ldJson);
     };
   }, []);
