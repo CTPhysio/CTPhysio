@@ -535,17 +535,13 @@ const Over60sStrengthClasses: React.FC = () => {
                 <span className="inline-flex items-center px-3 py-1 rounded-full bg-gray-100 text-gray-500 font-medium text-xs sm:text-sm">Full</span>
               </div>
             </div>
-          </div>
-
-          {/* Waiting list */}
-          <div className="bg-white rounded-lg border border-dashed border-gray-200 p-5 sm:p-6">
-            <div className="flex items-center gap-2 mb-2">
-              <span className="inline-flex items-center px-3 py-1 rounded-full bg-amber-50 text-amber-700 font-medium text-xs sm:text-sm">Coming soon</span>
-              <span className="text-gray-700 font-medium text-sm sm:text-base">Thursday 2:30pm</span>
+            <div className="grid grid-cols-3 border-t border-gray-100">
+              <div className="px-4 sm:px-5 py-3 text-gray-700 font-medium text-sm sm:text-base">Thursday</div>
+              <div className="px-4 sm:px-5 py-3 text-gray-600 text-sm sm:text-base">2:30pm</div>
+              <div className="px-4 sm:px-5 py-3">
+                <span className="inline-flex items-center px-3 py-1 rounded-full bg-sky-50 text-sky-700 font-medium text-xs sm:text-sm">3 spaces available</span>
+              </div>
             </div>
-            <p className="text-gray-600 leading-relaxed text-sm">
-              We're considering adding another Thursday class. If you're interested in this time, <Link to="/contact" className="text-sky-600 hover:text-sky-700 underline">join the waiting list</Link> and we'll let you know when a place becomes available.
-            </p>
           </div>
         </div>
       </section>

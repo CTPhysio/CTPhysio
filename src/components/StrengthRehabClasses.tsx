@@ -11,10 +11,10 @@ type ClassSlot = {
 };
 
 const classTimetable: ClassSlot[] = [
-  { day: 'Monday', time: '6:30pm', spaces: 2 },
+  { day: 'Monday', time: '6:30pm', spaces: 0 },
   { day: 'Monday', time: '7:30pm', spaces: 0 },
-  { day: 'Wednesday', time: '6:30pm', spaces: 1 },
-  { day: 'Wednesday', time: '7:30pm', spaces: 2 },
+  { day: 'Wednesday', time: '6:30pm', spaces: 0 },
+  { day: 'Wednesday', time: '7:30pm', spaces: 1 },
 ];
 
 const DiscoveryButton: React.FC<{ className?: string; children?: React.ReactNode }> = ({
@@ -372,7 +372,7 @@ const StrengthRehabClasses: React.FC = () => {
                 <div className="px-4 sm:px-5 py-3 text-gray-600 text-sm sm:text-base">{slot.time}</div>
                 <div className="px-4 sm:px-5 py-3">
                   {slot.spaces === 0 ? (
-                    <span className="inline-flex items-center px-3 py-1 rounded-full bg-gray-100 text-gray-500 font-medium text-xs sm:text-sm">Fully booked</span>
+                    <span className="inline-flex items-center px-3 py-1 rounded-full bg-gray-100 text-gray-500 font-medium text-xs sm:text-sm">Full</span>
                   ) : (
                     <span className={`inline-flex items-center px-3 py-1 rounded-full font-medium text-xs sm:text-sm ${slot.spaces === 1 ? 'bg-amber-50 text-amber-700' : 'bg-sky-50 text-sky-700'}`}>
                       {slot.spaces} {slot.spaces === 1 ? 'space' : 'spaces'} available
