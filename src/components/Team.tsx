@@ -217,7 +217,7 @@ const Team: React.FC = () => {
               <div className="bg-gradient-to-br from-sky-50 to-slate-100 px-6 pt-8 pb-0 flex justify-center">
                 <div className="w-40 h-40 sm:w-48 sm:h-48 rounded-full border-4 border-white shadow-[0_4px_20px_rgba(15,23,42,0.14)] overflow-hidden">
                   <img
-                    src="/1000083369.jpg"
+                    src="/Kate_Headshot_No_Background.png"
                     alt="Kate Evans - Physiotherapist"
                     style={{
                       width: '100%',
