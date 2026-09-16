@@ -43,7 +43,6 @@ const Services: React.FC = () => {
       link: "https://chris-tiley-physiotherapy.uk1.cliniko.com/bookings#service",
       buttonText: "Call the Clinic",
       pricing: [
-        { name: "Block of 12 Classes", price: "£225" },
         { name: "Monthly Direct Debit", price: "£65/month" }
       ]
     }
