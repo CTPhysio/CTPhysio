@@ -29,6 +29,7 @@ const Services: React.FC = () => {
       link: "https://chris-tiley-physiotherapy.uk1.cliniko.com/bookings#service",
       buttonText: "Call the Clinic",
       pricing: [
+        { name: "Free Discovery Visit", price: "£0" },
         { name: "Initial Assessment (60 mins)", price: "£80" },
         { name: "Follow-Up Session (45 mins)", price: "£60" },
         { name: "Block of 5 Sessions", price: "£275" },
