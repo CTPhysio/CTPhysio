@@ -123,7 +123,7 @@ const Booking: React.FC = () => {
             {/* Left column – Enquiry form (desktop) */}
             <div className="order-2 md:order-1 bg-white rounded-xl shadow-lg p-6 md:p-8">
               <h2 className="text-xl md:text-2xl font-bold text-navy-700 mb-3">
-                Prefer to send us a message?
+                Prefer to message us?
               </h2>
               <p className="text-gray-600 leading-relaxed mb-6 text-sm md:text-base">
                 If you’d rather send us a message, complete the short enquiry form and we’ll get back to you.
