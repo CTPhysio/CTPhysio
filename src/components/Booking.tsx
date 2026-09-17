@@ -198,7 +198,7 @@ const Booking: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">How can I help? *</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">How can we help? *</label>
                   <textarea
                     name="message"
                     value={formData.message}
@@ -210,13 +210,13 @@ const Booking: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">How did you hear about me? *</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">How did you hear about us? *</label>
                   <input
                     type="text"
                     name="referralSource"
                     value={formData.referralSource}
                     onChange={handleChange}
-                    placeholder="Google, doctor, gym... (be specific so we can thank them!)"
+                    placeholder="Google, doctor, gym... (be specific so we can thank...)"
                     className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-sky-500"
                     required
                     disabled={isSubmitting}
