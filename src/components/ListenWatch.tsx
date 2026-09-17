@@ -8,6 +8,7 @@ const resources = [
     description: 'Practical videos and advice to help you build strength, move well and stay active as you get older.',
     buttonText: 'Watch on YouTube',
     href: 'https://www.youtube.com/c/NeverTooOldtoLift',
+    imageClassName: 'max-h-full max-w-full object-contain scale-[1.6]',
   },
   {
     image: '/assets/images/Main_file.jpg',
@@ -16,6 +17,7 @@ const resources = [
     description: 'Practical conversations and advice about strength training, healthy ageing and staying strong for life.',
     buttonText: 'Listen to the Podcast',
     href: 'https://nevertoooldtolift.com/category/podcast/',
+    imageClassName: 'max-h-full max-w-full object-contain',
   },
 ];
 
@@ -39,7 +41,7 @@ const ListenWatch: React.FC = () => {
                 <img
                   src={resource.image}
                   alt={resource.imageAlt}
-                  className="max-h-full max-w-full object-contain"
+                  className={resource.imageClassName}
                 />
               </div>
               <div className="p-8 flex flex-col flex-grow">
