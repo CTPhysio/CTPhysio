@@ -4,7 +4,7 @@ const resources = [
   {
     image: '/assets/images/Never_Too_Old_To_Lift_-_Logo_-_Black_font_Blue_Dumbell_and_White_background.jpg',
     imageAlt: 'Never Too Old to Lift logo',
-    title: 'Never Too Old to Lift',
+    title: 'Never Too Old to Lift on YouTube',
     description: 'Practical videos and advice to help you build strength, move well and stay active as you get older.',
     buttonText: 'Watch on YouTube',
     href: 'https://www.youtube.com/c/NeverTooOldtoLift',
