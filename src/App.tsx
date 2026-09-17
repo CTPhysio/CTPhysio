@@ -34,6 +34,7 @@ import TermsOfService from './components/TermsOfService';
 import StrengthRehabClasses from './components/StrengthRehabClasses';
 import Over60sStrengthClasses from './components/Over60sStrengthClasses';
 import EventWaitingListConfirmed from './components/EventWaitingListConfirmed';
+import Booking from './components/Booking';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -66,6 +67,7 @@ function App() {
           } />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/booking" element={<Booking />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/events" element={<Events />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
