@@ -7,15 +7,13 @@ const BOOKING_URL = 'https://chris-tiley-physiotherapy.uk1.cliniko.com/bookings'
 
 const Booking: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
+    firstName: '',
+    lastName: '',
     email: '',
-    help: '',
-    when: '',
+    phone: '',
+    message: '',
+    referralSource: ''
   });
-
-  // Map booking fields to the existing "contact" Netlify form fields
-  // so submissions use the same form, notifications and routing.
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -40,18 +38,25 @@ const Booking: React.FC = () => {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encode({
           'form-name': 'contact',
-          'firstName': formData.name,
-          'lastName': '',
-          'phone': formData.phone,
+          'firstName': formData.firstName,
+          'lastName': formData.lastName,
           'email': formData.email,
-          'message': formData.help + (formData.when ? `\n\nPreferred time: ${formData.when}` : ''),
-          'referralSource': '',
+          'phone': formData.phone,
+          'message': formData.message,
+          'referralSource': formData.referralSource
         }),
       });
 
       if (response.ok) {
         setSubmitStatus('success');
-        setFormData({ name: '', phone: '', email: '', help: '', when: '' });
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          message: '',
+          referralSource: ''
+        });
       } else {
         throw new Error('Form submission failed');
       }
@@ -139,12 +144,39 @@ const Booking: React.FC = () => {
                   </label>
                 </p>
 
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">First Name *</label>
+                    <input
+                      type="text"
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleChange}
+                      className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-sky-500"
+                      required
+                      disabled={isSubmitting}
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">Last Name *</label>
+                    <input
+                      type="text"
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleChange}
+                      className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-sky-500"
+                      required
+                      disabled={isSubmitting}
+                    />
+                  </div>
+                </div>
+
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Name *</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Email *</label>
                   <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
+                    type="email"
+                    name="email"
+                    value={formData.email}
                     onChange={handleChange}
                     className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-sky-500"
                     required
@@ -166,43 +198,27 @@ const Booking: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Email *</label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-sky-500"
-                    required
-                    disabled={isSubmitting}
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    What can we help you with? *
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">How can I help? *</label>
                   <textarea
-                    name="help"
-                    value={formData.help}
+                    name="message"
+                    value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-sky-500 h-24"
+                    className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-sky-500 h-32"
                     required
                     disabled={isSubmitting}
-                  />
+                  ></textarea>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    When would you ideally like to come in?
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">How did you hear about me? *</label>
                   <input
                     type="text"
-                    name="when"
-                    value={formData.when}
+                    name="referralSource"
+                    value={formData.referralSource}
                     onChange={handleChange}
-                    placeholder="e.g. weekday mornings, ASAP, a specific date"
+                    placeholder="Google, doctor, gym... (be specific so we can thank them!)"
                     className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-sky-500"
+                    required
                     disabled={isSubmitting}
                   />
                 </div>
@@ -212,7 +228,7 @@ const Booking: React.FC = () => {
                   className="w-full bg-navy-700 text-white py-3 rounded-md font-semibold hover:bg-navy-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? 'Sending...' : 'Send Enquiry'}
+                  {isSubmitting ? 'Sending...' : 'Enquire about an Appointment'}
                 </button>
               </form>
             </div>
