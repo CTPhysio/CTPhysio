@@ -7,6 +7,7 @@ import HowWeHelp from './components/HowWeHelp';
 import GoogleReviewsSlider from './components/GoogleReviewsSlider';
 import FAQ from './components/FAQ';
 import FinalCTA from './components/FinalCTA';
+import ListenWatch from './components/ListenWatch';
 import Footer from './components/Footer';
 import TrustpilotBanner from './components/TrustpilotBanner';
 import Services from './components/Services';
@@ -60,6 +61,7 @@ function App() {
               <GoogleReviewsSlider />
               <FAQ />
               <FinalCTA />
+              <ListenWatch />
             </>
           } />
           <Route path="/services" element={<Services />} />
