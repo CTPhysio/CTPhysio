@@ -272,20 +272,6 @@ const Booking: React.FC = () => {
                   Book Online
                 </a>
               </div>
-
-              {/* Small reassurance */}
-              <div className="text-center px-2">
-                <p className="text-sm text-gray-500 leading-relaxed mb-3">
-                  Not sure what you need? That’s absolutely fine. Give us a call and we’ll talk things through with you.
-                </p>
-                <a
-                  href={CLINIC_PHONE_TEL}
-                  className="inline-flex items-center justify-center px-6 py-3 bg-navy-700 text-white font-semibold rounded-lg hover:bg-navy-800 transition-colors text-base"
-                >
-                  <Phone className="mr-2" size={18} />
-                  {CLINIC_PHONE}
-                </a>
-              </div>
             </div>
           </div>
         </div>
