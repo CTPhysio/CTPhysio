@@ -14,6 +14,9 @@ const Booking: React.FC = () => {
     when: '',
   });
 
+  // Map booking fields to the existing "contact" Netlify form fields
+  // so submissions use the same form, notifications and routing.
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
@@ -36,12 +39,13 @@ const Booking: React.FC = () => {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encode({
-          'form-name': 'booking-enquiry',
-          name: formData.name,
-          phone: formData.phone,
-          email: formData.email,
-          help: formData.help,
-          when: formData.when,
+          'form-name': 'contact',
+          'firstName': formData.name,
+          'lastName': '',
+          'phone': formData.phone,
+          'email': formData.email,
+          'message': formData.help + (formData.when ? `\n\nPreferred time: ${formData.when}` : ''),
+          'referralSource': '',
         }),
       });
 
@@ -121,14 +125,14 @@ const Booking: React.FC = () => {
               </p>
 
               <form
-                name="booking-enquiry"
+                name="contact"
                 method="POST"
                 data-netlify="true"
                 netlify-honeypot="bot-field"
                 onSubmit={handleSubmit}
                 className="space-y-4"
               >
-                <input type="hidden" name="form-name" value="booking-enquiry" />
+                <input type="hidden" name="form-name" value="contact" />
                 <p className="hidden">
                   <label>
                     Don't fill this out if you're human: <input name="bot-field" />
