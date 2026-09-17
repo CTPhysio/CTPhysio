@@ -69,7 +69,7 @@ const Hero: React.FC = () => {
             {/* Primary CTA */}
             <div className="mb-6">
               <a
-                href="/contact"
+                href="/booking"
                 className="inline-flex justify-center items-center px-8 py-4 text-sm sm:text-base font-semibold rounded-md shadow-md text-white bg-navy-700 hover:bg-navy-800 transition-colors duration-200"
               >
                 Start With A Free Discovery Visit

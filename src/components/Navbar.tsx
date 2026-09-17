@@ -86,10 +86,10 @@ const Navbar: React.FC = () => {
               <span>0121 517 0806</span>
             </a>
             <a
-              href="/contact"
+              href="/booking"
               className="inline-flex items-center px-5 py-2.5 text-sm font-semibold rounded-md text-white bg-navy-700 hover:bg-navy-800 transition-colors duration-200"
             >
-              Get In Touch
+              Book an Appointment
             </a>
           </div>
 
@@ -190,10 +190,10 @@ const Navbar: React.FC = () => {
               <span>0121 517 0806</span>
             </a>
             <a
-              href="/contact"
+              href="/booking"
               className="block w-full text-center mt-2 px-4 py-2.5 rounded-md text-sm font-semibold text-white bg-navy-700 hover:bg-navy-800"
             >
-              Get In Touch
+              Book an Appointment
             </a>
           </div>
         </div>
