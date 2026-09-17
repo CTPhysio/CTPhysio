@@ -14,7 +14,7 @@ const resources = [
     image: '/assets/images/Main_file.jpg',
     imageAlt: 'The Never Too Old to Lift Podcast logo',
     title: 'The Never Too Old to Lift Podcast',
-    description: 'Hosted by Chris Tiley, physiotherapist and founder of Chris Tiley Physiotherapy, with practical conversations and advice about strength training, healthy ageing and staying strong for life.',
+    description: 'Hosted by Chris Tiley, founder of Chris Tiley Physiotherapy, with practical conversations and advice about strength training, healthy ageing and staying strong for life.',
     buttonText: 'Listen to the Podcast',
     href: 'https://nevertoooldtolift.com/category/podcast/',
     imageClassName: 'max-h-full max-w-full object-contain',
