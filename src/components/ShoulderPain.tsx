@@ -1,153 +1,43 @@
 import React from 'react';
-import Seo from './Seo';
-import TreatmentCTA from './TreatmentCTA';
+import TreatmentPageTemplate from './TreatmentPageTemplate';
 
-const ShoulderPain: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Seo
-        title="Shoulder Pain Physiotherapy in Harborne | Chris Tiley Physiotherapy"
-        description="Physiotherapy for shoulder pain in Harborne, helping you restore movement, strength and confidence and get back to the activities you enjoy."
-        canonicalPath="/treatments/shoulder-pain"
-      />
-      {/* Hero Section - Lighter blue background */}
-      <section className="bg-sky-600 text-white py-16 md:py-24">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-lg md:text-xl mb-4 opacity-90">
-            CHRIS TILEY PHYSIOTHERAPY
-          </p>
-          <h1 className="text-4xl md:text-6xl font-bold mb-8">
-            Shoulder Pain
-          </h1>
-          <div className="text-lg md:text-xl max-w-4xl mx-auto leading-relaxed space-y-4">
-            <p>
-              Shoulder pain can be particularly frustrating as it often interferes with everyday tasks we take for granted - reaching into cupboards, getting dressed, sleeping comfortably, or lifting objects. Whether your shoulder pain developed gradually or started after a specific activity, physiotherapy can help you regain function and confidence in your arm movement.
-            </p>
-            <p>
-              My approach focuses on understanding what's contributing to your shoulder problem and helping you restore mobility, strength, and the ability to use your arm without pain or limitation.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Transition Section */}
-      <section className="bg-gray-50 py-12 text-center">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-sky-700 mb-4">
-            Ready to address your shoulder pain?
-          </h2>
-          <p className="text-lg md:text-xl text-sky-700 max-w-3xl mx-auto mb-8">
-            Whether your shoulder pain is preventing you from reaching comfortably, affecting your sleep, or limiting activities you enjoy, physiotherapy can help you understand your condition and work toward regaining full, pain-free movement.
-          </p>
-          <a
-            href="/booking"
-            className="inline-flex items-center px-8 py-4 bg-sky-600 text-white font-bold rounded-lg hover:bg-sky-700 transition-colors text-lg"
-          >
-            Book an Appointment
-          </a>
-        </div>
-      </section>
-
-      {/* Main Content Section with Parallax Background */}
-      <section className="relative min-h-screen">
-        {/* Fixed Background Image */}
-        <div 
-          className="fixed inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: 'url("https://lh3.googleusercontent.com/p/AF1QipMPeZpwD2vsxUz9DSm9BKzha0SzdF3R4AanKr9E=s680-w680-h510-rw")',
-            zIndex: -1
-          }}
-          role="img"
-          aria-label=""
-        >
-          <div className="absolute inset-0 bg-sky-900 bg-opacity-60"></div>
-        </div>
-
-        {/* Content that scrolls over the fixed background */}
-        <div className="relative z-10">
-          {/* Spacer to allow scrolling effect */}
-          <div className="h-32"></div>
-          
-          <div className="bg-sky-800 text-white">
-            <div className="container mx-auto px-4 py-16">
-              <div className="grid lg:grid-cols-2 gap-12 items-start">
-                {/* Left Column - Main Content */}
-                <div className="space-y-6">
-                  <h2 className="text-3xl md:text-4xl font-bold mb-8">
-                    Why Physiotherapy Works for Shoulder Pain
-                  </h2>
-                  
-                  <p className="text-lg leading-relaxed">
-                    Research demonstrates that exercise-based treatment is highly effective for most shoulder conditions, often providing better long-term results than injections or passive treatments alone. I'll help you understand your shoulder condition, address any movement restrictions, and guide you through a progressive program to restore function.
-                  </p>
-                  
-                  <p className="text-lg leading-relaxed">
-                    Many of my patients in Harborne have successfully overcome shoulder pain that was limiting their daily activities, sleep, and hobbies - often avoiding the need for surgery and regaining full use of their arm.
-                  </p>
-                  
-                  <p className="text-lg leading-relaxed font-semibold">
-                    I regularly help people with:
-                  </p>
-                  
-                  <ul className="space-y-2 text-lg">
-                    <li>• Rotator cuff injuries and impingement syndrome</li>
-                    <li>• Frozen shoulder (adhesive capsulitis) and stiffness</li>
-                    <li>• Age-related shoulder wear and arthritis</li>
-                    <li>• Pain with overhead reaching and lifting</li>
-                    <li>• Night pain affecting sleep quality</li>
-                    <li>• Post-surgical rehabilitation (rotator cuff repair, shoulder replacement)</li>
-                    <li>• Shoulder instability and weakness</li>
-                    <li>• Neck-related shoulder pain</li>
-                    <li>• Sports-related shoulder injuries</li>
-                    <li>• Chronic shoulder tension and muscle imbalances</li>
-                    <li>• Bursitis and inflammation</li>
-                  </ul>
-                  
-                  <div className="pt-8">
-                    <a
-                      href="/booking"
-                      className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-sky-800 transition-colors text-lg"
-                    >
-                      Book an Appointment
-                    </a>
-                  </div>
-                </div>
-
-                {/* Right Column - Testimonial placeholder */}
-                <div className="lg:sticky lg:top-8">
-                  <div className="bg-white/10 rounded-lg p-8 backdrop-blur-sm">
-                    <div className="aspect-square bg-white/20 rounded-lg flex items-center justify-center">
-                      <p className="text-center text-lg">
-                        "I can finally reach overhead without pain!"
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          {/* Bottom spacer */}
-          <div className="h-32 bg-sky-800"></div>
-        </div>
-      </section>
-
-      {/* Related Conditions */}
-      <section className="bg-white py-12">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-xl md:text-2xl font-bold text-navy-700 mb-6 text-center">
-            Related Conditions
-          </h2>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a href="/treatments/neck-pain" className="px-5 py-2.5 bg-gray-100 text-navy-700 font-semibold rounded-lg hover:bg-navy-700 hover:text-white transition-colors">Neck Pain</a>
-            <a href="/treatments/surgical-rehab" className="px-5 py-2.5 bg-gray-100 text-navy-700 font-semibold rounded-lg hover:bg-navy-700 hover:text-white transition-colors">Surgical Rehabilitation</a>
-          </div>
-        </div>
-      </section>
-
-      <TreatmentCTA conditionName="shoulder pain" />
-    </div>
-  );
-};
+const ShoulderPain: React.FC = () => (
+  <TreatmentPageTemplate
+    seoTitle="Shoulder Pain Physiotherapy in Harborne | Chris Tiley Physiotherapy"
+    seoDescription="Physiotherapy for shoulder pain in Harborne, helping you restore movement, strength and confidence and get back to the activities you enjoy."
+    canonicalPath="/treatments/shoulder-pain"
+    h1="Shoulder Pain"
+    heroParagraphs={[
+      "Shoulder pain can be particularly frustrating as it often interferes with everyday tasks we take for granted - reaching into cupboards, getting dressed, sleeping comfortably, or lifting objects. Whether your shoulder pain developed gradually or started after a specific activity, physiotherapy can help you regain function and confidence in your arm movement.",
+      "My approach focuses on understanding what's contributing to your shoulder problem and helping you restore mobility, strength, and the ability to use your arm without pain or limitation.",
+    ]}
+    ctaHeading="Ready to address your shoulder pain?"
+    ctaText="Whether your shoulder pain is preventing you from reaching comfortably, affecting your sleep, or limiting activities you enjoy, physiotherapy can help you understand your condition and work toward regaining full, pain-free movement."
+    mainHeading="Why Physiotherapy Works for Shoulder Pain"
+    mainParagraphs={[
+      "Research demonstrates that exercise-based treatment is highly effective for most shoulder conditions, often providing better long-term results than injections or passive treatments alone. I'll help you understand your shoulder condition, address any movement restrictions, and guide you through a progressive program to restore function.",
+      "Many of my patients in Harborne have successfully overcome shoulder pain that was limiting their daily activities, sleep, and hobbies - often avoiding the need for surgery and regaining full use of their arm.",
+    ]}
+    bulletList={[
+      "Rotator cuff injuries and impingement syndrome",
+      "Frozen shoulder (adhesive capsulitis) and stiffness",
+      "Age-related shoulder wear and arthritis",
+      "Pain with overhead reaching and lifting",
+      "Night pain affecting sleep quality",
+      "Post-surgical rehabilitation (rotator cuff repair, shoulder replacement)",
+      "Shoulder instability and weakness",
+      "Neck-related shoulder pain",
+      "Sports-related shoulder injuries",
+      "Chronic shoulder tension and muscle imbalances",
+      "Bursitis and inflammation",
+    ]}
+    imageUrl="https://lh3.googleusercontent.com/p/AF1QipMPeZpwD2vsxUz9DSm9BKzha0SzdF3R4AanKr9E=s680-w680-h510-rw"
+    relatedConditions={[
+      { label: "Neck Pain", href: "/treatments/neck-pain" },
+      { label: "Surgical Rehabilitation", href: "/treatments/surgical-rehab" },
+    ]}
+    conditionName="shoulder pain"
+  />
+);
 
 export default ShoulderPain;
