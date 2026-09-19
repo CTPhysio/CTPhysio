@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import WhoWeHelp from './components/WhoWeHelp';
 import HowWeHelp from './components/HowWeHelp';
+import HowCanWeHelp from './components/HowCanWeHelp';
 import GoogleReviewsSlider from './components/GoogleReviewsSlider';
 import FAQ from './components/FAQ';
 import FinalCTA from './components/FinalCTA';
@@ -62,6 +63,7 @@ function App() {
               <Hero />
               <WhoWeHelp />
               <HowWeHelp />
+              <HowCanWeHelp />
               <GoogleReviewsSlider />
               <FAQ />
               <FinalCTA />
