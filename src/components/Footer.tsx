@@ -86,6 +86,7 @@ const Footer: React.FC = () => {
                 <li><a href="/strength-rehab-classes" className="text-sm hover:text-sky-400 transition-colors">Strength &amp; Rehab Classes</a></li>
                 <li><a href="/over-60s-strength-classes" className="text-sm hover:text-sky-400 transition-colors">Over 60s Strength Classes</a></li>
                 <li><a href="/about" className="text-sm hover:text-sky-400 transition-colors">About Chris</a></li>
+                <li><a href="/insights" className="text-sm hover:text-sky-400 transition-colors">Insights</a></li>
                 <li><a href="/booking" className="text-sm hover:text-sky-400 transition-colors">Book Appointment</a></li>
                 <li><a href="/contact" className="text-sm hover:text-sky-400 transition-colors">Contact</a></li>
                 <li><a href="https://www.youtube.com/c/NeverTooOldtoLift" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-sky-400 transition-colors">Never Too Old to Lift on YouTube</a></li>
