@@ -35,9 +35,9 @@ import StrengthRehabClasses from './components/StrengthRehabClasses';
 import Over60sStrengthClasses from './components/Over60sStrengthClasses';
 import EventWaitingListConfirmed from './components/EventWaitingListConfirmed';
 import Booking from './components/Booking';
-import InsightsPage from './components/InsightsPage';
+import AdvicePage from './components/AdvicePage';
 import ArticlePage from './components/ArticlePage';
-import InsightsSection from './components/InsightsSection';
+import AdviceSection from './components/AdviceSection';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -65,14 +65,16 @@ function App() {
               <GoogleReviewsSlider />
               <FAQ />
               <FinalCTA />
-              <InsightsSection />
+              <AdviceSection />
               <ListenWatch />
             </>
           } />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/booking" element={<Booking />} />
-          <Route path="/insights" element={<InsightsPage />} />
+          <Route path="/advice" element={<AdvicePage />} />
+          <Route path="/advice/injury-prevention-womens-football" element={<ArticlePage />} />
+          <Route path="/insights" element={<AdvicePage />} />
           <Route path="/insights/injury-prevention-womens-football" element={<ArticlePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/events" element={<Events />} />

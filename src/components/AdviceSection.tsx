@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Calendar } from 'lucide-react';
 import { articles } from '../data/articles';
 
-const InsightsSection: React.FC = () => {
+const AdviceSection: React.FC = () => {
   const latest = articles[0];
   if (!latest) return null;
 
@@ -14,10 +14,10 @@ const InsightsSection: React.FC = () => {
   });
 
   return (
-    <section className="py-16 bg-white" aria-labelledby="insights-heading">
+    <section className="py-16 bg-white" aria-labelledby="advice-heading">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto text-center mb-10">
-          <h2 id="insights-heading" className="text-3xl md:text-4xl font-bold text-navy-700 mb-4">
+          <h2 id="advice-heading" className="text-3xl md:text-4xl font-bold text-navy-700 mb-4">
             From the Clinic
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed">
@@ -28,7 +28,7 @@ const InsightsSection: React.FC = () => {
         <div className="max-w-4xl mx-auto">
           <article className="bg-gray-50 rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row">
             <div className="md:w-2/5 flex-shrink-0">
-              <Link to={`/insights/${latest.slug}`}>
+              <Link to={`/advice/${latest.slug}`}>
                 <img
                   src={latest.featuredImage}
                   alt={latest.featuredImageAlt}
@@ -42,7 +42,7 @@ const InsightsSection: React.FC = () => {
                 {formattedDate}
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-navy-700 mb-3 leading-snug">
-                <Link to={`/insights/${latest.slug}`} className="hover:text-sky-500 transition-colors">
+                <Link to={`/advice/${latest.slug}`} className="hover:text-sky-500 transition-colors">
                   {latest.title}
                 </Link>
               </h3>
@@ -51,7 +51,7 @@ const InsightsSection: React.FC = () => {
               </p>
               <div>
                 <Link
-                  to={`/insights/${latest.slug}`}
+                  to={`/advice/${latest.slug}`}
                   className="inline-flex items-center text-sky-600 hover:text-sky-700 font-semibold transition-colors"
                 >
                   Read the article
@@ -66,4 +66,4 @@ const InsightsSection: React.FC = () => {
   );
 };
 
-export default InsightsSection;
+export default AdviceSection;

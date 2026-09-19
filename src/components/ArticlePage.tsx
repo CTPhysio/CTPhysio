@@ -68,11 +68,11 @@ const ArticlePage: React.FC = () => {
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
           <div className="max-w-3xl">
             <Link
-              to="/insights"
+              to="/advice"
               className="inline-flex items-center text-sky-300 hover:text-sky-200 transition-colors mb-6 text-sm font-medium"
             >
               <ArrowLeft size={16} className="mr-2" />
-              All Insights
+              All Advice
             </Link>
             <h1 className="text-2xl md:text-4xl font-bold mb-4 leading-tight">
               {article.title}
@@ -299,11 +299,11 @@ const ArticlePage: React.FC = () => {
             {/* Back link */}
             <div className="mt-10 text-center">
               <Link
-                to="/insights"
+                to="/advice"
                 className="inline-flex items-center text-sky-600 hover:text-sky-700 font-semibold transition-colors"
               >
                 <ArrowLeft size={16} className="mr-2" />
-                Back to all Insights
+                Back to all Advice
               </Link>
             </div>
           </div>
