@@ -82,68 +82,36 @@ const TreatmentPageTemplate: React.FC<TreatmentPageTemplateProps> = ({
       </section>
 
       {/* Main Content */}
-      <section className="relative">
-        {/* Parallax Background */}
-        <div
-          className="fixed inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url("${imageUrl}")`, zIndex: -1 }}
-          role="img"
-          aria-label=""
-        >
-          <div className="absolute inset-0 bg-navy-900 bg-opacity-70"></div>
-        </div>
+      <section className="bg-navy-800 text-white">
+        <div className="container mx-auto px-4 py-16">
+          <div className="max-w-3xl mx-auto space-y-6">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8">
+              {mainHeading}
+            </h2>
 
-        <div className="relative z-10">
-          <div className="h-24"></div>
+            {mainParagraphs.map((p, i) => (
+              <p key={i} className="text-lg leading-relaxed">{p}</p>
+            ))}
 
-          <div className="bg-navy-800 text-white">
-            <div className="container mx-auto px-4 py-16">
-              <div className="grid lg:grid-cols-2 gap-12 items-start">
-                {/* Left Column */}
-                <div className="space-y-6">
-                  <h2 className="text-3xl md:text-4xl font-bold mb-8">
-                    {mainHeading}
-                  </h2>
+            <p className="text-lg leading-relaxed font-semibold">
+              I regularly help people with:
+            </p>
 
-                  {mainParagraphs.map((p, i) => (
-                    <p key={i} className="text-lg leading-relaxed">{p}</p>
-                  ))}
+            <ul className="space-y-2 text-lg">
+              {bulletList.map((item, i) => (
+                <li key={i}>• {item}</li>
+              ))}
+            </ul>
 
-                  <p className="text-lg leading-relaxed font-semibold">
-                    I regularly help people with:
-                  </p>
-
-                  <ul className="space-y-2 text-lg">
-                    {bulletList.map((item, i) => (
-                      <li key={i}>• {item}</li>
-                    ))}
-                  </ul>
-
-                  <div className="pt-8">
-                    <a
-                      href="/booking"
-                      className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-navy-800 transition-colors text-lg"
-                    >
-                      Book an Appointment
-                    </a>
-                  </div>
-                </div>
-
-                {/* Right Column - Image */}
-                <div className="lg:sticky lg:top-8">
-                  <div className="rounded-xl overflow-hidden shadow-lg">
-                    <img
-                      src={imageUrl}
-                      alt=""
-                      className="w-full h-auto object-cover"
-                    />
-                  </div>
-                </div>
-              </div>
+            <div className="pt-8">
+              <a
+                href="/booking"
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-navy-800 transition-colors text-lg"
+              >
+                Book an Appointment
+              </a>
             </div>
           </div>
-
-          <div className="h-24 bg-navy-800"></div>
         </div>
       </section>
 
