@@ -164,6 +164,31 @@ const Services: React.FC = () => {
         </div>
       </section>
 
+      {/* Common Problems We Help With */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-navy-700 text-center mb-4">
+              Common Problems We Help With
+            </h2>
+            <p className="text-lg text-gray-600 text-center mb-10 max-w-2xl mx-auto">
+              Not sure where to start? Learn more about how we approach some of the most common conditions we treat.
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+              <a href="/treatments/back-pain" className="block px-4 py-3 md:px-5 md:py-4 bg-white rounded-xl shadow hover:shadow-md text-navy-700 font-semibold text-center transition-shadow">Lower Back Pain</a>
+              <a href="/treatments/shoulder-pain" className="block px-4 py-3 md:px-5 md:py-4 bg-white rounded-xl shadow hover:shadow-md text-navy-700 font-semibold text-center transition-shadow">Shoulder Pain</a>
+              <a href="/treatments/knee-pain" className="block px-4 py-3 md:px-5 md:py-4 bg-white rounded-xl shadow hover:shadow-md text-navy-700 font-semibold text-center transition-shadow">Knee Pain</a>
+              <a href="/treatments/neck-pain" className="block px-4 py-3 md:px-5 md:py-4 bg-white rounded-xl shadow hover:shadow-md text-navy-700 font-semibold text-center transition-shadow">Neck Pain</a>
+              <a href="/treatments/hip-pain" className="block px-4 py-3 md:px-5 md:py-4 bg-white rounded-xl shadow hover:shadow-md text-navy-700 font-semibold text-center transition-shadow">Hip Pain</a>
+              <a href="/treatments/sciatica" className="block px-4 py-3 md:px-5 md:py-4 bg-white rounded-xl shadow hover:shadow-md text-navy-700 font-semibold text-center transition-shadow">Sciatica</a>
+              <a href="/treatments/balance-falls" className="block px-4 py-3 md:px-5 md:py-4 bg-white rounded-xl shadow hover:shadow-md text-navy-700 font-semibold text-center transition-shadow">Balance &amp; Falls</a>
+              <a href="/treatments/surgical-rehab" className="block px-4 py-3 md:px-5 md:py-4 bg-white rounded-xl shadow hover:shadow-md text-navy-700 font-semibold text-center transition-shadow">Surgical Rehabilitation</a>
+              <a href="/treatments/deconditioning" className="block px-4 py-3 md:px-5 md:py-4 bg-white rounded-xl shadow hover:shadow-md text-navy-700 font-semibold text-center transition-shadow">Muscle Weakness &amp; Deconditioning</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Journey Steps */}
       <section className="py-16 bg-navy-700 text-white">
         <div className="container mx-auto px-4">

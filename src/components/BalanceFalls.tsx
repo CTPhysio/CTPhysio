@@ -1,8 +1,15 @@
 import React from 'react';
+import Seo from './Seo';
+import TreatmentCTA from './TreatmentCTA';
 
 const BalanceFalls: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
+      <Seo
+        title="Balance & Falls Prevention Physiotherapy in Harborne | Chris Tiley Physiotherapy"
+        description="Physiotherapy for balance problems and falls prevention in Harborne, helping you improve strength, stability and confidence when moving."
+        canonicalPath="/treatments/balance-falls"
+      />
       {/* Hero Section - Green theme */}
       <section className="bg-blue-800 text-white py-16 md:py-24">
         <div className="container mx-auto px-4 text-center">
@@ -33,10 +40,10 @@ const BalanceFalls: React.FC = () => {
             Whether you're experiencing dizziness, feeling unsteady, or simply want to maintain your independence as you age, physiotherapy can help you develop the strength and skills needed to move safely and confidently.
           </p>
           <a
-            href="/contact"
+            href="/booking"
             className="inline-flex items-center px-8 py-4 bg-blue-800 text-white font-bold rounded-lg hover:bg-blue-900 transition-colors text-lg"
           >
-            Get In Touch
+            Book an Appointment
           </a>
         </div>
       </section>
@@ -50,6 +57,8 @@ const BalanceFalls: React.FC = () => {
             backgroundImage: 'url("https://lh3.googleusercontent.com/p/AF1QipMPeZpwD2vsxUz9DSm9BKzha0SzdF3R4AanKr9E=s680-w680-h510-rw")',
             zIndex: -1
           }}
+          role="img"
+          aria-label=""
         >
           <div className="absolute inset-0 bg-green-900 bg-opacity-60"></div>
           <div className="absolute inset-0 bg-blue-900 bg-opacity-60"></div>
@@ -97,10 +106,10 @@ const BalanceFalls: React.FC = () => {
                   
                   <div className="pt-8">
                     <a
-                      href="/contact"
+                      href="/booking"
                       className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-blue-700 transition-colors text-lg"
                     >
-                      Get In Touch
+                      Book an Appointment
                     </a>
                   </div>
                 </div>
@@ -123,6 +132,22 @@ const BalanceFalls: React.FC = () => {
           <div className="h-32 bg-blue-700"></div>
         </div>
       </section>
+
+      {/* Related Conditions */}
+      <section className="bg-white py-12">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-xl md:text-2xl font-bold text-navy-700 mb-6 text-center">
+            Related Conditions
+          </h2>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a href="/treatments/deconditioning" className="px-5 py-2.5 bg-gray-100 text-navy-700 font-semibold rounded-lg hover:bg-navy-700 hover:text-white transition-colors">Deconditioning</a>
+            <a href="/treatments/hip-pain" className="px-5 py-2.5 bg-gray-100 text-navy-700 font-semibold rounded-lg hover:bg-navy-700 hover:text-white transition-colors">Hip Pain</a>
+            <a href="/treatments/arthritis" className="px-5 py-2.5 bg-gray-100 text-navy-700 font-semibold rounded-lg hover:bg-navy-700 hover:text-white transition-colors">Arthritis</a>
+          </div>
+        </div>
+      </section>
+
+      <TreatmentCTA conditionName="balance and falls" />
     </div>
   );
 };
