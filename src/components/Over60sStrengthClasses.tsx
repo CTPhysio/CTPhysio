@@ -525,21 +525,21 @@ const Over60sStrengthClasses: React.FC = () => {
               <div className="px-4 sm:px-5 py-3 text-gray-700 font-medium text-sm sm:text-base">Tuesday</div>
               <div className="px-4 sm:px-5 py-3 text-gray-600 text-sm sm:text-base">11:00am</div>
               <div className="px-4 sm:px-5 py-3">
-                <span className="inline-flex items-center px-3 py-1 rounded-full bg-gray-100 text-gray-500 font-medium text-xs sm:text-sm">Full</span>
+                <span className="inline-flex items-center px-3 py-1 rounded-full bg-amber-50 text-amber-700 font-medium text-xs sm:text-sm">1 space available</span>
               </div>
             </div>
             <div className="grid grid-cols-3 border-t border-gray-100 bg-gray-50/60">
               <div className="px-4 sm:px-5 py-3 text-gray-700 font-medium text-sm sm:text-base">Thursday</div>
               <div className="px-4 sm:px-5 py-3 text-gray-600 text-sm sm:text-base">1:30pm</div>
               <div className="px-4 sm:px-5 py-3">
-                <span className="inline-flex items-center px-3 py-1 rounded-full bg-gray-100 text-gray-500 font-medium text-xs sm:text-sm">Full</span>
+                <span className="inline-flex items-center px-3 py-1 rounded-full bg-gray-100 text-gray-500 font-medium text-xs sm:text-sm">Fully booked</span>
               </div>
             </div>
             <div className="grid grid-cols-3 border-t border-gray-100">
               <div className="px-4 sm:px-5 py-3 text-gray-700 font-medium text-sm sm:text-base">Thursday</div>
               <div className="px-4 sm:px-5 py-3 text-gray-600 text-sm sm:text-base">2:30pm</div>
               <div className="px-4 sm:px-5 py-3">
-                <span className="inline-flex items-center px-3 py-1 rounded-full bg-sky-50 text-sky-700 font-medium text-xs sm:text-sm">3 spaces available</span>
+                <span className="inline-flex items-center px-3 py-1 rounded-full bg-amber-50 text-amber-700 font-medium text-xs sm:text-sm">1 space available</span>
               </div>
             </div>
           </div>
