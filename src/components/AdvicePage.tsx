@@ -4,6 +4,16 @@ import { ArrowRight, Calendar } from 'lucide-react';
 import Seo from './Seo';
 import { articles } from '../data/articles';
 
+const cornerstoneArticle = {
+  slug: 'strength-training-over-60s',
+  title: 'Strength Training for Over 60s: How to Get Started',
+  publishedDate: '2026-09-25',
+  excerpt:
+    'A practical guide from Chris Tiley on how to start strength training after 60, including choosing the right exercises, progressing safely and building strength for the things you want to keep doing.',
+  featuredImage: '/dhdnevertoooldtoliftimage.webp',
+  featuredImageAlt: 'Strength training for over 60s',
+};
+
 const AdvicePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -30,6 +40,48 @@ const AdvicePage: React.FC = () => {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold text-navy-700 mb-8">Articles</h2>
             <div className="grid gap-8">
+              {/* Cornerstone article */}
+              <article
+                className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row"
+              >
+                <div className="md:w-2/5 flex-shrink-0">
+                  <Link to="/strength-training-over-60s">
+                    <img
+                      src={cornerstoneArticle.featuredImage}
+                      alt={cornerstoneArticle.featuredImageAlt}
+                      className="w-full h-56 md:h-full object-cover"
+                    />
+                  </Link>
+                </div>
+                <div className="p-6 md:p-8 flex flex-col flex-grow">
+                  <div className="flex items-center text-sm text-gray-500 mb-3">
+                    <Calendar size={16} className="mr-1.5" />
+                    {new Date(cornerstoneArticle.publishedDate).toLocaleDateString('en-GB', {
+                      day: 'numeric',
+                      month: 'long',
+                      year: 'numeric',
+                    })}
+                  </div>
+                  <h3 className="text-xl md:text-2xl font-bold text-navy-700 mb-3 leading-snug">
+                    <Link to="/strength-training-over-60s" className="hover:text-sky-500 transition-colors">
+                      {cornerstoneArticle.title}
+                    </Link>
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed mb-6 flex-grow">
+                    {cornerstoneArticle.excerpt}
+                  </p>
+                  <div>
+                    <Link
+                      to="/strength-training-over-60s"
+                      className="inline-flex items-center text-sky-600 hover:text-sky-700 font-semibold transition-colors"
+                    >
+                      Read the article
+                      <ArrowRight size={18} className="ml-2" />
+                    </Link>
+                  </div>
+                </div>
+              </article>
+
               {articles.map((article) => (
                 <article
                   key={article.slug}
@@ -87,11 +139,11 @@ const AdvicePage: React.FC = () => {
               Practical videos and advice from Chris Tiley on strength training, staying active and getting stronger as you get older.
             </p>
             <div className="bg-gray-50 rounded-xl shadow-lg overflow-hidden flex flex-col sm:flex-row">
-              <div className="sm:w-2/5 flex items-center justify-center bg-white p-6 sm:p-8 flex-shrink-0">
+              <div className="sm:w-2/5 flex items-center justify-center bg-white p-6 sm:p-8 flex-shrink-0 overflow-hidden">
                 <img
                   src="/assets/images/Never_Too_Old_To_Lift_-_Logo_-_Black_font_Blue_Dumbell_and_White_background.jpg"
                   alt="Never Too Old to Lift logo"
-                  className="max-h-full max-w-full object-contain scale-[1.6]"
+                  className="max-h-32 sm:max-h-40 max-w-full object-contain"
                 />
               </div>
               <div className="p-6 sm:p-8 flex flex-col flex-grow justify-center">
