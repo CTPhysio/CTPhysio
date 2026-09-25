@@ -30,6 +30,7 @@ const StrengthTrainingOver60s: React.FC = () => {
       headline: 'Strength Training for Over 60s: How to Get Started',
       description:
         'A Birmingham physiotherapist explains how to start strength training after 60, from setting goals and choosing exercises to progressing safely.',
+      image: `${SITE_URL}/dhdnevertoooldtoliftimage.webp`,
       author: {
         '@type': 'Person',
         name: 'Chris Tiley',
@@ -90,6 +91,17 @@ const StrengthTrainingOver60s: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* Featured image */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto -mt-8 md:-mt-12 mb-8 md:mb-10">
+          <img
+            src="/dhdnevertoooldtoliftimage.webp"
+            alt="Older woman strength training with dumbbells in a gym"
+            className="w-full rounded-xl shadow-lg object-cover aspect-[3/2]"
+          />
+        </div>
+      </div>
 
       {/* Article body */}
       <article className="py-12 md:py-16">
