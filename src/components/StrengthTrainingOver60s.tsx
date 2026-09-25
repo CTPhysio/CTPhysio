@@ -294,12 +294,12 @@ const StrengthTrainingOver60s: React.FC = () => {
               {/* Inline Birmingham CTA / blockquote */}
               <blockquote className="bg-sky-50 border-l-4 border-sky-400 rounded-r-lg p-5 md:p-6 mb-6">
                 <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
-                  <strong className="text-navy-700">Based in Birmingham?</strong> If you&rsquo;d rather have support than work this out on your own, our small-group Strength &amp; Rehab Classes at Chris Tiley Physiotherapy in Harborne are designed for exactly this.{' '}
+                  <strong className="text-navy-700">Based in Birmingham?</strong> If you&rsquo;re over 60 and would rather have support than work this out on your own, our Over 60s Strength Classes at Chris Tiley Physiotherapy in Harborne are designed to help you build strength and confidence in a supportive environment.{' '}
                   <Link
-                    to="/strength-rehab-classes"
+                    to="/over-60s-strength-classes"
                     className="text-sky-600 hover:text-sky-700 underline font-medium"
                   >
-                    Find out more about the classes
+                    Find out about our Over 60s Strength Classes
                   </Link>
                 </p>
               </blockquote>
@@ -342,14 +342,25 @@ const StrengthTrainingOver60s: React.FC = () => {
                 If you&rsquo;re in or near Birmingham
               </h3>
               <p className="text-gray-700 leading-relaxed mb-6">
-                Our small-group Strength &amp; Rehab Classes at Chris Tiley Physiotherapy in Harborne help you get stronger and more confident, with support at every stage. Before joining, you&rsquo;ll have a Discovery Visit, so we can understand where you&rsquo;re starting from and make sure the class is right for you.
+                If you&rsquo;re over 60 and based in or near Birmingham, you can get support in person through our Over 60s Strength Classes at Chris Tiley Physiotherapy in Harborne. These sessions are designed to help you build strength progressively and feel more confident with exercise.
+              </p>
+              <div className="mb-6">
+                <Link
+                  to="/over-60s-strength-classes"
+                  className="inline-flex items-center justify-center px-7 py-3.5 bg-sky-500 text-white font-bold rounded-xl hover:bg-sky-400 transition-all duration-300 shadow-lg hover:shadow-sky-500/30 hover:-translate-y-0.5"
+                >
+                  Find out about our Over 60s Strength Classes
+                </Link>
+              </div>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                If you&rsquo;re dealing with pain, recovering from an injury, or feel you need more individual support first, our Strength &amp; Rehab Classes may be a better starting point.
               </p>
               <div className="mb-8">
                 <Link
                   to="/strength-rehab-classes"
-                  className="inline-flex items-center justify-center px-7 py-3.5 bg-sky-500 text-white font-bold rounded-xl hover:bg-sky-400 transition-all duration-300 shadow-lg hover:shadow-sky-500/30 hover:-translate-y-0.5"
+                  className="inline-flex items-center justify-center px-5 py-2.5 bg-white text-navy-700 font-semibold rounded-lg border border-navy-200 hover:border-navy-300 hover:bg-navy-50 transition-colors"
                 >
-                  Find out about our Strength &amp; Rehab Classes
+                  Find out about Strength &amp; Rehab Classes
                 </Link>
               </div>
 
