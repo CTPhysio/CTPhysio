@@ -279,13 +279,13 @@ const Team: React.FC = () => {
                 </p>
                 <div className="mt-auto">
                   <p className="text-slate-600 leading-relaxed mb-4 text-sm">
-                    Jessamyn will be seeing patients from Saturday 24 October 2026, with appointments available on Saturday mornings and Monday evenings.
+                    Available from Saturday 24 October 2026, with appointments on Saturday mornings and Monday evenings.
                   </p>
                   <a
-                    href="/booking"
-                    className="inline-flex items-center justify-center w-full px-4 py-3 bg-sky-500 text-white font-bold rounded-xl hover:bg-sky-400 transition-all duration-300 shadow-sm hover:shadow-sky-500/30"
+                    href="https://christileyphysiotherapy.com/booking"
+                    className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3.5 bg-sky-500 text-white font-bold rounded-xl hover:bg-sky-400 transition-all duration-300 shadow-lg hover:shadow-sky-500/30 hover:-translate-y-0.5"
                   >
-                    Appointments with Jessamyn are now available to book.
+                    Book an Appointment
                   </a>
                 </div>
               </div>
