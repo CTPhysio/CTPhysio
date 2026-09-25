@@ -36,6 +36,7 @@ const BalanceFalls: React.FC = () => (
       { label: "Deconditioning", href: "/treatments/deconditioning" },
       { label: "Hip Pain", href: "/treatments/hip-pain" },
       { label: "Arthritis", href: "/treatments/arthritis" },
+      { label: "Strength Training for Over 60s", href: "/strength-training-over-60s" },
     ]}
     conditionName="balance and falls"
   />

@@ -35,6 +35,7 @@ const Deconditioning: React.FC = () => (
     relatedConditions={[
       { label: "Balance & Falls", href: "/treatments/balance-falls" },
       { label: "Arthritis", href: "/treatments/arthritis" },
+      { label: "Strength Training for Over 60s", href: "/strength-training-over-60s" },
     ]}
     conditionName="deconditioning and muscle weakness"
   />

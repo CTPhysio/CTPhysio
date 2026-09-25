@@ -223,7 +223,7 @@ const StrengthRehabClasses: React.FC = () => {
             ))}
           </div>
           <p className="text-gray-500 text-sm mt-6 max-w-3xl mx-auto text-center leading-relaxed">
-            Some people also use strength training to maintain muscle and bone strength as they get older. We also run <Link to="/over-60s-strength-classes" className="text-sky-600 hover:text-sky-700 underline">Over 60s Strength Classes</Link> for people who want a class focused on this stage of life.
+            Some people also use strength training to maintain muscle and bone strength as they get older. If you're over 60 and want to understand the principles first, <Link to="/strength-training-over-60s" className="text-sky-600 hover:text-sky-700 underline">our strength training guide for over 60s</Link> is a practical starting point. We also run <Link to="/over-60s-strength-classes" className="text-sky-600 hover:text-sky-700 underline">Over 60s Strength Classes</Link> for people who want a class focused on this stage of life.
           </p>
         </div>
       </section>

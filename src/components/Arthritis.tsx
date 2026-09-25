@@ -67,7 +67,9 @@ const Arthritis: React.FC = () => {
                     Arthritis affects millions of people, causing joint pain, stiffness, 
                     and reduced mobility. While there's no cure, proper management can 
                     significantly improve your symptoms and quality of life. <span className="underline">Our 
-                    evidence-based approach helps you stay active and independent.</span>
+                    evidence-based approach helps you stay active and independent.</span> If you're over 60, 
+                    <a href="/strength-training-over-60s" className="underline font-semibold">learning how to get started with strength training</a> 
+                    can be an important part of managing arthritis and staying strong.
                   </p>
                   
                   <p className="text-lg leading-relaxed">

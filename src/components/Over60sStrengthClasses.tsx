@@ -233,8 +233,11 @@ const Over60sStrengthClasses: React.FC = () => {
           <p className="text-gray-600 text-center max-w-2xl mx-auto mb-8 leading-relaxed">
             Getting older doesn't mean you have to accept becoming weaker or less capable. Strength training can help you maintain muscle strength, support bone health, improve balance and maintain the fitness you need for everyday life. But the real benefit is what that strength allows you to do outside the gym.
           </p>
-          <p className="text-gray-600 text-center max-w-2xl mx-auto mb-8 leading-relaxed">
+          <p className="text-gray-600 text-center max-w-2xl mx-auto mb-4 leading-relaxed">
             Whether that's working in the garden, walking with friends, travelling, carrying things or getting down onto the floor and back up again, the aim is to help you stay active and confident in the things that matter to you.
+          </p>
+          <p className="text-gray-600 text-center max-w-2xl mx-auto mb-8 leading-relaxed">
+            New to strength training? <Link to="/strength-training-over-60s" className="text-sky-600 hover:text-sky-700 underline">Read our guide to getting started with strength training for over 60s</Link>.
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
             {capabilityCards.map((card, i) => {
