@@ -39,6 +39,7 @@ import Booking from './components/Booking';
 import AdvicePage from './components/AdvicePage';
 import ArticlePage from './components/ArticlePage';
 import AdviceSection from './components/AdviceSection';
+import StrengthTrainingOver60s from './components/StrengthTrainingOver60s';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -79,6 +80,7 @@ function App() {
           <Route path="/insights" element={<AdvicePage />} />
           <Route path="/insights/injury-prevention-womens-football" element={<ArticlePage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/strength-training-over-60s" element={<StrengthTrainingOver60s />} />
           <Route path="/events" element={<Events />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
