@@ -251,6 +251,46 @@ const Team: React.FC = () => {
               </div>
             </div>
 
+            {/* Jessamyn Radford */}
+            <div className="bg-white rounded-2xl shadow-[0_2px_20px_rgba(15,23,42,0.07)] border border-slate-100 overflow-hidden hover:shadow-[0_4px_28px_rgba(15,23,42,0.11)] transition-all duration-300 hover:-translate-y-0.5 flex flex-col">
+              <div className="bg-gradient-to-br from-sky-50 to-slate-100 px-6 pt-8 pb-0 flex justify-center">
+                <div className="w-40 h-40 sm:w-48 sm:h-48 rounded-full border-4 border-white shadow-[0_4px_20px_rgba(15,23,42,0.14)] overflow-hidden">
+                  <img
+                    src="/assets/images/Jessamyn_Headshot_No_Background.png"
+                    alt="Jessamyn Radford, Chartered Physiotherapist"
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      objectPosition: 'center top',
+                      display: 'block',
+                    }}
+                  />
+                </div>
+              </div>
+              <div className="p-5 sm:p-8 flex flex-col flex-1">
+                <h3 className="text-xl sm:text-2xl font-bold text-slate-800 mb-1">Jessamyn Radford</h3>
+                <p className="text-sky-500 font-semibold text-xs uppercase tracking-wider mb-3">Chartered Physiotherapist</p>
+                <p className="text-slate-600 leading-relaxed mb-3 text-sm">
+                  Jessamyn is a Chartered Physiotherapist with experience working in NHS musculoskeletal outpatient services. She has experience treating a wide range of musculoskeletal conditions, supporting patients of all ages, from young people returning to sport through to older adults working towards greater independence and an active lifestyle.
+                </p>
+                <p className="text-slate-600 leading-relaxed mb-4 text-sm">
+                  She enjoys working with people to build confidence in movement and return to the activities that are important to them. As a keen tennis player herself, Jessamyn has a particular interest in sports rehabilitation and takes a practical, patient-centred approach to help people achieve their goals and stay active.
+                </p>
+                <div className="mt-auto">
+                  <p className="text-slate-600 leading-relaxed mb-4 text-sm">
+                    Jessamyn will be seeing patients from Saturday 24 October 2026, with appointments available on Saturday mornings and Monday evenings.
+                  </p>
+                  <a
+                    href="/booking"
+                    className="inline-flex items-center justify-center w-full px-4 py-3 bg-sky-500 text-white font-bold rounded-xl hover:bg-sky-400 transition-all duration-300 shadow-sm hover:shadow-sky-500/30"
+                  >
+                    Appointments with Jessamyn are now available to book.
+                  </a>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
