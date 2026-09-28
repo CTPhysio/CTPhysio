@@ -4,6 +4,17 @@ import { ChevronDown, Calendar, Clock, Users, Dumbbell, Scale, HeartPulse, Shiel
 
 const BOOKING_URL = 'https://chris-tiley-physiotherapy.uk1.cliniko.com/bookings';
 
+// Number of places available in the new Tuesday 2:30pm class.
+// Update this single value as people join the class.
+const NEW_CLASS_PLACES = 5;
+
+const classSchedule = [
+  { day: 'Tuesday', time: '11:00am', status: 'full' },
+  { day: 'Tuesday', time: '2:30pm', status: 'new', places: NEW_CLASS_PLACES },
+  { day: 'Thursday', time: '1:30pm', status: 'full' },
+  { day: 'Thursday', time: '2:30pm', status: 'full' },
+];
+
 const DiscoveryButton: React.FC<{ className?: string; children?: React.ReactNode }> = ({
   className = '',
   children = 'Book a free 20-minute Discovery Visit',
@@ -509,8 +520,38 @@ const Over60sStrengthClasses: React.FC = () => {
         </div>
       </section>
 
+      {/* NEW CLASS ANNOUNCEMENT */}
+      <section className="py-10 md:py-14 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+          <div className="bg-sky-50 border border-sky-200 rounded-xl p-6 md:p-8">
+            <div className="flex flex-wrap items-center gap-3 mb-4">
+              <span className="inline-flex items-center px-3 py-1 rounded-full bg-sky-600 text-white font-semibold text-xs sm:text-sm uppercase tracking-wide">New</span>
+              <span className="text-sm text-gray-500 font-medium">Starting Tuesday 6th October 2026</span>
+            </div>
+            <h2 className="text-2xl md:text-3xl font-bold text-navy-700 mb-4 leading-tight">
+              NEW: Tuesday 2:30pm Over 60s Strength Class
+            </h2>
+            <p className="text-gray-600 leading-relaxed mb-4">
+              Our Thursday afternoon Over 60s Strength Class filled within just a few weeks, so we've added another class to give more people the opportunity to join us.
+            </p>
+            <p className="text-gray-600 leading-relaxed mb-4">
+              The new Tuesday 2:30pm class has <span className="font-semibold text-navy-700">{NEW_CLASS_PLACES} places available</span>.
+            </p>
+            <p className="text-gray-600 leading-relaxed mb-6">
+              As our classes are deliberately kept small, places are limited. If you're interested in joining, get in touch soon to arrange your Discovery Visit and we'll talk through whether the class is right for you.
+            </p>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+              <DiscoveryButton>Book a Discovery Visit</DiscoveryButton>
+              <a href="#current-classes" className="text-sky-600 hover:text-sky-700 underline font-medium text-sm">
+                See all class times
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CURRENT CLASSES */}
-      <section className="py-10 md:py-16 bg-gray-50 rounded-[40px]">
+      <section id="current-classes" className="py-10 md:py-16 bg-gray-50 rounded-[40px]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           <SectionHeading className="text-center mb-3">Current classes</SectionHeading>
           <p className="text-gray-600 text-center max-w-2xl mx-auto mb-8 leading-relaxed">
@@ -524,27 +565,19 @@ const Over60sStrengthClasses: React.FC = () => {
               <div className="px-4 sm:px-5 py-3 flex items-center gap-2"><Clock size={16} /> Time</div>
               <div className="px-4 sm:px-5 py-3 flex items-center gap-2"><Users size={16} /> Status</div>
             </div>
-            <div className="grid grid-cols-3 border-t border-gray-100">
-              <div className="px-4 sm:px-5 py-3 text-gray-700 font-medium text-sm sm:text-base">Tuesday</div>
-              <div className="px-4 sm:px-5 py-3 text-gray-600 text-sm sm:text-base">11:00am</div>
-              <div className="px-4 sm:px-5 py-3">
-                <span className="inline-flex items-center px-3 py-1 rounded-full bg-gray-100 text-gray-500 font-medium text-xs sm:text-sm">Fully booked</span>
+            {classSchedule.map((cls, i) => (
+              <div key={i} className={`grid grid-cols-3 border-t border-gray-100 ${i % 2 === 1 ? 'bg-gray-50/60' : ''}`}>
+                <div className="px-4 sm:px-5 py-3 text-gray-700 font-medium text-sm sm:text-base">{cls.day}</div>
+                <div className="px-4 sm:px-5 py-3 text-gray-600 text-sm sm:text-base">{cls.time}</div>
+                <div className="px-4 sm:px-5 py-3">
+                  {cls.status === 'full' ? (
+                    <span className="inline-flex items-center px-3 py-1 rounded-full bg-gray-100 text-gray-500 font-medium text-xs sm:text-sm">Fully booked</span>
+                  ) : (
+                    <span className="inline-flex items-center px-3 py-1 rounded-full bg-sky-100 text-sky-700 font-semibold text-xs sm:text-sm">New — {cls.places} places available</span>
+                  )}
+                </div>
               </div>
-            </div>
-            <div className="grid grid-cols-3 border-t border-gray-100 bg-gray-50/60">
-              <div className="px-4 sm:px-5 py-3 text-gray-700 font-medium text-sm sm:text-base">Thursday</div>
-              <div className="px-4 sm:px-5 py-3 text-gray-600 text-sm sm:text-base">1:30pm</div>
-              <div className="px-4 sm:px-5 py-3">
-                <span className="inline-flex items-center px-3 py-1 rounded-full bg-gray-100 text-gray-500 font-medium text-xs sm:text-sm">Fully booked</span>
-              </div>
-            </div>
-            <div className="grid grid-cols-3 border-t border-gray-100">
-              <div className="px-4 sm:px-5 py-3 text-gray-700 font-medium text-sm sm:text-base">Thursday</div>
-              <div className="px-4 sm:px-5 py-3 text-gray-600 text-sm sm:text-base">2:30pm</div>
-              <div className="px-4 sm:px-5 py-3">
-                <span className="inline-flex items-center px-3 py-1 rounded-full bg-gray-100 text-gray-500 font-medium text-xs sm:text-sm">Fully booked</span>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
