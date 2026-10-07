@@ -6,7 +6,7 @@ const BOOKING_URL = 'https://chris-tiley-physiotherapy.uk1.cliniko.com/bookings'
 
 // Number of places available in the new Tuesday 2:30pm class.
 // Update this single value as people join the class.
-const NEW_CLASS_PLACES = 5;
+const NEW_CLASS_PLACES = 1;
 
 const classSchedule = [
   { day: 'Tuesday', time: '11:00am', status: 'full' },
@@ -535,7 +535,7 @@ const Over60sStrengthClasses: React.FC = () => {
               Our Thursday afternoon Over 60s Strength Class filled within just a few weeks, so we've added another class to give more people the opportunity to join us.
             </p>
             <p className="text-gray-600 leading-relaxed mb-4">
-              The new Tuesday 2:30pm class has <span className="font-semibold text-navy-700">{NEW_CLASS_PLACES} places available</span>.
+              The new Tuesday 2:30pm class has <span className="font-semibold text-navy-700">{NEW_CLASS_PLACES} {NEW_CLASS_PLACES === 1 ? 'space' : 'spaces'} available</span>.
             </p>
             <p className="text-gray-600 leading-relaxed mb-6">
               As our classes are deliberately kept small, places are limited. If you're interested in joining, get in touch soon to arrange your Discovery Visit and we'll talk through whether the class is right for you.
@@ -573,7 +573,7 @@ const Over60sStrengthClasses: React.FC = () => {
                   {cls.status === 'full' ? (
                     <span className="inline-flex items-center px-3 py-1 rounded-full bg-gray-100 text-gray-500 font-medium text-xs sm:text-sm">Fully booked</span>
                   ) : (
-                    <span className="inline-flex items-center px-3 py-1 rounded-full bg-sky-100 text-sky-700 font-semibold text-xs sm:text-sm">New — {cls.places} places available</span>
+                    <span className="inline-flex items-center px-3 py-1 rounded-full bg-sky-100 text-sky-700 font-semibold text-xs sm:text-sm">New — {cls.places} {cls.places === 1 ? 'space' : 'spaces'} available</span>
                   )}
                 </div>
               </div>
