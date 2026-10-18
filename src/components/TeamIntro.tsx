@@ -6,7 +6,7 @@ type Clinician = {
   image: string;
   alt: string;
   description: string;
-  fit: 'cover' | 'contain';
+  maxHeight: string;
 };
 
 const clinicians: Clinician[] = [
@@ -15,21 +15,21 @@ const clinicians: Clinician[] = [
     image: '/Chris_Headshot_No_Background.png',
     alt: 'Chris Tiley, Physiotherapist',
     description: 'Particular interest in strength, rehabilitation and helping people stay active as they get older.',
-    fit: 'cover',
+    maxHeight: '100%',
   },
   {
     name: 'Kate Evans',
     image: '/Kate_Headshot_No_Background.png',
     alt: 'Kate Evans, Physiotherapist',
     description: "Particular interest in sports injuries and women's football.",
-    fit: 'cover',
+    maxHeight: '100%',
   },
   {
     name: 'Jessamyn',
     image: '/assets/images/Jessamyn_Headshot_No_Background.png',
     alt: 'Jessamyn, Physiotherapist',
     description: 'Particular interest in sports injuries and tennis.',
-    fit: 'contain',
+    maxHeight: '92%',
   },
 ];
 
@@ -48,11 +48,12 @@ const TeamIntro: React.FC = () => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 text-left">
             {clinicians.map((clinician) => (
               <article key={clinician.name} className="h-full overflow-hidden rounded-xl border border-gray-100 bg-white shadow-sm flex flex-col">
-                <div className="h-48 bg-gradient-to-br from-sky-50 to-slate-100 flex items-center justify-center overflow-hidden">
+                <div className="h-56 bg-gradient-to-br from-sky-50 to-slate-100 flex items-end justify-center overflow-hidden">
                   <img
                     src={clinician.image}
                     alt={clinician.alt}
-                    className={`h-full w-full ${clinician.fit === 'contain' ? 'object-contain object-top' : 'object-cover object-top'}`}
+                    className="w-auto object-contain object-bottom"
+                    style={{ maxHeight: clinician.maxHeight }}
                   />
                 </div>
                 <div className="p-5 flex flex-col flex-1">
