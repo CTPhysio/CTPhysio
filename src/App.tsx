@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import WhoWeHelp from './components/WhoWeHelp';
+import TeamIntro from './components/TeamIntro';
 import HowWeHelp from './components/HowWeHelp';
 import HowCanWeHelp from './components/HowCanWeHelp';
 import GoogleReviewsSlider from './components/GoogleReviewsSlider';
@@ -63,6 +64,7 @@ function App() {
             <>
               <Hero />
               <WhoWeHelp />
+              <TeamIntro />
               <HowWeHelp />
               <HowCanWeHelp />
               <GoogleReviewsSlider />

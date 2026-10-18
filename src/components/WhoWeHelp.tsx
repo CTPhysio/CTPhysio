@@ -5,33 +5,33 @@ import { Users, Dumbbell, Activity, Heart, TrendingUp, ShieldCheck } from 'lucid
 const whoGroups = [
   {
     icon: Activity,
-    title: "Active adults in their 50s, 60s, and 70s",
-    description: "Staying strong, mobile, and independent as they get older."
-  },
-  {
-    icon: Heart,
-    title: "People recovering from surgery",
-    description: "Rebuilding strength and confidence after an operation."
+    title: "Everyday aches and pains",
+    description: "Back, neck, shoulder, hip and knee problems affecting daily life."
   },
   {
     icon: Dumbbell,
-    title: "Adults returning to sport or exercise",
-    description: "Golfers, hikers, and gym-goers sidelined by injury."
+    title: "Sports and exercise injuries",
+    description: "Helping people return to running, football, tennis, the gym and other activities."
+  },
+  {
+    icon: Heart,
+    title: "Recovery after surgery",
+    description: "Gradually rebuilding movement, strength and confidence."
   },
   {
     icon: TrendingUp,
-    title: "People with recurring or persistent pain",
-    description: "Who want a clear plan that actually moves things forward."
+    title: "Persistent or recurring pain",
+    description: "Understanding ongoing symptoms and developing a practical plan."
   },
   {
     icon: Users,
-    title: "Over 60s wanting to stay capable",
-    description: "Walking confidently and keeping up with what matters."
+    title: "Strength and mobility concerns",
+    description: "Building physical capability for everyday activities."
   },
   {
     icon: ShieldCheck,
-    title: "Adults worried about losing independence",
-    description: "Taking an active approach before problems get worse."
+    title: "Staying active as we get older",
+    description: "Supporting balance, strength and independence in later life."
   }
 ];
 
@@ -45,7 +45,7 @@ const WhoWeHelp: React.FC = () => {
               Who We Help
             </h2>
             <p className="text-sm md:text-base text-gray-500 max-w-xl mx-auto">
-              We specialise in helping active adults stay strong, confident, and independent.
+              We help people manage pain, recover from injury and build the strength and confidence to do more.
             </p>
           </div>
 

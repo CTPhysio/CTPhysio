@@ -39,46 +39,34 @@ const Hero: React.FC = () => {
               className="text-2xl sm:text-3xl lg:text-[2.375rem] font-semibold text-white mb-4 leading-[1.32] tracking-tight"
               style={{ textShadow: '0 2px 8px rgba(0,0,0,0.35)' }}
             >
-              Stay Strong, Active, and Independent Over 50
+              Physiotherapy in Harborne, Birmingham
             </h1>
 
-            {/* Desktop subtitle */}
             <p
-              className="hidden sm:block text-base sm:text-lg text-white mb-6 leading-relaxed"
+              className="text-base sm:text-lg text-white mb-6 leading-relaxed"
               style={{ textShadow: '0 2px 8px rgba(0,0,0,0.35)' }}
             >
-              Helping adults over 50 overcome pain, build strength, and stay confident doing the things they love.
+              Whether you're dealing with pain, recovering from an injury or trying to get back to an activity you enjoy, our physiotherapy team can help you move with confidence and build lasting strength.
             </p>
 
-            {/* Mobile bullets */}
-            <div className="sm:hidden space-y-1.5 text-white/90 text-sm mb-5">
-              <div className="flex items-start gap-2">
-                <span className="mt-1 text-sky-300">—</span>
-                <span>Helping active adults 50+ stay strong and independent</span>
-              </div>
-              <div className="flex items-start gap-2">
-                <span className="mt-1 text-sky-300">—</span>
-                <span>100+ five-star reviews in Harborne, Birmingham</span>
-              </div>
-              <div className="flex items-start gap-2">
-                <span className="mt-1 text-sky-300">—</span>
-                <span>A clear plan from your very first visit</span>
-              </div>
-            </div>
-
-            {/* Primary CTA */}
-            <div className="mb-6">
+            <div className="flex flex-col sm:flex-row gap-3 mb-6">
               <a
                 href="/booking"
-                className="inline-flex justify-center items-center px-8 py-4 text-sm sm:text-base font-semibold rounded-md shadow-md text-white bg-navy-700 hover:bg-navy-800 transition-colors duration-200"
+                className="inline-flex w-full sm:w-auto justify-center items-center px-6 sm:px-8 py-4 text-sm sm:text-base font-semibold rounded-md shadow-lg text-white bg-sky-500 hover:bg-sky-400 transition-colors"
               >
-                Start With A Free Discovery Visit
+                Book a Physiotherapy Appointment
+              </a>
+              <a
+                href="/booking"
+                className="inline-flex w-full sm:w-auto justify-center items-center px-6 sm:px-8 py-4 text-sm sm:text-base font-semibold rounded-md shadow-md text-navy-800 bg-white hover:bg-sky-50 transition-colors"
+              >
+                Book a Free Discovery Visit
               </a>
             </div>
 
             {/* Desktop trust signals */}
             <div className="hidden sm:flex flex-col gap-1.5 text-white/60 text-xs">
-              <span>HCPC Registered Physiotherapist</span>
+              <span>HCPC-registered physiotherapists</span>
               <span>18+ Years of Clinical Experience</span>
               <span>100+ Verified 5-Star Google Reviews</span>
             </div>
