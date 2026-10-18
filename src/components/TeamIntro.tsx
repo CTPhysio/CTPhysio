@@ -29,7 +29,7 @@ const clinicians: Clinician[] = [
     image: '/assets/images/Jessamyn_Headshot_No_Background.png',
     alt: 'Jessamyn, Physiotherapist',
     description: 'Particular interest in sports injuries and tennis.',
-    maxHeight: '92%',
+    maxHeight: '72%',
   },
 ];
 
