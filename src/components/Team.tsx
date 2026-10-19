@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { BookOpen, Target, TrendingUp, Heart, CheckCircle, ChevronLeft, ChevronRight, Star, Phone } from 'lucide-react';
+import Seo from './Seo';
 
 const approachCards = [
   {
@@ -76,6 +77,11 @@ const Team: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Seo
+        title="Meet Our Physiotherapy Team in Harborne | Chris Tiley Physiotherapy"
+        description="Meet Chris, Kate and Jessamyn, our physiotherapy team in Harborne, Birmingham. Learn about our approach to rehabilitation, strength and recovery."
+        canonicalPath="/about"
+      />
 
       {/* SECTION 1 — HERO */}
       <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-sky-900">
