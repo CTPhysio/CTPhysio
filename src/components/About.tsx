@@ -1,8 +1,15 @@
 import React from 'react';
+import Seo from './Seo';
 
 const About: React.FC = () => {
   return (
-    <section className="py-10 md:py-16 bg-white rounded-b-[60px]">
+    <>
+      <Seo
+        title="Meet Our Physiotherapy Team in Harborne | Chris Tiley Physiotherapy"
+        description="Meet Chris, Kate and Jessamyn, our physiotherapy team in Harborne, Birmingham. Learn about our approach to rehabilitation, strength and recovery."
+        canonicalPath="/about"
+      />
+      <section className="py-10 md:py-16 bg-white rounded-b-[60px]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl sm:text-4xl font-bold text-navy-700 mb-8 md:mb-12 text-center">
@@ -47,6 +54,7 @@ const About: React.FC = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

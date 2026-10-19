@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { X } from 'lucide-react';
 import FinalCTA from './FinalCTA';
+import Seo from './Seo';
 
 export interface EventItem {
   id: string;
@@ -115,6 +116,11 @@ const Events: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Seo
+        title="Physiotherapy Events in Harborne | Chris Tiley Physiotherapy"
+        description="Find information about upcoming events and activities organised by Chris Tiley Physiotherapy in Harborne, Birmingham."
+        canonicalPath="/events"
+      />
       <section className="relative h-[45vh] bg-navy-800 pt-20">
         <div className="absolute inset-0 bg-gradient-to-br from-navy-900 to-navy-700 opacity-90" />
         <div className="relative h-full flex items-center justify-center text-center px-4">

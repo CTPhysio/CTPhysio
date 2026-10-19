@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, CheckCircle, AlertCircle } from 'lucide-react';
 import GoogleMap from './GoogleMap';
+import Seo from './Seo';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -89,6 +90,11 @@ const Contact: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Seo
+        title="Contact Our Harborne Physiotherapy Clinic | Chris Tiley Physiotherapy"
+        description="Contact Chris Tiley Physiotherapy in Harborne, Birmingham. Find our clinic, call the reception team or send an enquiry about appointments."
+        canonicalPath="/contact"
+      />
       {/* Hero Section */}
       <section className="relative h-[40vh] bg-navy-800">
         <div className="absolute inset-0">

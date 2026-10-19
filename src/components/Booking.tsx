@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Phone, CheckCircle, AlertCircle, Calendar } from 'lucide-react';
+import Seo from './Seo';
 
 const CLINIC_PHONE = '0121 517 0806';
 const CLINIC_PHONE_TEL = 'tel:01215170806';
@@ -71,6 +72,11 @@ const Booking: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Seo
+        title="Book a Physiotherapy Appointment in Harborne | Chris Tiley Physiotherapy"
+        description="Book physiotherapy in Harborne, Birmingham. Arrange an appointment online, contact our reception team or enquire about a free Discovery Visit."
+        canonicalPath="/booking"
+      />
       {/* Compact heading */}
       <section className="bg-navy-800 py-12 md:py-16">
         <div className="max-w-5xl mx-auto px-4 text-center">

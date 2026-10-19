@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Activity, Dumbbell, Users, CircleDot, ArrowRight, Target } from 'lucide-react';
 import PainPoints from './PainPoints';
 import GoogleReviewsSlider from './GoogleReviewsSlider';
+import Seo from './Seo';
 
 const Services: React.FC = () => {
   const services = [
@@ -69,6 +70,11 @@ const Services: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Seo
+        title="Physiotherapy Services in Harborne | Chris Tiley Physiotherapy"
+        description="Explore physiotherapy services in Harborne, Birmingham, including treatment for muscle and joint pain, sports injuries and rehabilitation."
+        canonicalPath="/services"
+      />
       {/* Hero Section */}
       <section className="relative h-[60vh] bg-navy-800">
         <div className="absolute inset-0">
