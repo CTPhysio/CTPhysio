@@ -37,7 +37,7 @@ const clinicians: Clinician[] = [
     fallback: '/assets/images/Jessamyn_Headshot_No_Background.png',
     alt: 'Jessamyn, Physiotherapist',
     description: 'Particular interest in sports injuries and tennis.',
-    maxHeight: '100%',
+    maxHeight: '85%',
   },
 ];
 
