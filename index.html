@@ -39,57 +39,6 @@
         })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
     </script>
     
-    <!-- Voiceflow AI Chatbot -->
-    <script type="text/plain" data-cookieconsent="marketing">
-      (function(d, t) {
-          var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-          v.onload = function() {
-            window.voiceflow.chat.load({
-              verify: { projectID: '689bb99e90eb8fc31bb0b25f' },
-              url: 'https://general-runtime.voiceflow.com',
-              versionID: 'production',
-              voice: {
-                url: "https://runtime-api.voiceflow.com"
-              }
-            });
-          }
-          v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
-      })(document, 'script');
-    </script>
-    
-    <!-- Custom Voiceflow Styling -->
-    <style>
-      /* Hide the default "test your agent" text */
-      .vfrc-launcher--text,
-      .vfrc-launcher__text,
-      [data-testid="launcher-text"],
-      .vfrc-widget--launcher .vfrc-launcher--text {
-        display: none !important;
-      }
-      
-      /* Ensure only the icon is visible */
-      .vfrc-launcher,
-      .vfrc-widget--launcher {
-        width: 60px !important;
-        height: 60px !important;
-        border-radius: 50% !important;
-      }
-      
-      /* Style the launcher button */
-      .vfrc-launcher__button {
-        width: 60px !important;
-        height: 60px !important;
-        border-radius: 50% !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-      }
-      
-      /* Hide any text elements that might appear */
-      .vfrc-launcher span:not(.vfrc-icon) {
-        display: none !important;
-      }
-    </style>
     <meta property="og:image" content="https://christileyphysiotherapy.com/social-share-ctp.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
