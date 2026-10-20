@@ -5,9 +5,13 @@ const Hero: React.FC = () => {
   return (
     <div className="relative h-[75vh] sm:h-[66vh] overflow-hidden rounded-b-[60px]">
       {/* Background Image */}
-      <div
-        className="absolute inset-0 z-0 bg-cover bg-center sm:bg-[center_30%]"
-        style={{ backgroundImage: 'url("/Untitled_design_(2).png")' }}
+      <img
+        src="/hero-1920.webp"
+        srcSet="/hero-960.webp 960w, /hero-1920.webp 1920w"
+        sizes="100vw"
+        alt=""
+        fetchPriority="high"
+        className="absolute inset-0 z-0 w-full h-full object-cover object-center sm:object-[center_30%]"
       />
 
       {/* Left-to-right gradient overlay: darker navy on left, lighter on right */}
