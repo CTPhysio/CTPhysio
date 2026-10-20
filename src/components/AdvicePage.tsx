@@ -140,11 +140,14 @@ const AdvicePage: React.FC = () => {
             </p>
             <div className="bg-gray-50 rounded-xl shadow-lg overflow-hidden flex flex-col sm:flex-row">
               <div className="sm:w-2/5 flex items-center justify-center bg-white p-6 sm:p-8 flex-shrink-0 overflow-hidden">
-                <img
-                  src="/assets/images/Never_Too_Old_To_Lift_-_Logo_-_Black_font_Blue_Dumbell_and_White_background.jpg"
-                  alt="Never Too Old to Lift logo"
-                  className="max-h-32 sm:max-h-40 max-w-full object-contain"
-                />
+                <picture>
+                  <source type="image/webp" srcSet="/optimized/Never_Too_Old_To_Lift_Logo-400.webp" />
+                  <img
+                    src="/assets/images/Never_Too_Old_To_Lift_-_Logo_-_Black_font_Blue_Dumbell_and_White_background.jpg"
+                    alt="Never Too Old to Lift logo"
+                    className="max-h-32 sm:max-h-40 max-w-full object-contain"
+                  />
+                </picture>
               </div>
               <div className="p-6 sm:p-8 flex flex-col flex-grow justify-center">
                 <h3 className="text-xl md:text-2xl font-bold text-navy-700 mb-3">Never Too Old to Lift on YouTube</h3>

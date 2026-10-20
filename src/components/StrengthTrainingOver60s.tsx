@@ -393,17 +393,26 @@ const StrengthTrainingOver60s: React.FC = () => {
             <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-6 md:p-8 mt-10">
               <div className="flex flex-col sm:flex-row gap-5 sm:gap-6 items-start">
                 <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-4 border-sky-50 shadow-sm overflow-hidden flex-shrink-0">
-                  <img
-                    src="/Chris_Headshot_No_Background.png"
-                    alt="Chris Tiley, Chartered Physiotherapist"
-                    style={{
-                      width: '100%',
-                      height: '100%',
-                      objectFit: 'cover',
-                      objectPosition: 'center top',
-                      display: 'block',
-                    }}
-                  />
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcSet="/optimized/Chris_Headshot_No_Background-400.webp 400w, /optimized/Chris_Headshot_No_Background-600.webp 600w"
+                      sizes="112px"
+                    />
+                    <img
+                      src="/Chris_Headshot_No_Background.png"
+                      srcSet="/optimized/Chris_Headshot_No_Background-400.webp 400w, /optimized/Chris_Headshot_No_Background-600.webp 600w"
+                      sizes="112px"
+                      alt="Chris Tiley, Chartered Physiotherapist"
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        objectPosition: 'center top',
+                        display: 'block',
+                      }}
+                    />
+                  </picture>
                 </div>
                 <div>
                   <h2 className="text-lg sm:text-xl font-bold text-navy-700 mb-1">About the author</h2>

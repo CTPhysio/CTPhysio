@@ -1,17 +1,30 @@
 import React from 'react';
 
-const resources = [
+type Resource = {
+  image: string;
+  fallbackImage: string | null;
+  imageAlt: string;
+  title: string;
+  description: string;
+  buttonText: string;
+  href: string;
+  imageClassName: string;
+};
+
+const resources: Resource[] = [
   {
-    image: '/assets/images/Never_Too_Old_To_Lift_-_Logo_-_Black_font_Blue_Dumbell_and_White_background.jpg',
+    image: '/optimized/Never_Too_Old_To_Lift_Logo-400.webp',
+    fallbackImage: '/assets/images/Never_Too_Old_To_Lift_-_Logo_-_Black_font_Blue_Dumbell_and_White_background.jpg',
     imageAlt: 'Never Too Old to Lift logo',
     title: 'Never Too Old to Lift on YouTube',
-    description: 'Practical videos and advice from Chris Tiley to help you build strength, move well and stay active as you get older.',
+    description: 'Practical videos and advice from Chris Tiley to help you build strength, move well and stay active as they get older.',
     buttonText: 'Watch on YouTube',
     href: 'https://www.youtube.com/c/NeverTooOldtoLift',
     imageClassName: 'max-h-full max-w-full object-contain scale-[1.6]',
   },
   {
     image: '/assets/images/Main_file.jpg',
+    fallbackImage: null,
     imageAlt: 'The Never Too Old to Lift Podcast logo',
     title: 'The Never Too Old to Lift Podcast',
     description: 'Hosted by Chris Tiley, with practical conversations and advice about strength training, healthy ageing and staying strong for life.',
@@ -38,11 +51,24 @@ const ListenWatch: React.FC = () => {
           {resources.map((resource) => (
             <article key={resource.title} className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
               <div className="h-40 sm:h-48 flex items-center justify-center bg-white p-5 sm:p-6">
-                <img
-                  src={resource.image}
-                  alt={resource.imageAlt}
-                  className={resource.imageClassName}
-                />
+                {resource.fallbackImage ? (
+                  <picture>
+                    <source type="image/webp" srcSet={resource.image} />
+                    <img
+                      src={resource.fallbackImage}
+                      alt={resource.imageAlt}
+                      className={resource.imageClassName}
+                      loading="lazy"
+                    />
+                  </picture>
+                ) : (
+                  <img
+                    src={resource.image}
+                    alt={resource.imageAlt}
+                    className={resource.imageClassName}
+                    loading="lazy"
+                  />
+                )}
               </div>
               <div className="p-8 flex flex-col flex-grow">
                 <h3 className="text-2xl font-bold text-navy-700 mb-4">{resource.title}</h3>

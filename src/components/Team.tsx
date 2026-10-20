@@ -183,17 +183,26 @@ const Team: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-[0_2px_20px_rgba(15,23,42,0.07)] border border-slate-100 overflow-hidden hover:shadow-[0_4px_28px_rgba(15,23,42,0.11)] transition-all duration-300 hover:-translate-y-0.5 flex flex-col">
               <div className="bg-gradient-to-br from-sky-50 to-slate-100 px-6 pt-8 pb-0 flex justify-center">
                 <div className="w-40 h-40 sm:w-48 sm:h-48 rounded-full border-4 border-white shadow-[0_4px_20px_rgba(15,23,42,0.14)] overflow-hidden">
-                  <img
-                    src="/Chris_Headshot_No_Background.png"
-                    alt="Chris Tiley - Founder & Physiotherapist"
-                    style={{
-                      width: '100%',
-                      height: '100%',
-                      objectFit: 'cover',
-                      objectPosition: 'center top',
-                      display: 'block',
-                    }}
-                  />
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcSet="/optimized/Chris_Headshot_No_Background-400.webp 400w, /optimized/Chris_Headshot_No_Background-600.webp 600w"
+                      sizes="192px"
+                    />
+                    <img
+                      src="/Chris_Headshot_No_Background.png"
+                      srcSet="/optimized/Chris_Headshot_No_Background-400.webp 400w, /optimized/Chris_Headshot_No_Background-600.webp 600w"
+                      sizes="192px"
+                      alt="Chris Tiley - Founder & Physiotherapist"
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        objectPosition: 'center top',
+                        display: 'block',
+                      }}
+                    />
+                  </picture>
                 </div>
               </div>
               <div className="p-5 sm:p-8 flex flex-col flex-1">
@@ -222,17 +231,26 @@ const Team: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-[0_2px_20px_rgba(15,23,42,0.07)] border border-slate-100 overflow-hidden hover:shadow-[0_4px_28px_rgba(15,23,42,0.11)] transition-all duration-300 hover:-translate-y-0.5 flex flex-col">
               <div className="bg-gradient-to-br from-sky-50 to-slate-100 px-6 pt-8 pb-0 flex justify-center">
                 <div className="w-40 h-40 sm:w-48 sm:h-48 rounded-full border-4 border-white shadow-[0_4px_20px_rgba(15,23,42,0.14)] overflow-hidden">
-                  <img
-                    src="/Kate_Headshot_No_Background.png"
-                    alt="Kate Evans - Physiotherapist"
-                    style={{
-                      width: '100%',
-                      height: '100%',
-                      objectFit: 'cover',
-                      objectPosition: 'center top',
-                      display: 'block',
-                    }}
-                  />
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcSet="/optimized/Kate_Headshot_No_Background-400.webp 400w, /optimized/Kate_Headshot_No_Background-600.webp 600w"
+                      sizes="192px"
+                    />
+                    <img
+                      src="/Kate_Headshot_No_Background.png"
+                      srcSet="/optimized/Kate_Headshot_No_Background-400.webp 400w, /optimized/Kate_Headshot_No_Background-600.webp 600w"
+                      sizes="192px"
+                      alt="Kate Evans - Physiotherapist"
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        objectPosition: 'center top',
+                        display: 'block',
+                      }}
+                    />
+                  </picture>
                 </div>
               </div>
               <div className="p-5 sm:p-8 flex flex-col flex-1">
@@ -261,17 +279,26 @@ const Team: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-[0_2px_20px_rgba(15,23,42,0.07)] border border-slate-100 overflow-hidden hover:shadow-[0_4px_28px_rgba(15,23,42,0.11)] transition-all duration-300 hover:-translate-y-0.5 flex flex-col">
               <div className="bg-gradient-to-br from-sky-50 to-slate-100 px-6 pt-8 pb-0 flex justify-center">
                 <div className="w-40 h-40 sm:w-48 sm:h-48 rounded-full border-4 border-white shadow-[0_4px_20px_rgba(15,23,42,0.14)] overflow-hidden">
-                  <img
-                    src="/assets/images/Jessamyn_Headshot_No_Background.png"
-                    alt="Jessamyn Radford, Chartered Physiotherapist"
-                    style={{
-                      width: '100%',
-                      height: '100%',
-                      objectFit: 'contain',
-                      objectPosition: 'center top',
-                      display: 'block',
-                    }}
-                  />
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcSet="/optimized/Jessamyn_Headshot_No_Background-400.webp 400w, /optimized/Jessamyn_Headshot_No_Background-600.webp 600w"
+                      sizes="192px"
+                    />
+                    <img
+                      src="/assets/images/Jessamyn_Headshot_No_Background.png"
+                      srcSet="/optimized/Jessamyn_Headshot_No_Background-400.webp 400w, /optimized/Jessamyn_Headshot_No_Background-600.webp 600w"
+                      sizes="192px"
+                      alt="Jessamyn Radford, Chartered Physiotherapist"
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'contain',
+                        objectPosition: 'center top',
+                        display: 'block',
+                      }}
+                    />
+                  </picture>
                 </div>
               </div>
               <div className="p-5 sm:p-8 flex flex-col flex-1">
