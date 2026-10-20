@@ -57,7 +57,7 @@ const TeamIntro: React.FC = () => {
             {clinicians.map((clinician) => (
               <article key={clinician.name} className="h-full overflow-hidden rounded-xl border border-gray-100 bg-white shadow-sm flex flex-col">
                 <div className="h-56 bg-gradient-to-br from-sky-50 to-slate-100 flex items-end justify-center overflow-hidden">
-                  <picture>
+                  <picture className="h-full flex items-end justify-center">
                     <source
                       type="image/webp"
                       srcSet={`${clinician.image400} 400w, ${clinician.image600} 600w`}
