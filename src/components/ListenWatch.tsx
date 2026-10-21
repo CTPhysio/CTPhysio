@@ -52,7 +52,7 @@ const ListenWatch: React.FC = () => {
             <article key={resource.title} className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
               <div className="h-40 sm:h-48 flex items-center justify-center bg-white p-5 sm:p-6">
                 {resource.fallbackImage ? (
-                  <picture>
+                  <picture className="h-full w-full flex items-center justify-center">
                     <source type="image/webp" srcSet={resource.image} />
                     <img
                       src={resource.fallbackImage}
