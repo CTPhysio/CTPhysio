@@ -86,12 +86,12 @@ const AdviceSection: React.FC = () => {
                 <picture>
                   <source
                     type="image/webp"
-                    srcSet="/optimized/insights-womens-football-800.webp 800w, /insights-womens-football.webp 1408w"
+                    srcSet="/optimized/insights-womens-football-800.webp 800w"
                     sizes="(max-width: 768px) 100vw, 400px"
                   />
                   <img
                     src={latest.featuredImage}
-                    srcSet="/optimized/insights-womens-football-800.webp 800w, /insights-womens-football.webp 1408w"
+                    srcSet="/optimized/insights-womens-football-800.webp 800w"
                     sizes="(max-width: 768px) 100vw, 400px"
                     alt={latest.featuredImageAlt}
                     className="w-full h-56 md:h-full object-cover"
