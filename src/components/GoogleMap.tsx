@@ -2,6 +2,9 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Loader } from '@googlemaps/js-api-loader';
 import { useConsent } from '../lib/useConsent';
 
+const GOOGLE_MAPS_URL =
+  'https://www.google.com/maps/place/Chris+Tiley+Physiotherapy/@52.4603497,-1.9725524,17z/data=!4m18!1m9!3m8!1s0x4870bd415e6fc5e9:0x9cfb99fc1d9936ce!2sChris+Tiley+Physiotherapy!8m2!3d52.4603497!4d-1.9699775!9m1!1b1!16s%2Fg%2F11j5bx_tkw!3m7!1s0x4870bd415e6fc5e9:0x9cfb99fc1d9936ce!8m2!3d52.4603497!4d-1.9699775!9m1!1b1!16s%2Fg%2F11j5bx_tkw?entry=ttu&g_ep=EgoyMDI1MDcxMy4wIKXMDSoASAFQAw%3D%3D';
+
 interface GoogleMapProps {
   className?: string;
 }
@@ -68,6 +71,26 @@ const GoogleMap: React.FC<GoogleMapProps> = ({ className = "w-full h-[400px]" })
 
     initializeMap();
   }, [hasConsent]);
+
+  if (!hasConsent('preferences')) {
+    return (
+      <div className={`${className} bg-gray-100 flex items-center justify-center rounded-lg`}>
+        <div className="text-center px-6">
+          <p className="text-gray-600 mb-3">
+            To view the interactive map, please enable preferences cookies.
+          </p>
+          <a
+            href={GOOGLE_MAPS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center text-sky-600 hover:text-sky-700 font-semibold transition-colors"
+          >
+            View our location on Google Maps
+          </a>
+        </div>
+      </div>
+    );
+  }
 
   if (mapError) {
     return (

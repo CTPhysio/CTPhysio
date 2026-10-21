@@ -19,6 +19,19 @@ declare global {
 const STORAGE_KEY = 'CookieConsent';
 
 function readConsent(): ConsentMap | null {
+  // Cookiebot's in-memory consent is the authoritative source, updated
+  // immediately when the user accepts or changes preferences. localStorage
+  // may lag behind or not be written at all depending on configuration.
+  if (window.Cookiebot?.consent) {
+    const c = window.Cookiebot.consent;
+    return {
+      preferences: !!c.preferences,
+      statistics: !!c.statistics,
+      marketing: !!c.marketing,
+    };
+  }
+
+  // Fall back to localStorage for the initial load before Cookiebot has fired.
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) return null;
