@@ -9,8 +9,8 @@ const cornerstoneArticle = {
   publishedDate: '2026-09-25',
   excerpt:
     'A practical guide from Chris Tiley on how to start strength training after 60, including choosing the right exercises, progressing safely and building strength for the things you want to keep doing.',
-  featuredImage: '/dhdnevertoooldtoliftimage.webp',
-  featuredImageAlt: 'Strength training for over 60s',
+  featuredImage: '/assets/images/ChatGPT_Image_Sep_25,_2026,_03_49_06_PM.png',
+  featuredImageAlt: 'Older woman strength training with dumbbells in a gym',
 };
 
 const AdviceSection: React.FC = () => {
