@@ -49,6 +49,7 @@ const AdviceSection: React.FC = () => {
                   src={cornerstoneArticle.featuredImage}
                   alt={cornerstoneArticle.featuredImageAlt}
                   className="w-full h-56 md:h-full object-cover"
+                  loading="lazy"
                 />
               </Link>
             </div>
@@ -82,11 +83,21 @@ const AdviceSection: React.FC = () => {
           <article className="bg-gray-50 rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row">
             <div className="md:w-2/5 flex-shrink-0">
               <Link to={`/advice/${latest.slug}`}>
-                <img
-                  src={latest.featuredImage}
-                  alt={latest.featuredImageAlt}
-                  className="w-full h-56 md:h-full object-cover"
-                />
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcSet="/optimized/insights-womens-football-800.webp 800w, /insights-womens-football.webp 1408w"
+                    sizes="(max-width: 768px) 100vw, 400px"
+                  />
+                  <img
+                    src={latest.featuredImage}
+                    srcSet="/optimized/insights-womens-football-800.webp 800w, /insights-womens-football.webp 1408w"
+                    sizes="(max-width: 768px) 100vw, 400px"
+                    alt={latest.featuredImageAlt}
+                    className="w-full h-56 md:h-full object-cover"
+                    loading="lazy"
+                  />
+                </picture>
               </Link>
             </div>
             <div className="p-6 md:p-8 flex flex-col flex-grow justify-center">

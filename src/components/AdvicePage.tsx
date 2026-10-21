@@ -180,11 +180,15 @@ const AdvicePage: React.FC = () => {
             </p>
             <div className="bg-gray-50 rounded-xl shadow-lg overflow-hidden flex flex-col sm:flex-row">
               <div className="sm:w-2/5 flex items-center justify-center bg-white p-6 sm:p-8 flex-shrink-0">
-                <img
-                  src="/assets/images/Main_file.jpg"
-                  alt="The Never Too Old to Lift Podcast logo"
-                  className="max-h-full max-w-full object-contain"
-                />
+                <picture>
+                  <source type="image/webp" srcSet="/optimized/podcast-logo-400.webp" />
+                  <img
+                    src="/assets/images/Main_file.jpg"
+                    alt="The Never Too Old to Lift Podcast logo"
+                    className="max-h-full max-w-full object-contain"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
               <div className="p-6 sm:p-8 flex flex-col flex-grow justify-center">
                 <h3 className="text-xl md:text-2xl font-bold text-navy-700 mb-3">The Never Too Old to Lift Podcast</h3>
