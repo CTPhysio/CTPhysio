@@ -16,8 +16,20 @@
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
 
-    <!-- Preload hero image (LCP element) -->
-    <link rel="preload" as="image" type="image/webp" href="/hero-1920.webp" imagesrcset="/hero-960.webp 960w, /hero-1920.webp 1920w" imagesizes="100vw" fetchpriority="high" />
+    <!-- Preload hero image (LCP element) — homepage only -->
+    <script>
+      if (window.location.pathname === '/') {
+        var l = document.createElement('link');
+        l.rel = 'preload';
+        l.as = 'image';
+        l.type = 'image/webp';
+        l.href = '/hero-1920.webp';
+        l.setAttribute('imagesrcset', '/hero-960.webp 960w, /hero-1920.webp 1920w');
+        l.setAttribute('imagesizes', '100vw');
+        l.fetchPriority = 'high';
+        document.head.appendChild(l);
+      }
+    </script>
 
     <!-- Google Consent Mode v2 (Cookiebot default consent) -->
     <script data-cookieconsent="ignore">
