@@ -12,7 +12,7 @@ type ClassSlot = {
 };
 
 const classTimetable: ClassSlot[] = [
-  { day: 'Monday', time: '6:30pm', spaces: 2 },
+  { day: 'Monday', time: '6:30pm', spaces: 1 },
   { day: 'Monday', time: '7:30pm', spaces: 0 },
   { day: 'Wednesday', time: '6:30pm', spaces: 1 },
   { day: 'Wednesday', time: '7:30pm', spaces: 0 },

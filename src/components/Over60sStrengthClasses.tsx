@@ -4,13 +4,9 @@ import { ChevronDown, Calendar, Clock, Users, Dumbbell, Scale, HeartPulse, Shiel
 
 const BOOKING_URL = 'https://chris-tiley-physiotherapy.uk1.cliniko.com/bookings';
 
-// Number of places available in the new Tuesday 2:30pm class.
-// Update this single value as people join the class.
-const NEW_CLASS_PLACES = 1;
-
 const classSchedule = [
   { day: 'Tuesday', time: '11:00am', status: 'full' },
-  { day: 'Tuesday', time: '2:30pm', status: 'new', places: NEW_CLASS_PLACES },
+  { day: 'Tuesday', time: '2:30pm', status: 'full' },
   { day: 'Thursday', time: '1:30pm', status: 'full' },
   { day: 'Thursday', time: '2:30pm', status: 'full' },
 ];
@@ -520,25 +516,18 @@ const Over60sStrengthClasses: React.FC = () => {
         </div>
       </section>
 
-      {/* NEW CLASS ANNOUNCEMENT */}
+      {/* FULL CLASSES NOTICE */}
       <section className="py-10 md:py-14 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           <div className="bg-sky-50 border border-sky-200 rounded-xl p-6 md:p-8">
-            <div className="flex flex-wrap items-center gap-3 mb-4">
-              <span className="inline-flex items-center px-3 py-1 rounded-full bg-sky-600 text-white font-semibold text-xs sm:text-sm uppercase tracking-wide">New</span>
-              <span className="text-sm text-gray-500 font-medium">Starting Tuesday 6th October 2026</span>
-            </div>
             <h2 className="text-2xl md:text-3xl font-bold text-navy-700 mb-4 leading-tight">
-              NEW: Tuesday 2:30pm Over 60s Strength Class
+              All Over 60s Strength Classes are currently full
             </h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Our Thursday afternoon Over 60s Strength Class filled within just a few weeks, so we've added another class to give more people the opportunity to join us.
-            </p>
-            <p className="text-gray-600 leading-relaxed mb-4">
-              The new Tuesday 2:30pm class has <span className="font-semibold text-navy-700">{NEW_CLASS_PLACES} {NEW_CLASS_PLACES === 1 ? 'space' : 'spaces'} available</span>.
+              Our Tuesday and Thursday classes have all reached capacity. As our classes are deliberately kept small (maximum 5 people), places are limited.
             </p>
             <p className="text-gray-600 leading-relaxed mb-6">
-              As our classes are deliberately kept small, places are limited. If you're interested in joining, get in touch soon to arrange your Discovery Visit and we'll talk through whether the class is right for you.
+              If you're interested in joining, please get in touch to arrange a free Discovery Visit. We'll talk through whether the classes are right for you and let you know as soon as a place becomes available.
             </p>
             <div className="flex flex-col sm:flex-row sm:items-center gap-4">
               <DiscoveryButton>Book a Discovery Visit</DiscoveryButton>
