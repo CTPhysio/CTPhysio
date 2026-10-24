@@ -25,8 +25,14 @@ const GoogleMap: React.FC<GoogleMapProps> = ({ className = "w-full h-[400px]" })
       try {
         // Create loader only once
         if (!loaderInstance) {
+          const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
+          if (!apiKey) {
+            console.error('[GoogleMap] VITE_GOOGLE_MAPS_API_KEY is not configured');
+            setMapError(true);
+            return;
+          }
           loaderInstance = new Loader({
-            apiKey: 'AIzaSyAyhvShJVxYYJBw_iFcMw4UYWwVwWcMihY',
+            apiKey,
             version: 'weekly',
             libraries: ['places']
           });

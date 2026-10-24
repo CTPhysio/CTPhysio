@@ -90,8 +90,15 @@ const GoogleReviewsSlider: React.FC = () => {
 
     setLoading(true);
 
+    const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
+    if (!apiKey) {
+      console.error('[GoogleReviews] VITE_GOOGLE_MAPS_API_KEY is not configured');
+      setLoading(false);
+      return;
+    }
+
     const loader = new Loader({
-      apiKey: 'AIzaSyAyhvShJVxYYJBw_iFcMw4UYWwVwWcMihY',
+      apiKey,
       version: 'weekly',
       libraries: ['places']
     });
