@@ -149,7 +149,7 @@ const GoogleReviewsSlider: React.FC = () => {
               profile_photo_url: r.authorAttribution?.photoURI ?? '',
               relative_time_description: r.relativePublishTimeDescription ?? '',
               publish_time: r.publishTime ? new Date(r.publishTime).getTime() : 0,
-            }).filter((r) => r.text.trim().length > 0)
+           })).filter((r) => r.text.trim().length > 0)
             .sort((a, b) => b.publish_time - a.publish_time);
 
           setReviews(mapped);
