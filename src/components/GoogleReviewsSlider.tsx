@@ -15,6 +15,8 @@ interface Review {
 const GOOGLE_MAPS_URL =
   'https://www.google.com/maps/place/Chris+Tiley+Physiotherapy/@52.4603497,-1.9725524,17z/data=!4m18!1m9!3m8!1s0x4870bd415e6fc5e9:0x9cfb99fc1d9936ce!2sChris+Tiley+Physiotherapy!8m2!3d52.4603497!4d-1.9699775!9m1!1b1!16s%2Fg%2F11j5bx_tkw!3m7!1s0x4870bd415e6fc5e9:0x9cfb99fc1d9936ce!8m2!3d52.4603497!4d-1.9699775!9m1!1b1!16s%2Fg%2F11j5bx_tkw?entry=ttu&g_ep=EgoyMDI1MDcxMy4wIKXMDSoASAFQAw%3D%3D';
 
+const GOOGLE_REVIEW_COUNT = 137;
+
 function truncateReview(text: string, maxChars = 160): string {
   if (text.length <= maxChars) return text;
   const trimmed = text.slice(0, maxChars);
@@ -145,7 +147,7 @@ const GoogleReviewsSlider: React.FC = () => {
               ))}
             </div>
             <span className="text-sm font-semibold text-navy-700">5.0</span>
-            <span className="text-sm text-gray-400">(109 reviews)</span>
+            <span className="text-sm text-gray-400">({GOOGLE_REVIEW_COUNT} reviews)</span>
           </div>
         </div>
 
