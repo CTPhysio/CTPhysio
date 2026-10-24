@@ -98,26 +98,27 @@ const GoogleReviewsSlider: React.FC = () => {
 
     loader.load().then(() => {
       if (!google.maps.places) {
+        console.error('[GoogleReviews] Places library unavailable');
         setLoading(false);
         return;
       }
       const service = new google.maps.places.PlacesService(document.createElement('div'));
       service.getDetails(
-        { placeId: 'ChIJ6cVvXkG9cEgRzjaZHfyZ-5w', fields: ['reviews', 'user_ratings_total'], language: 'en' },
+        { placeId: 'ChIJ6cVvXkG9cEgRzjaZHfyZ-5w', fields: ['reviews'], language: 'en' },
         (place, status) => {
-          if (status === google.maps.places.PlacesServiceStatus.OK && place) {
-            if (place.reviews) {
-              const sorted = [...place.reviews].sort((a, b) => b.time - a.time);
-              setReviews(sorted);
-            }
-            if (typeof place.user_ratings_total === 'number' && place.user_ratings_total > 0) {
-              setReviewCount(place.user_ratings_total);
-            }
+          if (status === google.maps.places.PlacesServiceStatus.OK && place?.reviews) {
+            const sorted = [...place.reviews].sort((a, b) => b.time - a.time);
+            setReviews(sorted);
+          } else {
+            console.error('[GoogleReviews] Places API returned status:', status);
           }
           setLoading(false);
         }
       );
-    }).catch(() => setLoading(false));
+    }).catch((err) => {
+      console.error('[GoogleReviews] Maps JS API failed to load:', err?.message ?? err);
+      setLoading(false);
+    });
   }, [consentGranted]);
 
   const advance = (dir: 1 | -1) => {
