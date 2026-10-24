@@ -32,10 +32,9 @@ const GoogleMap: React.FC<GoogleMapProps> = ({ className = "w-full h-[400px]" })
             return;
           }
           loaderInstance = new Loader({
-            apiKey,
-            version: 'weekly',
-            libraries: ['places']
-          });
+  apiKey,
+  version: 'weekly',
+});
         }
 
         // Load Google Maps API only once
