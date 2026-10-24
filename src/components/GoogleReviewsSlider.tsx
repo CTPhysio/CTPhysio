@@ -143,13 +143,13 @@ const GoogleReviewsSlider: React.FC = () => {
           const mapped: Review[] = place.reviews
             .map((r): Review => ({
               rating: r.rating ?? 0,
-              text: r.text?.text ?? '',
+              text: typeof r.text === 'string' ? r.text : (r.text?.text ?? ''),
               author_name: r.authorAttribution?.displayName ?? 'Anonymous',
               author_uri: r.authorAttribution?.uri ?? '',
               profile_photo_url: r.authorAttribution?.photoURI ?? '',
               relative_time_description: r.relativePublishTimeDescription ?? '',
               publish_time: r.publishTime ? new Date(r.publishTime).getTime() : 0,
-            }))
+            }).filter((r) => r.text.trim().length > 0)
             .sort((a, b) => b.publish_time - a.publish_time);
 
           setReviews(mapped);
