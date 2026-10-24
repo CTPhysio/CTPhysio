@@ -7,15 +7,18 @@ interface Review {
   rating: number;
   text: string;
   author_name: string;
+  author_uri: string;
   profile_photo_url: string;
   relative_time_description: string;
-  time: number;
+  publish_time: number;
 }
+
+const PLACE_ID = 'ChIJ6cVvXkG9cEgRzjaZHfyZ-5w';
 
 const GOOGLE_MAPS_URL =
   'https://www.google.com/maps/place/Chris+Tiley+Physiotherapy/@52.4603497,-1.9725524,17z/data=!4m18!1m9!3m8!1s0x4870bd415e6fc5e9:0x9cfb99fc1d9936ce!2sChris+Tiley+Physiotherapy!8m2!3d52.4603497!4d-1.9699775!9m1!1b1!16s%2Fg%2F11j5bx_tkw!3m7!1s0x4870bd415e6fc5e9:0x9cfb99fc1d9936ce!8m2!3d52.4603497!4d-1.9699775!9m1!1b1!16s%2Fg%2F11j5bx_tkw?entry=ttu&g_ep=EgoyMDI1MDcxMy4wIKXMDSoASAFQAw%3D%3D';
 
-const GOOGLE_REVIEW_COUNT = 137;
+const FALLBACK_REVIEW_COUNT = 137;
 
 const GoogleLogo: React.FC = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -53,7 +56,18 @@ const ReviewCard: React.FC<{ review: Review; keyProp: string }> = ({ review, key
         }}
       />
       <div>
-        <p className="font-semibold text-navy-700 text-sm leading-tight">{review.author_name}</p>
+        {review.author_uri ? (
+          <a
+            href={review.author_uri}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-navy-700 text-sm leading-tight hover:text-sky-600 transition-colors"
+          >
+            {review.author_name}
+          </a>
+        ) : (
+          <p className="font-semibold text-navy-700 text-sm leading-tight">{review.author_name}</p>
+        )}
         <div className="flex gap-0.5 mt-0.5">
           {[...Array(review.rating)].map((_, i) => (
             <Star key={i} size={12} className="fill-yellow-400 text-yellow-400" />
@@ -77,7 +91,7 @@ const GoogleReviewsSlider: React.FC = () => {
   const { hasConsent } = useConsent();
 
   const consentGranted = hasConsent('preferences');
-  const displayCount = reviewCount ?? GOOGLE_REVIEW_COUNT;
+  const displayCount = reviewCount ?? FALLBACK_REVIEW_COUNT;
 
   useEffect(() => {
     if (!consentGranted) {
@@ -88,6 +102,7 @@ const GoogleReviewsSlider: React.FC = () => {
       return;
     }
 
+    let cancelled = false;
     setLoading(true);
 
     const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
@@ -100,32 +115,58 @@ const GoogleReviewsSlider: React.FC = () => {
     const loader = new Loader({
       apiKey,
       version: 'weekly',
-      libraries: ['places']
     });
 
-    loader.load().then(() => {
-      if (!google.maps.places) {
-        console.error('[GoogleReviews] Places library unavailable');
-        setLoading(false);
-        return;
-      }
-      const service = new google.maps.places.PlacesService(document.createElement('div'));
-      service.getDetails(
-        { placeId: 'ChIJ6cVvXkG9cEgRzjaZHfyZ-5w', fields: ['reviews'], language: 'en' },
-        (place, status) => {
-          if (status === google.maps.places.PlacesServiceStatus.OK && place?.reviews) {
-            const sorted = [...place.reviews].sort((a, b) => b.time - a.time);
-            setReviews(sorted);
-          } else {
-            console.error('[GoogleReviews] Places API returned status:', status);
-          }
-          setLoading(false);
+    loader.load().then(async () => {
+      if (cancelled) return;
+
+      try {
+        const { Place } = await google.maps.importLibrary('places') as typeof google.maps.places;
+        if (!Place) {
+          console.error('[GoogleReviews] Places library unavailable');
+          if (!cancelled) setLoading(false);
+          return;
         }
-      );
+
+        const place = new Place({ id: PLACE_ID });
+        await place.fetchFields({
+          fields: ['reviews', 'rating', 'userRatingCount'],
+        });
+
+        if (cancelled) return;
+
+        if (place.userRatingCount) {
+          setReviewCount(place.userRatingCount);
+        }
+
+        if (place.reviews && place.reviews.length > 0) {
+          const mapped: Review[] = place.reviews
+            .map((r): Review => ({
+              rating: r.rating ?? 0,
+              text: r.text?.text ?? '',
+              author_name: r.authorAttribution?.displayName ?? 'Anonymous',
+              author_uri: r.authorAttribution?.uri ?? '',
+              profile_photo_url: r.authorAttribution?.photoURI ?? '',
+              relative_time_description: r.relativePublishTimeDescription ?? '',
+              publish_time: r.publishTime ? new Date(r.publishTime).getTime() : 0,
+            }))
+            .sort((a, b) => b.publish_time - a.publish_time);
+
+          setReviews(mapped);
+        } else {
+          console.warn('[GoogleReviews] No reviews returned');
+        }
+      } catch (err) {
+        console.error('[GoogleReviews] Places API (New) request failed:', err instanceof Error ? err.message : err);
+      } finally {
+        if (!cancelled) setLoading(false);
+      }
     }).catch((err) => {
-      console.error('[GoogleReviews] Maps JS API failed to load:', err?.message ?? err);
-      setLoading(false);
+      console.error('[GoogleReviews] Maps JS API failed to load:', err instanceof Error ? err.message : err);
+      if (!cancelled) setLoading(false);
     });
+
+    return () => { cancelled = true; };
   }, [consentGranted]);
 
   const advance = (dir: 1 | -1) => {
@@ -249,14 +290,14 @@ const GoogleReviewsSlider: React.FC = () => {
               {/* Mobile: 1 card */}
               <div className="md:hidden px-1">
                 {visible.slice(0, 1).map((review) => (
-                  <ReviewCard key={`m-${review.author_name}-${review.time}-${currentIndex}`} review={review} keyProp={`m-${review.time}`} />
+                  <ReviewCard key={`m-${review.author_name}-${review.publish_time}-${currentIndex}`} review={review} keyProp={`m-${review.publish_time}`} />
                 ))}
               </div>
 
               {/* Desktop: 3 cards */}
               <div className="hidden md:grid md:grid-cols-3 gap-5">
                 {visible.map((review, i) => (
-                  <ReviewCard key={`d-${review.author_name}-${review.time}-${currentIndex}-${i}`} review={review} keyProp={`d-${review.time}-${i}`} />
+                  <ReviewCard key={`d-${review.author_name}-${review.publish_time}-${currentIndex}-${i}`} review={review} keyProp={`d-${review.publish_time}-${i}`} />
                 ))}
               </div>
             </div>
