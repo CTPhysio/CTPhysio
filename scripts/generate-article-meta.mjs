@@ -18,6 +18,8 @@ for (const [path, title, description, image] of pages) {
     ['meta', 'property', 'og:url', url],
     ['meta', 'property', 'og:type', 'article'],
     ['meta', 'property', 'og:image', origin + image],
+    ['meta', 'property', 'og:image:alt', title],
+    ['meta', 'name', 'twitter:image:alt', title],
     ['meta', 'name', 'twitter:card', 'summary_large_image'],
     ['meta', 'name', 'twitter:image', origin + image],
   ];
@@ -27,6 +29,7 @@ for (const [path, title, description, image] of pages) {
     const pattern = new RegExp('<meta\\s+' + attr + '="' + key + '"[^>]*>');
     html = pattern.test(html) ? html.replace(pattern, tag) : html.replace('</head>', tag + '\n</head>');
   }
+  html = html.replace(/<meta property="og:image:(?:width|height)"[^>]*>\s*/g, '');
   html = html.replace('</head>', '<link rel="canonical" href="' + url + '">\n</head>');
   const directory = join('dist', path.slice(1));
   await mkdir(directory, { recursive: true });
