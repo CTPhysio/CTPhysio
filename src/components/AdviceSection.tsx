@@ -44,44 +44,6 @@ const AdviceSection: React.FC = () => {
         <div className="max-w-4xl mx-auto">
           <article className="bg-gray-50 rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row">
             <div className="md:w-2/5 flex-shrink-0">
-              <Link to="/strength-training-over-60s">
-                <img
-                  src={cornerstoneArticle.featuredImage}
-                  alt={cornerstoneArticle.featuredImageAlt}
-                  className="w-full h-56 md:h-full object-cover"
-                  loading="lazy"
-                />
-              </Link>
-            </div>
-            <div className="p-6 md:p-8 flex flex-col flex-grow justify-center">
-              <div className="flex items-center text-sm text-gray-500 mb-3">
-                <Calendar size={16} className="mr-1.5" />
-                {cornerstoneDate}
-              </div>
-              <h3 className="text-xl md:text-2xl font-bold text-navy-700 mb-3 leading-snug">
-                <Link to="/strength-training-over-60s" className="hover:text-sky-500 transition-colors">
-                  {cornerstoneArticle.title}
-                </Link>
-              </h3>
-              <p className="text-gray-600 leading-relaxed mb-6">
-                {cornerstoneArticle.excerpt}
-              </p>
-              <div>
-                <Link
-                  to="/strength-training-over-60s"
-                  className="inline-flex items-center text-sky-600 hover:text-sky-700 font-semibold transition-colors"
-                >
-                  Read the article
-                  <ArrowRight size={18} className="ml-2" />
-                </Link>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <div className="max-w-4xl mx-auto mt-8">
-          <article className="bg-gray-50 rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row">
-            <div className="md:w-2/5 flex-shrink-0">
               <Link to={`/advice/${latest.slug}`}>
                 <picture>
                   
@@ -119,6 +81,45 @@ const AdviceSection: React.FC = () => {
             </div>
           </article>
         </div>
+        <div className="max-w-4xl mx-auto mt-8">
+          <article className="bg-gray-50 rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row">
+            <div className="md:w-2/5 flex-shrink-0">
+              <Link to="/strength-training-over-60s">
+                <img
+                  src={cornerstoneArticle.featuredImage}
+                  alt={cornerstoneArticle.featuredImageAlt}
+                  className="w-full h-56 md:h-full object-cover"
+                  loading="lazy"
+                />
+              </Link>
+            </div>
+            <div className="p-6 md:p-8 flex flex-col flex-grow justify-center">
+              <div className="flex items-center text-sm text-gray-500 mb-3">
+                <Calendar size={16} className="mr-1.5" />
+                {cornerstoneDate}
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-navy-700 mb-3 leading-snug">
+                <Link to="/strength-training-over-60s" className="hover:text-sky-500 transition-colors">
+                  {cornerstoneArticle.title}
+                </Link>
+              </h3>
+              <p className="text-gray-600 leading-relaxed mb-6">
+                {cornerstoneArticle.excerpt}
+              </p>
+              <div>
+                <Link
+                  to="/strength-training-over-60s"
+                  className="inline-flex items-center text-sky-600 hover:text-sky-700 font-semibold transition-colors"
+                >
+                  Read the article
+                  <ArrowRight size={18} className="ml-2" />
+                </Link>
+              </div>
+            </div>
+          </article>
+        </div>
+
+
       </div>
     </section>
   );
