@@ -40,6 +40,7 @@ const EventWaitingListConfirmed = lazy(() => import('./components/EventWaitingLi
 const Booking = lazy(() => import('./components/Booking'));
 const AdvicePage = lazy(() => import('./components/AdvicePage'));
 const ArticlePage = lazy(() => import('./components/ArticlePage'));
+const FloorTransfersArticle = lazy(() => import('./components/FloorTransfersArticle'));
 const AdviceSection = lazy(() => import('./components/AdviceSection'));
 const StrengthTrainingOver60s = lazy(() => import('./components/StrengthTrainingOver60s'));
 
@@ -89,6 +90,9 @@ function App() {
           } />
           <Route path="/advice/injury-prevention-womens-football" element={
             <Suspense fallback={null}><ArticlePage /></Suspense>
+          } />
+          <Route path="/advice/getting-up-from-the-floor-as-you-get-older" element={
+            <Suspense fallback={null}><FloorTransfersArticle /></Suspense>
           } />
           <Route path="/insights" element={
             <Suspense fallback={null}><AdvicePage /></Suspense>

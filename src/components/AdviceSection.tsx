@@ -84,15 +84,9 @@ const AdviceSection: React.FC = () => {
             <div className="md:w-2/5 flex-shrink-0">
               <Link to={`/advice/${latest.slug}`}>
                 <picture>
-                  <source
-                    type="image/webp"
-                    srcSet="/optimized/insights-womens-football-800.webp 800w"
-                    sizes="(max-width: 768px) 100vw, 400px"
-                  />
+                  
                   <img
                     src={latest.featuredImage}
-                    srcSet="/optimized/insights-womens-football-800.webp 800w"
-                    sizes="(max-width: 768px) 100vw, 400px"
                     alt={latest.featuredImageAlt}
                     className="w-full h-56 md:h-full object-cover"
                     loading="lazy"
