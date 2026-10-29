@@ -539,6 +539,21 @@ const Over60sStrengthClasses: React.FC = () => {
         </div>
       </section>
 
+      {/* PROPOSED MONDAY CLASS - EXPRESSIONS OF INTEREST */}
+      <section className="py-8 md:py-10 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+          <div className="border border-sky-200 rounded-xl p-6 md:p-8">
+            <h2 className="text-xl md:text-2xl font-bold text-navy-700 mb-3">Interested in a Monday 2:30pm Over 60s class?</h2>
+            <p className="text-gray-600 leading-relaxed mb-4">
+              I'm considering starting an additional Over 60s Strength Class on Mondays at 2:30pm. It isn't running yet, but I'll get it started once three people are ready to join.
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              If you're interested, please <a href="mailto:info@christileyphysiotherapy.com?subject=Monday%202%3A30pm%20Over%2060s%20class%20interest" className="text-sky-600 hover:text-sky-700 underline font-semibold">send me an email to express your interest</a>. There's no obligation at this stage.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* CURRENT CLASSES */}
       <section id="current-classes" className="py-10 md:py-16 bg-gray-50 rounded-[40px]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
@@ -562,7 +577,7 @@ const Over60sStrengthClasses: React.FC = () => {
                   {cls.status === 'full' ? (
                     <span className="inline-flex items-center px-3 py-1 rounded-full bg-gray-100 text-gray-500 font-medium text-xs sm:text-sm">Fully booked</span>
                   ) : (
-                    <span className="inline-flex items-center px-3 py-1 rounded-full bg-sky-100 text-sky-700 font-semibold text-xs sm:text-sm">New — {cls.places} {cls.places === 1 ? 'space' : 'spaces'} available</span>
+                    <span className="inline-flex items-center px-3 py-1 rounded-full bg-sky-100 text-sky-700 font-semibold text-xs sm:text-sm">{cls.places} {cls.places === 1 ? 'space' : 'spaces'} available</span>
                   )}
                 </div>
               </div>
