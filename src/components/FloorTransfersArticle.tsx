@@ -51,6 +51,7 @@ const FloorTransfersArticle: React.FC = () => {
             <p className="text-gray-700 leading-relaxed mb-6">But there's another question worth considering: what happens if you do end up on the floor?</p>
             <p className="text-gray-700 leading-relaxed mb-6">Research involving people aged over 90 found that, among those who experienced a fall, 80% were unable to get themselves up after at least one fall. Around 30% spent an hour or longer on the floor.</p>
             <p className="text-gray-700 leading-relaxed mb-6">These findings highlight why it's worth practising the ability to get up, rather than simply hoping we'll never need it.</p>
+            <p className="text-sm text-gray-600 leading-relaxed mb-6">Source: <a href="https://www.bmj.com/content/337/bmj.a2227" target="_blank" rel="noopener noreferrer" className="text-sky-600 hover:text-sky-700 underline">Fleming J, Brayne C. BMJ (2008), study of people aged over 90</a>.</p>
             <p className="text-gray-700 leading-relaxed mb-6">Of course, this isn't just about falls.</p>
             <p className="text-gray-700 leading-relaxed mb-6">Think about some of the things you might want to do in everyday life:</p>
             <ul className="space-y-2 mb-6 pl-6 list-disc text-gray-700">
