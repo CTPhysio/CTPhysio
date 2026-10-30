@@ -5,7 +5,7 @@ import PainPoints from './PainPoints';
 import GoogleReviewsSlider from './GoogleReviewsSlider';
 import Seo from './Seo';
 
-const Services: React.FC = () => {
+const Services: React.FC<{ prerender?: boolean }> = ({ prerender = false }) => {
   const services = [
     {
       title: "Physiotherapy",
@@ -234,10 +234,10 @@ const Services: React.FC = () => {
         </div>
       </section>
 
-      <GoogleReviewsSlider />
+      {!prerender && <GoogleReviewsSlider />}
 
       {/* Pain Points Section (only shown on physiotherapy page) */}
-      {window.location.pathname === '/services/physiotherapy' && <PainPoints />}
+      {!prerender && typeof window !== 'undefined' && window.location.pathname === '/services/physiotherapy' && <PainPoints />}
     </div>
   );
 };
