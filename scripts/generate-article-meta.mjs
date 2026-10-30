@@ -78,7 +78,7 @@ for (const [path, title, description, image] of pages) {
     const pattern = new RegExp('<meta\\s+' + attr + '="' + key + '"[^>]*>');
     html = pattern.test(html) ? html.replace(pattern, tag) : html.replace('</head>', tag + '\n</head>');
   }
-  html = html.replace('</head>', '<link rel="canonical" href="' + url + '">\\n</head>');
+  html = html.replace('</head>', '<link rel="canonical" href="' + url + '">\n</head>');
   html = html.replace('<div id="root"></div>', '<div id="root">' + snapshot + '</div>');
   const directory = join('dist', path.slice(1));
   await mkdir(directory, { recursive: true });
