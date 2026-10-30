@@ -17,14 +17,14 @@ try {
     React.createElement(MemoryRouter, { initialEntries: ['/services'] },
       React.createElement(mod.default, { prerender: true }))
   );
-  for (const required of ['Physiotherapy For Your Active Life', 'Common Problems We Help With', 'Knee Pain']) {
+  for (const required of ['Physiotherapy Services in Harborne, Birmingham', 'Common Problems We Help With', 'Knee Pain']) {
     if (!snapshot.includes(required)) throw new Error('Services snapshot missing: ' + required);
   }
 
   const path = '/services';
   const url = 'https://christileyphysiotherapy.com' + path;
-  const title = 'Physiotherapy Services in Harborne | Chris Tiley Physiotherapy';
-  const description = 'Explore physiotherapy services in Harborne, Birmingham, including treatment for muscle and joint pain, sports injuries and rehabilitation.';
+  const title = 'Physiotherapy Services in Harborne, Birmingham | Chris Tiley';
+  const description = 'Physiotherapy, injury rehabilitation and strength training in Harborne, Birmingham. Personalised support to reduce pain, recover and stay active.';
   const escape = s => s.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;');
   // Homepage pre-render has already filled dist/index.html's root.
   // Replace that snapshot with the Services snapshot for this route only.

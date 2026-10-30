@@ -11,7 +11,7 @@ const Services: React.FC<{ prerender?: boolean }> = ({ prerender = false }) => {
     {
       title: "Physiotherapy",
       icon: Activity,
-      description: "Expert physiotherapy to help you move well, recover from injury, and build confidence in your body again.",
+      description: "Assessment and treatment for back pain, joint problems, sports injuries and other musculoskeletal conditions, with a plan tailored to your goals.",
       image: "https://lh3.googleusercontent.com/p/AF1QipNUIFWtazHZCfcGL_0SirdXWy2s-d-xG-4HPuGS=s680-w680-h510-rw",
       link: "https://chris-tiley-physiotherapy.uk1.cliniko.com/bookings#service",
       buttonText: "Call the Clinic",
@@ -24,9 +24,9 @@ const Services: React.FC<{ prerender?: boolean }> = ({ prerender = false }) => {
       ]
     },
     {
-      title: "Strength Training",
+      title: "One-to-One Strength & Rehabilitation",
       icon: Dumbbell,
-      description: "Clinician-led strength training to build physical resilience, support your recovery, and help you stay capable long term.",
+      description: "Individual support to rebuild strength, improve confidence and return to the activities that matter to you, whether you are recovering from injury or want to become more capable.",
       image: "https://lh3.googleusercontent.com/p/AF1QipP4v9ya-xB_2jtMgpyz5gjO0ONL6mcdIUcvyVwC=s680-w680-h510-rw",
       link: "https://chris-tiley-physiotherapy.uk1.cliniko.com/bookings#service",
       buttonText: "Call the Clinic",
@@ -41,7 +41,7 @@ const Services: React.FC<{ prerender?: boolean }> = ({ prerender = false }) => {
     {
       title: "Strength & Rehab Classes",
       icon: Users,
-      description: "Small group sessions designed for active adults who want to build strength, move well, and stay independent.",
+      description: "Supportive, structured strength training to help you get stronger and stay active, including dedicated Over 60s classes.",
       image: "/dhdnevertoooldtoliftimage.webp",
       link: "https://chris-tiley-physiotherapy.uk1.cliniko.com/bookings#service",
       buttonText: "Call the Clinic",
@@ -72,8 +72,8 @@ const Services: React.FC<{ prerender?: boolean }> = ({ prerender = false }) => {
   return (
     <div className="min-h-screen bg-gray-50">
       <Seo
-        title="Physiotherapy Services in Harborne | Chris Tiley Physiotherapy"
-        description="Explore physiotherapy services in Harborne, Birmingham, including treatment for muscle and joint pain, sports injuries and rehabilitation."
+        title="Physiotherapy Services in Harborne, Birmingham | Chris Tiley"
+        description="Physiotherapy, injury rehabilitation and strength training in Harborne, Birmingham. Personalised support to reduce pain, recover and stay active."
         canonicalPath="/services"
       />
       {/* Hero Section */}
@@ -88,10 +88,10 @@ const Services: React.FC<{ prerender?: boolean }> = ({ prerender = false }) => {
         <div className="relative h-full flex items-center justify-center text-center">
           <div className="max-w-4xl mx-auto px-4">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Physiotherapy For Your Active Life
+              Physiotherapy Services in Harborne, Birmingham
             </h1>
             <p className="text-xl text-gray-200 mb-8">
-              At Chris Tiley Physiotherapy, we help you reduce pain, regain strength, and return to the activities that matter most.
+              Helping you recover from injury, manage pain and build the strength to keep doing the things you enjoy.
             </p>
           </div>
         </div>
@@ -156,7 +156,10 @@ const Services: React.FC<{ prerender?: boolean }> = ({ prerender = false }) => {
                     )}
                   </div>
                   
-                  <div className="p-8 pt-0">
+                  <div className="p-8 pt-0 space-y-3">
+                    {service.title !== "Strength & Rehab Classes" && (
+                      <a href="https://chris-tiley-physiotherapy.uk1.cliniko.com/bookings#service" className="block w-full text-center px-6 py-3 bg-sky-600 text-white font-semibold rounded-lg hover:bg-sky-700 transition-colors">Book Online</a>
+                    )}
                     <a
                       href="tel:01215170806"
                       className="block w-full text-center px-6 py-3 bg-navy-700 text-white font-semibold rounded-lg hover:bg-navy-800 transition-colors"
@@ -168,6 +171,17 @@ const Services: React.FC<{ prerender?: boolean }> = ({ prerender = false }) => {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      {/* Our approach */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-navy-700 mb-6">More than just getting out of pain</h2>
+          <p className="text-lg text-gray-700 mb-4">Physiotherapy is not only about relieving symptoms. It is about helping you get back to the things you enjoy and building the confidence and physical capacity to keep doing them.</p>
+          <p className="text-lg text-gray-700 mb-4">At Chris Tiley Physiotherapy, we combine assessment, advice, exercise and progressive strength training to help you make meaningful progress.</p>
+          <p className="text-lg text-gray-700">We will not push you into something you are not ready for, but we will help you gradually become capable of doing more.</p>
+          <p className="mt-5 text-gray-700">Meet <Link to="/about" className="text-sky-700 underline">our physiotherapy team</Link> and learn more about the people who will support you.</p>
         </div>
       </section>
 
@@ -192,6 +206,21 @@ const Services: React.FC<{ prerender?: boolean }> = ({ prerender = false }) => {
               <a href="/treatments/surgical-rehab" className="block px-4 py-3 md:px-5 md:py-4 bg-white rounded-xl shadow hover:shadow-md text-navy-700 font-semibold text-center transition-shadow">Surgical Rehabilitation</a>
               <a href="/treatments/deconditioning" className="block px-4 py-3 md:px-5 md:py-4 bg-white rounded-xl shadow hover:shadow-md text-navy-700 font-semibold text-center transition-shadow">Muscle Weakness &amp; Deconditioning</a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Practical questions for people considering an appointment */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-navy-700 mb-8">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            <div><h3 className="text-xl font-semibold text-navy-700 mb-2">What conditions can you help with?</h3><p className="text-gray-700">We see people with back, neck, knee, hip and shoulder problems, sports injuries, difficulties with balance and rehabilitation after surgery. We will discuss your symptoms and goals to establish whether physiotherapy is appropriate.</p></div>
+            <div><h3 className="text-xl font-semibold text-navy-700 mb-2">Do I need to be sporty or fit to attend?</h3><p className="text-gray-700">Not at all. We help people with a wide range of activity levels, from those returning to sport to those who want to feel stronger and more confident in everyday life.</p></div>
+            <div><h3 className="text-xl font-semibold text-navy-700 mb-2">What happens at my first physiotherapy appointment?</h3><p className="text-gray-700">Your initial appointment lasts 60 minutes. We will talk through your symptoms and goals, assess what is relevant and discuss a plan for moving forward.</p></div>
+            <div><h3 className="text-xl font-semibold text-navy-700 mb-2">Do you offer strength training for older adults?</h3><p className="text-gray-700">Yes. Our <Link to="/over-60s-strength-classes" className="text-sky-700 underline">Over 60s Strength Classes</Link> are designed to help people build strength, balance and confidence. We offer a free discovery visit to discuss whether a class is suitable.</p></div>
+            <div><h3 className="text-xl font-semibold text-navy-700 mb-2">How much does physiotherapy cost?</h3><p className="text-gray-700">An initial 60-minute assessment costs £80 and a 45-minute follow-up costs £60. Packages of five follow-ups (£275) and ten follow-ups (£500) are also available.</p></div>
+            <div><h3 className="text-xl font-semibold text-navy-700 mb-2">Where is the clinic?</h3><p className="text-gray-700">Chris Tiley Physiotherapy is based in Harborne, Birmingham. <Link to="/contact" className="text-sky-700 underline">Find our location and contact details</Link> before your visit.</p></div>
           </div>
         </div>
       </section>
