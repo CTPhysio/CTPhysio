@@ -12,6 +12,7 @@ interface TreatmentPageTemplateProps {
   seoDescription: string;
   canonicalPath: string;
   h1: string;
+  heroEyebrow?: string;
   heroParagraphs: string[];
   ctaHeading: string;
   ctaText: string;
@@ -28,6 +29,7 @@ const TreatmentPageTemplate: React.FC<TreatmentPageTemplateProps> = ({
   seoDescription,
   canonicalPath,
   h1,
+  heroEyebrow,
   heroParagraphs,
   ctaHeading,
   ctaText,
@@ -52,6 +54,7 @@ const TreatmentPageTemplate: React.FC<TreatmentPageTemplateProps> = ({
           <p className="text-lg md:text-xl mb-4 opacity-90">
             CHRIS TILEY PHYSIOTHERAPY
           </p>
+          {heroEyebrow && <p className="text-base md:text-lg uppercase tracking-wide opacity-90 mb-4">{heroEyebrow}</p>}
           <h1 className="text-4xl md:text-6xl font-bold mb-8">
             {h1}
           </h1>
