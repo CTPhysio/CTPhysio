@@ -26,6 +26,8 @@ try {
   const title = 'Physiotherapy Services in Harborne | Chris Tiley Physiotherapy';
   const description = 'Explore physiotherapy services in Harborne, Birmingham, including treatment for muscle and joint pain, sports injuries and rehabilitation.';
   const escape = s => s.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;');
+  // Homepage pre-render has already filled dist/index.html's root.
+  // Replace that snapshot with the Services snapshot for this route only.
   let html = await readFile('dist/index.html', 'utf8');
   html = html.replace(/<title>[^<]*<\/title>/, '<title>' + escape(title) + '</title>');
   const tags = [
@@ -41,8 +43,10 @@ try {
     html = pattern.test(html) ? html.replace(pattern, tag) : html.replace('</head>', tag + '\n</head>');
   }
   html = html.replace('</head>', '<link rel="canonical" href="' + url + '">\n</head>');
-  if (!html.includes('<div id="root"></div>')) throw new Error('React root not found');
-  html = html.replace('<div id="root"></div>', '<div id="root">' + snapshot + '</div>');
+  const rootPattern = /<div id="root">[\\s\\S]*?<\\/div>(?=\\s*<script|\\s*<\\/body>)/;
+  // Find the React root by its boundary before the bundled script/body close.
+  if (!rootPattern.test(html)) throw new Error('React root boundary not found');
+  html = html.replace(rootPattern, '<div id="root">' + snapshot + '</div>');
   await mkdir('dist/services', { recursive: true });
   await writeFile('dist/services/index.html', html);
   console.log('Services HTML generated from React component');
