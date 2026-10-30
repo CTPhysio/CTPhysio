@@ -64,7 +64,7 @@ for (const [path, title, description, image] of pages) {
         <p>Book a free Discovery Visit to see the training space, meet the team and discuss whether the class is right for you. No previous experience of lifting weights is required.</p>
       </main>
     </div>`;
-  let html = base.replace(/<title>[^<]*<\\/title>/, '<title>' + escape(title) + '</title>');
+  let html = base.replace(/<title>[^<]*<\/title>/, '<title>' + escape(title) + '</title>');
   const metas = [
     ['name', 'description', description],
     ['property', 'og:title', title],
@@ -75,8 +75,8 @@ for (const [path, title, description, image] of pages) {
   ];
   for (const [attr, key, value] of metas) {
     const tag = '<meta ' + attr + '="' + key + '" content="' + escape(value) + '">';
-    const pattern = new RegExp('<meta\\\\s+' + attr + '="' + key + '"[^>]*>');
-    html = pattern.test(html) ? html.replace(pattern, tag) : html.replace('</head>', tag + '\\n</head>');
+    const pattern = new RegExp('<meta\\s+' + attr + '="' + key + '"[^>]*>');
+    html = pattern.test(html) ? html.replace(pattern, tag) : html.replace('</head>', tag + '\n</head>');
   }
   html = html.replace('</head>', '<link rel="canonical" href="' + url + '">\\n</head>');
   html = html.replace('<div id="root"></div>', '<div id="root">' + snapshot + '</div>');
