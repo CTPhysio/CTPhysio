@@ -43,10 +43,13 @@ try {
     html = pattern.test(html) ? html.replace(pattern, tag) : html.replace('</head>', tag + '\n</head>');
   }
   html = html.replace('</head>', '<link rel="canonical" href="' + url + '">\n</head>');
-  const rootPattern = /<div id="root">[\\s\\S]*?<\\/div>(?=\\s*<script|\\s*<\\/body>)/;
-  // Find the React root by its boundary before the bundled script/body close.
-  if (!rootPattern.test(html)) throw new Error('React root boundary not found');
-  html = html.replace(rootPattern, '<div id="root">' + snapshot + '</div>');
+  const rootStart = html.indexOf('<div id="root">');
+  const scriptStart = html.indexOf('<script type="module"', rootStart);
+  const rootEnd = html.lastIndexOf('</div>', scriptStart);
+  if (rootStart < 0 || scriptStart < 0 || rootEnd < rootStart) {
+    throw new Error('React root boundaries not found');
+  }
+  html = html.slice(0, rootStart) + '<div id="root">' + snapshot + html.slice(rootEnd);
   await mkdir('dist/services', { recursive: true });
   await writeFile('dist/services/index.html', html);
   console.log('Services HTML generated from React component');
