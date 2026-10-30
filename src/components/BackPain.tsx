@@ -3,30 +3,30 @@ import TreatmentPageTemplate from './TreatmentPageTemplate';
 
 const BackPain: React.FC = () => (
   <TreatmentPageTemplate
-    seoTitle="Lower Back Pain Physiotherapy in Harborne | Chris Tiley Physiotherapy"
-    seoDescription="Physiotherapy for lower back pain in Harborne, helping you understand your symptoms, improve movement and build confidence in managing your back pain."
+    seoTitle="Lower Back Pain Physiotherapy in Harborne, Birmingham | Chris Tiley"
+    seoDescription="Lower back pain physiotherapy in Harborne, Birmingham. Understand your symptoms, build strength and confidence, and get back to the activities you enjoy."
     canonicalPath="/treatments/back-pain"
-    h1="Lower Back Pain"
+    h1="Lower Back Pain Physiotherapy in Harborne, Birmingham"
     heroParagraphs={[
-      "Back pain affects most people at some point in their lives and can significantly impact your daily activities and quality of life. The good news is that most back pain responds well to physiotherapy, even when it feels persistent or concerning.",
-      "My approach focuses on understanding what's contributing to your pain and helping you develop the knowledge, strength, and confidence to manage it effectively. Through a combination of hands-on treatment, targeted exercises, and education about your condition, we'll work together to get you moving comfortably again.",
+      "Back pain can make everyday activities, work, sleep and exercise feel difficult. Whether your symptoms started recently or have been around for a while, we can help you understand what may be contributing to them and find a way forward.",
+      "At our Harborne clinic, we take time to listen, assess your movement and discuss what matters to you. Treatment may include advice, exercises, progressive strength training and hands-on treatment where appropriate. The aim is to help you move with more confidence and return to the activities you enjoy.",
     ]}
     ctaHeading="Ready to address your back pain?"
     ctaText="Whether you're dealing with a recent flare-up or long-standing discomfort, physiotherapy can help you regain control and get back to the activities that matter to you."
     mainHeading="Why Choose Physiotherapy for Back Pain?"
     mainParagraphs={[
-      "Research consistently shows that staying active and engaging with physiotherapy leads to better outcomes than rest alone. I'll help you understand your pain, develop strategies to manage flare-ups, and build resilience to prevent future episodes.",
-      "Many of my patients in Harborne have successfully returned to their normal activities, avoided unnecessary procedures, and developed confidence in their body's ability to heal and adapt.",
+      "For many people with lower back pain, gradually returning to normal activity is more helpful than prolonged rest. We will work with you to find movements you can manage, understand flare-ups and build up activity at a pace that suits you.",
+      "There is no single exercise or treatment that suits everyone. Your plan will reflect your symptoms, goals and preferences, whether you want to sit comfortably at work, lift your children, get back to running or feel more confident in the gym.",
     ]}
     bulletList={[
       "Lower back stiffness and muscle tension",
       "Acute back strains and spasms",
       "Sciatica and nerve-related leg pain",
-      "Disc-related pain (herniated or bulging discs)",
-      "Age-related changes (arthritis, degenerative disc disease)",
-      "Spinal stenosis and spondylolisthesis",
+      "Back pain sometimes associated with disc changes",
+      "Back pain associated with age-related spinal changes",
+      "Symptoms associated with spinal stenosis or spondylolisthesis",
       "Post-surgical rehabilitation",
-      "Chronic pain that has persisted for months or years",
+      "Persistent back pain lasting months or years",
     ]}
     imageUrl="https://lh3.googleusercontent.com/p/AF1QipOBSAH73ObiUfNTFSDCJv3sKIxkXEKimAFAnjCW=s680-w680-h510-rw"
     relatedConditions={[
