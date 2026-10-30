@@ -16,7 +16,7 @@ try {
     React.createElement(MemoryRouter, { initialEntries: ['/treatments/back-pain'] },
       React.createElement(mod.default))
   );
-  for (const required of ['Lower Back Pain Physiotherapy in Harborne, Birmingham', 'Frequently Asked Questions', 'Book an Appointment']) {
+  for (const required of ['Lower Back Pain Physiotherapy in Harborne, Birmingham', 'Get Back to Doing What You Love', 'Frequently Asked Questions', 'Book an Appointment']) {
     if (!snapshot.includes(required)) throw new Error('Back pain snapshot missing: ' + required);
   }
 
