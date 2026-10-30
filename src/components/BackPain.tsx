@@ -7,7 +7,7 @@ const BackPain: React.FC = () => (
     seoTitle="Lower Back Pain Physiotherapy in Harborne, Birmingham | Chris Tiley"
     seoDescription="Lower back pain physiotherapy in Harborne, Birmingham. Understand your symptoms, build strength and confidence, and get back to the activities you enjoy."
     canonicalPath="/treatments/back-pain"
-    h1="Lower Back Pain Physiotherapy in Harborne, Birmingham"
+    h1="Get Back to Doing What You Love"
     heroParagraphs={[
       "Back pain can make everyday activities, work, sleep and exercise feel difficult. Whether your symptoms started recently or have been around for a while, we can help you understand what may be contributing to them and find a way forward.",
       "At our Harborne clinic, we take time to listen, assess your movement and discuss what matters to you. Treatment may include advice, exercises, progressive strength training and hands-on treatment where appropriate. The aim is to help you move with more confidence and return to the activities you enjoy.",
