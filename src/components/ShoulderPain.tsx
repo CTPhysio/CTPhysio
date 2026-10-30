@@ -9,14 +9,14 @@ const ShoulderPain: React.FC = () => (
     h1="Shoulder Pain"
     heroParagraphs={[
       "Shoulder pain can be particularly frustrating as it often interferes with everyday tasks we take for granted - reaching into cupboards, getting dressed, sleeping comfortably, or lifting objects. Whether your shoulder pain developed gradually or started after a specific activity, physiotherapy can help you regain function and confidence in your arm movement.",
-      "My approach focuses on understanding what's contributing to your shoulder problem and helping you restore mobility, strength, and the ability to use your arm without pain or limitation.",
+      "Our approach focuses on understanding what's contributing to your shoulder problem and helping you restore mobility, strength, and the ability to use your arm without pain or limitation.",
     ]}
     ctaHeading="Ready to address your shoulder pain?"
     ctaText="Whether your shoulder pain is preventing you from reaching comfortably, affecting your sleep, or limiting activities you enjoy, physiotherapy can help you understand your condition and work toward regaining full, pain-free movement."
     mainHeading="Why Physiotherapy Works for Shoulder Pain"
     mainParagraphs={[
-      "Research demonstrates that exercise-based treatment is highly effective for most shoulder conditions, often providing better long-term results than injections or passive treatments alone. I'll help you understand your shoulder condition, address any movement restrictions, and guide you through a progressive program to restore function.",
-      "Many of my patients in Harborne have successfully overcome shoulder pain that was limiting their daily activities, sleep, and hobbies - often avoiding the need for surgery and regaining full use of their arm.",
+      "Research demonstrates that exercise-based treatment is highly effective for most shoulder conditions, often providing better long-term results than injections or passive treatments alone. We'll help you understand your shoulder condition, address any movement restrictions, and guide you through a progressive program to restore function.",
+      "Many of our patients in Harborne have successfully overcome shoulder pain that was limiting their daily activities, sleep, and hobbies - often avoiding the need for surgery and regaining full use of their arm.",
     ]}
     bulletList={[
       "Rotator cuff injuries and impingement syndrome",
