@@ -28,7 +28,8 @@ try {
   const escape = s => s.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;');
   // Homepage pre-render has already filled dist/index.html's root.
   // Replace that snapshot with the Services snapshot for this route only.
-  let html = await readFile('dist/index.html', 'utf8');
+  let html = await readFile('index.html', 'utf8');
+  // Use the untouched Vite HTML template, not the homepage snapshot.
   html = html.replace(/<title>[^<]*<\/title>/, '<title>' + escape(title) + '</title>');
   const tags = [
     ['name', 'description', description],
@@ -43,13 +44,14 @@ try {
     html = pattern.test(html) ? html.replace(pattern, tag) : html.replace('</head>', tag + '\n</head>');
   }
   html = html.replace('</head>', '<link rel="canonical" href="' + url + '">\n</head>');
-  const rootStart = html.indexOf('<div id="root">');
-  const scriptStart = html.indexOf('<script type="module"', rootStart);
-  const rootEnd = html.lastIndexOf('</div>', scriptStart);
-  if (rootStart < 0 || scriptStart < 0 || rootEnd < rootStart) {
-    throw new Error('React root boundaries not found');
-  }
-  html = html.slice(0, rootStart) + '<div id="root">' + snapshot + html.slice(rootEnd);
+  if (!html.includes('<div id="root"></div>')) throw new Error('React root not found in template');
+  html = html.replace('<div id="root"></div>', '<div id="root">' + snapshot + '</div>');
+  // The source template points to TypeScript; copy built JS/CSS asset tags
+  // from Vite's generated index to keep the Services page functional.
+  const built = await readFile('dist/index.html', 'utf8');
+  const assetTags = [...built.matchAll(/<(?:script|link)\b[^>]*(?:\/assets\/)[^>]*>/g)].map(m => m[0]);
+  if (!assetTags.some(tag => tag.includes('<script'))) throw new Error('Built JavaScript asset not found');
+  html = html.replace('<script type="module" src="/src/main.tsx"></script>', assetTags.join('\n'));
   await mkdir('dist/services', { recursive: true });
   await writeFile('dist/services/index.html', html);
   console.log('Services HTML generated from React component');
