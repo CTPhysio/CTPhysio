@@ -43,9 +43,20 @@ try {
   if (!html.includes('<div id="root"></div>')) throw new Error('React root not found');
   html = html.replace('<div id="root"></div>', '<div id="root">' + snapshot + '</div>');
   const built = await readFile('dist/index.html', 'utf8');
-  const assetTags = [...built.matchAll(/<(?:script|link)\b[^>]*(?:\/assets\/)[^>]*>/g)].map(m => m[0]);
-  if (!assetTags.some(tag => tag.includes('<script'))) throw new Error('Built JS asset not found');
+  // Read Vite's emitted asset tags explicitly. Fail the build if CSS is absent,
+  // rather than shipping a visually unstyled pre-rendered treatment page.
+  const assetTags = [...built.matchAll(/<(?:script|link)\b[^>]*>/g)]
+    .map(match => match[0])
+    .filter(tag => tag.includes('/assets/'));
+  const hasScript = assetTags.some(tag => /<script\b/.test(tag));
+  const hasCss = assetTags.some(tag => /<link\b/.test(tag) && /\.css(?:["?])/.test(tag));
+  if (!hasScript || !hasCss) {
+    throw new Error('Built JS or CSS assets missing from back pain page: ' + JSON.stringify(assetTags));
+  }
   html = html.replace('<script type="module" src="/src/main.tsx"></script>', assetTags.join('\n'));
+  if (!html.includes('.css') || !html.includes('/assets/')) {
+    throw new Error('Back pain HTML has no bundled stylesheet');
+  }
   await mkdir('dist/treatments/back-pain', { recursive: true });
   await writeFile('dist/treatments/back-pain/index.html', html);
   console.log('Back pain HTML generated from React component');
