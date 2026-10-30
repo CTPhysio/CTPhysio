@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Activity, Dumbbell, Users, CircleDot, ArrowRight, Target } from 'lucide-react';
 import PainPoints from './PainPoints';
-import GoogleReviewsSlider from './GoogleReviewsSlider';
+import { lazy, Suspense } from 'react';
+const GoogleReviewsSlider = lazy(() => import('./GoogleReviewsSlider'));
 import Seo from './Seo';
 
 const Services: React.FC<{ prerender?: boolean }> = ({ prerender = false }) => {
@@ -234,7 +235,7 @@ const Services: React.FC<{ prerender?: boolean }> = ({ prerender = false }) => {
         </div>
       </section>
 
-      {!prerender && <GoogleReviewsSlider />}
+      {!prerender && <Suspense fallback={null}><GoogleReviewsSlider /></Suspense>}
 
       {/* Pain Points Section (only shown on physiotherapy page) */}
       {!prerender && typeof window !== 'undefined' && window.location.pathname === '/services/physiotherapy' && <PainPoints />}
