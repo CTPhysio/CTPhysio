@@ -22,7 +22,7 @@ try {
 
   const path = '/treatments/deconditioning';
   const url = 'https://christileyphysiotherapy.com' + path;
-  const title = 'Muscle Weakness and Deconditioning Physiotherapy in Harborne, Birmingham | Chris Tiley';
+  const title = 'Muscle Weakness and Deconditioning Physio in Harborne, Birmingham | Chris Tiley';
   const description = 'Physiotherapy for muscle weakness and deconditioning in Harborne, Birmingham. Rebuild strength, stamina and confidence with progressive exercise.';
   const escape = s => s.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;');
   let html = await readFile('index.html', 'utf8');
