@@ -4,6 +4,7 @@ import { join } from 'node:path';
 // Netlify serves these generated directory pages at trailing-slash URLs.
 // Align canonical/OG URLs and server-rendered internal links with their final 200 URLs.
 const redirected = new Set([
+  '/about', '/contact', '/booking', '/strength-rehab-classes',
   '/services', '/treatments/back-pain', '/treatments/shoulder-pain',
   '/treatments/surgical-rehab', '/treatments/knee-pain',
   '/treatments/neck-pain', '/treatments/hip-pain', '/treatments/sciatica',
