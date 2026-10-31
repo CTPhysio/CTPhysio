@@ -160,6 +160,9 @@ const Services: React.FC<{ prerender?: boolean }> = ({ prerender = false }) => {
                     {service.title !== "Strength & Rehab Classes" && (
                       <a href="https://chris-tiley-physiotherapy.uk1.cliniko.com/bookings#service" className="block w-full text-center px-6 py-3 bg-sky-600 text-white font-semibold rounded-lg hover:bg-sky-700 transition-colors">Book Online</a>
                     )}
+                    {service.title === "Strength & Rehab Classes" && (
+                      <a href="https://chris-tiley-physiotherapy.uk1.cliniko.com/bookings#service" className="block w-full text-center px-6 py-3 bg-sky-600 text-white font-semibold rounded-lg hover:bg-sky-700 transition-colors" aria-label="Book a free Discovery Visit via our online booking page">Book a Discovery Visit</a>
+                    )}
                     <a
                       href="tel:01215170806"
                       className="block w-full text-center px-6 py-3 bg-navy-700 text-white font-semibold rounded-lg hover:bg-navy-800 transition-colors"
