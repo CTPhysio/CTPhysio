@@ -9,6 +9,7 @@ interface SeoProps {
 }
 
 const SITE_URL = 'https://christileyphysiotherapy.com';
+const directoryPages = new Set(['/services', '/treatments/back-pain', '/treatments/shoulder-pain', '/treatments/surgical-rehab', '/treatments/knee-pain', '/treatments/neck-pain', '/treatments/hip-pain', '/treatments/sciatica', '/treatments/balance-falls', '/treatments/deconditioning', '/treatments/arthritis', '/over-60s-strength-classes', '/strength-training-over-60s', '/advice/injury-prevention-womens-football']);
 
 const setMeta = (selector: string, attr: string, value: string) => {
   let el = document.head.querySelector(selector) as HTMLMetaElement | null;
@@ -47,7 +48,8 @@ const setStructuredData = (id: string, json: object) => {
 
 const Seo: React.FC<SeoProps> = ({ title, description, image, article, canonicalPath }) => {
   useEffect(() => {
-    const canonicalUrl = canonicalPath ? `${SITE_URL}${canonicalPath}` : window.location.href;
+    const finalPath = canonicalPath && directoryPages.has(canonicalPath) ? canonicalPath + '/' : canonicalPath;
+    const canonicalUrl = finalPath ? `${SITE_URL}${finalPath}` : window.location.href;
 
     document.title = title;
     setMeta('meta[name="description"]', 'content', description);
