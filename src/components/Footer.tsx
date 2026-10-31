@@ -86,13 +86,13 @@ const Footer: React.FC = () => {
             <div>
               <h3 className="text-base md:text-xl font-bold mb-3">Quick Links</h3>
               <ul className="space-y-1.5">
-                <li><a href="/services" className="text-sm hover:text-sky-400 transition-colors">Our Services</a></li>
-                <li><a href="/strength-rehab-classes" className="text-sm hover:text-sky-400 transition-colors">Strength &amp; Rehab Classes</a></li>
-                <li><a href="/over-60s-strength-classes" className="text-sm hover:text-sky-400 transition-colors">Over 60s Strength Classes</a></li>
-                <li><a href="/about" className="text-sm hover:text-sky-400 transition-colors">About Chris</a></li>
-                <li><a href="/advice" className="text-sm hover:text-sky-400 transition-colors">Advice</a></li>
-                <li><a href="/booking" className="text-sm hover:text-sky-400 transition-colors">Book Appointment</a></li>
-                <li><a href="/contact" className="text-sm hover:text-sky-400 transition-colors">Contact</a></li>
+                <li><a href="/services/" className="text-sm hover:text-sky-400 transition-colors">Our Services</a></li>
+                <li><a href="/strength-rehab-classes/" className="text-sm hover:text-sky-400 transition-colors">Strength &amp; Rehab Classes</a></li>
+                <li><a href="/over-60s-strength-classes/" className="text-sm hover:text-sky-400 transition-colors">Over 60s Strength Classes</a></li>
+                <li><a href="/about/" className="text-sm hover:text-sky-400 transition-colors">About Chris</a></li>
+                <li><a href="/advice/" className="text-sm hover:text-sky-400 transition-colors">Advice</a></li>
+                <li><a href="/booking/" className="text-sm hover:text-sky-400 transition-colors">Book Appointment</a></li>
+                <li><a href="/contact/" className="text-sm hover:text-sky-400 transition-colors">Contact</a></li>
                 <li><a href="https://www.youtube.com/c/NeverTooOldtoLift" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-sky-400 transition-colors">Never Too Old to Lift on YouTube</a></li>
                 <li><a href="https://nevertoooldtolift.com/category/podcast/" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-sky-400 transition-colors">Never Too Old to Lift Podcast</a></li>
               </ul>
@@ -104,8 +104,8 @@ const Footer: React.FC = () => {
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
             <p className="text-sm">&copy; {new Date().getFullYear()} Chris Tiley Physiotherapy. All rights reserved.</p>
             <div>
-              <a href="/terms-of-service" className="text-sm text-gray-400 hover:text-white mr-4">Terms of Service</a>
-              <a href="/privacy-policy" className="text-sm text-gray-400 hover:text-white">Privacy Policy</a>
+              <a href="/terms-of-service/" className="text-sm text-gray-400 hover:text-white mr-4">Terms of Service</a>
+              <a href="/privacy-policy/" className="text-sm text-gray-400 hover:text-white">Privacy Policy</a>
             </div>
           </div>
         </div>

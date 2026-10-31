@@ -15,12 +15,17 @@ const server = await createServer({
 try {
   const banner = (await server.ssrLoadModule('/src/components/TrustpilotBanner.tsx')).default;
   const navbar = (await server.ssrLoadModule('/src/components/Navbar.tsx')).default;
+  const footer = (await server.ssrLoadModule('/src/components/Footer.tsx')).default;
   const shell = renderToStaticMarkup(
     React.createElement(MemoryRouter, { initialEntries: ['/'] },
       React.createElement(React.Fragment, null,
         React.createElement(banner),
         React.createElement(navbar)))
   );
+  const footerMarkup = renderToStaticMarkup(React.createElement(footer));
+  if (!footerMarkup.includes('/privacy-policy/') || !footerMarkup.includes('/terms-of-service/')) {
+    throw new Error('Footer legal links missing from generated markup');
+  }
   if (!shell.includes('<header') || !shell.includes('Our patients say Excellent')) {
     throw new Error('Shared banner or navigation missing from generated markup');
   }
@@ -33,8 +38,15 @@ try {
       if (!entry.isFile() || !file.endsWith('.html')) continue;
       let html = await readFile(file, 'utf8');
       if (!html.includes('<div id="root">')) continue;
-      if (html.includes('<header')) continue;
-      html = html.replace('<div id="root">', '<div id="root">' + shell);
+      const hasHeader = html.includes('<header');
+      const hasFooter = html.includes('<footer');
+      if (hasHeader && hasFooter) continue;
+      if (!hasHeader) html = html.replace('<div id="root">', '<div id="root">' + shell);
+      if (!hasFooter) {
+        const rootEnd = html.lastIndexOf('</div>');
+        if (rootEnd < html.indexOf('<div id="root">')) throw new Error('React root closing tag missing: ' + file);
+        html = html.slice(0, rootEnd) + footerMarkup + html.slice(rootEnd);
+      }
       await writeFile(file, html);
       updated++;
     }
