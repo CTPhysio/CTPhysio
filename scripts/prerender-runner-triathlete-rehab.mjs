@@ -22,7 +22,7 @@ try {
 
   const path = '/treatments/runner-triathlete-rehab';
   const url = 'https://christileyphysiotherapy.com' + path;
-  const title = 'Running Injury Physiotherapy in Harborne, Birmingham | Chris Tiley | Chris Tiley';
+  const title = 'Running Injury Physiotherapy in Harborne, Birmingham | Chris Tiley';
   const description = 'Physiotherapy for running and triathlon injuries in Harborne, Birmingham. Assess symptoms, manage training load and rebuild confidence in running.';
   const escape = s => s.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;');
   let html = await readFile('index.html', 'utf8');
