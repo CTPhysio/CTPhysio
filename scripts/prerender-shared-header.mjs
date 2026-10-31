@@ -42,7 +42,11 @@ try {
       const hasFooter = html.includes('<footer');
       if (hasHeader && hasFooter) continue;
       if (!hasHeader) html = html.replace('<div id="root">', '<div id="root">' + shell);
-      if (!hasFooter) html = html.replace('</div></body>', footerMarkup + '</div></body>');
+      if (!hasFooter) {
+        const rootEnd = html.lastIndexOf('</div>');
+        if (rootEnd < html.indexOf('<div id="root">')) throw new Error('React root closing tag missing: ' + file);
+        html = html.slice(0, rootEnd) + footerMarkup + html.slice(rootEnd);
+      }
       await writeFile(file, html);
       updated++;
     }
