@@ -2,32 +2,34 @@ import React from 'react';
 import TreatmentPageTemplate from './TreatmentPageTemplate';
 
 const NeckPain: React.FC = () => (
+  <>
   <TreatmentPageTemplate
-    seoTitle="Neck Pain Physiotherapy in Harborne | Chris Tiley Physiotherapy"
-    seoDescription="Physiotherapy for neck pain and stiffness in Harborne, helping you improve movement, reduce discomfort and build confidence in everyday activities."
+    seoTitle="Neck Pain Physiotherapy in Harborne, Birmingham | Chris Tiley"
+    seoDescription="Neck pain physiotherapy in Harborne, Birmingham. Help with neck stiffness, headaches and rehabilitation through advice, movement and progressive strengthening."
     canonicalPath="/treatments/neck-pain"
-    h1="Neck Pain and Stiffness"
+    h1="Move with More Comfort and Confidence"
+    heroEyebrow="Neck Pain Physiotherapy in Harborne, Birmingham"
     heroParagraphs={[
-      "Neck pain and stiffness can significantly impact your daily comfort and quality of life, often affecting everything from sleep and driving to simple tasks like looking over your shoulder. Whether your symptoms developed gradually over time or started after a specific incident, effective physiotherapy treatment can help you regain mobility and reduce discomfort.",
-      "Our approach focuses on identifying the factors contributing to your neck pain and helping you develop better movement patterns, strength, and strategies to manage and prevent future episodes.",
+      "Neck pain or stiffness can make working, driving, sleeping and everyday movement uncomfortable. Whether it started recently or has been troubling you for some time, we can help you understand your symptoms and work towards what matters to you.",
+      "At our Harborne clinic, we listen to your concerns, assess your neck movement and relevant strength and nerve function, and agree on a plan together. That may include advice, exercises and gradually building confidence with movement and activity.",
     ]}
     ctaHeading="Ready to address your neck pain?"
-    ctaText="Whether you're dealing with daily stiffness, recurring headaches, or persistent discomfort that's affecting your activities, physiotherapy can help you understand your condition and develop effective strategies for lasting improvement."
-    mainHeading="Why Physiotherapy is Effective for Neck Pain"
+    ctaText="Whether neck pain is affecting your sleep, work or activities you enjoy, we can help you explore what is contributing to it and develop a manageable plan."
+    mainHeading="How We Approach Neck Pain"
     mainParagraphs={[
-      "Evidence shows that active treatment combining manual therapy, targeted exercises, and education about posture and movement leads to better outcomes than rest alone. We'll help you understand your neck condition, address muscle tension and joint stiffness, and build the resilience needed for long-term improvement.",
-      "Many of our patients in Harborne have successfully reduced their neck pain, improved their sleep quality, and regained confidence in daily activities like driving, reading, and participating in hobbies without constant discomfort.",
+      "Many people with neck pain benefit from staying active, finding manageable movement and gradually building strength and tolerance. We can also consider hands-on treatment where appropriate, but the plan will be guided by your symptoms, preferences and goals.",
+      "Your goals might include turning your head comfortably while driving, getting back to exercise, managing desk work or sleeping better. We will help you build towards those activities without assuming that posture alone is the cause of your pain.",
     ]}
     bulletList={[
       "Chronic neck stiffness and reduced range of motion",
       "Tension headaches originating from the neck",
       "Pain radiating into shoulders or arms",
-      "Postural-related neck pain from desk work or prolonged activities",
+      "Neck discomfort associated with prolonged desk work or other activities",
       "Whiplash and acute neck injuries",
       "Age-related cervical spine changes and arthritis",
       "Sleep-related neck pain and morning stiffness",
       "Nerve-related symptoms (tingling, numbness in arms)",
-      "Dizziness associated with neck problems",
+      "Neck pain alongside dizziness, where further assessment may be needed",
     ]}
     imageUrl="https://lh3.googleusercontent.com/p/AF1QipMPeZpwD2vsxUz9DSm9BKzha0SzdF3R4AanKr9E=s680-w680-h510-rw"
     relatedConditions={[
@@ -36,6 +38,19 @@ const NeckPain: React.FC = () => (
     ]}
     conditionName="neck pain"
   />
+  <section className="bg-white py-16" aria-labelledby="neck-pain-faq">
+    <div className="container mx-auto px-4 max-w-4xl">
+      <h2 id="neck-pain-faq" className="text-3xl md:text-4xl font-bold text-navy-700 mb-8">Neck Pain: Frequently Asked Questions</h2>
+      <div className="space-y-7 text-gray-700">
+        <div><h3 className="text-xl font-semibold text-navy-700 mb-2">Can physiotherapy help with neck pain?</h3><p>Physiotherapy can help you understand your symptoms, explore movements and activities you can manage, and build strength and confidence over time. We tailor the approach to your assessment rather than relying on a single treatment for everyone.</p></div>
+        <div><h3 className="text-xl font-semibold text-navy-700 mb-2">Is poor posture causing my neck pain?</h3><p>Neck pain rarely has one simple cause. Spending a long time in one position may aggravate symptoms, but there is no single perfect posture. Changing position regularly and gradually building tolerance for everyday activities can be helpful.</p></div>
+        <div><h3 className="text-xl font-semibold text-navy-700 mb-2">Should I keep moving when my neck is stiff?</h3><p>For many uncomplicated episodes of neck pain, gentle movement and gradually returning to usual activities are helpful. We can guide you on what feels manageable and how to adapt activities if symptoms flare up.</p></div>
+        <div><h3 className="text-xl font-semibold text-navy-700 mb-2">Can neck problems cause headaches or arm symptoms?</h3><p>Some headaches and arm symptoms can be associated with the neck, but they can have other causes. We will ask about your symptoms, assess what is relevant and discuss whether further medical assessment is needed.</p></div>
+        <div><h3 className="text-xl font-semibold text-navy-700 mb-2">When should I seek urgent medical advice?</h3><p>Seek urgent medical assessment for neck pain with new or worsening arm or leg weakness, difficulty walking, or new bladder or bowel changes. A sudden severe headache, fever with marked neck stiffness, or symptoms following significant trauma also need urgent medical assessment rather than a routine appointment.</p></div>
+      </div>
+    </div>
+  </section>
+  </>
 );
 
 export default NeckPain;
