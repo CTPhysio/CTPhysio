@@ -342,7 +342,11 @@ const Contact: React.FC = () => {
                       <span>8am - 6pm</span>
                     </div>
                     <div className="flex justify-between">
-                      <span>Saturday - Sunday</span>
+                      <span>Saturday</span>
+                      <span>8am - 1pm</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Sunday</span>
                       <span>Closed</span>
                     </div>
                   </div>
