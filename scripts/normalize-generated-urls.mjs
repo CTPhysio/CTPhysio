@@ -8,7 +8,7 @@ const redirected = new Set([
   '/treatments/surgical-rehab', '/treatments/knee-pain',
   '/treatments/neck-pain', '/treatments/hip-pain', '/treatments/sciatica',
   '/treatments/balance-falls', '/treatments/deconditioning',
-  '/treatments/arthritis', '/treatments/sports-injuries', '/over-60s-strength-classes',
+  '/treatments/arthritis', '/treatments/sports-injuries', '/treatments/orthopedic-rehab', '/treatments/runner-triathlete-rehab', '/treatments/overuse-injuries', '/treatments/spinal-injuries', '/over-60s-strength-classes',
   '/strength-training-over-60s', '/advice/injury-prevention-womens-football'
 ]);
 const domain = 'https://christileyphysiotherapy.com';
