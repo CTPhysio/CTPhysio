@@ -72,7 +72,11 @@ const Footer: React.FC = () => {
                   <span className="text-gray-300 whitespace-nowrap">8am - 6pm</span>
                 </li>
                 <li className="flex items-baseline gap-2 text-sm">
-                  <span className="flex-1">Saturday - Sunday</span>
+                  <span className="flex-1">Saturday</span>
+                  <span className="text-gray-300 whitespace-nowrap">8am - 1pm</span>
+                </li>
+                <li className="flex items-baseline gap-2 text-sm">
+                  <span className="flex-1">Sunday</span>
                   <span className="text-gray-300 whitespace-nowrap">Closed</span>
                 </li>
               </ul>
