@@ -97,7 +97,7 @@ const TreatmentPageTemplate: React.FC<TreatmentPageTemplateProps> = ({
             ))}
 
             <p className="text-lg leading-relaxed font-semibold">
-              I regularly help people with:
+              We regularly help people with:
             </p>
 
             <ul className="space-y-2 text-lg">

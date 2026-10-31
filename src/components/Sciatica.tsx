@@ -9,14 +9,14 @@ const Sciatica: React.FC = () => (
     h1="Sciatica"
     heroParagraphs={[
       "Sciatica can be one of the most distressing conditions, with sharp, shooting pain, numbness, or tingling radiating from your lower back down through your buttock and leg. This nerve-related pain can make simple activities like sitting, walking, or even lying down extremely uncomfortable, often leaving you wondering if you'll ever feel normal again.",
-      "My approach focuses on understanding what's irritating your sciatic nerve and helping you develop effective strategies to reduce symptoms and build confidence in your movement, even during flare-ups.",
+      "Our approach focuses on understanding what's irritating your sciatic nerve and helping you develop effective strategies to reduce symptoms and build confidence in your movement, even during flare-ups.",
     ]}
     ctaHeading="Ready to address your sciatica?"
     ctaText="Whether you're experiencing your first episode of sciatica or dealing with recurring symptoms that have been disrupting your life, physiotherapy can help you understand your condition and develop practical strategies for both immediate relief and long-term management."
     mainHeading="Why Physiotherapy is Effective for Sciatica"
     mainParagraphs={[
-      "Research shows that staying active and engaging with appropriate physiotherapy leads to better outcomes for sciatica than bed rest or avoiding movement. I'll help you understand your condition, teach you positions and movements that can ease symptoms, and guide you through exercises that promote healing and prevent recurrence.",
-      "Many of my patients in Harborne have successfully overcome sciatica episodes that initially felt overwhelming, learning to manage symptoms effectively and returning to their normal activities with renewed confidence in their body's ability to heal.",
+      "Research shows that staying active and engaging with appropriate physiotherapy leads to better outcomes for sciatica than bed rest or avoiding movement. We'll help you understand your condition, teach you positions and movements that can ease symptoms, and guide you through exercises that promote healing and prevent recurrence.",
+      "Many of our patients in Harborne have successfully overcome sciatica episodes that initially felt overwhelming, learning to manage symptoms effectively and returning to their normal activities with renewed confidence in their body's ability to heal.",
     ]}
     bulletList={[
       "Sharp, shooting pain from lower back into leg",

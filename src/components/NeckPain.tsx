@@ -9,14 +9,14 @@ const NeckPain: React.FC = () => (
     h1="Neck Pain and Stiffness"
     heroParagraphs={[
       "Neck pain and stiffness can significantly impact your daily comfort and quality of life, often affecting everything from sleep and driving to simple tasks like looking over your shoulder. Whether your symptoms developed gradually over time or started after a specific incident, effective physiotherapy treatment can help you regain mobility and reduce discomfort.",
-      "My approach focuses on identifying the factors contributing to your neck pain and helping you develop better movement patterns, strength, and strategies to manage and prevent future episodes.",
+      "Our approach focuses on identifying the factors contributing to your neck pain and helping you develop better movement patterns, strength, and strategies to manage and prevent future episodes.",
     ]}
     ctaHeading="Ready to address your neck pain?"
     ctaText="Whether you're dealing with daily stiffness, recurring headaches, or persistent discomfort that's affecting your activities, physiotherapy can help you understand your condition and develop effective strategies for lasting improvement."
     mainHeading="Why Physiotherapy is Effective for Neck Pain"
     mainParagraphs={[
-      "Evidence shows that active treatment combining manual therapy, targeted exercises, and education about posture and movement leads to better outcomes than rest alone. I'll help you understand your neck condition, address muscle tension and joint stiffness, and build the resilience needed for long-term improvement.",
-      "Many of my patients in Harborne have successfully reduced their neck pain, improved their sleep quality, and regained confidence in daily activities like driving, reading, and participating in hobbies without constant discomfort.",
+      "Evidence shows that active treatment combining manual therapy, targeted exercises, and education about posture and movement leads to better outcomes than rest alone. We'll help you understand your neck condition, address muscle tension and joint stiffness, and build the resilience needed for long-term improvement.",
+      "Many of our patients in Harborne have successfully reduced their neck pain, improved their sleep quality, and regained confidence in daily activities like driving, reading, and participating in hobbies without constant discomfort.",
     ]}
     bulletList={[
       "Chronic neck stiffness and reduced range of motion",

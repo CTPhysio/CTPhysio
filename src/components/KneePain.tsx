@@ -9,14 +9,14 @@ const KneePain: React.FC = () => (
     h1="Knee Pain"
     heroParagraphs={[
       "Knee pain is one of the most common reasons people seek physiotherapy, particularly as we age. Whether you're experiencing the gradual onset of arthritis, recovering from a recent injury, or dealing with persistent discomfort that's affecting your daily life, effective treatment can help you regain confidence in your movement.",
-      "My approach focuses on understanding your specific knee condition and helping you develop the strength, mobility, and knowledge needed to manage your symptoms and return to activities you value.",
+      "Our approach focuses on understanding your specific knee condition and helping you develop the strength, mobility, and knowledge needed to manage your symptoms and return to activities you value.",
     ]}
     ctaHeading="Ready to address your knee pain?"
     ctaText="Whether your knee pain developed gradually over time or started after a specific incident, physiotherapy can help you understand your condition and develop strategies to move forward with confidence."
     mainHeading="Why Physiotherapy Works for Knee Pain"
     mainParagraphs={[
-      "Research shows that exercise-based treatment is highly effective for most knee conditions, often providing better long-term outcomes than passive treatments alone. I'll help you understand what's happening with your knee, guide you through appropriate exercises, and provide hands-on treatment to reduce pain and improve function.",
-      "Many of my patients in Harborne have successfully managed their knee pain, improved their walking confidence, and returned to activities like gardening, hiking, and playing with grandchildren - often avoiding the need for surgery.",
+      "Research shows that exercise-based treatment is highly effective for most knee conditions, often providing better long-term outcomes than passive treatments alone. We'll help you understand what's happening with your knee, guide you through appropriate exercises, and provide hands-on treatment to reduce pain and improve function.",
+      "Many of our patients in Harborne have successfully managed their knee pain, improved their walking confidence, and returned to activities like gardening, hiking, and playing with grandchildren - often avoiding the need for surgery.",
     ]}
     bulletList={[
       "Knee osteoarthritis and age-related joint changes",
