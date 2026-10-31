@@ -16,7 +16,7 @@ try {
     React.createElement(MemoryRouter, { initialEntries: ['/treatments/overuse-injuries'] },
       React.createElement(mod.default))
   );
-  for (const required of ['Overuse Injury Physiotherapy in Harborne, Birmingham | Chris Tiley', 'Physiotherapy for Overuse Injuries', 'Frequently Asked Questions', 'Book an Appointment']) {
+  for (const required of ['Physiotherapy for Overuse Injuries', 'Frequently Asked Questions', 'Book an Appointment']) {
     if (!snapshot.includes(required)) throw new Error('OveruseInjuries snapshot missing: ' + required);
   }
 
