@@ -128,7 +128,7 @@ const TreatmentPageTemplate: React.FC<TreatmentPageTemplateProps> = ({
             {relatedConditions.map((rc, i) => (
               <a
                 key={i}
-                href={rc.href}
+                href={rc.href.startsWith("/treatments/") || rc.href === "/strength-training-over-60s" ? rc.href.replace(/\/$/, "") + "/" : rc.href}
                 className="px-5 py-2.5 bg-gray-100 text-navy-700 font-semibold rounded-lg hover:bg-navy-700 hover:text-white transition-colors"
               >
                 {rc.label}
