@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node scripts/generate-article-meta.mjs && node scripts/prerender-home.mjs && node scripts/prerender-services.mjs && node scripts/prerender-back-pain.mjs && node scripts/prerender-knee-pain.mjs && node scripts/prerender-shoulder-pain.mjs && node scripts/prerender-hip-pain.mjs && node scripts/prerender-neck-pain.mjs && node scripts/prerender-sciatica.mjs && node scripts/prerender-balance-falls.mjs && node scripts/prerender-surgical-rehab.mjs",
+    "build": "vite build && node scripts/generate-article-meta.mjs && node scripts/prerender-home.mjs && node scripts/prerender-services.mjs && node scripts/prerender-back-pain.mjs && node scripts/prerender-knee-pain.mjs && node scripts/prerender-shoulder-pain.mjs && node scripts/prerender-hip-pain.mjs && node scripts/prerender-neck-pain.mjs && node scripts/prerender-sciatica.mjs && node scripts/prerender-balance-falls.mjs && node scripts/prerender-surgical-rehab.mjs && node scripts/prerender-deconditioning.mjs",
     "lint": "eslint .",
     "preview": "vite preview"
   },
