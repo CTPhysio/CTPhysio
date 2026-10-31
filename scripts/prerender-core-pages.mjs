@@ -31,7 +31,7 @@ try {
       ['property', 'og:description', page.description], ['property', 'og:url', url]
     ]) {
       const tag = '<meta ' + attr + '="' + key + '" content="' + escape(value) + '">';
-      const pattern = new RegExp('<meta\\\\s+' + attr + '="' + key + '"[^>]*>');
+      const pattern = new RegExp('<meta\\s+' + attr + '="' + key + '"[^>]*>', 'i');
       html = pattern.test(html) ? html.replace(pattern, tag) : html.replace('</head>', tag + '\n</head>');
     }
     html = html.replace('</head>', '<link rel="canonical" href="' + url + '">\n' + styles.join('\n') + '\n</head>');
