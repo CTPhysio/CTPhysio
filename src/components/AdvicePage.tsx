@@ -46,7 +46,7 @@ const AdvicePage: React.FC = () => {
                   className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row md:h-[360px]"
                 >
                   <div className="md:w-2/5 flex-shrink-0">
-                    <Link to={`/advice/${article.slug}`}>
+                    <Link to={`/advice/${article.slug}${article.slug === 'getting-up-from-the-floor-as-you-get-older' ? '/' : ''}`}>
                       <img
                         src={article.featuredImage}
                         alt={article.featuredImageAlt}
@@ -64,7 +64,7 @@ const AdvicePage: React.FC = () => {
                       })}
                     </div>
                     <h3 className="text-xl md:text-2xl font-bold text-navy-700 mb-3 leading-snug">
-                      <Link to={`/advice/${article.slug}`} className="hover:text-sky-500 transition-colors">
+                      <Link to={`/advice/${article.slug}${article.slug === 'getting-up-from-the-floor-as-you-get-older' ? '/' : ''}`} className="hover:text-sky-500 transition-colors">
                         {article.title}
                       </Link>
                     </h3>
@@ -73,7 +73,7 @@ const AdvicePage: React.FC = () => {
                     </p>
                     <div>
                       <Link
-                        to={`/advice/${article.slug}`}
+                        to={`/advice/${article.slug}${article.slug === 'getting-up-from-the-floor-as-you-get-older' ? '/' : ''}`}
                         className="inline-flex items-center text-sky-600 hover:text-sky-700 font-semibold transition-colors"
                       >
                         Read the article
@@ -131,7 +131,7 @@ const AdvicePage: React.FC = () => {
                   className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row md:h-[360px]"
                 >
                   <div className="md:w-2/5 flex-shrink-0">
-                    <Link to={`/advice/${article.slug}`}>
+                    <Link to={`/advice/${article.slug}${article.slug === 'getting-up-from-the-floor-as-you-get-older' ? '/' : ''}`}>
                       <img
                         src={article.featuredImage}
                         alt={article.featuredImageAlt}
@@ -149,7 +149,7 @@ const AdvicePage: React.FC = () => {
                       })}
                     </div>
                     <h3 className="text-xl md:text-2xl font-bold text-navy-700 mb-3 leading-snug">
-                      <Link to={`/advice/${article.slug}`} className="hover:text-sky-500 transition-colors">
+                      <Link to={`/advice/${article.slug}${article.slug === 'getting-up-from-the-floor-as-you-get-older' ? '/' : ''}`} className="hover:text-sky-500 transition-colors">
                         {article.title}
                       </Link>
                     </h3>
@@ -158,7 +158,7 @@ const AdvicePage: React.FC = () => {
                     </p>
                     <div>
                       <Link
-                        to={`/advice/${article.slug}`}
+                        to={`/advice/${article.slug}${article.slug === 'getting-up-from-the-floor-as-you-get-older' ? '/' : ''}`}
                         className="inline-flex items-center text-sky-600 hover:text-sky-700 font-semibold transition-colors"
                       >
                         Read the article
