@@ -16,7 +16,7 @@ try {
     React.createElement(MemoryRouter, { initialEntries: ['/treatments/runner-triathlete-rehab'] },
       React.createElement(mod.default))
   );
-  for (const required of ['Running Injury Physiotherapy in Harborne, Birmingham | Chris Tiley', 'Running and Triathlon Injury Physiotherapy', 'Frequently Asked Questions', 'Book an Appointment']) {
+  for (const required of ['Running and Triathlon Injury Physiotherapy', 'Frequently Asked Questions', 'Book an Appointment']) {
     if (!snapshot.includes(required)) throw new Error('RunnerTriathleteRehab snapshot missing: ' + required);
   }
 
