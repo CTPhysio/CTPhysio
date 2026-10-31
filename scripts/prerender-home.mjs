@@ -32,7 +32,7 @@ try {
   if (!html.includes('<meta name="description"') || !html.includes('<meta property="og:url"')) {
     throw new Error('Homepage metadata missing');
   }
-  const withCanonical = html.replace('</head>', canonical + '\\n</head>');
+  const withCanonical = html.replace('</head>', canonical + '\n</head>');
   await writeFile(file, withCanonical.replace('<div id="root"></div>', '<div id="root">' + snapshot + '</div>'));
   console.log('Homepage HTML generated from React components');
 } finally {
