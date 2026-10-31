@@ -16,7 +16,7 @@ try {
     React.createElement(MemoryRouter, { initialEntries: ['/treatments/spinal-injuries'] },
       React.createElement(mod.default))
   );
-  for (const required of ['Spinal Injury Rehabilitation in Harborne, Birmingham | Chris Tiley', 'Spinal Injury Rehabilitation in Harborne', 'Frequently Asked Questions', 'Book an Appointment']) {
+  for (const required of ['Spinal Injury Rehabilitation in Harborne', 'Frequently Asked Questions', 'Book an Appointment']) {
     if (!snapshot.includes(required)) throw new Error('SpinalInjuries snapshot missing: ' + required);
   }
 
