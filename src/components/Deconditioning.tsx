@@ -2,33 +2,35 @@ import React from 'react';
 import TreatmentPageTemplate from './TreatmentPageTemplate';
 
 const Deconditioning: React.FC = () => (
+  <>
   <TreatmentPageTemplate
-    seoTitle="Physiotherapy for Muscle Weakness & Deconditioning | Chris Tiley Physiotherapy"
-    seoDescription="Physiotherapy and progressive exercise for muscle weakness and deconditioning in Harborne, helping you rebuild strength, fitness and confidence."
+    seoTitle="Muscle Weakness and Deconditioning Physio in Harborne, Birmingham | Chris Tiley"
+    seoDescription="Physiotherapy for muscle weakness and deconditioning in Harborne, Birmingham. Rebuild strength, stamina and confidence with progressive exercise."
     canonicalPath="/treatments/deconditioning"
-    h1="General Deconditioning/Muscle Weakness"
+    h1="Build Strength for Everyday Life"
+    heroEyebrow="Muscle Weakness and Deconditioning Physiotherapy in Harborne, Birmingham"
     heroParagraphs={[
-      "Loss of strength and fitness can happen gradually over time due to reduced activity, illness, injury, or simply the natural changes that come with aging. You might notice that everyday tasks feel more challenging, you tire more easily, or you've lost confidence in your physical abilities. The encouraging news is that with the right approach, strength and fitness can be rebuilt at any age.",
-      "My approach focuses on understanding your current fitness level and health history, then gradually building your strength, endurance, and confidence through a safe and progressive exercise program tailored to your needs and goals.",
+      "When everyday activities start to feel harder, it can be frustrating or worrying. You might notice difficulty getting up from a chair, climbing stairs, carrying shopping or walking as far as you used to. Reduced activity, illness, injury or time in hospital can all contribute to losing strength and stamina.",
+      "At our Harborne clinic, we take time to understand your health, current abilities and goals. Together we can find an appropriate starting point and gradually build your strength, endurance and confidence through manageable exercises.",
     ]}
     ctaHeading="Ready to rebuild your strength and confidence?"
-    ctaText="Whether you're recovering from illness, dealing with gradual decline, or simply want to feel stronger and more capable in your daily activities, physiotherapy can help you safely regain the fitness and confidence you deserve."
-    mainHeading="Why Physiotherapy is Effective for Deconditioning"
+    ctaText="Whether you want to feel stronger after illness, return to activities you have stopped doing or make everyday tasks easier, we can help you plan a gradual way forward."
+    mainHeading="How We Approach Muscle Weakness and Deconditioning"
     mainParagraphs={[
-      "Research consistently shows that structured, progressive exercise programmes can significantly improve strength, endurance, and quality of life, even in people who have been inactive for extended periods. I'll help you start at an appropriate level and progress safely, ensuring you build both physical capacity and confidence in your abilities.",
-      "Many of my patients in Harborne have successfully rebuilt their fitness and strength, often surprised by how much they can achieve with consistent effort and proper guidance, returning to activities they thought were no longer possible.",
+      "Strength and physical capacity can often improve with progressive exercise, even after long periods of reduced activity. We focus on useful movements and activities, choosing a level that is appropriate for you and increasing the challenge as your abilities develop.",
+      "We will also consider whether symptoms such as unexpected weakness or marked fatigue need medical assessment. Our aim is to help you build capacity and confidence, not simply tell you to do more or promise a fixed result.",
     ]}
     bulletList={[
       "General weakness affecting daily activities",
       "Reduced stamina and early fatigue",
       "Loss of confidence in physical abilities",
       "Deconditioning following illness or injury",
-      "Age-related muscle loss and frailty",
+      "Age-related loss of muscle strength and physical capacity",
       "Difficulty with stairs, lifting, or walking distances",
       "Poor balance and coordination from inactivity",
       "Rebuilding fitness after prolonged bed rest",
       "Post-hospitalisation weakness and recovery",
-      "Chronic fatigue affecting activity levels",
+      "Reduced activity tolerance, with assessment of possible contributing factors",
       "Fear of exercise due to past injuries or health concerns",
     ]}
     imageUrl="https://lh3.googleusercontent.com/p/AF1QipMPeZpwD2vsxUz9DSm9BKzha0SzdF3R4AanKr9E=s680-w680-h510-rw"
@@ -39,6 +41,19 @@ const Deconditioning: React.FC = () => (
     ]}
     conditionName="deconditioning and muscle weakness"
   />
+  <section className="bg-white py-16" aria-labelledby="deconditioning-faq">
+    <div className="container mx-auto px-4 max-w-4xl">
+      <h2 id="deconditioning-faq" className="text-3xl md:text-4xl font-bold text-navy-700 mb-8">Muscle Weakness and Deconditioning: Frequently Asked Questions</h2>
+      <div className="space-y-7 text-gray-700">
+        <div><h3 className="text-xl font-semibold text-navy-700 mb-2">What does deconditioning mean?</h3><p>Deconditioning describes a reduction in physical capacity, such as strength or stamina, often following a period of reduced activity, illness or injury. We can help you understand what is contributing to your difficulties and how to rebuild gradually.</p></div>
+        <div><h3 className="text-xl font-semibold text-navy-700 mb-2">Can I rebuild strength as I get older?</h3><p>Yes. Strength can improve at many ages with appropriately challenging exercise. We tailor exercises to your current abilities and progress them over time, rather than assuming that getting older means you cannot get stronger.</p></div>
+        <div><h3 className="text-xl font-semibold text-navy-700 mb-2">What if I have not exercised for years?</h3><p>You do not need to be fit to begin. We can start with manageable movements and build towards more demanding activities at a pace that suits your health, confidence and goals.</p></div>
+        <div><h3 className="text-xl font-semibold text-navy-700 mb-2">Can physiotherapy help after illness or a hospital stay?</h3><p>For many people, graded activity and strength training are useful parts of recovery. We will consider your medical history and any advice from your healthcare team before deciding what is appropriate.</p></div>
+        <div><h3 className="text-xl font-semibold text-navy-700 mb-2">When should weakness be checked by a doctor?</h3><p>New, unexplained or rapidly worsening weakness needs medical assessment rather than assuming it is deconditioning. Sudden weakness, especially on one side or with facial drooping or speech changes, requires emergency help. We will also discuss medical review when fatigue or other symptoms suggest an underlying cause.</p></div>
+      </div>
+    </div>
+  </section>
+  </>
 );
 
 export default Deconditioning;
