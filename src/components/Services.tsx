@@ -205,6 +205,7 @@ const Services: React.FC<{ prerender?: boolean }> = ({ prerender = false }) => {
               <a href="/treatments/balance-falls/" className="block px-4 py-3 md:px-5 md:py-4 bg-white rounded-xl shadow hover:shadow-md text-navy-700 font-semibold text-center transition-shadow">Balance &amp; Falls</a>
               <a href="/treatments/surgical-rehab/" className="block px-4 py-3 md:px-5 md:py-4 bg-white rounded-xl shadow hover:shadow-md text-navy-700 font-semibold text-center transition-shadow">Surgical Rehabilitation</a>
               <a href="/treatments/deconditioning/" className="block px-4 py-3 md:px-5 md:py-4 bg-white rounded-xl shadow hover:shadow-md text-navy-700 font-semibold text-center transition-shadow">Muscle Weakness &amp; Deconditioning</a>
+              <a href="/treatments/sports-injuries/" className="block px-4 py-3 md:px-5 md:py-4 bg-white rounded-xl shadow hover:shadow-md text-navy-700 font-semibold text-center transition-shadow">Sports Injuries</a>
             </div>
           </div>
         </div>
