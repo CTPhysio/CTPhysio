@@ -31,8 +31,13 @@ try {
       ['property', 'og:description', page.description], ['property', 'og:url', url]
     ]) {
       const tag = '<meta ' + attr + '="' + key + '" content="' + escape(value) + '">';
-      const pattern = new RegExp('<meta\\\\s+' + attr + '="' + key + '"[^>]*>');
+      const pattern = new RegExp('<meta\\s+' + attr + '="' + key + '"[^>]*>', 'i');
       html = pattern.test(html) ? html.replace(pattern, tag) : html.replace('</head>', tag + '\n</head>');
+    }
+    // Guard against regressions: each page should have one description and one OG URL.
+    for (const [attr, key] of [['name', 'description'], ['property', 'og:url']]) {
+      const matches = html.match(new RegExp('<meta\\s+' + attr + '="' + key + '"', 'gi')) || [];
+      if (matches.length !== 1) throw new Error('Expected exactly one ' + key + ' on ' + page.path + ', found ' + matches.length);
     }
     html = html.replace('</head>', '<link rel="canonical" href="' + url + '">\n' + styles.join('\n') + '\n</head>');
     if (!html.includes('<div id="root"></div>')) throw new Error('React root missing');
