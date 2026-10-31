@@ -22,7 +22,7 @@ try {
 
   const path = '/treatments/overuse-injuries';
   const url = 'https://christileyphysiotherapy.com' + path;
-  const title = 'Overuse Injury Physiotherapy in Harborne, Birmingham | Chris Tiley | Chris Tiley';
+  const title = 'Overuse Injury Physiotherapy in Harborne, Birmingham | Chris Tiley';
   const description = 'Physiotherapy for persistent tendon and activity-related pain in Harborne, Birmingham. Understand symptoms and build a gradual return to activity.';
   const escape = s => s.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;');
   let html = await readFile('index.html', 'utf8');
