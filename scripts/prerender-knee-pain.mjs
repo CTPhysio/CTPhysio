@@ -23,7 +23,7 @@ try {
   const path = '/treatments/knee-pain';
   const url = 'https://christileyphysiotherapy.com' + path;
   const title = 'Knee Pain Physiotherapy in Harborne, Birmingham | Chris Tiley';
-  const description = 'Lower knee pain physiotherapy in Harborne, Birmingham. Understand your symptoms, build strength and confidence, and get back to the activities you enjoy.';
+  const description = 'Knee pain physiotherapy in Harborne, Birmingham. Support for knee arthritis, injuries and rehabilitation to help you move with strength and confidence.';
   const escape = s => s.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;');
   let html = await readFile('index.html', 'utf8');
   html = html.replace(/<title>[^<]*<\/title>/, '<title>' + escape(title) + '</title>');
