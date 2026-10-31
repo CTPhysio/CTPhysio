@@ -19,6 +19,8 @@ declare global {
 const STORAGE_KEY = 'CookieConsent';
 
 function readConsent(): ConsentMap | null {
+  // No browser storage or Cookiebot exists during server-side pre-rendering.
+  if (typeof window === 'undefined') return null;
   // Cookiebot's in-memory consent is the authoritative source, updated
   // immediately when the user accepts or changes preferences. localStorage
   // may lag behind or not be written at all depending on configuration.
