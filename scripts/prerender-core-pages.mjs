@@ -15,29 +15,29 @@ const server = await createServer({ server: { middlewareMode: true }, appType: '
 try {
   const template = await readFile('index.html', 'utf8');
   const built = await readFile('dist/index.html', 'utf8');
-  const assetTags = [...built.matchAll(/<(?:script|link)\\b[^>]*>/g)].map(m => m[0]).filter(t => t.includes('/assets/'));
-  const styles = assetTags.filter(t => /^<link\\b/.test(t) && /\\.css(?:["?])/.test(t));
-  const scripts = assetTags.filter(t => /^<script\\b/.test(t));
+  const assetTags = [...built.matchAll(/<(?:script|link)\b[^>]*>/g)].map(m => m[0]).filter(t => t.includes('/assets/'));
+  const styles = assetTags.filter(t => /^<link\b/.test(t) && /\.css(?:["?])/.test(t));
+  const scripts = assetTags.filter(t => /^<script\b/.test(t));
   if (!styles.length || !scripts.length) throw new Error('Missing Vite CSS or JS assets');
   const escape = s => s.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;');
   for (const page of pages) {
     const mod = await server.ssrLoadModule('/src/components/' + page.component + '.tsx');
     const snapshot = renderToStaticMarkup(React.createElement(MemoryRouter, { initialEntries: [page.path] }, React.createElement(mod.default)));
-    if (!snapshot.includes(page.check) || !/<h1\\b/.test(snapshot)) throw new Error('Missing page content/H1: ' + page.path);
+    if (!snapshot.includes(page.check) || !/<h1\b/.test(snapshot)) throw new Error('Missing page content/H1: ' + page.path);
     const url = 'https://christileyphysiotherapy.com' + page.path;
-    let html = template.replace(/<title>[^<]*<\\/title>/, '<title>' + escape(page.title) + '</title>');
+    let html = template.replace(/<title>[^<]*<\/title>/, '<title>' + escape(page.title) + '</title>');
     for (const [attr, key, value] of [
       ['name', 'description', page.description], ['property', 'og:title', page.title],
       ['property', 'og:description', page.description], ['property', 'og:url', url]
     ]) {
       const tag = '<meta ' + attr + '="' + key + '" content="' + escape(value) + '">';
       const pattern = new RegExp('<meta\\\\s+' + attr + '="' + key + '"[^>]*>');
-      html = pattern.test(html) ? html.replace(pattern, tag) : html.replace('</head>', tag + '\\n</head>');
+      html = pattern.test(html) ? html.replace(pattern, tag) : html.replace('</head>', tag + '\n</head>');
     }
-    html = html.replace('</head>', '<link rel="canonical" href="' + url + '">\\n' + styles.join('\\n') + '\\n</head>');
+    html = html.replace('</head>', '<link rel="canonical" href="' + url + '">\n' + styles.join('\n') + '\n</head>');
     if (!html.includes('<div id="root"></div>')) throw new Error('React root missing');
     html = html.replace('<div id="root"></div>', '<div id="root">' + snapshot + '</div>');
-    html = html.replace('<script type="module" src="/src/main.tsx"></script>', scripts.join('\\n'));
+    html = html.replace('<script type="module" src="/src/main.tsx"></script>', scripts.join('\n'));
     const dest = 'dist' + page.path;
     await mkdir(dest, { recursive: true });
     await writeFile(dest + '/index.html', html);
