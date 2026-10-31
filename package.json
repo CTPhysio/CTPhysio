@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node scripts/generate-article-meta.mjs && node scripts/prerender-home.mjs && node scripts/prerender-services.mjs && node scripts/prerender-back-pain.mjs && node scripts/prerender-knee-pain.mjs && node scripts/prerender-shoulder-pain.mjs && node scripts/prerender-hip-pain.mjs && node scripts/prerender-neck-pain.mjs && node scripts/prerender-sciatica.mjs && node scripts/prerender-balance-falls.mjs && node scripts/prerender-surgical-rehab.mjs && node scripts/prerender-deconditioning.mjs && node scripts/prerender-arthritis.mjs && node scripts/prerender-sports-injuries.mjs && node scripts/prerender-core-pages.mjs && node scripts/normalize-generated-urls.mjs",
+    "build": "vite build && node scripts/generate-article-meta.mjs && node scripts/prerender-home.mjs && node scripts/prerender-services.mjs && node scripts/prerender-back-pain.mjs && node scripts/prerender-knee-pain.mjs && node scripts/prerender-shoulder-pain.mjs && node scripts/prerender-hip-pain.mjs && node scripts/prerender-neck-pain.mjs && node scripts/prerender-sciatica.mjs && node scripts/prerender-balance-falls.mjs && node scripts/prerender-surgical-rehab.mjs && node scripts/prerender-deconditioning.mjs && node scripts/prerender-arthritis.mjs && node scripts/prerender-sports-injuries.mjs && node scripts/prerender-orthopedic-rehab.mjs && node scripts/prerender-runner-triathlete-rehab.mjs && node scripts/prerender-overuse-injuries.mjs && node scripts/prerender-spinal-injuries.mjs && node scripts/prerender-core-pages.mjs && node scripts/normalize-generated-urls.mjs",
     "lint": "eslint .",
     "preview": "vite preview"
   },

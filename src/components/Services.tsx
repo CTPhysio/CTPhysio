@@ -160,6 +160,9 @@ const Services: React.FC<{ prerender?: boolean }> = ({ prerender = false }) => {
                     {service.title !== "Strength & Rehab Classes" && (
                       <a href="https://chris-tiley-physiotherapy.uk1.cliniko.com/bookings#service" className="block w-full text-center px-6 py-3 bg-sky-600 text-white font-semibold rounded-lg hover:bg-sky-700 transition-colors">Book Online</a>
                     )}
+                    {service.title === "Strength & Rehab Classes" && (
+                      <a href="https://chris-tiley-physiotherapy.uk1.cliniko.com/bookings#service" className="block w-full text-center px-6 py-3 bg-sky-600 text-white font-semibold rounded-lg hover:bg-sky-700 transition-colors" aria-label="Book a free Discovery Visit via our online booking page">Book a Discovery Visit</a>
+                    )}
                     <a
                       href="tel:01215170806"
                       className="block w-full text-center px-6 py-3 bg-navy-700 text-white font-semibold rounded-lg hover:bg-navy-800 transition-colors"
@@ -185,15 +188,15 @@ const Services: React.FC<{ prerender?: boolean }> = ({ prerender = false }) => {
         </div>
       </section>
 
-      {/* Common Problems We Help With */}
+      {/* Conditions and rehabilitation navigation */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-navy-700 text-center mb-4">
-              Common Problems We Help With
+              Conditions &amp; Rehabilitation
             </h2>
             <p className="text-lg text-gray-600 text-center mb-10 max-w-2xl mx-auto">
-              Not sure where to start? Learn more about how we approach some of the most common conditions we treat.
+              Not sure where to start? Explore the conditions we help with and the rehabilitation support we offer.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
               <a href="/treatments/back-pain/" className="block px-4 py-3 md:px-5 md:py-4 bg-white rounded-xl shadow hover:shadow-md text-navy-700 font-semibold text-center transition-shadow">Lower Back Pain</a>
@@ -206,7 +209,10 @@ const Services: React.FC<{ prerender?: boolean }> = ({ prerender = false }) => {
               <a href="/treatments/surgical-rehab/" className="block px-4 py-3 md:px-5 md:py-4 bg-white rounded-xl shadow hover:shadow-md text-navy-700 font-semibold text-center transition-shadow">Surgical Rehabilitation</a>
               <a href="/treatments/deconditioning/" className="block px-4 py-3 md:px-5 md:py-4 bg-white rounded-xl shadow hover:shadow-md text-navy-700 font-semibold text-center transition-shadow">Muscle Weakness &amp; Deconditioning</a>
               <a href="/treatments/sports-injuries/" className="block px-4 py-3 md:px-5 md:py-4 bg-white rounded-xl shadow hover:shadow-md text-navy-700 font-semibold text-center transition-shadow">Sports Injuries</a>
+              <a href="/treatments/runner-triathlete-rehab/" className="block px-4 py-3 md:px-5 md:py-4 bg-white rounded-xl shadow hover:shadow-md text-navy-700 font-semibold text-center transition-shadow">Running &amp; Triathlon Rehabilitation</a>
+              <a href="/treatments/overuse-injuries/" className="block px-4 py-3 md:px-5 md:py-4 bg-white rounded-xl shadow hover:shadow-md text-navy-700 font-semibold text-center transition-shadow">Overuse Injuries</a>
             </div>
+            <p className="text-center text-gray-600 mt-8">Looking for something else? Explore <Link to="/treatments/orthopedic-rehab/" className="text-sky-700 underline">Orthopaedic Rehabilitation</Link>, <Link to="/treatments/spinal-injuries/" className="text-sky-700 underline">Spinal Injury Rehabilitation</Link> and <Link to="/treatments/arthritis/" className="text-sky-700 underline">Arthritis Physiotherapy</Link>.</p>
           </div>
         </div>
       </section>

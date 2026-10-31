@@ -1,139 +1,37 @@
 import React from 'react';
+import TreatmentPageTemplate from './TreatmentPageTemplate';
 
-const OrthopedicRehab: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Hero Section - Teal blue theme */}
-      <section className="bg-teal-600 text-white py-16 md:py-24">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-lg md:text-xl mb-4 opacity-90">
-            CHRIS TILEY PHYSIOTHERAPY
-          </p>
-          <h1 className="text-4xl md:text-6xl font-bold mb-8">
-            Orthopedic Rehabilitation
-          </h1>
-          <p className="text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
-            Comprehensive orthopedic rehabilitation to help you recover from musculoskeletal 
-            injuries and conditions. Our specialized approach focuses on restoring function, 
-            reducing pain, and preventing future injuries.
-          </p>
+const OrthopedicRehab: React.FC = () => (
+  <>
+    <TreatmentPageTemplate
+      seoTitle="Orthopaedic Rehabilitation in Harborne, Birmingham | Chris Tiley"
+      seoDescription="Physiotherapy for joint, bone and soft-tissue problems in Harborne, Birmingham. Build strength, restore movement and work towards your goals."
+      canonicalPath="/treatments/orthopedic-rehab"
+      h1="Orthopaedic Rehabilitation in Harborne"
+      heroEyebrow="Orthopaedic Rehabilitation in Harborne, Birmingham"
+      heroParagraphs={["An injury, painful joint or period of reduced activity can make everyday movement feel less straightforward. Whether you are recovering after a fracture, managing persistent joint symptoms or building confidence after an injury, rehabilitation should fit your circumstances.","At our Harborne clinic, we listen to what has changed, assess your movement and strength, and help you work towards the activities that matter to you."]}
+      ctaHeading="Ready to discuss your rehabilitation?"
+      ctaText="We can assess your symptoms, discuss your goals and agree on a realistic next step."
+      mainHeading="A practical plan for your recovery"
+      mainParagraphs={["Your first appointment includes a discussion of your symptoms, medical history and goals, followed by a relevant physical assessment. We will explain what we find and agree a plan together.","Rehabilitation often involves gradually progressing strength, mobility and activity. We can adapt exercises to your starting point and review how you respond rather than following a fixed programme for everyone.","If your injury needs medical investigation or input from another healthcare professional, we will discuss the appropriate next steps. Recovery times vary according to the condition and individual circumstances."]}
+      bulletList={["Rehabilitation after fractures once medically cleared","Joint pain and stiffness","Ligament and soft-tissue injuries","Building strength after a period of reduced activity","Confidence with walking, stairs and daily activities","Returning to exercise and hobbies"]}
+      imageUrl="https://lh3.googleusercontent.com/p/AF1QipMPeZpwD2vsxUz9DSm9BKzha0SzdF3R4AanKr9E=s680-w680-h510-rw"
+      relatedConditions={[{"label":"Surgical Rehabilitation","href":"/treatments/surgical-rehab/"},{"label":"Arthritis","href":"/treatments/arthritis/"},{"label":"Knee Pain","href":"/treatments/knee-pain/"}]}
+      conditionName="orthopaedic rehabilitation"
+    />
+    <section className="bg-white py-16" aria-labelledby="orthopedic-rehab-faq">
+      <div className="container mx-auto px-4 max-w-4xl">
+        <h2 id="orthopedic-rehab-faq" className="text-3xl md:text-4xl font-bold text-navy-700 mb-8">Orthopaedic Rehabilitation: Frequently Asked Questions</h2>
+        <div className="space-y-7 text-gray-700">
+          <div><h3 className="text-xl font-semibold text-navy-700 mb-2">What happens at an orthopaedic rehabilitation appointment?</h3><p>We will ask about your symptoms, history and goals, assess relevant movements and strength, and agree a practical starting plan.</p></div>
+          <div><h3 className="text-xl font-semibold text-navy-700 mb-2">Do I need a scan before booking?</h3><p>Not necessarily. We can assess many musculoskeletal problems clinically and discuss whether imaging or medical review would be useful.</p></div>
+          <div><h3 className="text-xl font-semibold text-navy-700 mb-2">Can physiotherapy help after a fracture?</h3><p>Once your treating team has confirmed the appropriate stage of healing and any restrictions, rehabilitation may help you restore movement, strength and confidence.</p></div>
+          <div><h3 className="text-xl font-semibold text-navy-700 mb-2">Will I need exercises at home?</h3><p>Often, yes. We aim for a manageable programme that fits your routine and progress it as your capacity improves.</p></div>
+          <div><h3 className="text-xl font-semibold text-navy-700 mb-2">How long will rehabilitation take?</h3><p>That depends on the injury, your starting point and goals. We will review progress together and adjust the plan rather than promise a fixed recovery time.</p></div>
         </div>
-      </section>
-
-      {/* Transition Section */}
-      <section className="bg-gray-50 py-12 text-center">
-        <div className="container mx-auto px-4">
-          <p className="text-lg md:text-xl text-teal-700 max-w-3xl mx-auto mb-8">
-            Our expert orthopedic rehabilitation programs will help you regain strength, 
-            mobility, and confidence in your movement!
-          </p>
-          <a
-            href="/contact"
-            className="inline-flex items-center px-8 py-4 bg-teal-600 text-white font-bold rounded-lg hover:bg-teal-700 transition-colors text-lg"
-          >
-            Get In Touch
-          </a>
-        </div>
-      </section>
-
-      {/* Main Content Section with Parallax Background */}
-      <section className="relative min-h-screen">
-        {/* Fixed Background Image */}
-        <div 
-          className="fixed inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: 'url("https://lh3.googleusercontent.com/p/AF1QipMPeZpwD2vsxUz9DSm9BKzha0SzdF3R4AanKr9E=s680-w680-h510-rw")',
-            zIndex: -1
-          }}
-        >
-          <div className="absolute inset-0 bg-teal-900 bg-opacity-60"></div>
-        </div>
-
-        {/* Content that scrolls over the fixed background */}
-        <div className="relative z-10">
-          {/* Spacer to allow scrolling effect */}
-          <div className="h-32"></div>
-          
-          <div className="bg-teal-800 text-white">
-            <div className="container mx-auto px-4 py-16">
-              <div className="grid lg:grid-cols-2 gap-12 items-start">
-                {/* Left Column - Main Content */}
-                <div className="space-y-6">
-                  <h2 className="text-3xl md:text-4xl font-bold mb-8">
-                    Comprehensive orthopedic care for lasting recovery.
-                  </h2>
-                  
-                  <p className="text-lg leading-relaxed">
-                    Orthopedic conditions can significantly impact your quality of life, 
-                    affecting your ability to work, exercise, and enjoy daily activities. 
-                    Whether you're dealing with a recent injury or chronic condition, 
-                    <span className="underline"> our specialized rehabilitation approach can help you achieve optimal recovery.</span>
-                  </p>
-                  
-                  <p className="text-lg leading-relaxed">
-                    Our comprehensive orthopedic rehabilitation programs combine 
-                    evidence-based treatments with personalized exercise protocols 
-                    to restore your function and get you back to your active lifestyle.
-                  </p>
-                  
-                  <p className="text-lg leading-relaxed">
-                    We have successfully helped hundreds of people in 
-                    Harborne and Birmingham recover from orthopedic conditions, 
-                    avoid unnecessary procedures, and return to their favorite 
-                    activities with renewed confidence.
-                  </p>
-                  
-                  <p className="text-lg leading-relaxed font-semibold">
-                    Some examples of orthopedic conditions that we have 
-                    successfully treated include:
-                  </p>
-                  
-                  <ul className="space-y-2 text-lg">
-                    <li>• Joint Replacements (Hip, Knee, Shoulder)</li>
-                    <li>• Fracture Recovery</li>
-                    <li>• Ligament Injuries (ACL, MCL, PCL)</li>
-                    <li>• Meniscus Tears</li>
-                    <li>• Cartilage Damage</li>
-                    <li>• Osteoarthritis</li>
-                    <li>• Rheumatoid Arthritis</li>
-                    <li>• Tendon Injuries</li>
-                    <li>• Muscle Strains and Tears</li>
-                    <li>• Joint Stiffness</li>
-                    <li>• Chronic Pain Conditions</li>
-                    <li>• Post-Trauma Rehabilitation</li>
-                    <li>• Movement Dysfunction</li>
-                  </ul>
-                  
-                  <div className="pt-8">
-                    <a
-                      href="/contact"
-                      className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-teal-800 transition-colors text-lg"
-                    >
-                      Get In Touch
-                    </a>
-                  </div>
-                </div>
-
-                {/* Right Column - Testimonial placeholder */}
-                <div className="lg:sticky lg:top-8">
-                  <div className="bg-white/10 rounded-lg p-8 backdrop-blur-sm">
-                    <div className="aspect-square bg-white/20 rounded-lg flex items-center justify-center">
-                      <p className="text-center text-lg">
-                        "Back to hiking without limitations!"
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          {/* Bottom spacer */}
-          <div className="h-32 bg-teal-800"></div>
-        </div>
-      </section>
-    </div>
-  );
-};
+      </div>
+    </section>
+  </>
+);
 
 export default OrthopedicRehab;

@@ -1,140 +1,37 @@
 import React from 'react';
+import TreatmentPageTemplate from './TreatmentPageTemplate';
 
-const OveruseInjuries: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Hero Section - Blue-gray theme */}
-      <section className="bg-blue-600 text-white py-16 md:py-24">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-lg md:text-xl mb-4 opacity-90">
-            CHRIS TILEY PHYSIOTHERAPY
-          </p>
-          <h1 className="text-4xl md:text-6xl font-bold mb-8">
-            Overuse Injuries
-          </h1>
-          <p className="text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
-            Specialized treatment for overuse injuries that develop gradually from repetitive 
-            activities. Our comprehensive approach addresses the root causes and helps you 
-            return to your activities with improved movement patterns and injury prevention strategies.
-          </p>
+const OveruseInjuries: React.FC = () => (
+  <>
+    <TreatmentPageTemplate
+      seoTitle="Overuse Injury Physiotherapy in Harborne, Birmingham | Chris Tiley"
+      seoDescription="Physiotherapy for persistent tendon and activity-related pain in Harborne, Birmingham. Understand symptoms and build a gradual return to activity."
+      canonicalPath="/treatments/overuse-injuries"
+      h1="Physiotherapy for Overuse Injuries"
+      heroEyebrow="Overuse Injuries in Harborne, Birmingham"
+      heroParagraphs={["Pain that builds gradually during work, sport or everyday activity can be frustrating, especially when it keeps returning. It is not always caused by a single incident, and stopping everything is not necessarily the best long-term solution.","At our Harborne clinic, we help you understand what may be contributing to symptoms and find a manageable way to rebuild your tolerance for activity."]}
+      ctaHeading="Ready to discuss your rehabilitation?"
+      ctaText="We can assess your symptoms, discuss your goals and agree on a realistic next step."
+      mainHeading="Understanding load, recovery and symptoms"
+      mainParagraphs={["We will discuss what you do, how your symptoms behave and whether your activity has changed recently. We also assess relevant movement, strength and other factors that might affect your rehabilitation.","Treatment may include adjusting how much or how often you do an activity, progressive strengthening and advice on returning to your normal routine. We aim to find a balance between doing too much and avoiding movement unnecessarily.","Not every persistent pain problem is an overuse injury. We will consider other possible causes and recommend medical review when the history or examination suggests it is needed."]}
+      bulletList={["Achilles and patellar tendon pain","Elbow tendon-related pain","Persistent shoulder pain with activity","Running-related lower-limb symptoms","Pain associated with repetitive work or hobbies","Gradual return to training and exercise"]}
+      imageUrl="https://lh3.googleusercontent.com/p/AF1QipMPeZpwD2vsxUz9DSm9BKzha0SzdF3R4AanKr9E=s680-w680-h510-rw"
+      relatedConditions={[{"label":"Running & Triathlon Rehabilitation","href":"/treatments/runner-triathlete-rehab/"},{"label":"Sports Injuries","href":"/treatments/sports-injuries/"},{"label":"Shoulder Pain","href":"/treatments/shoulder-pain/"}]}
+      conditionName="overuse injuries"
+    />
+    <section className="bg-white py-16" aria-labelledby="overuse-injuries-faq">
+      <div className="container mx-auto px-4 max-w-4xl">
+        <h2 id="overuse-injuries-faq" className="text-3xl md:text-4xl font-bold text-navy-700 mb-8">Overuse Injuries: Frequently Asked Questions</h2>
+        <div className="space-y-7 text-gray-700">
+          <div><h3 className="text-xl font-semibold text-navy-700 mb-2">What is an overuse injury?</h3><p>It is a broad term for symptoms that develop or persist in association with repeated activity and the demands placed on tissues. The precise diagnosis still matters.</p></div>
+          <div><h3 className="text-xl font-semibold text-navy-700 mb-2">Do I need to rest completely?</h3><p>Sometimes a short period of reduced activity helps, but complete rest is not always needed. We can help you find an appropriate level of movement.</p></div>
+          <div><h3 className="text-xl font-semibold text-navy-700 mb-2">Will exercises make my pain worse?</h3><p>We select and progress exercises according to your symptoms and response. Some discomfort can be acceptable in certain conditions, but the plan should be individual.</p></div>
+          <div><h3 className="text-xl font-semibold text-navy-700 mb-2">Why does the pain keep coming back?</h3><p>Recurring symptoms can have several contributors, including activity changes, insufficient recovery or an underlying condition. An assessment can help clarify the picture.</p></div>
+          <div><h3 className="text-xl font-semibold text-navy-700 mb-2">Can you help me return to sport?</h3><p>Yes. We can plan a graded return based on the demands of your sport and how you respond to rehabilitation.</p></div>
         </div>
-      </section>
-
-      {/* Transition Section */}
-      <section className="bg-gray-50 py-12 text-center">
-        <div className="container mx-auto px-4">
-          <p className="text-lg md:text-xl text-blue-700 max-w-3xl mx-auto mb-8">
-            Our specialized overuse injury treatments will help you break the cycle 
-            of recurring pain and get back to your activities stronger than before!
-          </p>
-          <a
-            href="/contact"
-            className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition-colors text-lg"
-          >
-            Get In Touch
-          </a>
-        </div>
-      </section>
-
-      {/* Main Content Section with Parallax Background */}
-      <section className="relative min-h-screen">
-        {/* Fixed Background Image */}
-        <div 
-          className="fixed inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: 'url("https://lh3.googleusercontent.com/p/AF1QipMPeZpwD2vsxUz9DSm9BKzha0SzdF3R4AanKr9E=s680-w680-h510-rw")',
-            zIndex: -1
-          }}
-        >
-          <div className="absolute inset-0 bg-blue-900 bg-opacity-60"></div>
-        </div>
-
-        {/* Content that scrolls over the fixed background */}
-        <div className="relative z-10">
-          {/* Spacer to allow scrolling effect */}
-          <div className="h-32"></div>
-          
-          <div className="bg-blue-800 text-white">
-            <div className="container mx-auto px-4 py-16">
-              <div className="grid lg:grid-cols-2 gap-12 items-start">
-                {/* Left Column - Main Content */}
-                <div className="space-y-6">
-                  <h2 className="text-3xl md:text-4xl font-bold mb-8">
-                    Break the cycle of recurring overuse injuries.
-                  </h2>
-                  
-                  <p className="text-lg leading-relaxed">
-                    Overuse injuries develop gradually from repetitive stress on tissues 
-                    without adequate recovery time. These injuries can be frustrating 
-                    because they often return if not properly addressed. <span className="underline">Our approach 
-                    identifies and corrects the underlying causes to prevent recurrence.</span>
-                  </p>
-                  
-                  <p className="text-lg leading-relaxed">
-                    Our comprehensive treatment combines manual therapy, 
-                    corrective exercises, biomechanical analysis, and activity 
-                    modification to address both symptoms and root causes 
-                    of your overuse injury.
-                  </p>
-                  
-                  <p className="text-lg leading-relaxed">
-                    We have successfully helped hundreds of people in 
-                    Harborne and Birmingham overcome chronic overuse injuries, 
-                    return to their activities, and develop strategies to 
-                    prevent future problems.
-                  </p>
-                  
-                  <p className="text-lg leading-relaxed font-semibold">
-                    Some examples of overuse injuries that we have 
-                    successfully treated include:
-                  </p>
-                  
-                  <ul className="space-y-2 text-lg">
-                    <li>• Tennis Elbow (Lateral Epicondylitis)</li>
-                    <li>• Golfer's Elbow (Medial Epicondylitis)</li>
-                    <li>• Carpal Tunnel Syndrome</li>
-                    <li>• Repetitive Strain Injuries (RSI)</li>
-                    <li>• Tendonitis (Various Locations)</li>
-                    <li>• Bursitis</li>
-                    <li>• Stress Fractures</li>
-                    <li>• Chronic Muscle Strains</li>
-                    <li>• Joint Impingement Syndromes</li>
-                    <li>• Chronic Neck/Shoulder Pain</li>
-                    <li>• Computer-Related Injuries</li>
-                    <li>• Occupational Injuries</li>
-                    <li>• Activity-Related Pain Syndromes</li>
-                  </ul>
-                  
-                  <div className="pt-8">
-                    <a
-                      href="/contact"
-                      className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-blue-800 transition-colors text-lg"
-                    >
-                      Get In Touch
-                    </a>
-                  </div>
-                </div>
-
-                {/* Right Column - Testimonial placeholder */}
-                <div className="lg:sticky lg:top-8">
-                  <div className="bg-white/10 rounded-lg p-8 backdrop-blur-sm">
-                    <div className="aspect-square bg-white/20 rounded-lg flex items-center justify-center">
-                      <p className="text-center text-lg">
-                        "Finally broke my cycle of recurring pain!"
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          {/* Bottom spacer */}
-          <div className="h-32 bg-blue-800"></div>
-        </div>
-      </section>
-    </div>
-  );
-};
+      </div>
+    </section>
+  </>
+);
 
 export default OveruseInjuries;
