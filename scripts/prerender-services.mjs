@@ -17,7 +17,7 @@ try {
     React.createElement(MemoryRouter, { initialEntries: ['/services'] },
       React.createElement(mod.default, { prerender: true }))
   );
-  for (const required of ['Physiotherapy Services in Harborne, Birmingham', 'Common Problems We Help With', 'Knee Pain']) {
+  for (const required of ['Physiotherapy Services in Harborne, Birmingham', 'Conditions &amp; Rehabilitation', 'Knee Pain']) {
     if (!snapshot.includes(required)) throw new Error('Services snapshot missing: ' + required);
   }
 
