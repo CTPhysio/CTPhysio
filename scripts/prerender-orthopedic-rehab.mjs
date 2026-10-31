@@ -22,7 +22,7 @@ try {
 
   const path = '/treatments/orthopedic-rehab';
   const url = 'https://christileyphysiotherapy.com' + path;
-  const title = 'Orthopaedic Rehabilitation in Harborne, Birmingham | Chris Tiley | Chris Tiley';
+  const title = 'Orthopaedic Rehabilitation in Harborne, Birmingham | Chris Tiley';
   const description = 'Physiotherapy for joint, bone and soft-tissue problems in Harborne, Birmingham. Build strength, restore movement and work towards your goals.';
   const escape = s => s.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;');
   let html = await readFile('index.html', 'utf8');
