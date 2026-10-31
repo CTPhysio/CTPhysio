@@ -39,7 +39,7 @@ const Navbar: React.FC = () => {
             <Link to="/" className="text-navy-700 hover:text-sky-500 px-3 py-2 font-medium transition-colors duration-200">
               Home
             </Link>
-            <Link to="/services" className="text-navy-700 hover:text-sky-500 px-3 py-2 font-medium transition-colors duration-200">
+            <Link to="/services/" className="text-navy-700 hover:text-sky-500 px-3 py-2 font-medium transition-colors duration-200">
               Services
             </Link>
 
@@ -51,13 +51,13 @@ const Navbar: React.FC = () => {
               </button>
               <div className="absolute top-full left-0 hidden group-hover:block w-60 bg-white shadow-lg rounded-md border border-gray-100 pt-1 z-50">
                 <Link
-                  to="/strength-rehab-classes"
+                  to="/strength-rehab-classes/"
                   className="block px-4 py-2.5 text-sm text-navy-700 hover:text-sky-500 hover:bg-gray-50 transition-colors duration-200"
                 >
                   Strength &amp; Rehab Classes
                 </Link>
                 <Link
-                  to="/over-60s-strength-classes"
+                  to="/over-60s-strength-classes/"
                   className="block px-4 py-2.5 text-sm text-navy-700 hover:text-sky-500 hover:bg-gray-50 transition-colors duration-200"
                 >
                   Over 60s Strength Classes
@@ -65,16 +65,16 @@ const Navbar: React.FC = () => {
               </div>
             </div>
 
-            <Link to="/about" className="text-navy-700 hover:text-sky-500 px-3 py-2 font-medium transition-colors duration-200">
+            <Link to="/about/" className="text-navy-700 hover:text-sky-500 px-3 py-2 font-medium transition-colors duration-200">
               About
             </Link>
-            <Link to="/events" className="text-navy-700 hover:text-sky-500 px-3 py-2 font-medium transition-colors duration-200">
+            <Link to="/events/" className="text-navy-700 hover:text-sky-500 px-3 py-2 font-medium transition-colors duration-200">
               Events
             </Link>
-            <Link to="/advice" className="text-navy-700 hover:text-sky-500 px-3 py-2 font-medium transition-colors duration-200">
+            <Link to="/advice/" className="text-navy-700 hover:text-sky-500 px-3 py-2 font-medium transition-colors duration-200">
               Advice
             </Link>
-            <Link to="/contact" className="text-navy-700 hover:text-sky-500 px-3 py-2 font-medium transition-colors duration-200">
+            <Link to="/contact/" className="text-navy-700 hover:text-sky-500 px-3 py-2 font-medium transition-colors duration-200">
               Contact
             </Link>
           </nav>
@@ -89,7 +89,7 @@ const Navbar: React.FC = () => {
               <span>0121 517 0806</span>
             </a>
             <a
-              href="/booking"
+              href="/booking/"
               className="inline-flex items-center px-5 py-2.5 text-sm font-semibold rounded-md text-white bg-navy-700 hover:bg-navy-800 transition-colors duration-200"
             >
               Book an Appointment
@@ -127,7 +127,7 @@ const Navbar: React.FC = () => {
               Home
             </Link>
             <Link
-              to="/services"
+              to="/services/"
               className="block px-3 py-2 rounded-md text-base font-medium text-navy-700 hover:text-sky-500"
               onClick={() => setMobileMenuOpen(false)}
             >
@@ -146,14 +146,14 @@ const Navbar: React.FC = () => {
               {mobileClassesOpen && (
                 <div className="pl-6 space-y-1">
                   <Link
-                    to="/strength-rehab-classes"
+                    to="/strength-rehab-classes/"
                     className="block px-3 py-2 rounded-md text-sm font-medium text-navy-700 hover:text-sky-500"
                     onClick={() => { setMobileMenuOpen(false); setMobileClassesOpen(false); }}
                   >
                     Strength &amp; Rehab Classes
                   </Link>
                   <Link
-                    to="/over-60s-strength-classes"
+                    to="/over-60s-strength-classes/"
                     className="block px-3 py-2 rounded-md text-sm font-medium text-navy-700 hover:text-sky-500"
                     onClick={() => { setMobileMenuOpen(false); setMobileClassesOpen(false); }}
                   >
@@ -164,28 +164,28 @@ const Navbar: React.FC = () => {
             </div>
 
             <Link
-              to="/about"
+              to="/about/"
               className="block px-3 py-2 rounded-md text-base font-medium text-navy-700 hover:text-sky-500"
               onClick={() => setMobileMenuOpen(false)}
             >
               About
             </Link>
             <Link
-              to="/events"
+              to="/events/"
               className="block px-3 py-2 rounded-md text-base font-medium text-navy-700 hover:text-sky-500"
               onClick={() => setMobileMenuOpen(false)}
             >
               Events
             </Link>
             <Link
-              to="/advice"
+              to="/advice/"
               className="block px-3 py-2 rounded-md text-base font-medium text-navy-700 hover:text-sky-500"
               onClick={() => setMobileMenuOpen(false)}
             >
               Advice
             </Link>
             <Link
-              to="/contact"
+              to="/contact/"
               className="block px-3 py-2 rounded-md text-base font-medium text-navy-700 hover:text-sky-500"
               onClick={() => setMobileMenuOpen(false)}
             >
@@ -200,7 +200,7 @@ const Navbar: React.FC = () => {
               <span>0121 517 0806</span>
             </a>
             <a
-              href="/booking"
+              href="/booking/"
               className="block w-full text-center mt-2 px-4 py-2.5 rounded-md text-sm font-semibold text-white bg-navy-700 hover:bg-navy-800"
             >
               Book an Appointment
