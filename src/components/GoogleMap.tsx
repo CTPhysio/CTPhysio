@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Loader } from '@googlemaps/js-api-loader';
+import type { Loader as GoogleMapsLoader } from '@googlemaps/js-api-loader';
 import { useConsent } from '../lib/useConsent';
 
 const GOOGLE_MAPS_URL =
@@ -10,7 +10,7 @@ interface GoogleMapProps {
 }
 
 // Singleton loader instance
-let loaderInstance: Loader | null = null;
+let loaderInstance: GoogleMapsLoader | null = null;
 let isLoaderInitialized = false;
 
 const GoogleMap: React.FC<GoogleMapProps> = ({ className = "w-full h-[400px]" }) => {
@@ -31,6 +31,8 @@ const GoogleMap: React.FC<GoogleMapProps> = ({ className = "w-full h-[400px]" })
             setMapError(true);
             return;
           }
+          // Load the browser-only Google Maps library after mount, not during SSR.
+          const { Loader } = await import('@googlemaps/js-api-loader');
           loaderInstance = new Loader({
   apiKey,
   version: 'weekly',
