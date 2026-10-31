@@ -151,7 +151,7 @@ const Services: React.FC<{ prerender?: boolean }> = ({ prerender = false }) => {
                     )}
                     {service.title === "Strength & Rehab Classes" && (
                       <p className="text-sm text-gray-600 mb-2">
-                        We also run <Link to="/over-60s-strength-classes" className="text-sky-600 hover:text-sky-700 underline">Over 60s Strength Classes</Link> for people who want a class focused on this stage of life.
+                        We also run <Link to="/over-60s-strength-classes/" className="text-sky-600 hover:text-sky-700 underline">Over 60s Strength Classes</Link> for people who want a class focused on this stage of life.
                       </p>
                     )}
                   </div>
@@ -196,15 +196,15 @@ const Services: React.FC<{ prerender?: boolean }> = ({ prerender = false }) => {
               Not sure where to start? Learn more about how we approach some of the most common conditions we treat.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
-              <a href="/treatments/back-pain" className="block px-4 py-3 md:px-5 md:py-4 bg-white rounded-xl shadow hover:shadow-md text-navy-700 font-semibold text-center transition-shadow">Lower Back Pain</a>
-              <a href="/treatments/shoulder-pain" className="block px-4 py-3 md:px-5 md:py-4 bg-white rounded-xl shadow hover:shadow-md text-navy-700 font-semibold text-center transition-shadow">Shoulder Pain</a>
-              <a href="/treatments/knee-pain" className="block px-4 py-3 md:px-5 md:py-4 bg-white rounded-xl shadow hover:shadow-md text-navy-700 font-semibold text-center transition-shadow">Knee Pain</a>
-              <a href="/treatments/neck-pain" className="block px-4 py-3 md:px-5 md:py-4 bg-white rounded-xl shadow hover:shadow-md text-navy-700 font-semibold text-center transition-shadow">Neck Pain</a>
-              <a href="/treatments/hip-pain" className="block px-4 py-3 md:px-5 md:py-4 bg-white rounded-xl shadow hover:shadow-md text-navy-700 font-semibold text-center transition-shadow">Hip Pain</a>
-              <a href="/treatments/sciatica" className="block px-4 py-3 md:px-5 md:py-4 bg-white rounded-xl shadow hover:shadow-md text-navy-700 font-semibold text-center transition-shadow">Sciatica</a>
-              <a href="/treatments/balance-falls" className="block px-4 py-3 md:px-5 md:py-4 bg-white rounded-xl shadow hover:shadow-md text-navy-700 font-semibold text-center transition-shadow">Balance &amp; Falls</a>
-              <a href="/treatments/surgical-rehab" className="block px-4 py-3 md:px-5 md:py-4 bg-white rounded-xl shadow hover:shadow-md text-navy-700 font-semibold text-center transition-shadow">Surgical Rehabilitation</a>
-              <a href="/treatments/deconditioning" className="block px-4 py-3 md:px-5 md:py-4 bg-white rounded-xl shadow hover:shadow-md text-navy-700 font-semibold text-center transition-shadow">Muscle Weakness &amp; Deconditioning</a>
+              <a href="/treatments/back-pain/" className="block px-4 py-3 md:px-5 md:py-4 bg-white rounded-xl shadow hover:shadow-md text-navy-700 font-semibold text-center transition-shadow">Lower Back Pain</a>
+              <a href="/treatments/shoulder-pain/" className="block px-4 py-3 md:px-5 md:py-4 bg-white rounded-xl shadow hover:shadow-md text-navy-700 font-semibold text-center transition-shadow">Shoulder Pain</a>
+              <a href="/treatments/knee-pain/" className="block px-4 py-3 md:px-5 md:py-4 bg-white rounded-xl shadow hover:shadow-md text-navy-700 font-semibold text-center transition-shadow">Knee Pain</a>
+              <a href="/treatments/neck-pain/" className="block px-4 py-3 md:px-5 md:py-4 bg-white rounded-xl shadow hover:shadow-md text-navy-700 font-semibold text-center transition-shadow">Neck Pain</a>
+              <a href="/treatments/hip-pain/" className="block px-4 py-3 md:px-5 md:py-4 bg-white rounded-xl shadow hover:shadow-md text-navy-700 font-semibold text-center transition-shadow">Hip Pain</a>
+              <a href="/treatments/sciatica/" className="block px-4 py-3 md:px-5 md:py-4 bg-white rounded-xl shadow hover:shadow-md text-navy-700 font-semibold text-center transition-shadow">Sciatica</a>
+              <a href="/treatments/balance-falls/" className="block px-4 py-3 md:px-5 md:py-4 bg-white rounded-xl shadow hover:shadow-md text-navy-700 font-semibold text-center transition-shadow">Balance &amp; Falls</a>
+              <a href="/treatments/surgical-rehab/" className="block px-4 py-3 md:px-5 md:py-4 bg-white rounded-xl shadow hover:shadow-md text-navy-700 font-semibold text-center transition-shadow">Surgical Rehabilitation</a>
+              <a href="/treatments/deconditioning/" className="block px-4 py-3 md:px-5 md:py-4 bg-white rounded-xl shadow hover:shadow-md text-navy-700 font-semibold text-center transition-shadow">Muscle Weakness &amp; Deconditioning</a>
             </div>
           </div>
         </div>
