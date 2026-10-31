@@ -9,7 +9,7 @@ interface SeoProps {
 }
 
 const SITE_URL = 'https://christileyphysiotherapy.com';
-const directoryPages = new Set(['/about', '/contact', '/booking', '/strength-rehab-classes', '/services', '/treatments/back-pain', '/treatments/shoulder-pain', '/treatments/surgical-rehab', '/treatments/knee-pain', '/treatments/neck-pain', '/treatments/hip-pain', '/treatments/sciatica', '/treatments/balance-falls', '/treatments/deconditioning', '/treatments/arthritis', '/treatments/sports-injuries', '/treatments/orthopedic-rehab', '/treatments/runner-triathlete-rehab', '/treatments/overuse-injuries', '/treatments/spinal-injuries', '/over-60s-strength-classes', '/strength-training-over-60s', '/advice/injury-prevention-womens-football']);
+const directoryPages = new Set(['/events', '/advice', '/privacy-policy', '/terms-of-service', '/about', '/contact', '/booking', '/strength-rehab-classes', '/services', '/treatments/back-pain', '/treatments/shoulder-pain', '/treatments/surgical-rehab', '/treatments/knee-pain', '/treatments/neck-pain', '/treatments/hip-pain', '/treatments/sciatica', '/treatments/balance-falls', '/treatments/deconditioning', '/treatments/arthritis', '/treatments/sports-injuries', '/treatments/orthopedic-rehab', '/treatments/runner-triathlete-rehab', '/treatments/overuse-injuries', '/treatments/spinal-injuries', '/over-60s-strength-classes', '/strength-training-over-60s', '/advice/injury-prevention-womens-football']);
 
 const setMeta = (selector: string, attr: string, value: string) => {
   let el = document.head.querySelector(selector) as HTMLMetaElement | null;
