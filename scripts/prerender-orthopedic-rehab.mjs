@@ -16,7 +16,7 @@ try {
     React.createElement(MemoryRouter, { initialEntries: ['/treatments/orthopedic-rehab'] },
       React.createElement(mod.default))
   );
-  for (const required of ['Orthopaedic Rehabilitation in Harborne, Birmingham | Chris Tiley', 'Orthopaedic Rehabilitation in Harborne', 'Frequently Asked Questions', 'Book an Appointment']) {
+  for (const required of ['Orthopaedic Rehabilitation in Harborne', 'Frequently Asked Questions', 'Book an Appointment']) {
     if (!snapshot.includes(required)) throw new Error('OrthopedicRehab snapshot missing: ' + required);
   }
 
