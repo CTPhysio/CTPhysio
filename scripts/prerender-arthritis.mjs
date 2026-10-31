@@ -22,7 +22,7 @@ try {
 
   const path = '/treatments/arthritis';
   const url = 'https://christileyphysiotherapy.com' + path;
-  const title = 'Muscle Weakness and Deconditioning Physio in Harborne, Birmingham | Chris Tiley';
+  const title = 'Arthritis Physiotherapy in Harborne, Birmingham | Chris Tiley';
   const description = 'Arthritis physiotherapy in Harborne, Birmingham. Understand joint pain and stiffness, build strength and stay active with a personalised plan.';
   const escape = s => s.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;');
   let html = await readFile('index.html', 'utf8');
