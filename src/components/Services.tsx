@@ -177,6 +177,17 @@ const Services: React.FC<{ prerender?: boolean }> = ({ prerender = false }) => {
         </div>
       </section>
 
+      <section className="py-12 bg-white" aria-labelledby="ski-mojo-services-heading">
+        <div className="container mx-auto px-4 max-w-5xl grid md:grid-cols-3 gap-8 items-center">
+          <img src="/assets/images/ski-mojo-brace.webp" alt="Ski Mojo leg support worn with ski clothing" loading="lazy" className="w-full max-h-72 object-contain rounded-xl bg-gray-50" />
+          <div className="md:col-span-2">
+            <h2 id="ski-mojo-services-heading" className="text-3xl font-bold text-navy-700 mb-4">Ski Mojo fittings in Birmingham</h2>
+            <p className="text-gray-700 mb-5">Planning a skiing holiday but concerned about knee discomfort or tired legs? Chris offers personalised Ski Mojo fittings at our Harborne clinic, helping you understand whether the device is suitable and how to use it with your own ski boots.</p>
+            <Link to="/ski-mojo/" className="inline-block bg-navy-700 text-white font-semibold rounded-md px-6 py-3 hover:bg-navy-800">Find out about Ski Mojo fittings</Link>
+          </div>
+        </div>
+      </section>
+
       {/* Our approach */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
