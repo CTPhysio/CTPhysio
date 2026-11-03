@@ -341,7 +341,7 @@ const StrengthRehabClasses: React.FC = () => {
                 <span className="font-semibold text-navy-700">You don&rsquo;t need to wait for the next 12-week block.</span> If you join part-way through, you&rsquo;ll be introduced to the movement patterns and given appropriate exercise variations for your current ability.
               </p>
               <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-                You start from your own level and progress from there. You are not expected to catch up with everyone else.
+                You start from your own level and progress from there. You are not expected to catch up with everyone else. If you're getting ready for a ski holiday, you might also enjoy our <Link to="/advice/ski-fitness-exercises/" className="text-sky-700 underline">skiing preparation and strength exercise guide</Link>.
               </p>
             </div>
           </div>
