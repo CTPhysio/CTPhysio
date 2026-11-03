@@ -6,13 +6,12 @@ const Footer: React.FC = () => {
     <footer className="bg-navy-900 text-white">
       <div className="py-8 md:py-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-6">
+            <img src="/logo.png" alt="Chris Tiley Physiotherapy" className="h-10 md:h-12 w-auto brightness-0 invert" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
             {/* Clinic details */}
             <div>
-              <div className="flex items-center mb-3">
-                <img src="/logo.png" alt="Chris Tiley Physiotherapy" className="h-10 md:h-12 w-auto brightness-0 invert" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
-              </div>
-              <p className="text-gray-300 mb-4 text-sm leading-relaxed">Professional physiotherapy clinic with over 100 5-star reviews.</p>
               <h3 className="text-base md:text-xl font-bold mb-3">Contact Us</h3>
               <ul className="space-y-2">
                 <li className="flex items-start"><Phone size={16} className="mr-2 flex-shrink-0 mt-0.5 text-sky-400" /><a href="tel:01215170806" className="text-sm hover:text-sky-400">0121 517 0806</a></li>
