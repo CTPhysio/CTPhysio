@@ -64,7 +64,7 @@ const SkiMojo: React.FC = () => {
           <h2 className="text-3xl font-bold text-navy-700 mb-5">Why arrange your fitting with Chris?</h2>
           <p className="mb-4 leading-relaxed">Chris is a chartered physiotherapist with experience working in skiing, including with GB Para Snowsport. He has been fitting Ski Mojos for several years and has been a recommended retailer since 2019.</p>
           <p className="mb-4 leading-relaxed">The fitting is a product fitting rather than a full physiotherapy assessment. Chris will ask about your needs and help you understand how to use and adjust the Ski Mojo before your trip.</p>
-          <p className="leading-relaxed">A Ski Mojo may be one part of the solution, but building and maintaining leg strength also matters if you want to keep skiing for years to come. We can discuss strengthening options where appropriate.</p>
+          <p className="leading-relaxed">A Ski Mojo may be one part of the solution, but building and maintaining leg strength also matters if you want to keep skiing for years to come. We can discuss strengthening options where appropriate. For a starting point, <a href="/advice/ski-fitness-exercises/" className="text-sky-700 underline">read our guide to building strength for skiing</a>.</p>
         </div>
       </section>
       <section id="enquiry" className="container mx-auto px-4 max-w-5xl py-14">
