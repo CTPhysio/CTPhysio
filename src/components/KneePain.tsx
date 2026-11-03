@@ -53,6 +53,7 @@ const KneePain: React.FC = () => (
       </div>
     </div>
   </section>
+    <section className="bg-gray-50 py-10"><div className="container mx-auto px-4 max-w-4xl"><h2 className="text-2xl font-bold text-navy-700 mb-3">Want to keep skiing?</h2><p className="text-gray-700 mb-3">If knee discomfort makes skiing difficult, some recreational skiers also explore Ski Mojo leg supports. Chris offers personalised fittings at the clinic, following a conversation about suitability.</p><a href="/ski-mojo/" className="text-sky-700 underline font-semibold">Learn about Ski Mojo fittings in Birmingham</a></div></section>
   </>
 );
 

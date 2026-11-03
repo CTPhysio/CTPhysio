@@ -6,6 +6,7 @@ const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileClassesOpen, setMobileClassesOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,9 +40,15 @@ const Navbar: React.FC = () => {
             <Link to="/" className="text-navy-700 hover:text-sky-500 px-3 py-2 font-medium transition-colors duration-200">
               Home
             </Link>
-            <Link to="/services/" className="text-navy-700 hover:text-sky-500 px-3 py-2 font-medium transition-colors duration-200">
-              Services
-            </Link>
+            <div className="relative group">
+              <button type="button" aria-label="Services menu" className="flex items-center text-navy-700 hover:text-sky-500 px-3 py-2 font-medium transition-colors duration-200">
+                Services <ChevronDown size={16} className="ml-1" />
+              </button>
+              <div className="absolute top-full left-0 hidden group-hover:block group-focus-within:block w-60 bg-white shadow-lg rounded-md border border-gray-100 pt-1 z-50">
+                <Link to="/services/" className="block px-4 py-2.5 text-sm text-navy-700 hover:text-sky-500 hover:bg-gray-50">All Services</Link>
+                <Link to="/ski-mojo/" className="block px-4 py-2.5 text-sm text-navy-700 hover:text-sky-500 hover:bg-gray-50">Ski Mojo Fittings</Link>
+              </div>
+            </div>
 
             {/* Classes Dropdown */}
             <div className="relative group">
@@ -126,13 +133,15 @@ const Navbar: React.FC = () => {
             >
               Home
             </Link>
-            <Link
-              to="/services/"
-              className="block px-3 py-2 rounded-md text-base font-medium text-navy-700 hover:text-sky-500"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Services
-            </Link>
+            <div>
+              <button type="button" className="w-full flex items-center justify-between px-3 py-2 rounded-md text-base font-medium text-navy-700 hover:text-sky-500" aria-expanded={mobileServicesOpen} onClick={() => setMobileServicesOpen(!mobileServicesOpen)}>
+                <span>Services</span><ChevronDown size={18} className={mobileServicesOpen ? 'rotate-180' : ''} />
+              </button>
+              {mobileServicesOpen && <div className="pl-6 space-y-1">
+                <Link to="/services/" className="block px-3 py-2 rounded-md text-sm text-navy-700" onClick={() => { setMobileMenuOpen(false); setMobileServicesOpen(false); }}>All Services</Link>
+                <Link to="/ski-mojo/" className="block px-3 py-2 rounded-md text-sm text-navy-700" onClick={() => { setMobileMenuOpen(false); setMobileServicesOpen(false); }}>Ski Mojo Fittings</Link>
+              </div>}
+            </div>
 
             {/* Classes expandable */}
             <div>
