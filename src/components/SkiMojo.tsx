@@ -25,22 +25,24 @@ const SkiMojo: React.FC = () => {
     <div className="bg-gray-50">
       <Seo title="Ski Mojo Fitting in Birmingham | Chris Tiley Physiotherapy" description="Ski Mojo fitting in Harborne, Birmingham with physiotherapist Chris Tiley. Personalised setup with your ski boots. £594 including fitting, or £50 without purchase." canonicalPath="/ski-mojo" />
       <section className="bg-navy-800 text-white py-16 md:py-24">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <p className="text-sky-300 font-semibold mb-3">Ski Mojo retailer and fitting service in Harborne, Birmingham</p>
+        <div className="container mx-auto px-4 max-w-5xl grid md:grid-cols-5 gap-10 items-center">
+          <div className="md:col-span-3"><p className="text-sky-300 font-semibold mb-3">Ski Mojo retailer and fitting service in Harborne, Birmingham</p>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Ski Mojo fitting in Birmingham</h1>
           <p className="text-xl max-w-3xl leading-relaxed mb-7">Get your Ski Mojo fitted and adjusted before your skiing holiday. We'll set it up with your own ski boots, show you how to use it and help you head for the slopes with confidence in your setup.</p>
           <a href="#enquiry" className="inline-block rounded-md bg-sky-500 hover:bg-sky-600 px-7 py-4 font-semibold">Enquire about a fitting</a>
-          <p className="text-sm text-gray-300 mt-4">No obligation to purchase. Fittings are arranged after an initial phone conversation.</p>
+          <p className="text-sm text-gray-300 mt-4">No obligation to purchase. Fittings are arranged after an initial phone conversation.</p></div>
+          <div className="md:col-span-2"><img src="/assets/images/ski-mojo-brace.webp" alt="Ski Mojo wearable leg support worn over ski clothing" className="w-full rounded-xl bg-white object-contain" fetchPriority="high" /></div>
         </div>
       </section>
       <section className="container mx-auto px-4 max-w-5xl py-14">
+        <img src="/assets/images/ski-mojo-logo.webp" alt="Ski Mojo logo" className="w-40 h-auto object-contain mb-6" loading="lazy" />
         <h2 className="text-3xl font-bold text-navy-700 mb-5">What is a Ski Mojo?</h2>
         <p className="text-gray-700 leading-relaxed mb-4">The Ski Mojo is a wearable support system designed to reduce some of the load on your legs while skiing. People often enquire about it because of knee discomfort, tired legs or a desire to keep enjoying longer days on the mountain.</p>
         <p className="text-gray-700 leading-relaxed">It's not the right solution for everyone. For example, if your main concern is an unstable ACL-deficient knee, a brace designed specifically for stability may be more appropriate. We can discuss whether a fitting sounds suitable before arranging an appointment.</p>
       </section>
       <section className="bg-white py-14">
         <div className="container mx-auto px-4 max-w-5xl">
-          <h2 className="text-3xl font-bold text-navy-700 mb-7">What happens at your fitting?</h2>
+          <div className="grid md:grid-cols-3 gap-8 items-center mb-8"><div className="md:col-span-2"><h2 className="text-3xl font-bold text-navy-700 mb-4">What happens at your fitting?</h2><p className="text-gray-700">Your Ski Mojo is ordered for you ahead of the appointment, then fitted and adjusted at the clinic.</p></div><img src="/assets/images/ski-mojo-fitting-box.webp" alt="Ski Mojo product box photographed at the clinic" className="w-full rounded-lg object-cover max-h-64" loading="lazy" /></div>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="rounded-lg border p-6"><h3 className="font-bold text-xl text-navy-700 mb-3">1. A conversation first</h3><p>Chris will call to discuss your skiing needs and whether the Ski Mojo is likely to be the right option for you. He'll also confirm your weight to select the appropriate model and check that you have your own ski boots. Once everything is agreed, we'll arrange your fitting and order your Ski Mojo.</p></div>
             <div className="rounded-lg border p-6"><h3 className="font-bold text-xl text-navy-700 mb-3">2. Personalised setup</h3><p>Chris will fit and adjust the Ski Mojo to suit you, showing you how to put it on, take it off and make adjustments. You'll be able to wear it with your own ski boots, walk around and try some movements in the clinic to get a feel for the support it provides.</p></div>
