@@ -13,6 +13,18 @@ export interface Article {
 
 export const articles: Article[] = [
   {
+    slug: 'ski-fitness-exercises',
+    title: 'How to Prepare Your Body for a Skiing Holiday: 7 Essential Movement Patterns',
+    author: 'Chris Tiley',
+    authorBio: 'Chartered Physiotherapist',
+    publishedDate: '2026-11-03',
+    excerpt: 'Prepare for your skiing holiday with seven essential movement patterns, practical strength exercises and advice for managing tired legs and knee discomfort.',
+    featuredImage: '/assets/images/ski-fitness-older-skier.webp',
+    featuredImageAlt: 'Older woman skiing confidently on an alpine slope',
+    metaTitle: 'Ski Fitness Exercises: Prepare for Your Holiday',
+    metaDescription: 'Preparing for a skiing holiday? Discover 7 strength movement patterns to help build ski fitness, manage fatigue and enjoy your time on the slopes.',
+  },
+  {
     slug: 'getting-up-from-the-floor-as-you-get-older',
     title: "Can You Get Up From the Floor? Why It's a Skill Worth Practising as You Get Older",
     author: 'Chris Tiley',
