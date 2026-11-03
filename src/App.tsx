@@ -13,6 +13,7 @@ import ListenWatch from './components/ListenWatch';
 import Footer from './components/Footer';
 import TrustpilotBanner from './components/TrustpilotBanner';
 
+const SkiFitnessArticle = lazy(() => import('./components/SkiFitnessArticle'));
 const SkiMojo = lazy(() => import('./components/SkiMojo'));
 const Services = lazy(() => import('./components/Services'));
 const Contact = lazy(() => import('./components/Contact'));
@@ -77,6 +78,7 @@ function App() {
               <ListenWatch />
             </>
           } />
+          <Route path="/advice/ski-fitness-exercises" element={<Suspense fallback={null}><SkiFitnessArticle /></Suspense>} />
           <Route path="/ski-mojo" element={<Suspense fallback={null}><SkiMojo /></Suspense>} />
           <Route path="/services" element={
             <Suspense fallback={null}><Services /></Suspense>
