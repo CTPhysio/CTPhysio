@@ -42,8 +42,8 @@ const SkiMojo: React.FC = () => {
         <div className="container mx-auto px-4 max-w-5xl">
           <h2 className="text-3xl font-bold text-navy-700 mb-7">What happens at your fitting?</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="rounded-lg border p-6"><h3 className="font-bold text-xl text-navy-700 mb-3">1. A conversation first</h3><p>Chris will call to discuss your needs, confirm your weight to select the appropriate model and check that you have your own ski boots. Your fitting is then arranged once the Ski Mojo can be delivered.</p></div>
-            <div className="rounded-lg border p-6"><h3 className="font-bold text-xl text-navy-700 mb-3">2. Personalised setup</h3><p>Bring your ski boots. Chris will fit and adjust the Ski Mojo, help you put it on and take it off, and show you how it works. You can walk and move around in the clinic, but there is no on-snow trial.</p></div>
+            <div className="rounded-lg border p-6"><h3 className="font-bold text-xl text-navy-700 mb-3">1. A conversation first</h3><p>Chris will call to discuss your skiing needs and whether the Ski Mojo is likely to be the right option for you. He'll also confirm your weight to select the appropriate model and check that you have your own ski boots. Once everything is agreed, we'll arrange your fitting and order your Ski Mojo.</p></div>
+            <div className="rounded-lg border p-6"><h3 className="font-bold text-xl text-navy-700 mb-3">2. Personalised setup</h3><p>Chris will fit and adjust the Ski Mojo to suit you, showing you how to put it on, take it off and make adjustments. You'll be able to wear it with your own ski boots, walk around and try some movements in the clinic to get a feel for the support it provides.</p></div>
             <div className="rounded-lg border p-6"><h3 className="font-bold text-xl text-navy-700 mb-3">3. Decide without pressure</h3><p>You'll have the opportunity to see how it feels before deciding whether to buy. If you purchase, you can take your fitted Ski Mojo home that day.</p></div>
           </div>
           <p className="text-gray-600 mt-6">We allow up to an hour for your appointment, although most fittings take around 30–40 minutes. Please also bring your ski trousers if you'd like to check how the Ski Mojo fits underneath them.</p>
@@ -52,15 +52,15 @@ const SkiMojo: React.FC = () => {
       <section className="container mx-auto px-4 max-w-5xl py-14">
         <h2 className="text-3xl font-bold text-navy-700 mb-5">Fitting and purchase costs</h2>
         <div className="grid md:grid-cols-2 gap-5">
-          <div className="bg-white rounded-lg p-7 border"><h3 className="font-bold text-navy-700 text-xl">Ski Mojo with fitting</h3><p className="text-4xl font-bold text-navy-700 my-3">£594</p><p>Same retail price as buying online. The fitting is included and there is no separate £50 charge.</p></div>
-          <div className="bg-white rounded-lg p-7 border"><h3 className="font-bold text-navy-700 text-xl">Fitting without purchase</h3><p className="text-4xl font-bold text-navy-700 my-3">£50</p><p>If you decide not to purchase, this covers the fitting appointment.</p></div>
+          <div className="bg-white rounded-lg p-7 border"><h3 className="font-bold text-navy-700 text-xl">Ski Mojo with fitting</h3><p className="text-4xl font-bold text-navy-700 my-3">£594</p><p>Same retail price as buying online, with your personalised fitting included.</p></div>
+          <div className="bg-white rounded-lg p-7 border"><h3 className="font-bold text-navy-700 text-xl">Fitting without purchase</h3><p className="text-4xl font-bold text-navy-700 my-3">£50</p><p>If you decide not to purchase, this fee covers the time spent fitting and adjusting the Ski Mojo.</p></div>
         </div>
         <p className="mt-4 text-gray-600">Payment for a purchased Ski Mojo is by card at the clinic. Ski Mojo handles product warranty, repairs and returns.</p>
       </section>
       <section className="bg-white py-14">
         <div className="container mx-auto px-4 max-w-5xl">
           <h2 className="text-3xl font-bold text-navy-700 mb-5">Why arrange your fitting with Chris?</h2>
-          <p className="mb-4 leading-relaxed">Chris is a chartered physiotherapist with experience working in skiing, including with GB Para Snowsport. He has fitted Ski Mojos since his time working at a clinic in Bournemouth and has been a recommended retailer since 2019.</p>
+          <p className="mb-4 leading-relaxed">Chris is a chartered physiotherapist with experience working in skiing, including with GB Para Snowsport. He has been fitting Ski Mojos for several years and has been a recommended retailer since 2019.</p>
           <p className="mb-4 leading-relaxed">The fitting is a product fitting rather than a full physiotherapy assessment. Chris will ask about your needs and help you understand how to use and adjust the Ski Mojo before your trip.</p>
           <p className="leading-relaxed">A Ski Mojo may be one part of the solution, but building and maintaining leg strength also matters if you want to keep skiing for years to come. We can discuss strengthening options where appropriate.</p>
         </div>
