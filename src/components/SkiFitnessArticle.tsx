@@ -28,6 +28,7 @@ const SkiFitnessArticle: React.FC = () => {
       <article className="py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
+          <img src="/assets/images/ski-fitness-older-skier.webp" alt="Older woman skiing confidently on a snowy alpine slope" className="w-full rounded-xl shadow-lg object-cover aspect-[16/9] mb-10" />
           <p className="text-xl text-gray-700 leading-relaxed mb-6">Planning a skiing holiday? A little preparation before you travel can make a big difference to how much you enjoy your time on the slopes.</p>
           <p className="text-gray-700 leading-relaxed mb-6">Skiing is one of those activities that many of us only do for one or two weeks each year. We spend months looking forward to the holiday, but often give relatively little thought to preparing our bodies for it.</p>
           <p className="text-gray-700 leading-relaxed mb-6">Then, suddenly, we're asking our legs to cope with several hours of skiing each day, often for six consecutive days. It's not surprising that aching thighs, tired legs and sore knees can become familiar parts of a skiing holiday.</p>
