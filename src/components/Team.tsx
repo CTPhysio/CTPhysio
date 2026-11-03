@@ -209,7 +209,7 @@ const Team: React.FC = () => {
                 <h3 className="text-xl sm:text-2xl font-bold text-slate-800 mb-1">Chris Tiley</h3>
                 <p className="text-sky-500 font-semibold text-xs uppercase tracking-wider mb-3">Founder & Physiotherapist</p>
                 <p className="text-slate-600 leading-relaxed mb-3 text-sm">
-                  Chris is a chartered physiotherapist with over 15 years of experience across the NHS, rehabilitation services, private practice, and elite sport, including work with Para Snowsport GB.
+                  Chris is a chartered physiotherapist with over 15 years of experience across the NHS, rehabilitation services, private practice, and elite sport, including work with Para Snowsport GB. He has also written a practical <Link to="/advice/ski-fitness-exercises/" className="text-sky-700 underline">guide to preparing your body for a skiing holiday</Link>.
                 </p>
                 <p className="text-slate-600 leading-relaxed mb-4 text-sm flex-1">
                   He also offers <Link to="/ski-mojo/" className="text-sky-700 underline">Ski Mojo fittings in Birmingham</Link> for recreational skiers looking for help with knee discomfort or tired legs on the slopes.
