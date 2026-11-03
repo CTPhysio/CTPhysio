@@ -6,6 +6,7 @@ import { MemoryRouter } from 'react-router-dom';
 
 // Render existing components without rewriting their content or interactive behaviour.
 const pages = [
+  { path: "/advice/ski-fitness-exercises", component: "SkiFitnessArticle", title: "Ski Fitness Exercises: Prepare for Your Holiday", description: "Preparing for a skiing holiday? Discover 7 strength movement patterns to help build ski fitness, manage fatigue and enjoy your time on the slopes.", check: "How to Prepare Your Body for a Skiing Holiday" },
   { path: "/ski-mojo", component: "SkiMojo", title: "Ski Mojo Fitting in Birmingham | Chris Tiley Physiotherapy", description: "Ski Mojo fitting in Harborne, Birmingham with physiotherapist Chris Tiley. Personalised setup with your ski boots. £594 including fitting, or £50 without purchase.", check: "Ski Mojo fitting in Birmingham" },
   { path: "/events", component: "Events", title: "Physiotherapy Events in Harborne | Chris Tiley Physiotherapy", description: "Find information about upcoming events and activities organised by Chris Tiley Physiotherapy in Harborne, Birmingham.", check: "Upcoming Events" },
   { path: "/advice", component: "AdvicePage", title: "Physiotherapy Advice | Chris Tiley Physiotherapy", description: "Practical advice from Chris, Kate and the physiotherapy team to help you stay active, get stronger and manage injuries.", check: "Practical advice from the Chris Tiley Physiotherapy team" },
