@@ -92,6 +92,7 @@ const Footer: React.FC = () => {
                 <li><a href="/about/" className="text-sm hover:text-sky-400 transition-colors">About Chris</a></li>
                 <li><a href="/advice/" className="text-sm hover:text-sky-400 transition-colors">Advice</a></li>
                 <li><a href="/booking/" className="text-sm hover:text-sky-400 transition-colors">Book Appointment</a></li>
+                <li><a href="/ski-mojo/" className="text-sm hover:text-sky-400 transition-colors">Ski Mojo Fittings</a></li>
                 <li><a href="/contact/" className="text-sm hover:text-sky-400 transition-colors">Contact</a></li>
                 <li><a href="https://www.youtube.com/c/NeverTooOldtoLift" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-sky-400 transition-colors">Never Too Old to Lift on YouTube</a></li>
                 <li><a href="https://nevertoooldtolift.com/category/podcast/" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-sky-400 transition-colors">Never Too Old to Lift Podcast</a></li>
