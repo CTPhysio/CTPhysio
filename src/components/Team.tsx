@@ -212,6 +212,9 @@ const Team: React.FC = () => {
                   Chris is a chartered physiotherapist with over 15 years of experience across the NHS, rehabilitation services, private practice, and elite sport, including work with Para Snowsport GB.
                 </p>
                 <p className="text-slate-600 leading-relaxed mb-4 text-sm flex-1">
+                  He also offers <Link to="/ski-mojo/" className="text-sky-700 underline">Ski Mojo fittings in Birmingham</Link> for recreational skiers looking for help with knee discomfort or tired legs on the slopes.
+                </p>
+                <p className="text-slate-600 leading-relaxed mb-4 text-sm flex-1">
                   He has a particular interest in helping active adults and older people move confidently, build strength, and stay independent. Chris combines clinical expertise with strength-focused rehabilitation to help people recover from injury, manage persistent pain, and get back to the activities that matter most.
                 </p>
                 <div className="flex flex-wrap gap-1.5 mt-auto">
