@@ -37,6 +37,15 @@ const StrengthTrainingOver60s: React.FC = () => {
         worksFor: {
           '@type': 'MedicalBusiness',
           name: 'Chris Tiley Physiotherapy',
+          url: SITE_URL + '/',
+          telephone: '0121 517 0806',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: '24 Earls Ct Rd',
+            addressLocality: 'Harborne, Birmingham',
+            postalCode: 'B17 9AH',
+            addressCountry: 'GB',
+          },
         },
       },
       publisher: {
