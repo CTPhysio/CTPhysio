@@ -91,7 +91,7 @@ const Contact: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <Seo
-        title="Contact Our Harborne Physiotherapy Clinic | Chris Tiley Physiotherapy"
+        title="Contact Chris Tiley Physiotherapy | Harborne, Birmingham"
         description="Contact Chris Tiley Physiotherapy in Harborne, Birmingham. Find our clinic, call the reception team or send an enquiry about appointments."
         canonicalPath="/contact"
       />
