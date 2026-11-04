@@ -17,7 +17,7 @@ const SkiFitnessArticle: React.FC = () => {
   };
   return (
     <div className="min-h-screen bg-gray-50">
-      <Seo title="Ski Fitness Exercises: Prepare for Your Holiday" description="Preparing for a skiing holiday? Discover 7 strength movement patterns to help build ski fitness, manage fatigue and enjoy your time on the slopes." canonicalPath="/advice/ski-fitness-exercises" article />
+      <Seo image="/assets/images/ski-fitness-older-skier.webp" title="Ski Fitness Exercises: Prepare for Your Holiday" description="Preparing for a skiing holiday? Discover 7 strength movement patterns to help build ski fitness, manage fatigue and enjoy your time on the slopes." canonicalPath="/advice/ski-fitness-exercises" article />
       <section className="bg-navy-800 text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 max-w-4xl">
           <Link to="/advice/" className="inline-flex items-center text-sky-300 hover:text-sky-200 mb-6"><ArrowLeft size={16} className="mr-2" />All Advice</Link>
