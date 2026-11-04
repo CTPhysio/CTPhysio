@@ -41,6 +41,7 @@ const SportsInjuries: React.FC = () => (
     />
     <section className="bg-white py-16">
       <div className="container mx-auto px-4 max-w-4xl">
+        <p className="text-gray-700 leading-relaxed mb-8">Play women's football? Read our <a href="/advice/injury-prevention-womens-football/" className="text-sky-700 underline hover:text-sky-900">practical guide to injury prevention in women's football</a> for advice on strength, training and preparing for the demands of the game.</p>
         <h2 className="text-3xl font-bold text-navy-700 mb-8">Frequently Asked Questions</h2>
         <div className="space-y-8 text-gray-700 leading-relaxed">
           <div><h3 className="text-xl font-semibold text-navy-700 mb-2">Should I stop exercising when I have a sports injury?</h3><p>Not necessarily. Depending on the injury, you may be able to continue some activities while temporarily reducing or modifying others. We can help you work out what is appropriate rather than automatically stopping everything.</p></div>
