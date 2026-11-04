@@ -36,6 +36,7 @@ const SurgicalRehab: React.FC = () => (
     ]}
     imageUrl="https://lh3.googleusercontent.com/p/AF1QipP4v9ya-xB_2jtMgpyz5gjO0ONL6mcdIUcvyVwC=s680-w680-h510-rw"
     relatedConditions={[
+      { label: "Orthopaedic Rehabilitation", href: "/treatments/orthopedic-rehab/" },
       { label: "Knee Pain", href: "/treatments/knee-pain" },
       { label: "Hip Pain", href: "/treatments/hip-pain" },
       { label: "Shoulder Pain", href: "/treatments/shoulder-pain" },
