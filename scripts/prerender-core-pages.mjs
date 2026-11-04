@@ -6,8 +6,8 @@ import { MemoryRouter } from 'react-router-dom';
 
 // Render existing components without rewriting their content or interactive behaviour.
 const pages = [
-  { path: "/advice/ski-fitness-exercises", component: "SkiFitnessArticle", title: "Ski Fitness Exercises: Prepare for Your Holiday", description: "Preparing for a skiing holiday? Discover 7 strength movement patterns to help build ski fitness, manage fatigue and enjoy your time on the slopes.", check: "How to Prepare Your Body for a Skiing Holiday" },
-  { path: "/ski-mojo", component: "SkiMojo", title: "Ski Mojo Fitting in Birmingham | Chris Tiley Physiotherapy", description: "Ski Mojo fitting in Harborne, Birmingham with physiotherapist Chris Tiley. Personalised setup with your ski boots. £594 including fitting, or £50 without purchase.", check: "Ski Mojo fitting in Birmingham" },
+  { path: "/advice/ski-fitness-exercises", component: "SkiFitnessArticle", image: "/assets/images/ski-fitness-older-skier.webp", imageAlt: "Older woman skiing on a snowy alpine slope", imageWidth: "1556", imageHeight: "1011", type: "article", title: "Ski Fitness Exercises: Prepare for Your Holiday", description: "Preparing for a skiing holiday? Discover 7 strength movement patterns to help build ski fitness, manage fatigue and enjoy your time on the slopes.", check: "How to Prepare Your Body for a Skiing Holiday" },
+  { path: "/ski-mojo", component: "SkiMojo", image: "/assets/images/ski-mojo-brace.webp", imageAlt: "Ski Mojo wearable leg support worn over ski clothing", imageWidth: "831", imageHeight: "831", type: "website", title: "Ski Mojo Fitting in Birmingham | Chris Tiley Physiotherapy", description: "Ski Mojo fitting in Harborne, Birmingham with physiotherapist Chris Tiley. Personalised setup with your ski boots. £594 including fitting, or £50 without purchase.", check: "Ski Mojo fitting in Birmingham" },
   { path: "/events", component: "Events", title: "Physiotherapy Events in Harborne | Chris Tiley Physiotherapy", description: "Find information about upcoming events and activities organised by Chris Tiley Physiotherapy in Harborne, Birmingham.", check: "Upcoming Events" },
   { path: "/advice", component: "AdvicePage", title: "Physiotherapy Advice | Chris Tiley Physiotherapy", description: "Practical advice from Chris, Kate and the physiotherapy team to help you stay active, get stronger and manage injuries.", check: "Practical advice from the Chris Tiley Physiotherapy team" },
   { path: "/privacy-policy", component: "PrivacyPolicy", title: "Privacy Policy | Chris Tiley Physiotherapy", description: "Read how Chris Tiley Physiotherapy collects, uses and protects personal information, including patient and website data.", check: "How I collect, use, and protect your personal information" },
@@ -34,7 +34,17 @@ try {
     let html = template.replace(/<title>[^<]*<\/title>/, '<title>' + escape(page.title) + '</title>');
     for (const [attr, key, value] of [
       ['name', 'description', page.description], ['property', 'og:title', page.title],
-      ['property', 'og:description', page.description], ['property', 'og:url', url]
+      ['property', 'og:description', page.description], ['property', 'og:url', url],
+      ...(page.image ? [
+        ['property', 'og:type', page.type],
+        ['property', 'og:image', 'https://christileyphysiotherapy.com' + page.image],
+        ['property', 'og:image:alt', page.imageAlt],
+        ['property', 'og:image:width', page.imageWidth],
+        ['property', 'og:image:height', page.imageHeight],
+        ['name', 'twitter:card', 'summary_large_image'],
+        ['name', 'twitter:image', 'https://christileyphysiotherapy.com' + page.image],
+        ['name', 'twitter:image:alt', page.imageAlt],
+      ] : [])
     ]) {
       const tag = '<meta ' + attr + '="' + key + '" content="' + escape(value) + '">';
       const pattern = new RegExp('<meta\\s+' + attr + '="' + key + '"[^>]*>', 'i');
