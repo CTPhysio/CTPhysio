@@ -272,7 +272,7 @@ const Over60sStrengthClasses: React.FC = () => {
             The exercises we use aren't chosen simply to make you better at exercising. They're chosen to help you build the physical qualities you need for everyday life.
           </p>
           <p className="text-gray-600 text-center max-w-2xl mx-auto mb-8 leading-relaxed">
-            You might work on squatting, lifting, carrying, pushing, pulling, balancing or getting up from the floor. Exercises can be adapted to your current ability and gradually progressed as you become stronger. The goal isn't to become a gym enthusiast. It's to give you the strength and confidence to keep doing the things you enjoy.
+            You might work on squatting, lifting, carrying, pushing, pulling, balancing or <a href="/advice/getting-up-from-the-floor-as-you-get-older/" className="text-sky-700 underline hover:text-sky-900">getting up from the floor</a>. Exercises can be adapted to your current ability and gradually progressed as you become stronger. The goal isn't to become a gym enthusiast. It's to give you the strength and confidence to keep doing the things you enjoy.
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
             {realLifeExamples.map((item, i) => (
