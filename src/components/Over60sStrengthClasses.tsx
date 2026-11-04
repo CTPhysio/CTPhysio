@@ -150,8 +150,8 @@ const Over60sStrengthClasses: React.FC = () => {
 
     const pageUrl = 'https://christileyphysiotherapy.com/over-60s-strength-classes';
     const ogImageUrl = 'https://christileyphysiotherapy.com/og-over60s-strength-classes.png';
-    const ogTitleContent = 'Over 60s Strength Classes in Harborne, Birmingham | Chris Tiley Physiotherapy';
-    const ogDescContent = 'Small-group strength and fitness classes for over 60s in Harborne, Birmingham. Led by a physiotherapist, with individualised exercises to build strength, balance, fitness and confidence.';
+    const ogTitleContent = 'Over 60s Strength Classes in Harborne | Chris Tiley';
+    const ogDescContent = 'Small-group strength classes for over 60s in Harborne, Birmingham. Physiotherapist-led exercises to build strength, balance and confidence.';
 
     document.title = ogTitleContent;
     if (prevDesc) prevDesc.setAttribute('content', ogDescContent);
