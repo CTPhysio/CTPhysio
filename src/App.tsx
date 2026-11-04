@@ -32,7 +32,7 @@ const NeckPain = lazy(() => import('./components/NeckPain'));
 const HipPain = lazy(() => import('./components/HipPain'));
 const Sciatica = lazy(() => import('./components/Sciatica'));
 const BalanceFalls = lazy(() => import('./components/BalanceFalls'));
-const Deconditioning = lazy(() => import('./components/Deconditioning'));
+import Deconditioning from './components/Deconditioning';
 const Events = lazy(() => import('./components/Events'));
 const PrivacyPolicy = lazy(() => import('./components/PrivacyPolicy'));
 const TermsOfService = lazy(() => import('./components/TermsOfService'));
@@ -171,7 +171,7 @@ function App() {
             <Suspense fallback={null}><BalanceFalls /></Suspense>
           } />
           <Route path="/treatments/deconditioning" element={
-            <Suspense fallback={null}><Deconditioning /></Suspense>
+            <Deconditioning />
           } />
         </Routes>
       </main>
