@@ -7,7 +7,7 @@ import { MemoryRouter } from 'react-router-dom';
 
 const origin = 'https://christileyphysiotherapy.com';
 const pages = [
-  ['/advice/getting-up-from-the-floor-as-you-get-older', "Can You Get Up From the Floor? Why It's a Skill Worth Practising as You Get Older", 'Getting up from the floor is a skill you can practise. Learn how our Over 60s Strength Classes in Harborne build strength, confidence and independence.', '/optimized/floor-transfers-1200.webp'],
+  ['/advice/getting-up-from-the-floor-as-you-get-older', "Getting Up From the Floor as You Get Older | Physio Advice", 'Getting up from the floor is a skill you can practise. Learn how our Over 60s Strength Classes in Harborne build strength, confidence and independence.', '/optimized/floor-transfers-1200.webp'],
   ['/advice/injury-prevention-womens-football', 'Injury Prevention in Women’s Football: A Practical Guide for Players', 'Practical injury prevention advice for women’s football, including warm-ups, strength training, training load and recovery.', '/insights-womens-football.webp'],
   ['/strength-training-over-60s', 'Strength Training for Over 60s: How to Get Started', 'A Birmingham physiotherapist explains how to start strength training after 60, from choosing exercises to progressing safely.', '/optimized/strength-training-over60s-1200.webp'],
 ];
@@ -61,8 +61,8 @@ for (const [path, title, description, image] of pages) {
 {
   const path = '/over-60s-strength-classes';
   const url = origin + path;
-  const title = 'Over 60s Strength Classes in Harborne, Birmingham | Chris Tiley Physiotherapy';
-  const description = 'Small-group strength and fitness classes for over 60s in Harborne, Birmingham. Led by a physiotherapist, with individualised exercises to build strength, balance, fitness and confidence.';
+  const title = 'Over 60s Strength Classes in Harborne | Chris Tiley';
+  const description = 'Small-group strength classes for over 60s in Harborne, Birmingham. Physiotherapist-led exercises to build strength, balance and confidence.';
   const snapshot = `
     <div class="bg-white">
       <main id="over60s-static-content" class="max-w-5xl mx-auto px-5 py-10">

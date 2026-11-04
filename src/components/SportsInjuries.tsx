@@ -5,7 +5,7 @@ const SportsInjuries: React.FC = () => (
   <>
     <TreatmentPageTemplate
       seoTitle="Sports Injury Physiotherapy in Harborne, Birmingham | Chris Tiley"
-      seoDescription="Sports injury physiotherapy in Harborne, Birmingham. Assessment, progressive rehabilitation and support returning to running, football, cycling and other activities."
+      seoDescription="Sports injury physiotherapy in Harborne, Birmingham. Assessment and progressive rehab to help you return to running, football, cycling and other activities."
       canonicalPath="/treatments/sports-injuries"
       h1="Sports Injury Physiotherapy in Harborne, Birmingham"
       heroEyebrow="SPORTS INJURIES AND REHABILITATION"
