@@ -40,6 +40,11 @@ try {
     '@id': 'https://christileyphysiotherapy.com/#clinic',
     name: 'Chris Tiley Physiotherapy',
     url: 'https://christileyphysiotherapy.com/',
+    logo: 'https://christileyphysiotherapy.com/Logo_-_250px_x_100px.png',
+    sameAs: [
+      'https://www.facebook.com/christileyphysiotherapy/',
+      'https://www.instagram.com/christileyphysiotherapy/',
+    ],
     telephone: '0121 517 0806',
     address: {
       '@type': 'PostalAddress',
