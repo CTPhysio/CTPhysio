@@ -195,7 +195,7 @@ const StrengthRehabClasses: React.FC = () => {
             </div>
             <figure className="overflow-hidden rounded-xl border border-gray-100 shadow-sm">
               <img
-                src="/IMG_5689.jpeg"
+                src="/optimized/clinic-training-space-1200.webp"
                 alt="The strength and rehab training space at Chris Tiley Physiotherapy"
                 className="block w-full aspect-[4/3] object-cover"
               />
@@ -297,7 +297,7 @@ const StrengthRehabClasses: React.FC = () => {
               </div>
               <figure className="overflow-hidden rounded-xl border border-gray-100 shadow-sm">
                 <img
-                  src="/IMG_5688.jpeg"
+                  src="/optimized/clinic-equipment-1200.webp"
                   alt="Strength training equipment in the clinic"
                   className="block w-full aspect-[4/3] object-cover"
                 />

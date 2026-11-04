@@ -241,7 +241,7 @@ const Team: React.FC = () => {
                       sizes="192px"
                     />
                     <img
-                      src="/Kate_Headshot_No_Background.png"
+                      src="/optimized/Kate_Headshot_No_Background-600.webp"
                       srcSet="/optimized/Kate_Headshot_No_Background-400.webp 400w, /optimized/Kate_Headshot_No_Background-600.webp 600w"
                       sizes="192px"
                       alt="Kate Evans - Physiotherapist"
@@ -289,7 +289,7 @@ const Team: React.FC = () => {
                       sizes="192px"
                     />
                     <img
-                      src="/assets/images/Jessamyn_Headshot_No_Background.png"
+                      src="/optimized/Jessamyn_Headshot_No_Background-600.webp"
                       srcSet="/optimized/Jessamyn_Headshot_No_Background-400.webp 400w, /optimized/Jessamyn_Headshot_No_Background-600.webp 600w"
                       sizes="192px"
                       alt="Jessamyn Radford, Chartered Physiotherapist"

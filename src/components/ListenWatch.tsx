@@ -24,7 +24,7 @@ const resources: Resource[] = [
   },
   {
     image: '/optimized/podcast-logo-400.webp',
-    fallbackImage: '/assets/images/Main_file.jpg',
+    fallbackImage: '/optimized/podcast-logo-400.webp',
     imageAlt: 'The Never Too Old to Lift Podcast logo',
     title: 'The Never Too Old to Lift Podcast',
     description: 'Hosted by Chris Tiley, with practical conversations and advice about strength training, healthy ageing and staying strong for life.',
