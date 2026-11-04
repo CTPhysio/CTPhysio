@@ -30,7 +30,7 @@ try {
     const mod = await server.ssrLoadModule('/src/components/' + page.component + '.tsx');
     const snapshot = renderToStaticMarkup(React.createElement(MemoryRouter, { initialEntries: [page.path] }, React.createElement(mod.default)));
     if (!snapshot.includes(page.check) || !/<h1\b/.test(snapshot)) throw new Error('Missing page content/H1: ' + page.path);
-    const url = 'https://christileyphysiotherapy.com' + page.path;
+    const url = 'https://christileyphysiotherapy.com' + page.path.replace(/\/$/, '') + '/';
     let html = template.replace(/<title>[^<]*<\/title>/, '<title>' + escape(page.title) + '</title>');
     for (const [attr, key, value] of [
       ['name', 'description', page.description], ['property', 'og:title', page.title],
