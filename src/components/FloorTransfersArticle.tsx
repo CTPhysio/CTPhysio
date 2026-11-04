@@ -20,7 +20,7 @@ const FloorTransfersArticle: React.FC = () => {
   };
   return (
     <div className="min-h-screen bg-gray-50">
-      <Seo title="Getting Up From the Floor as You Age | Harborne Physio" description="Worried about getting up from the floor as you get older? Harborne physiotherapist Chris Tiley explains how to build strength and confidence." image={image} canonicalPath="/advice/getting-up-from-the-floor-as-you-get-older" article />
+      <Seo title="Getting Up From the Floor as You Get Older | Physio Advice" description="Worried about getting up from the floor as you get older? Harborne physiotherapist Chris Tiley explains how to build strength and confidence." image={image} canonicalPath="/advice/getting-up-from-the-floor-as-you-get-older" article />
       <section className="bg-navy-800 text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
           <div className="max-w-3xl">
