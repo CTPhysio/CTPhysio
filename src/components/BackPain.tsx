@@ -32,6 +32,7 @@ const BackPain: React.FC = () => (
     ]}
     imageUrl="https://lh3.googleusercontent.com/p/AF1QipOBSAH73ObiUfNTFSDCJv3sKIxkXEKimAFAnjCW=s680-w680-h510-rw"
     relatedConditions={[
+      { label: "Spinal Injury Rehabilitation", href: "/treatments/spinal-injuries/" },
       { label: "Sciatica", href: "/treatments/sciatica" },
       { label: "Hip Pain", href: "/treatments/hip-pain" },
       { label: "Surgical Rehabilitation", href: "/treatments/surgical-rehab" },
