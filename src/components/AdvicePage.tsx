@@ -15,8 +15,26 @@ const cornerstoneArticle = {
 };
 
 const AdvicePage: React.FC = () => {
+  const origin = 'https://christileyphysiotherapy.com';
+  const listedArticles = [...articles, cornerstoneArticle].sort((a, b) => b.publishedDate.localeCompare(a.publishedDate));
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Physiotherapy Advice',
+    url: origin + '/advice/',
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: listedArticles.map((article, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: article.title,
+        url: origin + (article.slug === cornerstoneArticle.slug ? '/' : '/advice/') + article.slug + '/',
+      })),
+    },
+  };
   return (
     <div className="min-h-screen bg-gray-50">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <Seo
         title="Advice | Chris Tiley Physiotherapy"
         description="Practical advice from Chris, Kate and the Chris Tiley Physiotherapy team to help you stay active, get stronger and manage injuries."
