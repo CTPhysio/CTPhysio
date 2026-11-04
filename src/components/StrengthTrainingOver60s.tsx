@@ -23,8 +23,7 @@ const StrengthTrainingOver60s: React.FC = () => {
     };
   }, []);
 
-  useEffect(() => {
-    const structuredData = {
+  const structuredData = {
       '@context': 'https://schema.org',
       '@type': 'Article',
       headline: 'Strength Training for Over 60s: How to Get Started',
@@ -49,18 +48,10 @@ const StrengthTrainingOver60s: React.FC = () => {
         '@id': `${SITE_URL}/strength-training-over-60s/`,
       },
     };
-    const el = document.createElement('script');
-    el.type = 'application/ld+json';
-    el.setAttribute('data-structured', 'strength-training-over-60s-article');
-    el.textContent = JSON.stringify(structuredData);
-    document.head.appendChild(el);
-    return () => {
-      document.head.removeChild(el);
-    };
-  }, []);
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <script type="application/ld+json" data-structured="strength-training-over-60s-article" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <Seo
         title="Strength Training for Over 60s: How to Get Started | Harborne Physio"
         description="A Birmingham physiotherapist explains how to start strength training after 60, from setting goals and choosing exercises to progressing safely."
