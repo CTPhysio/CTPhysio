@@ -6,7 +6,7 @@ import Seo from './Seo';
 const FloorTransfersArticle: React.FC = () => {
   const title = "Can You Get Up From the Floor? Why It's a Skill Worth Practising as You Get Older";
   const url = 'https://christileyphysiotherapy.com/advice/getting-up-from-the-floor-as-you-get-older';
-  const image = '/floor-transfers-older-adults.png';
+  const image = '/optimized/floor-transfers-1200.webp';
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',

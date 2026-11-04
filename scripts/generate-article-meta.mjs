@@ -7,9 +7,9 @@ import { MemoryRouter } from 'react-router-dom';
 
 const origin = 'https://christileyphysiotherapy.com';
 const pages = [
-  ['/advice/getting-up-from-the-floor-as-you-get-older', "Can You Get Up From the Floor? Why It's a Skill Worth Practising as You Get Older", 'Getting up from the floor is a skill you can practise. Learn how our Over 60s Strength Classes in Harborne build strength, confidence and independence.', '/floor-transfers-older-adults.png'],
+  ['/advice/getting-up-from-the-floor-as-you-get-older', "Can You Get Up From the Floor? Why It's a Skill Worth Practising as You Get Older", 'Getting up from the floor is a skill you can practise. Learn how our Over 60s Strength Classes in Harborne build strength, confidence and independence.', '/optimized/floor-transfers-1200.webp'],
   ['/advice/injury-prevention-womens-football', 'Injury Prevention in Women’s Football: A Practical Guide for Players', 'Practical injury prevention advice for women’s football, including warm-ups, strength training, training load and recovery.', '/insights-womens-football.webp'],
-  ['/strength-training-over-60s', 'Strength Training for Over 60s: How to Get Started', 'A Birmingham physiotherapist explains how to start strength training after 60, from choosing exercises to progressing safely.', '/assets/images/ChatGPT_Image_Sep_25,_2026,_03_49_06_PM.png'],
+  ['/strength-training-over-60s', 'Strength Training for Over 60s: How to Get Started', 'A Birmingham physiotherapist explains how to start strength training after 60, from choosing exercises to progressing safely.', '/optimized/strength-training-over60s-1200.webp'],
 ];
 const escape = s => s.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;');
 const base = await readFile('dist/index.html', 'utf8');
