@@ -40,10 +40,10 @@ const ArticlePage: React.FC = () => {
     datePublished: article.publishedDate,
     dateModified: article.publishedDate,
     description: article.metaDescription,
-    image: window.location.origin + article.featuredImage,
+    image: 'https://christileyphysiotherapy.com' + article.featuredImage,
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': window.location.href,
+      '@id': 'https://christileyphysiotherapy.com/advice/injury-prevention-womens-football/',
     },
   };
 
