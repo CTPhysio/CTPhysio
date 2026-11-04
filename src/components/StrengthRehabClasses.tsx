@@ -131,7 +131,7 @@ const StrengthRehabClasses: React.FC = () => {
     const prevTitle = document.title;
     const prevDesc = document.querySelector('meta[name="description"]');
     const prevDescContent = prevDesc?.getAttribute('content');
-    document.title = 'Strength & Rehab Classes in Harborne, Birmingham | Chris Tiley Physiotherapy';
+    document.title = 'Strength & Rehab Classes in Harborne | Chris Tiley';
     if (prevDesc) prevDesc.setAttribute('content', 'Small-group strength and rehab classes in Harborne, Birmingham, led by physiotherapists and sports therapists. Build strength with expert guidance in a supportive setting.');
     const ldJson = document.createElement('script');
     ldJson.type = 'application/ld+json';
