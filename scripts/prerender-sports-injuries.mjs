@@ -23,7 +23,7 @@ try {
   const path = '/treatments/sports-injuries';
   const url = 'https://christileyphysiotherapy.com' + path;
   const title = 'Sports Injury Physiotherapy in Harborne, Birmingham | Chris Tiley';
-  const description = 'Sports injury physiotherapy in Harborne, Birmingham. Assessment, progressive rehabilitation and support returning to running, football, cycling and other activities.';
+  const description = 'Sports injury physiotherapy in Harborne, Birmingham. Assessment and progressive rehab to help you return to running, football, cycling and other activities.';
   const escape = s => s.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;');
   let html = await readFile('index.html', 'utf8');
   html = html.replace(/<title>[^<]*<\/title>/, '<title>' + escape(title) + '</title>');
