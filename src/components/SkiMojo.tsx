@@ -23,7 +23,7 @@ const SkiMojo: React.FC = () => {
   const field = 'w-full rounded-md border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-sky-500';
   return (
     <div className="bg-gray-50">
-      <Seo title="Ski Mojo Fitting in Birmingham | Chris Tiley Physiotherapy" description="Ski Mojo fitting in Harborne, Birmingham with physiotherapist Chris Tiley. Personalised setup with your ski boots. £594 including fitting, or £50 without purchase." canonicalPath="/ski-mojo" />
+      <Seo image="/assets/images/ski-mojo-brace.webp" title="Ski Mojo Fitting in Birmingham | Chris Tiley Physiotherapy" description="Ski Mojo fitting in Harborne, Birmingham with physiotherapist Chris Tiley. Personalised setup with your ski boots. £594 including fitting, or £50 without purchase." canonicalPath="/ski-mojo" />
       <section className="bg-navy-800 text-white py-16 md:py-24">
         <div className="container mx-auto px-4 max-w-5xl grid md:grid-cols-5 gap-10 items-center">
           <div className="md:col-span-3"><p className="text-sky-300 font-semibold mb-3">Ski Mojo retailer and fitting service in Harborne, Birmingham</p>
