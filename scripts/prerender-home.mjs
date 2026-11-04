@@ -32,11 +32,11 @@ try {
   if (!html.includes('<meta name="description"') || !html.includes('<meta property="og:url"')) {
     throw new Error('Homepage metadata missing');
   }
-  // MedicalBusiness is an Organization subtype. Include it in the initial HTML,
-  // rather than relying on the client-side Seo effect to describe the clinic.
+  // Declare the parent type explicitly for crawlers that match Organization
+  // without inferring it from MedicalBusiness. Both describe the same entity.
   const business = {
     '@context': 'https://schema.org',
-    '@type': 'MedicalBusiness',
+    '@type': ['Organization', 'MedicalBusiness'],
     '@id': 'https://christileyphysiotherapy.com/#clinic',
     name: 'Chris Tiley Physiotherapy',
     url: 'https://christileyphysiotherapy.com/',
