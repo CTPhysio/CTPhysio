@@ -4,7 +4,7 @@ import TreatmentPageTemplate from './TreatmentPageTemplate';
 const SurgicalRehab: React.FC = () => (
   <>
   <TreatmentPageTemplate
-    seoTitle="Surgical Rehabilitation Physiotherapy in Harborne, Birmingham | Chris Tiley"
+    seoTitle="Surgical Rehabilitation in Harborne | Chris Tiley"
     seoDescription="Physiotherapy before and after surgery in Harborne, Birmingham. Personalised rehabilitation to rebuild movement, strength and confidence."
     canonicalPath="/treatments/surgical-rehab"
     h1="Rebuild Strength and Confidence After Surgery"
