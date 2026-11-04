@@ -5,9 +5,8 @@ import { ChevronDown, Calendar, Clock, Users, Dumbbell, Scale, HeartPulse, Shiel
 const BOOKING_URL = 'https://chris-tiley-physiotherapy.uk1.cliniko.com/bookings';
 
 const classSchedule = [
-  { day: 'Monday', time: '2:30pm', status: 'available', places: 3 },
   { day: 'Tuesday', time: '11:00am', status: 'full' },
-  { day: 'Tuesday', time: '2:30pm', status: 'available', places: 2 },
+  { day: 'Tuesday', time: '2:30pm', status: 'full' },
   { day: 'Thursday', time: '1:30pm', status: 'full' },
   { day: 'Thursday', time: '2:30pm', status: 'full' },
 ];
@@ -272,7 +271,7 @@ const Over60sStrengthClasses: React.FC = () => {
             The exercises we use aren't chosen simply to make you better at exercising. They're chosen to help you build the physical qualities you need for everyday life.
           </p>
           <p className="text-gray-600 text-center max-w-2xl mx-auto mb-8 leading-relaxed">
-            You might work on squatting, lifting, carrying, pushing, pulling, balancing or getting up from the floor. Exercises can be adapted to your current ability and gradually progressed as you become stronger. The goal isn't to become a gym enthusiast. It's to give you the strength and confidence to keep doing the things you enjoy.
+            You might work on squatting, lifting, carrying, pushing, pulling, balancing or <a href="/advice/getting-up-from-the-floor-as-you-get-older/" className="text-sky-700 underline hover:text-sky-900">getting up from the floor</a>. Exercises can be adapted to your current ability and gradually progressed as you become stronger. The goal isn't to become a gym enthusiast. It's to give you the strength and confidence to keep doing the things you enjoy.
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
             {realLifeExamples.map((item, i) => (
@@ -517,25 +516,40 @@ const Over60sStrengthClasses: React.FC = () => {
         </div>
       </section>
 
-      {/* NEW MONDAY CLASS ANNOUNCEMENT */}
+      {/* FULL CLASSES NOTICE */}
       <section className="py-10 md:py-14 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           <div className="bg-sky-50 border border-sky-200 rounded-xl p-6 md:p-8">
             <h2 className="text-2xl md:text-3xl font-bold text-navy-700 mb-4 leading-tight">
-              New Monday 2:30pm Over 60s Strength Class
+              All Over 60s Strength Classes are currently full
             </h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Starting Monday 23 November 2026. We've had enough interest to launch this new small-group class, and there are currently 3 of the 5 places remaining.
+              Our Tuesday and Thursday classes have all reached capacity. As our classes are deliberately kept small (maximum 5 people), places are limited.
             </p>
             <p className="text-gray-600 leading-relaxed mb-6">
-              Before joining, book a free Discovery Visit with Chris or one of the team so we can get to know you, discuss your goals and check that the class is suitable. Places are confirmed through the clinic.
+              If you're interested in joining, please get in touch to arrange a free Discovery Visit. We'll talk through whether the classes are right for you and let you know as soon as a place becomes available.
             </p>
             <div className="flex flex-col sm:flex-row sm:items-center gap-4">
-              <DiscoveryButton>Book a free Discovery Visit</DiscoveryButton>
+              <DiscoveryButton>Book a Discovery Visit</DiscoveryButton>
               <a href="#current-classes" className="text-sky-600 hover:text-sky-700 underline font-medium text-sm">
                 See all class times
               </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* PROPOSED MONDAY CLASS - EXPRESSIONS OF INTEREST */}
+      <section className="py-8 md:py-10 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+          <div className="border border-sky-200 rounded-xl p-6 md:p-8">
+            <h2 className="text-xl md:text-2xl font-bold text-navy-700 mb-3">Interested in a Monday 2:30pm Over 60s class?</h2>
+            <p className="text-gray-600 leading-relaxed mb-4">
+              I'm considering starting an additional Over 60s Strength Class on Mondays at 2:30pm. It isn't running yet, but I'll get it started once three people are ready to join.
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              If you're interested, please <a href="mailto:info@christileyphysiotherapy.com?subject=Monday%202%3A30pm%20Over%2060s%20class%20interest" className="text-sky-600 hover:text-sky-700 underline font-semibold">send me an email to express your interest</a>. There's no obligation at this stage.
+            </p>
           </div>
         </div>
       </section>
