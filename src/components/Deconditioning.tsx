@@ -4,7 +4,7 @@ import TreatmentPageTemplate from './TreatmentPageTemplate';
 const Deconditioning: React.FC = () => (
   <>
   <TreatmentPageTemplate
-    seoTitle="Muscle Weakness and Deconditioning Physio in Harborne, Birmingham | Chris Tiley"
+    seoTitle="Muscle Weakness & Deconditioning Physio | Harborne"
     seoDescription="Physiotherapy for muscle weakness and deconditioning in Harborne, Birmingham. Rebuild strength, stamina and confidence with progressive exercise."
     canonicalPath="/treatments/deconditioning"
     h1="Build Strength for Everyday Life"
