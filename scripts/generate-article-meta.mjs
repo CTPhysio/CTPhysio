@@ -1,5 +1,9 @@
 import { readFile, mkdir, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
+import { createServer } from 'vite';
+import React from 'react';
+import { renderToStaticMarkup } from 'react-dom/server';
+import { MemoryRouter } from 'react-router-dom';
 
 const origin = 'https://christileyphysiotherapy.com';
 const pages = [
@@ -9,6 +13,9 @@ const pages = [
 ];
 const escape = s => s.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;');
 const base = await readFile('dist/index.html', 'utf8');
+const components = ['FloorTransfersArticle', 'ArticlePage', 'StrengthTrainingOver60s'];
+const server = await createServer({ server: { middlewareMode: true }, appType: 'custom', logLevel: 'error' });
+try {
 for (const [path, title, description, image] of pages) {
   const url = origin + path;
   const tags = [
@@ -31,9 +38,20 @@ for (const [path, title, description, image] of pages) {
   }
   html = html.replace(/<meta property="og:image:(?:width|height)"[^>]*>\s*/g, '');
   html = html.replace('</head>', '<link rel="canonical" href="' + url + '">\n</head>');
+  const component = components[pages.findIndex(page => page[0] === path)];
+  const mod = await server.ssrLoadModule('/src/components/' + component + '.tsx');
+  const snapshot = renderToStaticMarkup(React.createElement(MemoryRouter, { initialEntries: [path] }, React.createElement(mod.default)));
+  if ((snapshot.match(/<h1\b/g) || []).length !== 1 || !snapshot.includes('<article')) {
+    throw new Error('Missing article content or unique H1: ' + path);
+  }
+  if (!html.includes('<div id="root"></div>')) throw new Error('React root missing: ' + path);
+  html = html.replace('<div id="root"></div>', '<div id="root">' + snapshot + '</div>');
   const directory = join('dist', path.slice(1));
   await mkdir(directory, { recursive: true });
   await writeFile(join(directory, 'index.html'), html);
+}
+} finally {
+  await server.close();
 }
 
 
