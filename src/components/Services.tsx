@@ -188,6 +188,19 @@ const Services: React.FC<{ prerender?: boolean }> = ({ prerender = false }) => {
         </div>
       </section>
 
+      <section className="py-16 bg-gray-50" aria-labelledby="acupuncture-heading">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 id="acupuncture-heading" className="text-3xl md:text-4xl font-bold text-navy-700 mb-6">Acupuncture and Dry Needling</h2>
+          <div className="space-y-4 text-lg text-gray-700">
+            <p>Acupuncture and dry needling are additional treatment options offered by Jessamyn Radford as part of physiotherapy at our Harborne clinic. Only Jessamyn offers these treatments at the clinic.</p>
+            <p>They involve inserting fine, sterile, single-use needles into selected areas of the body and may help some people manage pain and muscle-related sensitivity.</p>
+            <p>Acupuncture and dry needling are not offered as standalone services. Jessamyn will first assess your symptoms and discuss whether either technique might be appropriate, alongside other treatments such as exercise, advice and rehabilitation.</p>
+            <p>If you're interested in finding out whether acupuncture might be suitable for you, you can book a free 20-minute Discovery Visit with Jessamyn. Alternatively, you can book a full physiotherapy assessment.</p>
+          </div>
+          <a href="https://chris-tiley-physiotherapy.uk1.cliniko.com/bookings" className="inline-block mt-6 bg-navy-700 text-white font-semibold rounded-md px-6 py-3 hover:bg-navy-800">Book an appointment with Jessamyn</a>
+        </div>
+      </section>
+
       {/* Our approach */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
