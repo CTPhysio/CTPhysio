@@ -36,7 +36,7 @@ const clinicians: Clinician[] = [
     image600: '/optimized/Jessamyn_Headshot_No_Background-600.webp',
     fallback: '/optimized/Jessamyn_Headshot_No_Background-600.webp',
     alt: 'Jessamyn, Physiotherapist',
-    description: 'Particular interest in sports injuries and tennis.',
+    description: 'Particular interest in sports injuries and tennis. Also offers acupuncture and dry needling as part of physiotherapy when clinically appropriate.',
     maxHeight: '85%',
   },
 ];

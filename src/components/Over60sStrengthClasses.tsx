@@ -532,9 +532,6 @@ const Over60sStrengthClasses: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row sm:items-center gap-4">
               <DiscoveryButton>Book a free Discovery Visit</DiscoveryButton>
-              <a href="#current-classes" className="text-sky-600 hover:text-sky-700 underline font-medium text-sm">
-                See all class times
-              </a>
             </div>
           </div>
         </div>
