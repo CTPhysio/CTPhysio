@@ -313,9 +313,12 @@ const Team: React.FC = () => {
                 <p className="text-slate-600 leading-relaxed mb-4 text-sm">
                   She enjoys working with people to build confidence in movement and return to the activities that are important to them. As a keen tennis player herself, Jessamyn has a particular interest in sports rehabilitation and takes a practical, patient-centred approach to help people achieve their goals and stay active.
                 </p>
+                <p className="text-slate-600 leading-relaxed mb-4 text-sm">
+                  Jessamyn is trained in acupuncture and dry needling, which she may offer as part of physiotherapy when clinically appropriate, alongside exercise, advice and rehabilitation. <Link to="/services/#acupuncture-heading" className="text-sky-700 underline">Find out about acupuncture and dry needling</Link>.
+                </p>
                 <div className="mt-auto">
                   <p className="text-slate-600 leading-relaxed mb-4 text-sm">
-                    Available from Saturday 24 October 2026, with appointments on Saturday mornings and Monday evenings.
+                    Appointments are available on Saturday mornings and Monday evenings.
                   </p>
                   <a
                     href="https://christileyphysiotherapy.com/booking"
