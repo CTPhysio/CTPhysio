@@ -7,9 +7,9 @@ const BOOKING_URL = 'https://chris-tiley-physiotherapy.uk1.cliniko.com/bookings'
 const classSchedule = [
   { day: 'Monday', time: '2:30pm', status: 'available', places: 2 },
   { day: 'Tuesday', time: '11:00am', status: 'full' },
-  { day: 'Tuesday', time: '2:30pm', status: 'available', places: 2 },
+  { day: 'Tuesday', time: '2:30pm', status: 'available', places: 1 },
   { day: 'Thursday', time: '1:30pm', status: 'full' },
-  { day: 'Thursday', time: '2:30pm', status: 'full' },
+  { day: 'Thursday', time: '2:30pm', status: 'available', places: 1 },
 ];
 
 const DiscoveryButton: React.FC<{ className?: string; children?: React.ReactNode }> = ({
