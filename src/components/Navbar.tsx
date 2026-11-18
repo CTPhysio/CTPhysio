@@ -49,6 +49,7 @@ const Navbar: React.FC = () => {
               <div className="absolute top-full left-0 hidden group-hover:block group-focus-within:block w-60 bg-white shadow-lg rounded-md border border-gray-100 pt-1 z-50">
                 <Link to="/services/" className="block px-4 py-2.5 text-sm text-navy-700 hover:text-sky-500 hover:bg-gray-50">All Services</Link>
                 <Link to="/ski-mojo/" className="block px-4 py-2.5 text-sm text-navy-700 hover:text-sky-500 hover:bg-gray-50">Ski Mojo Fittings</Link>
+                <Link to="/gift-vouchers/" className="block px-4 py-2.5 text-sm text-navy-700 hover:text-sky-500 hover:bg-gray-50">Gift Vouchers</Link>
               </div>
             </div>
 
@@ -142,6 +143,7 @@ const Navbar: React.FC = () => {
               {mobileServicesOpen && <div className="pl-6 space-y-1">
                 <Link to="/services/" className="block px-3 py-2 rounded-md text-sm text-navy-700" onClick={() => { setMobileMenuOpen(false); setMobileServicesOpen(false); }}>All Services</Link>
                 <Link to="/ski-mojo/" className="block px-3 py-2 rounded-md text-sm text-navy-700" onClick={() => { setMobileMenuOpen(false); setMobileServicesOpen(false); }}>Ski Mojo Fittings</Link>
+                <Link to="/gift-vouchers/" className="block px-3 py-2 rounded-md text-sm text-navy-700" onClick={() => { setMobileMenuOpen(false); setMobileServicesOpen(false); }}>Gift Vouchers</Link>
               </div>}
             </div>
 
