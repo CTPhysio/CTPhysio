@@ -42,6 +42,7 @@ const Footer: React.FC = () => {
                 <li><a href="/ski-mojo/" className="text-sm hover:text-sky-400 transition-colors">Ski Mojo Fittings</a></li>
                 <li><a href="/strength-rehab-classes/" className="text-sm hover:text-sky-400 transition-colors">Strength &amp; Rehab Classes</a></li>
                 <li><a href="/over-60s-strength-classes/" className="text-sm hover:text-sky-400 transition-colors">Over 60s Strength Classes</a></li>
+                <li><a href="/gift-vouchers/" className="text-sm hover:text-sky-400">Gift Vouchers</a></li>
                 <li><a href="/booking/" className="text-sm hover:text-sky-400 transition-colors">Book Appointment</a></li>
               </ul>
             </div>
