@@ -75,7 +75,7 @@ for (const [path, title, description, image] of pages) {
         <h2 class="text-2xl font-bold mb-3">What the classes include</h2>
         <p class="mb-4">Progressive resistance training, balance exercises, fitness intervals, bone health and falls preparedness, including practising <a class="underline text-sky-700" href="/advice/getting-up-from-the-floor-as-you-get-older/">getting down to and back up from the floor</a>.</p>
         <h2 class="text-2xl font-bold mb-3">Current class timetable</h2>
-        <p class="mb-4">Tuesday 11:00am — full; Tuesday 2:30pm — full; Thursday 1:30pm — full; Thursday 2:30pm — full.</p>
+        <p class="mb-4">Tuesday 11:00am — full; Tuesday 2:30pm — full; Thursday 1:30pm — 1 space available; Thursday 2:30pm — full.</p>
         <h2 class="text-2xl font-bold mb-3">New Monday 2:30pm Over 60s Strength Class</h2>
         <p class="mb-4">Starting Monday 23 November 2026. Three members have signed up, with 2 of the 5 places remaining. <a class="underline text-sky-700" href="https://chris-tiley-physiotherapy.uk1.cliniko.com/bookings">Book a free 20-minute Discovery Visit</a> to find out more.</p>
         <h2 class="text-2xl font-bold mb-3">Getting started</h2>
