@@ -5,7 +5,7 @@ import { ChevronDown, Calendar, Clock, Users, Dumbbell, Scale, HeartPulse, Shiel
 const BOOKING_URL = 'https://chris-tiley-physiotherapy.uk1.cliniko.com/bookings';
 
 const classSchedule = [
-  { day: 'Monday', time: '2:30pm', status: 'available', places: 2 },
+  { day: 'Monday', time: '2:30pm', status: 'available', places: 1 },
   { day: 'Tuesday', time: '11:00am', status: 'full' },
   { day: 'Tuesday', time: '2:30pm', status: 'available', places: 1 },
   { day: 'Thursday', time: '1:30pm', status: 'full' },
@@ -525,7 +525,7 @@ const Over60sStrengthClasses: React.FC = () => {
               New Monday 2:30pm Over 60s Strength Class
             </h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Starting Monday 23 November 2026. We've had enough interest to launch this new small-group class, and there are currently 2 of the 5 places remaining.
+              Our new Monday class started on 23 November 2026, and there is currently 1 of the 5 places remaining.
             </p>
             <p className="text-gray-600 leading-relaxed mb-6">
               Before joining, book a free Discovery Visit with Chris or one of the team so we can get to know you, discuss your goals and check that the class is suitable. Places are confirmed through the clinic.
